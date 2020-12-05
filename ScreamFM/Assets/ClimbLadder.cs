@@ -7,10 +7,11 @@ public class ClimbLadder : MonoBehaviour
     RaycastHit2D hit;
     [SerializeField]
     LayerMask ladderLayer;
+    [SerializeField]
+    float climbSpeed = 2f;
     bool isClimbing = false;
     float MoveY;
     Rigidbody2D rigidBody;
-    float speed = 2f;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,7 +50,7 @@ public class ClimbLadder : MonoBehaviour
         if(hit && isClimbing)
         {
             MoveY = Input.GetAxis("Vertical");
-            rigidBody.velocity = new Vector2(rigidBody.velocity.x, MoveY * speed);
+            rigidBody.velocity = new Vector2(rigidBody.velocity.x, MoveY * climbSpeed);
             rigidBody.gravityScale = 0f;
         }
         else

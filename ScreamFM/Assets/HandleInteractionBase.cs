@@ -15,7 +15,7 @@ public class HandleInteractionBase : MonoBehaviour
         }
     }
 
-    private void OnDestroy()
+    void OnDestroy()
     {
         if (interact != null)
         {

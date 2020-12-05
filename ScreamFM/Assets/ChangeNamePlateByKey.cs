@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class ChangeNamePlateByKey : MonoBehaviour
 {
-    public KeyListSO keys;
     public string changedMessage;
-    public string keyName;
+    ICheckKey keyChecker;
     INamePlate namePlate;
     IInteractionStats stats;
     // Start is called before the first frame update
@@ -14,6 +13,7 @@ public class ChangeNamePlateByKey : MonoBehaviour
     {
         namePlate = GetComponent<INamePlate>();
         stats = GetComponent<IInteractionStats>();
+        keyChecker = GetComponent<ICheckKey>();
     }
 
     // Update is called once per frame
@@ -27,9 +27,12 @@ public class ChangeNamePlateByKey : MonoBehaviour
 
     void ValidateKeys()
     {
-        if(keys != null && keys.IsKeyCollected(keyName))
+        if(keyChecker != null)
         {
-            namePlate.ChangeNamePlate(changedMessage);
+            if(keyChecker.Keys != null && keyChecker.Keys.IsKeyCollected(keyChecker.KeyName))
+            {
+                namePlate.ChangeNamePlate(changedMessage);
+            }
         }
     }
 }

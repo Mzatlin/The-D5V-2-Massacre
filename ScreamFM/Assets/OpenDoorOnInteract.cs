@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class OpenDoorOnInteract : HandleInteractionBase
 {
-    public KeyListSO keys;
-    public string KeyName;
     INamePlate plate;
+    ICheckKey keyChecker;
 
     protected override void Start()
     {
         base.Start();
         plate = GetComponent<INamePlate>();
+        keyChecker = GetComponent<ICheckKey>();
     }
 
     protected override void HandleInteract()
     {
-        if (keys.IsKeyCollected(KeyName))
+        if (keyChecker.Keys.IsKeyCollected(keyChecker.KeyName))
         {
             gameObject.SetActive(false);
             if(plate != null)
