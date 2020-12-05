@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class ShowNamePlate : MonoBehaviour
+public class ShowNamePlate : MonoBehaviour, INamePlate
 {
     IInteractionStats interact;
     public Canvas nameCanvas;
@@ -62,4 +62,15 @@ public class ShowNamePlate : MonoBehaviour
             isShowingPlate = false;
         }
     }
+
+    public void ChangeNamePlate(string name)
+    {
+        text = name;
+    }
+
+    public void DisableNamePlate()
+    {
+        nameCanvas.enabled = false;
+    }
 }
+

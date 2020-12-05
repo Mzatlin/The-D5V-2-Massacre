@@ -5,22 +5,22 @@ using UnityEngine;
 
 public class ProcessInteraction : MonoBehaviour, IInteractable, IInteractionStats
 {
-    [SerializeField]
     private bool isInteracting = false;
-    [SerializeField]
     private bool isHovering = false;
+    private bool canInteract = true;
     public bool IsInteracting => isInteracting;
     public bool IsHovering => isHovering;
+
+    public bool CanInteract { get => canInteract; set => canInteract = value; }
 
     public event Action OnInteract = delegate { };
 
     public void StartInteraction()
     {
-        if (!isInteracting && isHovering)
+        if (canInteract && !isInteracting && isHovering)
         {
             isInteracting = true;
             OnInteract();
-            Debug.Log("Interacted!");
         }
     }
 
@@ -29,12 +29,13 @@ public class ProcessInteraction : MonoBehaviour, IInteractable, IInteractionStat
         if (isInteracting)
         {
             isInteracting = false;
+            isHovering = false;
         }
     }
 
     public void EnterInteractionRange()
     {
-        if (!isInteracting)
+        if (canInteract && !isInteracting)
         {
             isHovering = true;
         }
