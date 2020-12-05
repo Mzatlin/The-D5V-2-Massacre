@@ -11,6 +11,7 @@ public class MovementPhysics : MonoBehaviour, IMovement
     private float movementSpeedX;
 
     private Vector2 moveVelocity;
+    private float moveDirectionX;
 
     // Start is called before the first frame update
     void Start()
@@ -20,13 +21,15 @@ public class MovementPhysics : MonoBehaviour, IMovement
 
     public void ApplyMovement(float xDirection)
     {
-      moveVelocity = new Vector2(xDirection * movementSpeedX * Time.deltaTime, rigidBody.velocity.y);
+        moveDirectionX = xDirection;
+     
     }
     // Update is called once per frame
     void FixedUpdate()
     {
         if (rigidBody != null)
         {
+            moveVelocity = new Vector2(moveDirectionX * movementSpeedX * Time.fixedDeltaTime, rigidBody.velocity.y);
             rigidBody.velocity = moveVelocity;
         }
 
