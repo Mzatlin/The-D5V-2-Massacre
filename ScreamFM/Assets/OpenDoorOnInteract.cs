@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class OpenDoorOnInteract : HandleInteractionBase
 {
@@ -22,6 +23,7 @@ public class OpenDoorOnInteract : HandleInteractionBase
             if(plate != null)
             {
                 plate.DisableNamePlate();
+                AstarPathEditor.MenuScan();
             }
         }
         base.HandleInteract();

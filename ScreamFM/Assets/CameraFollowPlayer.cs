@@ -9,11 +9,6 @@ public class CameraFollowPlayer : MonoBehaviour
     [SerializeField]
     Vector3 offsetPosition = Vector3.zero;
     Vector3 cameraOffset;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void LateUpdate()

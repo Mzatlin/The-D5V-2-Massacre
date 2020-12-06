@@ -17,6 +17,7 @@ public class PathingBase : MonoBehaviour
     protected Path path;
     protected Seeker seeker;
     protected Rigidbody2D rb;
+    [SerializeField]
     protected Vector2 direction;
     protected Vector2 force;
     protected SpriteRenderer render;
@@ -55,12 +56,12 @@ public class PathingBase : MonoBehaviour
         Vector2 force = objectSpeed * direction * Time.deltaTime;
         rb.AddForce(force);
 
-        if (rb.velocity.x >= 0.1f)
+        if (rb.velocity.x >= Mathf.Abs(0.1f))
         {
             // transform.localScale = new Vector3(-1f, -1f, -1f);
             render.flipX = false;
         }
-        else if (rb.velocity.x <= -0.1f)
+        else if (rb.velocity.x <= Mathf.Abs(-0.1f))
         {
             render.flipX = true;
             //  transform.localScale = new Vector3(1f, 1f, 1f);

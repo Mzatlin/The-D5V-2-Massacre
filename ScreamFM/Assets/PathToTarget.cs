@@ -2,8 +2,10 @@
 using Pathfinding;
 
 
-public class PathToTarget : PathingBase
+public class PathToTarget : PathingBase, IEnemyDirection
 {
+    public Vector2 Direction => direction;
+
     // Start is called before the first frame update
     protected override void Start()
     {

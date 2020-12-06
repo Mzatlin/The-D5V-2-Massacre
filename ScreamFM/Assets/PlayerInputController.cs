@@ -8,6 +8,7 @@ public class PlayerInputController : MonoBehaviour, IPlayerInputAxis
     float Inputy;
     bool isFacingRight = true;
     IMovement movement;
+    IPlayerState state;
     Vector2 playerScale;
 
     public float XMovement => Inputx;
@@ -18,12 +19,20 @@ public class PlayerInputController : MonoBehaviour, IPlayerInputAxis
     {
         movement = GetComponent<IMovement>();
         playerScale = transform.localScale;
+        state = GetComponent<IPlayerState>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        MovePlayer();
+        if (state.PlayerState.IsPlayerReady())
+        {
+            MovePlayer();
+        }
+        else
+        {
+            movement.ApplyMovement(0f);
+        }
     }
 
     void MovePlayer()

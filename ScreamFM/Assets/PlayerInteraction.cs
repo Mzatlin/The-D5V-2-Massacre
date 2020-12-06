@@ -7,6 +7,7 @@ public class PlayerInteraction : MonoBehaviour
     RaycastHit2D hit;
     IInteractable interact;
     IPlayerInputAxis axis;
+    IPlayerState state;
     Rigidbody2D rigidBody;
     [SerializeField]
     LayerMask mask;
@@ -18,13 +19,18 @@ public class PlayerInteraction : MonoBehaviour
     {
         rigidBody = GetComponent<Rigidbody2D>();
         axis = GetComponent<IPlayerInputAxis>();
+        state = GetComponent<IPlayerState>();
         lastPosition = Vector2.right;
     }
 
     // Update is called once per frame
     void Update()
     {
-        CastInteractionRay();
+        if (state.PlayerState.IsPlayerReady())
+        {
+            CastInteractionRay();
+        }
+
     }
 
     void CastInteractionRay()

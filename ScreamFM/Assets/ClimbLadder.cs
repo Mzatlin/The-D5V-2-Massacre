@@ -12,17 +12,22 @@ public class ClimbLadder : MonoBehaviour
     bool isClimbing = false;
     float MoveY;
     Rigidbody2D rigidBody;
+    IPlayerState state;
     // Start is called before the first frame update
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
+        state = GetComponent<IPlayerState>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        RayCastUpwards();
-        Climb();
+        if (state.PlayerState.IsPlayerReady())
+        {
+            RayCastUpwards();
+            Climb();
+        }
     }
 
     void RayCastUpwards()
@@ -58,5 +63,6 @@ public class ClimbLadder : MonoBehaviour
             rigidBody.gravityScale = 1f;
         }
     }
+
 
 }
