@@ -9,7 +9,7 @@ public class HidePlayerOnInteract : HandleInteractionBase
     Collider2D playerCollider;
     SpriteRenderer playerSprite;
     Rigidbody2D playerRigidbody2D;
-    IInteractionStats interactionStats;
+    IInteractionStats interactionStats => GetComponent<IInteractionStats>();
     bool isHiding = false;
 
     // Start is called before the first frame update
@@ -19,8 +19,6 @@ public class HidePlayerOnInteract : HandleInteractionBase
         playerCollider = player.GetComponent<Collider2D>();
         playerSprite = player.GetComponentInChildren<SpriteRenderer>();
         playerRigidbody2D = player.GetComponent<Rigidbody2D>();
-        interactionStats = GetComponent<IInteractionStats>();
-       
     }
 
     protected override void HandleInteract()

@@ -2,9 +2,16 @@
 using Pathfinding;
 
 
-public class PathToTarget : PathingBase, IEnemyDirection
+public class PathToTarget : PathingBase, IEnemyDirection, IEnemyPath
 {
     public Vector2 Direction => direction;
+    private bool canPath;
+    public bool CanPath { get => canPath; set => canPath = value; }
+
+    public void SetPathTarget(Transform nextTarget)
+    {
+        target = nextTarget;
+    }
 
     // Start is called before the first frame update
     protected override void Start()

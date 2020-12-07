@@ -18,15 +18,27 @@ public class IgnoreCollisionByVelocity : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.transform == enemy)
+        if (collision.transform == enemy)
         {
-            //if(direction != null && Mathf.Abs(direction.Direction.y) > 0.8)
-            if (collision.rigidbody.velocity.x < (Mathf.Abs(0.1f)))
+            CheckCollision(collision);
+        }
+    }
+
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.transform == enemy)
+        {
+            CheckCollision(collision);
+        }
+    }
+
+    void CheckCollision(Collision2D collision)
+    {
+        if (direction != null && Mathf.Abs(direction.Direction.x) < 0.8f)
+        {
+            foreach (Collider2D collider in colliders)
             {
-                foreach (Collider2D collider in colliders)
-                {
-                    Physics2D.IgnoreCollision(GetComponent<Collider2D>(), collider);
-                }
+                Physics2D.IgnoreCollision(GetComponent<Collider2D>(), collider);
             }
         }
     }
