@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class HandleInteractionBase : MonoBehaviour
 {
-    private IInteractable interact;
+    private IInteractable interact => GetComponent<IInteractable>();
     // Start is called before the first frame update
     protected virtual void Start()
     {
-        interact = GetComponent<IInteractable>();
         if (interact != null)
         {
             interact.OnInteract += HandleInteract;

@@ -24,7 +24,6 @@ public class HidePlayerOnInteract : HandleInteractionBase
     protected override void HandleInteract()
     {
         TogglePlayerHide();
-        //base.HandleInteract();
     }
 
     void TogglePlayerHide()
