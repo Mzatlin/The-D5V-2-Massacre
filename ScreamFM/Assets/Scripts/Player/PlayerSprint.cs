@@ -6,13 +6,20 @@ public class PlayerSprint : MonoBehaviour
 {
     IPlayerState state => GetComponent<IPlayerState>();
     IMovement movement => GetComponent<IMovement>();
-    [SerializeField]
-    float sprintAmount = 100f;
+
     [SerializeField]
     float moveSpeedMultiplier = 2f;
+    [SerializeField]
+    float rechargeSpeed = 10f;
+    [SerializeField]
+    float depletionSpeed = 30f;
+    [SerializeField]
+    float rechargeDelay = 3f;
+    bool hasDelayed = false;
+ 
     float baseMovementSpeed;
     bool isSpriting = false;
-    public float SprintAmount => sprintAmount;
+    public float SprintAmount { get; private set; } = 100f;
 
     // Start is called before the first frame update
     void Start()
@@ -33,18 +40,38 @@ public class PlayerSprint : MonoBehaviour
 
         if (isSpriting)
         {
-            sprintAmount -= 30 * Time.deltaTime;
+            SprintAmount -= depletionSpeed * Time.deltaTime;
         }
         else
         {
-            sprintAmount += 10 * Time.deltaTime;
+            TryRecharge();
         }
-        sprintAmount = Mathf.Clamp(sprintAmount, 0, 100);
+
+        SprintAmount = Mathf.Clamp(SprintAmount, 0, 100);
+    }
+
+    void TryRecharge()
+    {
+        if (SprintAmount < 3f && !hasDelayed)
+        {
+            StartCoroutine(Delay());
+        }
+        else
+        {
+            hasDelayed = false;
+            SprintAmount += rechargeSpeed * Time.deltaTime;
+        }
     }
 
     void TrySprint()
     {
-        if (sprintAmount > 1 && Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            ResetSpeed();
+            return;
+        }
+
+        if (SprintAmount > 1 && Input.GetKey(KeyCode.LeftShift))
         {
             if(movement != null && !isSpriting)
             {
@@ -54,12 +81,20 @@ public class PlayerSprint : MonoBehaviour
         }
         else
         {
-            if (Input.GetKeyUp(KeyCode.LeftShift))
-            {
-                isSpriting = false;
-            }
+            ResetSpeed();
             movement.MoveSpeed = baseMovementSpeed;
         }
         
+    }
+    void ResetSpeed()
+    {
+        isSpriting = false;
+        movement.MoveSpeed = baseMovementSpeed;
+    }
+
+    IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(rechargeDelay);
+        hasDelayed = true;
     }
 }

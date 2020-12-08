@@ -7,6 +7,7 @@ using System.Linq;
 public class EnemyStateMachine : MonoBehaviour
 {
     public EnemyStateBase CurrentState { get; private set; }
+    public bool IsDelayed { get; private set; }
     private Type nextState;
     private Dictionary<Type, EnemyStateBase> states;
     public event Action<EnemyStateBase> OnStateChanged;
@@ -20,6 +21,7 @@ public class EnemyStateMachine : MonoBehaviour
     {
         CurrentState = states.Values.First();
         CurrentState.BeginState();
+        IsDelayed = false;
     }
 
     // Update is called once per frame
@@ -43,5 +45,20 @@ public class EnemyStateMachine : MonoBehaviour
             CurrentState.BeginState();
             OnStateChanged?.Invoke(CurrentState);
         }
+    }
+
+    public void DelayTransition(float delay)
+    {
+        if (!IsDelayed)
+        {
+            IsDelayed = true;
+            StartCoroutine(DelayCoroutine(delay));
+        }
+    }
+
+    IEnumerator DelayCoroutine(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        IsDelayed = false;
     }
 }

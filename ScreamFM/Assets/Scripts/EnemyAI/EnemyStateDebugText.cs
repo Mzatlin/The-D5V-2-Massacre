@@ -33,6 +33,10 @@ public class EnemyStateDebugText : MonoBehaviour
         {
             stateText.text = "Chasing";
         }
-            
+        else if (stateMachine.CurrentState.GetType() == typeof(InvestigateObjectState))
+        {
+            stateText.text = "Investigating";
+        }
+
     }
 }

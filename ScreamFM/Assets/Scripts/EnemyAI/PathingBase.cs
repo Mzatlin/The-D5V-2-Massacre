@@ -58,12 +58,12 @@ public class PathingBase : MonoBehaviour
         Vector2 force = objectSpeed * direction * Time.deltaTime;
         rb.AddForce(force);
 
-        if (rb.velocity.x >= Mathf.Abs(0.1f))
+        if (rb.velocity.x >= Mathf.Abs(0.3f))
         {
             // transform.localScale = new Vector3(-1f, -1f, -1f);
             render.flipX = false;
         }
-        else if (rb.velocity.x <= Mathf.Abs(-0.1f))
+        else if (rb.velocity.x <= Mathf.Abs(-0.3f))
         {
             render.flipX = true;
             //  transform.localScale = new Vector3(1f, 1f, 1f);
