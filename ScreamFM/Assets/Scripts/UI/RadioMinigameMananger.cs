@@ -1,13 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public class RadioMinigameMananger : HandleInteractionBase
+public class RadioMinigameMananger : HandleInteractionBase, IRadioMinigame
 {
     public PlayerStateSO state;
     public Canvas minigameCanvas;
+    Collider2D radioCollider => GetComponent<Collider2D>();
     IInteractionStats interact => GetComponent<IInteractionStats>();
     bool isMiniGameStarted = false;
+
+    public event Action OnMinigameStart = delegate { };
+    public event Action OnExit = delegate { };
+    public event Action OnComplete = delegate { };
 
     // Start is called before the first frame update
     protected override void Start()
@@ -44,6 +50,7 @@ public class RadioMinigameMananger : HandleInteractionBase
         isMiniGameStarted = true;
         state.isInteracting = true;
         interact.CanInteract = false;
+        OnMinigameStart();
     }
 
     void EndMinigame()
@@ -67,5 +74,15 @@ public class RadioMinigameMananger : HandleInteractionBase
 
             EndMinigame();
         }
+    }
+
+    public void ProcessSuccess()
+    {
+        OnComplete();
+        if(radioCollider != null)
+        {
+            radioCollider.enabled = false;
+        }
+        EndMinigame();
     }
 }
