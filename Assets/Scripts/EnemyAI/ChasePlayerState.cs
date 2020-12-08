@@ -22,7 +22,7 @@ public class ChasePlayerState : EnemyStateBase
     {
         if(playerCollider != null && !playerCollider.enabled)
         {
-            return typeof(PatrolState);
+            return typeof(InvestigateObjectState);
         }
 
         return null;

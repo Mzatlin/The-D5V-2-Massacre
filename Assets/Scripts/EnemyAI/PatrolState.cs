@@ -47,7 +47,6 @@ public class PatrolState : EnemyStateBase
             {
                 return typeof(ChasePlayerState);
             }
-            //enemy.PatrolTargets
 
 
         }

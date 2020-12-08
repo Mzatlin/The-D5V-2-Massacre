@@ -13,6 +13,8 @@ public class MovementPhysics : MonoBehaviour, IMovement
     private Vector2 moveVelocity;
     private float moveDirectionX;
 
+    public float MoveSpeed { get => movementSpeedX; set => movementSpeedX = value; }
+
     // Start is called before the first frame update
     void Start()
     {

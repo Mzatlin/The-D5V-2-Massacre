@@ -18,6 +18,8 @@ GameObject:
   - component: {fileID: 2943845963661684774}
   - component: {fileID: 2943845963661684769}
   - component: {fileID: 1575310513552125895}
+  - component: {fileID: 7270576253345465612}
+  - component: {fileID: 3934728090674473667}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -220,6 +222,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8d0b6dc67c9b374ab29492489c3353e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  map: {fileID: 0}
+--- !u!114 &7270576253345465612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2943845963661684782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 377ca97fadf0c4a4c841d328c08c245a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprintAmount: 100
+  moveSpeedMultiplier: 1.8
+--- !u!114 &3934728090674473667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2943845963661684782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 511ec0f6c418f9a4f9a09582614bbc3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprintSlider: {fileID: 0}
 --- !u!1 &2943845964805126345
 GameObject:
   m_ObjectHideFlags: 0
