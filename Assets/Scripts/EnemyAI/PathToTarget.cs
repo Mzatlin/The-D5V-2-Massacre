@@ -5,8 +5,8 @@ using Pathfinding;
 public class PathToTarget : PathingBase, IEnemyDirection, IEnemyPath
 {
     public Vector2 Direction => direction;
-    private bool canPath;
-    public bool CanPath { get => canPath; set => canPath = value; }
+    public bool CanPath { get; set; } = true;
+    float stoppingDistance = 1f;
 
     public void SetPathTarget(Transform nextTarget)
     {
@@ -22,7 +22,7 @@ public class PathToTarget : PathingBase, IEnemyDirection, IEnemyPath
 
     void FixedUpdate()
     {
-        if (path != null)
+        if (path != null && CanPath)
         {
             CheckPathing();
             MoveSeeker();

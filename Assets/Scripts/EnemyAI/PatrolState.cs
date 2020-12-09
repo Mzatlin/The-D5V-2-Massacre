@@ -20,14 +20,19 @@ public class PatrolState : EnemyStateBase
         currentPatrolPoint = enemy.PatrolTargets[0];
         enemy.SetTarget(currentPatrolPoint);
         size = enemy.PatrolTargets.Count - 1;
-
     }
 
     public override Type Tick()
     {
+        if (enemy.CurrentTarget == enemy.RadioTarget)
+        {
+            return typeof(InvestigateObjectState);
+        }
+
 
         if (currentPatrolPoint != null)
         {
+
             if (Vector2.Distance(transformEnemy.position, currentPatrolPoint.position) < 1)
             {
                 if (index >= size)

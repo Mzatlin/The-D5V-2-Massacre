@@ -25,21 +25,24 @@ public class InvestigateObjectState : EnemyStateBase
     {
         if (currentTarget != null)
         {
-
-            if (!hasDelayed && Vector3.Distance(transformEnemy.position, currentTarget.position) < 1f)
+           
+            if (!hasDelayed && Vector3.Distance(transformEnemy.position, currentTarget.position) < 2f)
             {
                 enemy.DelayAction(UnityEngine.Random.Range(4f,6f));
+                enemy.SetCanPath();
                 hasDelayed = true;
             }
 
             if (hasDelayed && !enemy.CheckDelay())
             {
+                enemy.SetCanPath();
                 hasDelayed = false;
                 return typeof(PatrolState);
             }
 
             if (playerCollider != null && playerCollider.enabled && Vector2.Distance(transformEnemy.position, enemy.PlayerTarget.position) < 5)
             {
+                enemy.SetCanPath();
                 return typeof(ChasePlayerState);
             }
         }
