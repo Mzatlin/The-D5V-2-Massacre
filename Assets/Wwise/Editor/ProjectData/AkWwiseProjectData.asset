@@ -12,14 +12,238 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdd775f6494834f449d187567be611fc, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
-  AcousticTextureWwu: []
-  AuxBusWwu: []
-  BankWwu: []
-  EventWwu: []
-  RtpcWwu: []
-  StateWwu: []
-  SwitchWwu: []
-  TriggerWwu: []
-  ExpandedItems: []
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: d17e34ce87493f4ebfd405b3fa1d481b
+    GuidInternal: 
+    m_lastTime: -8585941301442853248
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: 7d87f821eacae141a568149f9766c3ab
+    GuidInternal: 
+    m_lastTime: -8585940532893139187
+    List:
+    - name: Footsteps
+      guid: 9a7efce5b6081f4a97dc430676cf8f4b
+      id: 2385628198
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: Footsteps
+        ObjectType: 1
+      Path: Default Work Unit\Master Audio Bus\Footsteps
+    - name: Master Audio Bus
+      guid: d8a41415a61d2a41a17e75ca0c2149f3
+      id: 3803692087
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus
+    - name: Submarine
+      guid: 72e562a71162f048bbebe5737a85285a
+      id: 232782671
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: Submarine
+        ObjectType: 1
+      Path: Default Work Unit\Master Audio Bus\Submarine
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: c5c1c9c6241f25489d42937e88389abb
+    GuidInternal: 
+    m_lastTime: -8585940531424334347
+    List:
+    - name: Main
+      guid: 3b70d55d269857419d15d3d738a71d00
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Main
+        ObjectType: 7
+      Path: Default Work Unit\Main
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: 681b6d033837e744bd1c22bb66c897fc
+    GuidInternal: 
+    m_lastTime: -8585940532893465181
+    List:
+    - name: Play_Ambience
+      guid: 70d340678b217b4e8912c1c178b89e04
+      id: 278617630
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Ambience
+        ObjectType: 3
+      Path: Default Work Unit\Play_Ambience
+      maxAttenuation: 0
+      maxDuration: 154.82738
+      minDuration: 154.82738
+    - name: Play_Footsteps
+      guid: a6391b3390c2cf43ba0aeed6491eda90
+      id: 3854155799
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Footsteps
+        ObjectType: 3
+      Path: Default Work Unit\Play_Footsteps
+      maxAttenuation: 0
+      maxDuration: 0.669023
+      minDuration: 0.324252
+    - name: Play_LadderClimb
+      guid: 467c632d7749664d8a61de55ac7c6b41
+      id: 2071442557
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_LadderClimb
+        ObjectType: 3
+      Path: Default Work Unit\Play_LadderClimb
+      maxAttenuation: 0
+      maxDuration: 1.008453
+      minDuration: 0.678601
+    - name: Play_Sines
+      guid: c1d76f9d68205446a7a1a4ce722874f5
+      id: 647636032
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Sines
+        ObjectType: 3
+      Path: Default Work Unit\Play_Sines
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Sines
+      guid: 8263ad9ffde974438890f48e2458f5d0
+      id: 4065681590
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_Sines
+        ObjectType: 3
+      Path: Default Work Unit\Stop_Sines
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: 27bddc2350c2e641a46965c8cc67b0cd
+    GuidInternal: 
+    m_lastTime: -8585940532893053964
+    List:
+    - name: Correct_Sine
+      guid: 7836978c86460448a0c9af21e9ebe714
+      id: 1694191731
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Correct_Sine
+        ObjectType: 13
+      Path: Default Work Unit\Correct_Sine
+    - name: Current_Sine
+      guid: 9504e351b538f84c89262677cc6bf7a6
+      id: 602825232
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Current_Sine
+        ObjectType: 13
+      Path: Default Work Unit\Current_Sine
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: 2ce6a218eff4b544980eeb50d113cbf2
+    GuidInternal: 
+    m_lastTime: -8585940537995325422
+    List:
+    - name: Locomotion
+      guid: 9134ec22e3d7d74696705602a0bab5e5
+      id: 556887514
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Locomotion
+        ObjectType: 9
+      Path: Default Work Unit\Locomotion
+      values:
+      - name: None
+        guid: 44232628a6089d4bb062fef3d3bb7103
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      - name: Running
+        guid: 6306749367677b45b51b1d1523d9e88d
+        id: 3863236874
+        PathAndIcons:
+        - ElementName: Running
+          ObjectType: 8
+      - name: Walking
+        guid: 1b73968a88720646a523ca607611d03f
+        id: 340271938
+        PathAndIcons:
+        - ElementName: Walking
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: 22001b69de116748872cd71c7cf4d50e
+    GuidInternal: 
+    m_lastTime: -8585941301442863279
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: 06d862936eb2ab4fb30d1da0df971481
+    GuidInternal: 
+    m_lastTime: -8585941301442858266
+    List: []
+  ExpandedItems:
+  - /ScreamFM - Mzatlin2_WwiseProject
+  - /ScreamFM - Mzatlin2_WwiseProject/Events
+  - /ScreamFM - Mzatlin2_WwiseProject/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

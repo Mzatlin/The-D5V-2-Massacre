@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="135">
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="135">
 	<RootPaths>
 		<ProjectRoot>C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<SourceFilesRoot>C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3762518835">
+		<SoundBank Id="1355168291" Language="SFX" Hash="876658801">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
