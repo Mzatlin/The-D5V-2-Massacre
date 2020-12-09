@@ -13,8 +13,9 @@ public class EnemyAI : MonoBehaviour
     private Transform playerTarget;
     [SerializeField]
     private List<Transform> patrolTargets = new List<Transform>();
-
+  //  public bool CanPath { get => enemyPath.CanPath; set => CanPath = value; }
     public Transform PlayerTarget => playerTarget;
+    public Transform RadioTarget { get; set; }
     public Transform CurrentTarget { get; private set; }
     public List<Transform> PatrolTargets => patrolTargets;
     public EnemyStateMachine StateMachine => GetComponent<EnemyStateMachine>();
@@ -51,6 +52,11 @@ public class EnemyAI : MonoBehaviour
     public bool CheckDelay()
     {
         return StateMachine.IsDelayed;
+    }
+
+    public void SetCanPath()
+    {
+        enemyPath.CanPath = !enemyPath.CanPath;
     }
 
 

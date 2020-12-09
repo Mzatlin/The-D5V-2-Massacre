@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23821e0c4a6599341bdd882ab70bb9e1, type: 3}
   m_Name: RadioCompletionSO
   m_EditorClassIdentifier: 
-  radios: []
+  radios:
+  - {fileID: 11400000, guid: 22c3e2911050e4e4c99865bdd09e4238, type: 2}
+  - {fileID: 11400000, guid: 4357fd1be6eb9d44e9b550a3afd995c5, type: 2}
+  - {fileID: 11400000, guid: ad1700eb062f4d44191466cd5b5c2c36, type: 2}
+  - {fileID: 11400000, guid: 49af87a75bcc9ab40bcf10ecf92bca08, type: 2}
+  - {fileID: 11400000, guid: 4725c06dd89d4e14092509f25798f753, type: 2}
+  - {fileID: 11400000, guid: e86f69fceb676af49bed811cf7d99275, type: 2}

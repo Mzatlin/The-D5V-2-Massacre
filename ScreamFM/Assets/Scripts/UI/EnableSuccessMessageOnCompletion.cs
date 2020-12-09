@@ -22,7 +22,15 @@ public class EnableSuccessMessageOnCompletion : MonoBehaviour
         }
     }
 
-   void HandleSuccess()
+    void OnDestroy()
+    {
+        if (minigame != null)
+        {
+            minigame.OnComplete -= HandleSuccess;
+        }
+    }
+
+    void HandleSuccess()
     {
         successCanvas.enabled = true;
         successText.text = successMessage;

@@ -6,24 +6,32 @@ using System;
 [CreateAssetMenu(menuName = "Lists/Radios")]
 public class RadioCompletionListSO : ScriptableObject
 {
-    public event Action<GameObject> OnRadioComplete;
+    public event Action<Transform> OnRadioComplete = delegate { };
 
-    public List<GameObject> radios = new List<GameObject>();
-    public Dictionary<GameObject,bool> radioStatuses = new Dictionary<GameObject,bool>();
-    
+    public List<RadioSO> radios = new List<RadioSO>();
+    public Dictionary<RadioSO, bool> radioStatuses = new Dictionary<RadioSO, bool>();
+
     // Start is called before the first frame update
-    void ResetRadios()
+    public void ResetRadios()
     {
         radioStatuses.Clear();
-        foreach (GameObject radio in radios)
+        foreach (RadioSO radio in radios)
         {
-           radioStatuses.Add(radio, false);
+            radioStatuses.Add(radio, false);
         }
     }
 
-    void LogRadio()
+    public void LogRadio(RadioSO radio, Transform radioTransform)
     {
-
+        if (radio != null && radioStatuses.ContainsKey(radio))
+        {
+            radioStatuses[radio] = true;
+            OnRadioComplete?.Invoke(radioTransform);
+        }
+        else
+        {
+            Debug.Log("Radio does not exist!");
+        }
     }
-    
+
 }
