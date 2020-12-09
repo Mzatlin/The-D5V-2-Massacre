@@ -34,4 +34,16 @@ public class RadioCompletionListSO : ScriptableObject
         }
     }
 
+    public bool HasWon()
+    {
+        foreach(KeyValuePair<RadioSO,bool> radio in radioStatuses)
+        {
+            if (radio.Value == false)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
 }

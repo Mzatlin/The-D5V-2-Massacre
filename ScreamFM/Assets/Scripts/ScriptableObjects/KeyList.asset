@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: KeyList
   m_EditorClassIdentifier: 
   keyNames:
-  - Yellow
-  - Green
-  - Red
+  - Storage
+  - Control Room
+  - Diving
