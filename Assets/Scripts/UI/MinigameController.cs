@@ -7,19 +7,27 @@ using UnityEngine.UI;
 public class MinigameController : MonoBehaviour
 {
     public Image dialImage;
+    public Image radioScreen;
     public Slider radioSlider;
     IRadioMinigame radio => GetComponent<IRadioMinigame>();
+    [SerializeField]
     float turnSpeed = 36f;
     float dialRotation = 0f;
-    bool isPlayingGame;
+    bool isPlayingGame = false;
+    bool isOnTheSpot = false;
+    float winSpaceMin = 0.5f;
+    float winSpaceMax = 0.53f;
+    float middleSpaceMin = 0.3f;
+    float middleSpaceMax = 0.7f;
     // Start is called before the first frame update
     void Start()
     {
-       
-        if(radio != null)
+
+        if (radio != null)
         {
             radio.OnMinigameStart += HandleMiniGameStart;
             radio.OnExit += HandleMiniGameExit;
+           
         }
     }
 
@@ -32,7 +40,21 @@ public class MinigameController : MonoBehaviour
     {
         isPlayingGame = true;
         dialImage.rectTransform.rotation = Quaternion.Euler(0, 0, 0);
-        radioSlider.value = 0f;
+        radioSlider.value = 0.5f;
+        SetRadioValue();
+    }
+
+    void SetRadioValue()
+    {
+        middleSpaceMin = UnityEngine.Random.Range(0.01f, 0.59f);
+        middleSpaceMax = middleSpaceMin + 0.4f;
+        winSpaceMin = UnityEngine.Random.Range(middleSpaceMin + 0.1f, middleSpaceMax - 0.1f);
+        winSpaceMax = winSpaceMin + 0.03f;
+
+        if (Mathf.Abs(winSpaceMax - 0.5f) <= 0.1f || Mathf.Abs(winSpaceMin - 0.5f) <= 0.1f)
+        {
+            SetRadioValue();
+        }
     }
 
     // Update is called once per frame
@@ -41,26 +63,59 @@ public class MinigameController : MonoBehaviour
 
         if (dialImage != null && isPlayingGame)
         {
-            dialRotation = Input.GetAxis("Horizontal") * turnSpeed * Time.deltaTime;
-            //dialRotation = Mathf.Clamp(dialRotation, -90, 90);
-            //dialImage.rectTransform.rotation = Quaternion.identity * Quaternion.AngleAxis(dialRotation, dialImage.rectTransform.right);
+            RotateDial();
+            GetInputValidation();
+        }
+    }
 
-            dialImage.rectTransform.Rotate(new Vector3(0, 0, -dialRotation));
-            radioSlider.value += dialRotation / 360;
-            radioSlider.value = Mathf.Clamp(radioSlider.value, 0f, 1f);
+    void RotateDial()
+    {
+        dialRotation = Input.GetAxis("Horizontal") * turnSpeed * Time.deltaTime;
+        dialImage.rectTransform.Rotate(new Vector3(0, 0, -dialRotation));
 
-            if (dialImage.rectTransform.rotation.z >= 0.9 && dialImage.rectTransform.rotation.z <= -0.9)
-            {
+        radioSlider.value += dialRotation / 360;
+        radioSlider.value = Mathf.Clamp(radioSlider.value, 0f, 1f);
 
-                 dialImage.rectTransform.rotation = Quaternion.Euler(0, 0, -90);
-                // dialImage.rectTransform = Mathf.Clamp(dialImage.rectTransform.eulerAngles.z, -90, 90);
-            }
-            if(radioSlider.value >= 0.5 && radioSlider.value <= 0.53)
-            {
-                isPlayingGame = false;
-                radio.ProcessSuccess();
-            }
+        if ((dialImage.rectTransform.rotation.z < -0.9999f && dialRotation > 0))
+        {
+            dialImage.rectTransform.rotation = Quaternion.Euler(0, 0, -180);
+        }
+        else if ((dialImage.rectTransform.rotation.z > 0.9999f) && dialRotation < 0)
+        {
+            dialImage.rectTransform.rotation = Quaternion.Euler(0, 0, 180);
+        }
+    }
 
+    void GetInputValidation()
+    {
+        if (Input.GetKeyDown(KeyCode.W) && isOnTheSpot)
+        {
+            isPlayingGame = false;
+            radio.ProcessSuccess();
+        }
+
+        if (radioSlider.value >= winSpaceMin && radioSlider.value <= winSpaceMax)
+        {
+            isOnTheSpot = true;
+            SetRadioScreen(Color.green);
+        }
+        else if (radioSlider.value >= middleSpaceMin && radioSlider.value <= middleSpaceMax)
+        {
+            isOnTheSpot = false;
+            SetRadioScreen(Color.yellow);
+        }
+        else
+        {
+            isOnTheSpot = false;
+            SetRadioScreen(Color.white);
+        }
+    }
+
+    void SetRadioScreen(Color color)
+    {
+        if (radioScreen != null)
+        {
+            radioScreen.color = color;
         }
     }
 }
