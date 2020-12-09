@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{18A2E62C-F4EF-44B5-980E-EB50D113CBF2}" SchemaVersion="97">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{18A2E62C-F4EF-44B5-980E-EB50D113CBF2}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{18A2E62C-F4EF-44B5-980E-EB50D113CBF2}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="Locomotion" ID="{22EC3491-D7E3-46D7-9670-5602A0BAB5E5}">
+					<ChildrenList>
+						<State Name="None" ID="{28262344-08A6-4B9D-B062-FEF3D3BB7103}"/>
+						<State Name="Walking" ID="{8A96731B-7288-4606-A523-CA607611D03F}"/>
+						<State Name="Running" ID="{93740663-6767-457B-B51B-1D1523D9E88D}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

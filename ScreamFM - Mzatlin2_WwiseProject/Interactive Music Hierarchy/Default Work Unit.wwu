@@ -1,6 +1,264 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{3B76972A-B63E-4218-9166-980A2C8C1120}" SchemaVersion="97">
 	<InteractiveMusic>
-		<WorkUnit Name="Default Work Unit" ID="{3B76972A-B63E-4218-9166-980A2C8C1120}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{3B76972A-B63E-4218-9166-980A2C8C1120}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicPlaylistContainer Name="Ambience" ID="{38A28C59-EFF8-4CC5-AC2F-F1F63140CBDB}" ShortID="113394717">
+					<PropertyList>
+						<Property Name="Tempo" Type="Real64" Value="80"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSegment Name="Melody2" ID="{27A54AEA-6C42-49E5-816A-79295F4CEC21}" ShortID="871939623">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="77413.6875"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="amb_drone_22b_4-4_80bpm" ID="{F53E2349-C8A2-4908-B58E-07ABC399EDC7}" ShortID="995007542">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="amb_drone_22b_4-4_80bpm" ID="{DD3FAA7D-90FA-4754-8160-E239EA681352}">
+											<Language>SFX</Language>
+											<AudioFile>amb_drone_22b_4-4_80bpm.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="719380269"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{64BB5973-CAAE-42F0-83FD-F9F1227D3440}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{2C7EF274-4122-4C40-8660-53A108689628}">
+											<ClipList>
+												<MusicClip Name="amb_drone_22b_4-4_80bpm" ID="{BCB5C01D-380E-4B62-B842-80FF2CBC31D7}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="77413.6875"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="amb_drone_22b_4-4_80bpm" ID="{DD3FAA7D-90FA-4754-8160-E239EA681352}"/>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+								<MusicTrack Name="amb_melody2_22b_4-4_80bpm" ID="{6A97350A-5C57-44CB-A94B-A9D9B218E38E}" ShortID="880281723">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="amb_melody2_22b_4-4_80bpm" ID="{A885FBD4-8D67-4CE5-B4C9-B578344FC551}">
+											<Language>SFX</Language>
+											<AudioFile>amb_melody2_22b_4-4_80bpm.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="997529329"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{A4C40469-401A-43C1-A411-33310B80E17E}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{CCA9125E-B712-4200-BF31-BF00B5FE72CA}">
+											<ClipList>
+												<MusicClip Name="amb_melody2_22b_4-4_80bpm" ID="{4C1919FC-1549-4C81-839D-BCCA84189EFE}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="63456.1041666667"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="amb_melody2_22b_4-4_80bpm" ID="{A885FBD4-8D67-4CE5-B4C9-B578344FC551}"/>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{BBE88A11-3542-41D5-AC51-1E400C9A3B2D}"/>
+								<MusicCue Name="Exit Cue" ID="{D7466634-8F45-4591-9312-E7002597570C}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="63000"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
+						<MusicSegment Name="Melody1" ID="{6647A5F3-63F4-4B6F-8CCE-0447778EA955}" ShortID="562767069">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="77413.6875"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="amb_melody1_22b_4-4_80bpm" ID="{5F71ED90-78BC-4EA8-8110-83F5A19C3A61}" ShortID="652782576">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="amb_melody1_22b_4-4_80bpm" ID="{AC029AB6-8713-4151-90F0-2108AF9E6C19}">
+											<Language>SFX</Language>
+											<AudioFile>amb_melody1_22b_4-4_80bpm.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="131747932"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{63C1D694-56FF-4BA7-A688-D560C0E4BA69}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{F58F6935-6414-4837-B118-A1714AB9B60D}">
+											<ClipList>
+												<MusicClip Name="amb_melody1_22b_4-4_80bpm" ID="{49C6764E-96CB-4081-981E-4CF58134893B}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="61046.3541666667"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="amb_melody1_22b_4-4_80bpm" ID="{AC029AB6-8713-4151-90F0-2108AF9E6C19}"/>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+								<MusicTrack Name="amb_drone_22b_4-4_80bpm" ID="{A6535978-DE24-4E99-BF07-79224DC2E9D4}" ShortID="209118299">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="amb_drone_22b_4-4_80bpm" ID="{25450C1D-E887-40D5-9BBF-3ACB9A28CE76}">
+											<Language>SFX</Language>
+											<AudioFile>amb_drone_22b_4-4_80bpm.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="719380269"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{6E9A3907-BC0E-42CF-8DBE-E2A9E167F58D}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{B408CA4C-572A-451B-929E-9F1DF8FD6C7A}">
+											<ClipList>
+												<MusicClip Name="amb_drone_22b_4-4_80bpm" ID="{E9BE6359-6FCE-4E06-A075-5A65E88381ED}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="77413.6875"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="amb_drone_22b_4-4_80bpm" ID="{25450C1D-E887-40D5-9BBF-3ACB9A28CE76}"/>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{1DA2167F-2EC0-4398-A183-6974CA0E5950}"/>
+								<MusicCue Name="Exit Cue" ID="{5CD70C3D-77C4-4645-AC68-BB6C171C7219}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="63000"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
+					</ChildrenList>
+					<TransitionList>
+						<MusicTransition Name="Root" ID="{41912686-CF82-4E3B-900B-C22D42A2519C}">
+							<PropertyList>
+								<Property Name="IsFolder" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicTransition Name="Transition" ID="{1F809F3F-7E9B-4DE8-A6A8-C02632D869D7}">
+									<TransitionInfo/>
+								</MusicTransition>
+							</ChildrenList>
+							<TransitionInfo/>
+						</MusicTransition>
+					</TransitionList>
+					<Playlist>
+						<MusicPlaylistItem Name="" ID="{44FE35CE-F9D2-484C-B94D-C567541B5133}" ShortID="397492923">
+							<PropertyList>
+								<Property Name="PlayMode" Type="int16" Value="2"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicPlaylistItem Name="" ID="{C0B344A3-79B4-4CE6-BA10-69396AA53902}" ShortID="78171643">
+									<PropertyList>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="Melody1" ID="{6647A5F3-63F4-4B6F-8CCE-0447778EA955}"/>
+								</MusicPlaylistItem>
+								<MusicPlaylistItem Name="" ID="{B4F71B1C-CAB1-41A8-97D2-7DB9ED9B8CC9}" ShortID="137994399">
+									<PropertyList>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="Melody2" ID="{27A54AEA-6C42-49E5-816A-79295F4CEC21}"/>
+								</MusicPlaylistItem>
+							</ChildrenList>
+						</MusicPlaylistItem>
+					</Playlist>
+				</MusicPlaylistContainer>
+			</ChildrenList>
+		</WorkUnit>
 	</InteractiveMusic>
 </WwiseDocument>

@@ -1,6 +1,1085 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{ABEF7731-B9EE-49A0-888E-7D7B3DCDFD0D}" SchemaVersion="97">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{ABEF7731-B9EE-49A0-888E-7D7B3DCDFD0D}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{ABEF7731-B9EE-49A0-888E-7D7B3DCDFD0D}" PersistMode="Standalone">
+			<ChildrenList>
+				<RandomSequenceContainer Name="LadderClimb" ID="{F4882778-97B4-4A48-86A9-9776A98F81D6}" ShortID="662426195">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>10</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+						</Reference>
+						<Reference Name="Effect0" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+							<ObjectRef Name="Dialog_Leveler_Soft" ID="{9C1D0FCF-896E-4739-A8E8-B1E908F51CE6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Submarine" ID="{A762E572-6211-48F0-BBEB-E5737A85285A}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="ladder_climb_04" ID="{991E1142-10A8-492C-B61E-788374DB1AB6}" ShortID="409189049">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ClimbingLadder" ID="{7091E763-12E7-48CE-B34D-F3EBEA4193F5}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.298685563606174"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="5.20026334295967"/>
+										<Property Name="TrimEnd" Type="Real64" Value="5.8788646942098"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>ClimbingLadder.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="733799120"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ClimbingLadder" ID="{7091E763-12E7-48CE-B34D-F3EBEA4193F5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ladder_climb_08" ID="{C1527A3C-32EB-4BA4-8719-E317DE292BF5}" ShortID="861039976">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ClimbingLadder" ID="{D5015C15-9670-4289-89F8-AE480710557D}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.26358377013197"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="8.50066772060183"/>
+										<Property Name="TrimEnd" Type="Real64" Value="9.50912086807408"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>ClimbingLadder.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="960626912"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ClimbingLadder" ID="{D5015C15-9670-4289-89F8-AE480710557D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ladder_climb_01" ID="{8A0C7527-045C-4DDD-8CF9-E48865EF3138}" ShortID="761941544">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ClimbingLadder" ID="{715443A6-202B-4695-99CE-8AC7F860B7DD}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.298685563606174"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="2.69793553046944"/>
+										<Property Name="TrimEnd" Type="Real64" Value="3.49690358371768"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>ClimbingLadder.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1064843630"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ClimbingLadder" ID="{715443A6-202B-4695-99CE-8AC7F860B7DD}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ladder_climb_07" ID="{8D51512E-B5E0-4BA5-86BE-472B3A5EDF29}" ShortID="404686764">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ClimbingLadder" ID="{90AF4938-8B2B-4595-ACA0-E7A44EC6E74D}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.26358377013197"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="7.5239750147599"/>
+										<Property Name="TrimEnd" Type="Real64" Value="8.49041987380885"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>ClimbingLadder.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="89402265"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ClimbingLadder" ID="{90AF4938-8B2B-4595-ACA0-E7A44EC6E74D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ladder_climb" ID="{2D396C5D-BCE2-4552-B729-8D5C249DFEE8}" ShortID="189552646">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ClimbingLadder" ID="{C6176026-7128-440E-AEBB-080DE1F6F2B4}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.298685563606174"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.7174419907355"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.62664304549228"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>ClimbingLadder.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="581915762"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ClimbingLadder" ID="{C6176026-7128-440E-AEBB-080DE1F6F2B4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ladder_climb_02" ID="{E7B203E2-11DD-4A2A-A465-28D412559195}" ShortID="927459098">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ClimbingLadder" ID="{91C4CF71-E1B5-496B-854D-D6CB0FB46AB7}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.298685563606174"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="3.52889897061319"/>
+										<Property Name="TrimEnd" Type="Real64" Value="4.32152379149392"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>ClimbingLadder.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="162220479"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ClimbingLadder" ID="{91C4CF71-E1B5-496B-854D-D6CB0FB46AB7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ladder_climb_03" ID="{62000BDE-AE38-4596-9E80-D838EA58FA27}" ShortID="114120019">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ClimbingLadder" ID="{E4F37D06-D237-4DB0-8814-8FC7B40423A0}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.298685563606174"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="4.31979174775243"/>
+										<Property Name="TrimEnd" Type="Real64" Value="5.16733967815671"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>ClimbingLadder.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="101983256"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ClimbingLadder" ID="{E4F37D06-D237-4DB0-8814-8FC7B40423A0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ladder_climb_06" ID="{B4A305F9-07B3-48EC-80F2-316C0758926C}" ShortID="58977748">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ClimbingLadder" ID="{A2862C4A-1F4B-445D-B8D6-69D69D4C166A}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.26358377013197"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="6.65974828293287"/>
+										<Property Name="TrimEnd" Type="Real64" Value="7.50489816207627"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>ClimbingLadder.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1066285631"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ClimbingLadder" ID="{A2862C4A-1F4B-445D-B8D6-69D69D4C166A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ladder_climb_05" ID="{6668A179-4141-41CD-BB2B-BB05D0BD77F5}" ShortID="890287036">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ClimbingLadder" ID="{57221E89-B315-4BC9-92F3-BBDBEF10DD27}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.26358377013197"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="5.87999484068292"/>
+										<Property Name="TrimEnd" Type="Real64" Value="6.64159970815667"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>ClimbingLadder.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="217938441"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ClimbingLadder" ID="{57221E89-B315-4BC9-92F3-BBDBEF10DD27}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<SwitchContainer Name="Footsteps" ID="{A471C2F1-FABA-436A-B912-D8534C173F16}" ShortID="118403159">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>35</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+						</Reference>
+						<Reference Name="DefaultSwitchOrState">
+							<ObjectRef Name="Walking" ID="{8A96731B-7288-4606-A523-CA607611D03F}" WorkUnitID="{18A2E62C-F4EF-44B5-980E-EB50D113CBF2}"/>
+						</Reference>
+						<Reference Name="Effect0" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+							<ObjectRef Name="Dialog_Leveler_Soft" ID="{9C1D0FCF-896E-4739-A8E8-B1E908F51CE6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+						</Reference>
+						<Reference Name="SwitchGroupOrStateGroup">
+							<ObjectRef Name="Locomotion" ID="{22EC3491-D7E3-46D7-9670-5602A0BAB5E5}" WorkUnitID="{18A2E62C-F4EF-44B5-980E-EB50D113CBF2}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Footsteps" ID="{E5FC7E9A-08B6-4A1F-97DC-430676CF8F4B}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="Running" ID="{FC527D18-CF0F-432D-82DC-2598E408C54E}" ShortID="978813872">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="running_01" ID="{E0D0361D-E5C8-4747-95F6-A780EFE4E581}" ShortID="648769160">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WHGA1 - Rock" ID="{064DE10F-96CD-497F-8643-D3509A23324B}">
+											<PropertyList>
+												<Property Name="CrossfadeShape" Type="int16" Value="2"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.20623841814358"/>
+												<Property Name="FadeOutShape" Type="int16" Value="7"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="118.563524640559"/>
+												<Property Name="TrimEnd" Type="Real64" Value="118.936614237282"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WHGA1 - Rock.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="593177721"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WHGA1 - Rock" ID="{064DE10F-96CD-497F-8643-D3509A23324B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="running_02" ID="{4D6F50CE-D01C-49D1-996E-03F264C33161}" ShortID="320837916">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WHGA1 - Rock" ID="{7F3F2C50-7B55-46D1-B840-D594C9D8B667}">
+											<PropertyList>
+												<Property Name="CrossfadeShape" Type="int16" Value="2"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.20623841814358"/>
+												<Property Name="FadeOutShape" Type="int16" Value="7"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="118.931009887116"/>
+												<Property Name="TrimEnd" Type="Real64" Value="119.304099483839"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WHGA1 - Rock.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="609552309"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WHGA1 - Rock" ID="{7F3F2C50-7B55-46D1-B840-D594C9D8B667}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="running_03" ID="{4CEE080F-1DB1-4B30-BC27-C4729A421AEE}" ShortID="988275702">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WHGA1 - Rock" ID="{694E68B8-5989-4093-BA5F-806C7E42F624}">
+											<PropertyList>
+												<Property Name="CrossfadeShape" Type="int16" Value="2"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.20623841814358"/>
+												<Property Name="FadeOutShape" Type="int16" Value="7"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="119.321713155788"/>
+												<Property Name="TrimEnd" Type="Real64" Value="119.720422638981"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WHGA1 - Rock.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="899899946"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WHGA1 - Rock" ID="{694E68B8-5989-4093-BA5F-806C7E42F624}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="running_04" ID="{94E327F9-3D9D-4C9F-BC56-444FD3F82CE4}" ShortID="290444122">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WHGA1 - Rock" ID="{40DBA44D-CE40-4EA0-9C43-AF5FC2FA4A78}">
+											<PropertyList>
+												<Property Name="CrossfadeShape" Type="int16" Value="2"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.20623841814358"/>
+												<Property Name="FadeOutShape" Type="int16" Value="7"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="119.733632892942"/>
+												<Property Name="TrimEnd" Type="Real64" Value="120.081903224647"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WHGA1 - Rock.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="804904074"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WHGA1 - Rock" ID="{40DBA44D-CE40-4EA0-9C43-AF5FC2FA4A78}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="running_05" ID="{09A7D617-4EA9-4054-B163-B232DAD87845}" ShortID="365488701">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WHGA1 - Rock" ID="{B5B740F5-7051-40DD-8787-2CB9B89349F5}">
+											<PropertyList>
+												<Property Name="CrossfadeShape" Type="int16" Value="2"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.20623841814358"/>
+												<Property Name="FadeOutShape" Type="int16" Value="7"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="120.09391254643"/>
+												<Property Name="TrimEnd" Type="Real64" Value="120.41816423457"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WHGA1 - Rock.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="227446820"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WHGA1 - Rock" ID="{B5B740F5-7051-40DD-8787-2CB9B89349F5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="running_06" ID="{130F5704-9489-4F30-AE5B-ED13642C8B94}" ShortID="119584691">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WHGA1 - Rock" ID="{31787767-46E5-4CA0-8B23-588BB86B5934}">
+											<PropertyList>
+												<Property Name="CrossfadeShape" Type="int16" Value="2"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.20623841814358"/>
+												<Property Name="FadeOutShape" Type="int16" Value="7"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="120.428572313448"/>
+												<Property Name="TrimEnd" Type="Real64" Value="120.798459424362"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WHGA1 - Rock.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="195104483"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WHGA1 - Rock" ID="{31787767-46E5-4CA0-8B23-588BB86B5934}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="running_07" ID="{09CCC2B6-AC8B-4AF2-9FC4-4D4209D0A1C6}" ShortID="851063352">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WHGA1 - Rock" ID="{A24E5D70-49E8-4533-8B16-790F51A1A941}">
+											<PropertyList>
+												<Property Name="CrossfadeShape" Type="int16" Value="2"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.20623841814358"/>
+												<Property Name="FadeOutShape" Type="int16" Value="7"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="120.821807684555"/>
+												<Property Name="TrimEnd" Type="Real64" Value="121.206722898824"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WHGA1 - Rock.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="922779358"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WHGA1 - Rock" ID="{A24E5D70-49E8-4533-8B16-790F51A1A941}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="running_08" ID="{5E675735-B93D-49A3-B67F-4FF4D4C39D58}" ShortID="317945573">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WHGA1 - Rock" ID="{4FCBC8F4-D864-411B-B70B-706DF204C2B0}">
+											<PropertyList>
+												<Property Name="CrossfadeShape" Type="int16" Value="2"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.20623841814358"/>
+												<Property Name="FadeOutShape" Type="int16" Value="7"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="121.209708778144"/>
+												<Property Name="TrimEnd" Type="Real64" Value="121.571806281025"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WHGA1 - Rock.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="551339478"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WHGA1 - Rock" ID="{4FCBC8F4-D864-411B-B70B-706DF204C2B0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="running_09" ID="{19591865-0565-475D-A5F3-B30DB5AE5782}" ShortID="713149417">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WHGA1 - Rock" ID="{43C7A63B-199E-422A-95A2-E9B6FC5210BA}">
+											<PropertyList>
+												<Property Name="CrossfadeShape" Type="int16" Value="2"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.20623841814358"/>
+												<Property Name="FadeOutShape" Type="int16" Value="7"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="121.567186256549"/>
+												<Property Name="TrimEnd" Type="Real64" Value="121.974919182205"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WHGA1 - Rock.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="813349880"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WHGA1 - Rock" ID="{43C7A63B-199E-422A-95A2-E9B6FC5210BA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Walking" ID="{F2641311-C0F7-4281-9C60-5505F9B258F0}" ShortID="447614257">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="walking_01" ID="{ACBB76B7-1DC8-42F7-A863-B50679B702DB}" ShortID="465375283">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WHGA1 - Rock" ID="{845B48FE-ED9B-45F8-BC37-3DEFB68C4C12}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.20623841814358"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="2.32119317675323"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.82206881571926"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WHGA1 - Rock.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="228877556"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WHGA1 - Rock" ID="{845B48FE-ED9B-45F8-BC37-3DEFB68C4C12}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="walking_02" ID="{153CAA0D-D75B-4964-9811-E3735152A286}" ShortID="924723982">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WHGA1 - Rock" ID="{2226281F-9619-4FA0-9931-1DD041315B04}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.20623841814358"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="2.83679339196716"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.34687617763344"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WHGA1 - Rock.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="394858174"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WHGA1 - Rock" ID="{2226281F-9619-4FA0-9931-1DD041315B04}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="walking_03" ID="{5876A341-B011-44B1-A7CF-6310745412CE}" ShortID="243631196">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WHGA1 - Rock" ID="{317C7F2D-5951-4688-9933-EF4B72486084}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.20623841814358"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="3.36760541477279"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.85687204268199"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WHGA1 - Rock.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="370068166"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WHGA1 - Rock" ID="{317C7F2D-5951-4688-9933-EF4B72486084}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="walking_04" ID="{2A68D9D9-D39F-4287-9C52-E089B0678FD4}" ShortID="365916332">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WHGA1 - Rock" ID="{D69A5DBC-D15A-4C44-8F3F-569CCF6F0BA2}">
+											<PropertyList>
+												<Property Name="CrossfadeShape" Type="int16" Value="2"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.20623841814358"/>
+												<Property Name="FadeOutShape" Type="int16" Value="7"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="3.87890503153546"/>
+												<Property Name="TrimEnd" Type="Real64" Value="4.3697894867307"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WHGA1 - Rock.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="684935305"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WHGA1 - Rock" ID="{D69A5DBC-D15A-4C44-8F3F-569CCF6F0BA2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="walking_05" ID="{516D37E4-29C6-4A72-A599-AB36CBFCD57B}" ShortID="977221816">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WHGA1 - Rock" ID="{3B1B93CD-B70A-4B3E-AE48-AF79E1045454}">
+											<PropertyList>
+												<Property Name="CrossfadeShape" Type="int16" Value="2"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.20623841814358"/>
+												<Property Name="FadeOutShape" Type="int16" Value="7"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="4.39930897546255"/>
+												<Property Name="TrimEnd" Type="Real64" Value="4.90020119881024"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WHGA1 - Rock.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="693898603"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WHGA1 - Rock" ID="{3B1B93CD-B70A-4B3E-AE48-AF79E1045454}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="walking_06" ID="{22B62455-D1AD-4455-87AF-8F261332BB1E}" ShortID="586176260">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WHGA1 - Rock" ID="{8BF7FA21-C824-4456-9457-EE786A9F9C74}">
+											<PropertyList>
+												<Property Name="CrossfadeShape" Type="int16" Value="2"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.20623841814358"/>
+												<Property Name="FadeOutShape" Type="int16" Value="7"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="4.93172224117258"/>
+												<Property Name="TrimEnd" Type="Real64" Value="5.60074496948133"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WHGA1 - Rock.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="495072260"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WHGA1 - Rock" ID="{8BF7FA21-C824-4456-9457-EE786A9F9C74}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="walking_07" ID="{CACA84BB-8E7C-46C6-9593-10950B8107AD}" ShortID="976754013">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WHGA1 - Rock" ID="{261EA8F6-E9D4-4A37-B16D-909B7C917DFD}">
+											<PropertyList>
+												<Property Name="CrossfadeShape" Type="int16" Value="2"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.20623841814358"/>
+												<Property Name="FadeOutShape" Type="int16" Value="7"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="5.62105731151294"/>
+												<Property Name="TrimEnd" Type="Real64" Value="6.180795211597"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WHGA1 - Rock.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="404373423"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WHGA1 - Rock" ID="{261EA8F6-E9D4-4A37-B16D-909B7C917DFD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="walking_08" ID="{3584A07E-25E5-4200-AE86-C03CA9E5C2CF}" ShortID="461372374">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WHGA1 - Rock" ID="{4DC3601E-1DBC-4748-802C-2CF4E1ABD907}">
+											<PropertyList>
+												<Property Name="CrossfadeShape" Type="int16" Value="2"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.20623841814358"/>
+												<Property Name="FadeOutShape" Type="int16" Value="7"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="6.20390972871129"/>
+												<Property Name="TrimEnd" Type="Real64" Value="6.76364762879535"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WHGA1 - Rock.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="334631596"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WHGA1 - Rock" ID="{4DC3601E-1DBC-4748-802C-2CF4E1ABD907}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="walking_09" ID="{92480B00-ED75-4661-8B60-7781D4FD3A23}" ShortID="967330171">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WHGA1 - Rock" ID="{E1DB8175-87E8-458C-B55D-B0B363BB0B75}">
+											<PropertyList>
+												<Property Name="CrossfadeShape" Type="int16" Value="2"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.20623841814358"/>
+												<Property Name="FadeOutShape" Type="int16" Value="7"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="6.83439912231527"/>
+												<Property Name="TrimEnd" Type="Real64" Value="7.29606089450538"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WHGA1 - Rock.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="117347736"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WHGA1 - Rock" ID="{E1DB8175-87E8-458C-B55D-B0B363BB0B75}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+					<GroupingInfo>
+						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="Walking" ID="{F2641311-C0F7-4281-9C60-5505F9B258F0}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Running" ID="{FC527D18-CF0F-432D-82DC-2598E408C54E}"/>
+							</GroupingBehavior>
+						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="Walking" ID="{8A96731B-7288-4606-A523-CA607611D03F}"/>
+								<ItemList>
+									<ItemRef Name="Walking" ID="{F2641311-C0F7-4281-9C60-5505F9B258F0}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Running" ID="{93740663-6767-457B-B51B-1D1523D9E88D}"/>
+								<ItemList>
+									<ItemRef Name="Running" ID="{FC527D18-CF0F-432D-82DC-2598E408C54E}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
+					</GroupingInfo>
+				</SwitchContainer>
+				<Sound Name="CorrectSine" ID="{6DD942D1-FCEE-4D89-9422-87809DA143B3}" ShortID="633476209">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<RTPCList>
+								<RTPC Name="" ID="{324F2F8D-9270-4DB0-AA8E-E17066A72509}" ShortID="907861491">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Correct_Sine" ID="{8C973678-4686-4804-A0C9-AF21E9EBE714}" WorkUnitID="{23DCBD27-C250-41E6-A469-65C8CC67B0CD}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{3FB88DFB-67FD-4846-938E-628E916813B5}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="65537"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-750</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>750</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-3</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+						</Reference>
+						<Reference Name="Effect0" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+							<ObjectRef Name="Dual_Filters_Radio_Comm" ID="{69479ACD-2C87-4007-B83E-55210A3B36B7}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<SourcePlugin Name="Wwise Synth One" ID="{812055B7-161A-4E6B-B460-65453ABEE831}" ShortID="365725625" PluginName="Wwise Synth One" CompanyID="0" PluginID="148">
+							<PropertyList>
+								<Property Name="BaseFrequency" Type="Real32" Value="800"/>
+								<Property Name="OutputLevel" Type="Real32">
+									<RTPCList>
+										<RTPC Name="" ID="{60CCD4B0-4D14-4100-8DAE-406FB7B67972}" ShortID="325991666">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<Custom>
+														<ModulatorEnvelope Name="Modulator Envelope (Custom)" ID="{19259984-6F27-44DC-AD44-DE4587065278}" ShortID="80431712">
+															<PropertyList>
+																<Property Name="EnvelopeAttackTime" Type="Real64" Value="0.01"/>
+															</PropertyList>
+														</ModulatorEnvelope>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{D5F44CEE-038B-4209-9450-87CC9A0B7941}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-96</YPos>
+														<Flags>21</Flags>
+													</Point>
+													<Point>
+														<XPos>1</XPos>
+														<YPos>0</YPos>
+														<Flags>53</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<Language>SFX</Language>
+						</SourcePlugin>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Wwise Synth One" ID="{812055B7-161A-4E6B-B460-65453ABEE831}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="CurrentSine" ID="{CAD20A23-BAB3-4791-94E2-A56249F41F31}" ShortID="848020328">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<RTPCList>
+								<RTPC Name="" ID="{369F0B7A-474E-40B1-AC64-E6E489345B4B}" ShortID="80690284">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Current_Sine" ID="{51E30495-38B5-4CF8-8926-2677CC6BF7A6}" WorkUnitID="{23DCBD27-C250-41E6-A469-65C8CC67B0CD}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{40AF8D16-2DFE-4063-B3C7-10E3D33236CE}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="65537"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-750</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>750</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-3</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+						</Reference>
+						<Reference Name="Effect0" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+							<ObjectRef Name="Dual_Filters_Radio_Comm" ID="{69479ACD-2C87-4007-B83E-55210A3B36B7}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<SourcePlugin Name="Wwise Synth One" ID="{DA600E28-BBDF-4BA9-B7FC-CB8C0FE40D23}" ShortID="200889188" PluginName="Wwise Synth One" CompanyID="0" PluginID="148">
+							<PropertyList>
+								<Property Name="BaseFrequency" Type="Real32" Value="800"/>
+								<Property Name="OutputLevel" Type="Real32">
+									<RTPCList>
+										<RTPC Name="" ID="{4FBF1969-9A24-44E0-8A11-A30AA18A21F0}" ShortID="429187154">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<Custom>
+														<ModulatorEnvelope Name="Modulator Envelope (Custom)" ID="{AC108293-3A6E-42C0-8592-13FD134A6F15}" ShortID="221762509">
+															<PropertyList>
+																<Property Name="EnvelopeAttackTime" Type="Real64" Value="0.01"/>
+															</PropertyList>
+														</ModulatorEnvelope>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{CC602C0B-9063-4A36-A633-E3781211B05E}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-96</YPos>
+														<Flags>21</Flags>
+													</Point>
+													<Point>
+														<XPos>1</XPos>
+														<YPos>0</YPos>
+														<Flags>53</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<Language>SFX</Language>
+						</SourcePlugin>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Wwise Synth One" ID="{DA600E28-BBDF-4BA9-B7FC-CB8C0FE40D23}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>

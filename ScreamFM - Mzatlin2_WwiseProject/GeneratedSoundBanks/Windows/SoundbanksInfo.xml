@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="135">
+	<RootPaths>
+		<ProjectRoot>C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX" Hash="3762518835">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<IncludedAuxBusses>
+				<AuxBus Id="232782671" Name="Submarine" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Submarine"/>
+				<AuxBus Id="2385628198" Name="Footsteps" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Footsteps"/>
+			</IncludedAuxBusses>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX" Hash="3771854488">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="278617630" Name="Play_Ambience" ObjectPath="\Events\Default Work Unit\Play_Ambience" DurationType="OneShot" DurationMin="154.827377" DurationMax="154.827377">
+					<IncludedMemoryFiles>
+						<File Id="131747932" Language="SFX">
+							<ShortName>amb_melody1_22b_4-4_80bpm.wav</ShortName>
+							<Path>SFX\amb_melody1_22b_4-4_80bpm_696A9007.wem</Path>
+						</File>
+						<File Id="719380269" Language="SFX">
+							<ShortName>amb_drone_22b_4-4_80bpm.wav</ShortName>
+							<Path>SFX\amb_drone_22b_4-4_80bpm_696A9007.wem</Path>
+						</File>
+						<File Id="997529329" Language="SFX">
+							<ShortName>amb_melody2_22b_4-4_80bpm.wav</ShortName>
+							<Path>SFX\amb_melody2_22b_4-4_80bpm_696A9007.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps" DurationType="OneShot" DurationMin="0.324252" DurationMax="0.669023">
+					<IncludedMemoryFiles>
+						<File Id="117347736" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_C9ECCEAA.wem</Path>
+						</File>
+						<File Id="195104483" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_A4B2EF57.wem</Path>
+						</File>
+						<File Id="227446820" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_C80B203A.wem</Path>
+						</File>
+						<File Id="228877556" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_F6B4CD20.wem</Path>
+						</File>
+						<File Id="334631596" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_31080AE4.wem</Path>
+						</File>
+						<File Id="370068166" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_EA92B3E1.wem</Path>
+						</File>
+						<File Id="394858174" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_5088D872.wem</Path>
+						</File>
+						<File Id="404373423" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_265C3387.wem</Path>
+						</File>
+						<File Id="495072260" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_3F7C17BB.wem</Path>
+						</File>
+						<File Id="551339478" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_EE2369A4.wem</Path>
+						</File>
+						<File Id="593177721" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_2503AF6D.wem</Path>
+						</File>
+						<File Id="609552309" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_DE3C9469.wem</Path>
+						</File>
+						<File Id="684935305" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_4A487997.wem</Path>
+						</File>
+						<File Id="693898603" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_2A519CAC.wem</Path>
+						</File>
+						<File Id="804904074" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_46CF827A.wem</Path>
+						</File>
+						<File Id="813349880" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_8E071778.wem</Path>
+						</File>
+						<File Id="899899946" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_0536E096.wem</Path>
+						</File>
+						<File Id="922779358" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_49888693.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{8A96731B-7288-4606-A523-CA607611D03F}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{93740663-6767-457B-B51B-1D1523D9E88D}">
+							<Media>
+								<File Id="593177721"/>
+								<File Id="609552309"/>
+								<File Id="899899946"/>
+								<File Id="804904074"/>
+								<File Id="227446820"/>
+								<File Id="195104483"/>
+								<File Id="922779358"/>
+								<File Id="551339478"/>
+								<File Id="813349880"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{8A96731B-7288-4606-A523-CA607611D03F}">
+							<Media>
+								<File Id="228877556"/>
+								<File Id="394858174"/>
+								<File Id="370068166"/>
+								<File Id="684935305"/>
+								<File Id="693898603"/>
+								<File Id="495072260"/>
+								<File Id="404373423"/>
+								<File Id="334631596"/>
+								<File Id="117347736"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+					<AuxBusSends>
+						<AuxBus Id="2385628198" Name="Footsteps" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Footsteps"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="2071442557" Name="Play_LadderClimb" ObjectPath="\Events\Default Work Unit\Play_LadderClimb" DurationType="OneShot" DurationMin="0.678601" DurationMax="1.008453">
+					<IncludedMemoryFiles>
+						<File Id="89402265" Language="SFX">
+							<ShortName>ClimbingLadder.wav</ShortName>
+							<Path>SFX\ClimbingLadder_D0EF3231.wem</Path>
+						</File>
+						<File Id="101983256" Language="SFX">
+							<ShortName>ClimbingLadder.wav</ShortName>
+							<Path>SFX\ClimbingLadder_CD206134.wem</Path>
+						</File>
+						<File Id="162220479" Language="SFX">
+							<ShortName>ClimbingLadder.wav</ShortName>
+							<Path>SFX\ClimbingLadder_14D5A325.wem</Path>
+						</File>
+						<File Id="217938441" Language="SFX">
+							<ShortName>ClimbingLadder.wav</ShortName>
+							<Path>SFX\ClimbingLadder_EF33C62D.wem</Path>
+						</File>
+						<File Id="581915762" Language="SFX">
+							<ShortName>ClimbingLadder.wav</ShortName>
+							<Path>SFX\ClimbingLadder_E160D394.wem</Path>
+						</File>
+						<File Id="733799120" Language="SFX">
+							<ShortName>ClimbingLadder.wav</ShortName>
+							<Path>SFX\ClimbingLadder_8E1C57CF.wem</Path>
+						</File>
+						<File Id="960626912" Language="SFX">
+							<ShortName>ClimbingLadder.wav</ShortName>
+							<Path>SFX\ClimbingLadder_55810FA6.wem</Path>
+						</File>
+						<File Id="1064843630" Language="SFX">
+							<ShortName>ClimbingLadder.wav</ShortName>
+							<Path>SFX\ClimbingLadder_A1D7C20D.wem</Path>
+						</File>
+						<File Id="1066285631" Language="SFX">
+							<ShortName>ClimbingLadder.wav</ShortName>
+							<Path>SFX\ClimbingLadder_7EB75D16.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="232782671" Name="Submarine" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Submarine"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="647636032" Name="Play_Sines" ObjectPath="\Events\Default Work Unit\Play_Sines" DurationType="Unknown"/>
+				<Event Id="4065681590" Name="Stop_Sines" ObjectPath="\Events\Default Work Unit\Stop_Sines" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+			</IncludedEvents>
+			<GameParameters>
+				<GameParameter Id="602825232" Name="Current_Sine" ObjectPath="\Game Parameters\Default Work Unit\Current_Sine"/>
+				<GameParameter Id="1694191731" Name="Correct_Sine" ObjectPath="\Game Parameters\Default Work Unit\Correct_Sine"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="556887514" Name="Locomotion" ObjectPath="\States\Default Work Unit\Locomotion">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Locomotion\None"/>
+						<State Id="340271938" Name="Walking" ObjectPath="\States\Default Work Unit\Locomotion\Walking"/>
+						<State Id="3863236874" Name="Running" ObjectPath="\States\Default Work Unit\Locomotion\Running"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

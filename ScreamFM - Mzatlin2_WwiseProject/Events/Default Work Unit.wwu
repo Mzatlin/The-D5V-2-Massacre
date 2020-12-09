@@ -3,7 +3,81 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{036D1B68-3738-44E7-BD1C-22BB66C897FC}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Play_Footsteps" ID="{331B39A6-C290-43CF-BA0A-EED6491EDA90}"/>
+				<Event Name="Play_Footsteps" ID="{331B39A6-C290-43CF-BA0A-EED6491EDA90}">
+					<ChildrenList>
+						<Action Name="" ID="{C8932A97-3829-4D90-99CB-F21DF6DE62F8}" ShortID="406753064">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps" ID="{A471C2F1-FABA-436A-B912-D8534C173F16}" WorkUnitID="{ABEF7731-B9EE-49A0-888E-7D7B3DCDFD0D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_LadderClimb" ID="{2D637C46-4977-4D66-8A61-DE55AC7C6B41}">
+					<ChildrenList>
+						<Action Name="" ID="{B03E1AAF-91D3-4315-851C-9DB31AFD730B}" ShortID="973096270">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="LadderClimb" ID="{F4882778-97B4-4A48-86A9-9776A98F81D6}" WorkUnitID="{ABEF7731-B9EE-49A0-888E-7D7B3DCDFD0D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ambience" ID="{6740D370-218B-4E7B-8912-C1C178B89E04}">
+					<ChildrenList>
+						<Action Name="" ID="{77466B81-1640-4577-8FCC-ABA58CD963BB}" ShortID="142113564">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambience" ID="{38A28C59-EFF8-4CC5-AC2F-F1F63140CBDB}" WorkUnitID="{3B76972A-B63E-4218-9166-980A2C8C1120}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Sines" ID="{9D6FD7C1-2068-4654-A7A1-A4CE722874F5}">
+					<ChildrenList>
+						<Action Name="" ID="{807BA9DE-72F4-40D3-BB52-96918488804E}" ShortID="975157373">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CorrectSine" ID="{6DD942D1-FCEE-4D89-9422-87809DA143B3}" WorkUnitID="{ABEF7731-B9EE-49A0-888E-7D7B3DCDFD0D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E9E5BA19-464A-4A0B-9DE2-A43E5DC89222}" ShortID="383940242">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CurrentSine" ID="{CAD20A23-BAB3-4791-94E2-A56249F41F31}" WorkUnitID="{ABEF7731-B9EE-49A0-888E-7D7B3DCDFD0D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Sines" ID="{9FAD6382-E9FD-4374-8890-F48E2458F5D0}">
+					<ChildrenList>
+						<Action Name="" ID="{363C8A2B-2301-45AA-B606-17E48D7DA940}" ShortID="897874404">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CorrectSine" ID="{6DD942D1-FCEE-4D89-9422-87809DA143B3}" WorkUnitID="{ABEF7731-B9EE-49A0-888E-7D7B3DCDFD0D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A0813276-0E38-4E23-853D-A412211FBFAE}" ShortID="1054693441">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CurrentSine" ID="{CAD20A23-BAB3-4791-94E2-A56249F41F31}" WorkUnitID="{ABEF7731-B9EE-49A0-888E-7D7B3DCDFD0D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
