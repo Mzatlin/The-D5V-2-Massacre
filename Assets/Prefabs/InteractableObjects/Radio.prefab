@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   successCanvas: {fileID: 0}
-  successMessage: 
+  successMessage: Radio Activated
   successText: {fileID: 0}
 --- !u!114 &7917558914912458075
 MonoBehaviour:
@@ -197,3 +197,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b535955430647249a716f378062378c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  completion: {fileID: 0}
+  radio: {fileID: 0}
