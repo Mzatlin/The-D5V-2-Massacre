@@ -15,6 +15,8 @@ public class RadioMinigameMananger : HandleInteractionBase, IRadioMinigame
     public event Action OnExit = delegate { };
     public event Action OnComplete = delegate { };
 
+    [SerializeField] GameObject mainCamera;
+
     // Start is called before the first frame update
     protected override void Start()
     {
@@ -55,6 +57,7 @@ public class RadioMinigameMananger : HandleInteractionBase, IRadioMinigame
 
     void EndMinigame()
     {
+        AkSoundEngine.PostEvent("Stop_Sines", mainCamera);
         isMiniGameStarted = false;
         minigameCanvas.enabled = false;
         state.isInteracting = false;

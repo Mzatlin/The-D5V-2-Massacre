@@ -7401,6 +7401,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 90686536}
     m_Modifications:
     - target: {fileID: 349570348710239395, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1134361716}
+    - target: {fileID: 349570348710239395, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: minigameCanvas
       value: 
       objectReference: {fileID: 358102011}
