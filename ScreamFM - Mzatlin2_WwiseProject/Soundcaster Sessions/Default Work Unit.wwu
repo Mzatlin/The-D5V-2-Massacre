@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{74B94C3C-9771-4E3E-B726-B6C3147C3A6C}" SchemaVersion="97">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{74B94C3C-9771-4E3E-B726-B6C3147C3A6C}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{74B94C3C-9771-4E3E-B726-B6C3147C3A6C}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="New Soundcaster Session" ID="{02765E7A-C348-43AC-863A-1961AF2508D0}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_Ambience" ID="{6740D370-218B-4E7B-8912-C1C178B89E04}" WorkUnitID="{036D1B68-3738-44E7-BD1C-22BB66C897FC}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_DeathMusic" ID="{34F8EC1E-D996-4907-BEF8-345431729AFD}" WorkUnitID="{036D1B68-3738-44E7-BD1C-22BB66C897FC}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_DeathTransition" ID="{D3A131CC-FDD3-45D9-8B47-490FCEE185D3}" WorkUnitID="{036D1B68-3738-44E7-BD1C-22BB66C897FC}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="Tension" ID="{56A358F2-294D-45D3-B89E-B3EE523F744E}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Correct_Sine" ID="{8C973678-4686-4804-A0C9-AF21E9EBE714}"/>
+							<Value>10</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Current_Sine" ID="{51E30495-38B5-4CF8-8926-2677CC6BF7A6}"/>
+							<Value>10</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Off" ID="{F66CF3BF-799D-4AFA-922B-79321E287472}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

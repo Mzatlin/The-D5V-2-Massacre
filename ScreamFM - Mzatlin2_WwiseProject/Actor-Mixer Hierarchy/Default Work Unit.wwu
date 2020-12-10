@@ -1079,6 +1079,28 @@
 						<ActiveSource Name="Wwise Synth One" ID="{DA600E28-BBDF-4BA9-B7FC-CB8C0FE40D23}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Sound Name="DeathTransition" ID="{195ABA50-31B6-4256-A09B-3E46E736693C}" ShortID="239130211">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="trans_1b_4-4_80bpm" ID="{DC08F727-47E3-4D62-A902-9A72AD6B6B4A}">
+							<Language>SFX</Language>
+							<AudioFile>trans_1b_4-4_80bpm.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="911940217"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="trans_1b_4-4_80bpm" ID="{DC08F727-47E3-4D62-A902-9A72AD6B6B4A}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

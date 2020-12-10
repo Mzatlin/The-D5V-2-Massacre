@@ -78,6 +78,49 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_DeathTransition" ID="{D3A131CC-FDD3-45D9-8B47-490FCEE185D3}">
+					<ChildrenList>
+						<Action Name="" ID="{F38A9230-26FC-4D36-B399-B7D4DE9E8088}" ShortID="621288260">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+						<Action Name="" ID="{97E68B7D-8DC2-4B5D-93B5-FB752107583D}" ShortID="232954904">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="DeathTransition" ID="{195ABA50-31B6-4256-A09B-3E46E736693C}" WorkUnitID="{ABEF7731-B9EE-49A0-888E-7D7B3DCDFD0D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_DeathMusic" ID="{34F8EC1E-D996-4907-BEF8-345431729AFD}">
+					<ChildrenList>
+						<Action Name="" ID="{66577E78-1006-4A2C-9A52-C21CB3CD810C}" ShortID="528955453">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Death" ID="{16F48CE8-A5AA-44AE-83BF-6E6ECC7B6D2B}" WorkUnitID="{3B76972A-B63E-4218-9166-980A2C8C1120}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8A3F33C3-341B-4A8D-9BBF-4DF6B860D047}" ShortID="565898702">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+							</PropertyList>
+							<ReferenceList/>
+							<ChildrenList>
+								<EventActionException Name="" ID="{694498CD-7153-48B0-B7BD-2323AD8EC2FD}">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Death" ID="{16F48CE8-A5AA-44AE-83BF-6E6ECC7B6D2B}" WorkUnitID="{3B76972A-B63E-4218-9166-980A2C8C1120}"/>
+										</Reference>
+									</ReferenceList>
+								</EventActionException>
+							</ChildrenList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

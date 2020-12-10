@@ -108,6 +108,171 @@
 										</MusicTrackSequence>
 									</SequenceList>
 								</MusicTrack>
+								<MusicTrack Name="tens_oshs_22b_4-4_80bpm" ID="{85D9CEB9-9F2A-40C1-AFDB-7301DA5B1FD6}" ShortID="357365937">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<RTPCList>
+												<RTPC Name="" ID="{022EB44D-B4B6-49EA-8E3B-E569CA78449C}" ShortID="947695410">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="Tension" ID="{56A358F2-294D-45D3-B89E-B3EE523F744E}" WorkUnitID="{23DCBD27-C250-41E6-A469-65C8CC67B0CD}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{E067D6A8-B27B-444A-9037-520E2A21FD91}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>0</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>2.5</XPos>
+																<YPos>0</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>Log2</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>7.42236</XPos>
+																<YPos>-200</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>10</XPos>
+																<YPos>-200</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="tens_oshs_22b_4-4_80bpm_1" ID="{1412E229-59A5-41C9-A338-4309106D0CB2}">
+											<Language>SFX</Language>
+											<AudioFile>tens_oshs_22b_4-4_80bpm_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="835370741"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo MusicSyncType="3">
+												<StateGroupRef Name="Chase" ID="{885A65B0-14E5-449C-844A-4AAE6E0623D2}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="Off" ID="{F66CF3BF-799D-4AFA-922B-79321E287472}"/>
+												<CustomState Name="" ID="{CE545072-A3E1-425D-8A96-15435C888B06}" ShortID="534153973">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="On" ID="{AF328BFF-F50B-4F39-A469-5EA342A50E49}"/>
+												<CustomState Name="" ID="{C09A8F50-7EED-410F-B53A-47905F8DCC3F}" ShortID="187078382"/>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{B184C97F-2861-491F-B819-B4FA99388B52}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{B30E1D78-0ED9-4DBD-B0B8-9A69BADE3BB6}">
+											<ClipList>
+												<MusicClip Name="tens_oshs_22b_4-4_80bpm_1" ID="{4541377F-D2FD-4AD8-995C-1BBE69A11DBB}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="66697.6458333333"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="tens_oshs_22b_4-4_80bpm_1" ID="{1412E229-59A5-41C9-A338-4309106D0CB2}"/>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+								<MusicTrack Name="tens_ostls_22b_4-4_80bpm" ID="{3E882375-3844-4352-B69F-1CB3D53130FB}" ShortID="1004673457">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="tens_ostls_22b_4-4_80bpm" ID="{E47DD515-9A08-4878-8C9A-1DCC1F4F542A}">
+											<Language>SFX</Language>
+											<AudioFile>tens_ostls_22b_4-4_80bpm.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="23158334"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo MusicSyncType="3">
+												<StateGroupRef Name="Chase" ID="{885A65B0-14E5-449C-844A-4AAE6E0623D2}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="Off" ID="{F66CF3BF-799D-4AFA-922B-79321E287472}"/>
+												<CustomState Name="" ID="{35A117A6-7973-4080-BB2B-79555B4A50C4}" ShortID="664414894">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="On" ID="{AF328BFF-F50B-4F39-A469-5EA342A50E49}"/>
+												<CustomState Name="" ID="{646C370B-7247-41A6-8A7C-4086AA4C2F6F}" ShortID="465067981"/>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{4E332F69-92BF-42D6-AB81-BBD7A61CEAD9}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{AE679D70-FA56-40A6-9609-AB2D08627236}">
+											<ClipList>
+												<MusicClip Name="tens_ostls_22b_4-4_80bpm" ID="{992812E3-E75B-4308-84DE-CFC331B65698}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="67425.8125"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="tens_ostls_22b_4-4_80bpm" ID="{E47DD515-9A08-4878-8C9A-1DCC1F4F542A}"/>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
 							</ChildrenList>
 							<CueList>
 								<MusicCue Name="Entry Cue" ID="{BBE88A11-3542-41D5-AC51-1E400C9A3B2D}"/>
@@ -211,6 +376,165 @@
 										</MusicTrackSequence>
 									</SequenceList>
 								</MusicTrack>
+								<MusicTrack Name="tens_oshs_22b_4-4_80bpm" ID="{EE10DB7E-E9BC-4AEE-8555-185214DFDC7D}" ShortID="966989485">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<RTPCList>
+												<RTPC Name="" ID="{BAFE48A3-6F4F-4E55-A9A4-05B1EAD562C2}" ShortID="1052883040">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="Tension" ID="{56A358F2-294D-45D3-B89E-B3EE523F744E}" WorkUnitID="{23DCBD27-C250-41E6-A469-65C8CC67B0CD}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{A078B196-72C2-4229-9F7B-4E97FC419301}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>0.36655</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>2.5</XPos>
+																<YPos>0</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>Log1</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>7.51553</XPos>
+																<YPos>-200</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>10</XPos>
+																<YPos>-200</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="tens_oshs_22b_4-4_80bpm_1" ID="{FD107E1D-2B38-4F46-9E62-6EFEAEC1590C}">
+											<Language>SFX</Language>
+											<AudioFile>tens_oshs_22b_4-4_80bpm_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="835370741"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo MusicSyncType="3">
+												<StateGroupRef Name="Chase" ID="{885A65B0-14E5-449C-844A-4AAE6E0623D2}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="Off" ID="{F66CF3BF-799D-4AFA-922B-79321E287472}"/>
+												<CustomState Name="" ID="{E8671F2B-5EB8-4C66-B93B-3A151028919B}" ShortID="297482713">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="On" ID="{AF328BFF-F50B-4F39-A469-5EA342A50E49}"/>
+												<CustomState Name="" ID="{98C6915E-F849-44A9-B997-B7C3BCAA51A7}" ShortID="381484228"/>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{0FD157F2-EB8A-4477-B732-302375E3576E}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{8A9546C1-A271-41F4-8969-43D8EDA1EBF7}">
+											<ClipList>
+												<MusicClip Name="tens_oshs_22b_4-4_80bpm_1" ID="{DAAC190F-8C5B-444C-8BFE-88AF00684636}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="66697.6458333333"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="tens_oshs_22b_4-4_80bpm_1" ID="{FD107E1D-2B38-4F46-9E62-6EFEAEC1590C}"/>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+								<MusicTrack Name="tens_ostls_22b_4-4_80bpm" ID="{4D10281E-F27E-4BCF-A544-63CE89C327CC}" ShortID="871075623">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="tens_ostls_22b_4-4_80bpm" ID="{FC4B033E-0D48-41A6-B4C2-FC2FE7885EDC}">
+											<Language>SFX</Language>
+											<AudioFile>tens_ostls_22b_4-4_80bpm.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="23158334"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo MusicSyncType="3">
+												<StateGroupRef Name="Chase" ID="{885A65B0-14E5-449C-844A-4AAE6E0623D2}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="Off" ID="{F66CF3BF-799D-4AFA-922B-79321E287472}"/>
+												<CustomState Name="" ID="{F82CCC67-8A7B-4E69-AF31-F4CE954336B0}" ShortID="242987081">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="On" ID="{AF328BFF-F50B-4F39-A469-5EA342A50E49}"/>
+												<CustomState Name="" ID="{AE8247B5-AABE-4BEC-89F7-A58FDEAF1D3A}" ShortID="1017181281"/>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{91CCF747-A7EC-4480-A9A8-605E126D417E}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{606DE5EB-B474-485C-81CD-8221ACD778A9}">
+											<ClipList>
+												<MusicClip Name="tens_ostls_22b_4-4_80bpm" ID="{C1215F64-E49C-4447-9F0A-2088A1CB9AF4}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="67425.8125"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="tens_ostls_22b_4-4_80bpm" ID="{FC4B033E-0D48-41A6-B4C2-FC2FE7885EDC}"/>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
 							</ChildrenList>
 							<CueList>
 								<MusicCue Name="Entry Cue" ID="{1DA2167F-2EC0-4398-A183-6974CA0E5950}"/>
@@ -232,6 +556,9 @@
 								<MusicTransition Name="Transition" ID="{1F809F3F-7E9B-4DE8-A6A8-C02632D869D7}">
 									<TransitionInfo/>
 								</MusicTransition>
+								<MusicTransition Name="Transition" ID="{5FA6D243-5DDC-46FF-87D2-83D943658FD6}">
+									<TransitionInfo/>
+								</MusicTransition>
 							</ChildrenList>
 							<TransitionInfo/>
 						</MusicTransition>
@@ -239,6 +566,7 @@
 					<Playlist>
 						<MusicPlaylistItem Name="" ID="{44FE35CE-F9D2-484C-B94D-C567541B5133}" ShortID="397492923">
 							<PropertyList>
+								<Property Name="LoopCount" Type="int16" Value="0"/>
 								<Property Name="PlayMode" Type="int16" Value="2"/>
 							</PropertyList>
 							<ChildrenList>
@@ -253,6 +581,153 @@
 										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 									</PropertyList>
 									<SegmentRef Name="Melody2" ID="{27A54AEA-6C42-49E5-816A-79295F4CEC21}"/>
+								</MusicPlaylistItem>
+							</ChildrenList>
+						</MusicPlaylistItem>
+					</Playlist>
+				</MusicPlaylistContainer>
+				<MusicPlaylistContainer Name="Death" ID="{16F48CE8-A5AA-44AE-83BF-6E6ECC7B6D2B}" ShortID="250957485">
+					<PropertyList>
+						<Property Name="Tempo" Type="Real64" Value="80"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSegment Name="Death" ID="{A7E62E87-4605-4DC4-9B9B-159B5A6ABB95}" ShortID="1057342817">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="75000"/>
+								<Property Name="Tempo" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="death_impact_22b_4-4_80bpm" ID="{502998B0-735B-474F-8B99-660A78C2CF3D}" ShortID="1039378890">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="death_impact_22b_4-4_80bpm" ID="{0D3B2540-7A3C-45E4-8491-80A11F5F51D7}">
+											<Language>SFX</Language>
+											<AudioFile>death_impact_22b_4-4_80bpm.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1011446651"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{F75148C1-2CC5-4856-AC35-C4008E8773D3}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{4D0DF782-520B-4C62-AFB7-3375F9103738}">
+											<ClipList>
+												<MusicClip Name="death_impact_22b_4-4_80bpm" ID="{402DD900-4B72-4B84-B2DF-1E2A114C7262}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="74521.3958333333"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="death_impact_22b_4-4_80bpm" ID="{0D3B2540-7A3C-45E4-8491-80A11F5F51D7}"/>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+								<MusicTrack Name="death_piano_22b_4-4_80bpm" ID="{D5BEB7F9-E36D-4AF1-909E-507633FA2292}" ShortID="928262761">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="death_piano_22b_4-4_80bpm" ID="{52B83704-36F0-437E-B86A-CE46B540A1B0}">
+											<Language>SFX</Language>
+											<AudioFile>death_piano_22b_4-4_80bpm.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="105749822"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{F3A15E22-15CD-435D-A37C-4AA59302A81C}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{EDDA6657-3A29-45D4-88C9-D575EA365D3C}">
+											<ClipList>
+												<MusicClip Name="death_piano_22b_4-4_80bpm" ID="{BF0A344E-E7F2-4B9D-A4EC-5238718FFE4E}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="71346.3333333333"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="death_piano_22b_4-4_80bpm" ID="{52B83704-36F0-437E-B86A-CE46B540A1B0}"/>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{BC6198F2-FBF0-42DA-A28F-692368BEDD8E}"/>
+								<MusicCue Name="Exit Cue" ID="{F143CEE1-6771-4AFC-BBC9-591A9BE07555}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="63000"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
+					</ChildrenList>
+					<TransitionList>
+						<MusicTransition Name="Root" ID="{AA07DAAB-2913-4F4B-951C-365AEEACE2B2}">
+							<PropertyList>
+								<Property Name="IsFolder" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicTransition Name="Transition" ID="{09A58F11-725F-436D-8E99-D4CE7149C119}">
+									<TransitionInfo/>
+								</MusicTransition>
+							</ChildrenList>
+							<TransitionInfo/>
+						</MusicTransition>
+					</TransitionList>
+					<Playlist>
+						<MusicPlaylistItem Name="" ID="{F0A3B358-BB58-44F5-93D3-37112536E766}" ShortID="25384548">
+							<PropertyList>
+								<Property Name="LoopCount" Type="int16" Value="0"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicPlaylistItem Name="" ID="{1A890996-9352-47D9-B43A-B2F10311C1A2}" ShortID="239580034">
+									<PropertyList>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="Death" ID="{A7E62E87-4605-4DC4-9B9B-159B5A6ABB95}"/>
 								</MusicPlaylistItem>
 							</ChildrenList>
 						</MusicPlaylistItem>
