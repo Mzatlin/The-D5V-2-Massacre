@@ -7,7 +7,7 @@ public class EnemyAI : MonoBehaviour
 {
 
     IEnemyPath enemyPath => GetComponent<IEnemyPath>();
-   
+    IEnemyDirection enemyDirection => GetComponent<IEnemyDirection>();
 
     [SerializeField]
     private Transform playerTarget;
@@ -42,6 +42,11 @@ public class EnemyAI : MonoBehaviour
     {
         CurrentTarget = target;
         enemyPath?.SetPathTarget(target);
+    }
+
+    public Vector2 GetDirection()
+    {
+        return enemyDirection.Direction;
     }
 
     public void DelayAction(float delay)

@@ -47,15 +47,26 @@ public class PatrolState : EnemyStateBase
                 enemy.SetTarget(currentPatrolPoint);
             }
 
+            CheckLineOfSight();
 
             if (Vector2.Distance(transformEnemy.position, enemy.PlayerTarget.position) < 5 && enemy.PlayerTarget.gameObject.GetComponent<Collider2D>().enabled)
             {
                 return typeof(ChasePlayerState);
             }
 
+            
 
         }
 
         return null;
+    }
+
+    void CheckLineOfSight()
+    {
+        Ray2D ray = new Ray2D(transformEnemy.position, gameObjectEnemy.GetComponent<Rigidbody2D>().velocity);
+        Debug.DrawRay(ray.origin, ray.direction, Color.red);
+        RaycastHit2D[] results;
+        results = Physics2D.RaycastAll(ray.origin, ray.direction); //check if raycast is hitting door or wall.
+
     }
 }
