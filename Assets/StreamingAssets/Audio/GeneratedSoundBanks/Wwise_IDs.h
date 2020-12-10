@@ -14,6 +14,8 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_AMBIENCE = 278617630U;
+        static const AkUniqueID PLAY_DEATHMUSIC = 477908357U;
+        static const AkUniqueID PLAY_DEATHTRANSITION = 2295672933U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_LADDERCLIMB = 2071442557U;
         static const AkUniqueID PLAY_SINES = 647636032U;
@@ -22,6 +24,18 @@ namespace AK
 
     namespace STATES
     {
+        namespace CHASE
+        {
+            static const AkUniqueID GROUP = 417490929U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID OFF = 930712164U;
+                static const AkUniqueID ON = 1651971902U;
+            } // namespace STATE
+        } // namespace CHASE
+
         namespace LOCOMOTION
         {
             static const AkUniqueID GROUP = 556887514U;
@@ -40,6 +54,7 @@ namespace AK
     {
         static const AkUniqueID CORRECT_SINE = 1694191731U;
         static const AkUniqueID CURRENT_SINE = 602825232U;
+        static const AkUniqueID TENSION = 1571361561U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS

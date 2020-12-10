@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="1379994856">
+		<SoundBank Id="1355168291" Language="SFX" Hash="1603715560">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -20,13 +20,17 @@
 				<AuxBus Id="2385628198" Name="Footsteps" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Footsteps"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="4071037663">
+		<SoundBank Id="3161908922" Language="SFX" Hash="680393517">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
-				<Event Id="278617630" Name="Play_Ambience" ObjectPath="\Events\Default Work Unit\Play_Ambience" DurationType="OneShot" DurationMin="154.827377" DurationMax="154.827377">
+				<Event Id="278617630" Name="Play_Ambience" ObjectPath="\Events\Default Work Unit\Play_Ambience" DurationType="Infinite">
 					<IncludedMemoryFiles>
+						<File Id="23158334" Language="SFX">
+							<ShortName>tens_ostls_22b_4-4_80bpm.wav</ShortName>
+							<Path>SFX\tens_ostls_22b_4-4_80bpm_696A9007.wem</Path>
+						</File>
 						<File Id="131747932" Language="SFX">
 							<ShortName>amb_melody1_22b_4-4_80bpm.wav</ShortName>
 							<Path>SFX\amb_melody1_22b_4-4_80bpm_696A9007.wem</Path>
@@ -35,9 +39,33 @@
 							<ShortName>amb_drone_22b_4-4_80bpm.wav</ShortName>
 							<Path>SFX\amb_drone_22b_4-4_80bpm_696A9007.wem</Path>
 						</File>
+						<File Id="835370741" Language="SFX">
+							<ShortName>tens_oshs_22b_4-4_80bpm_1.wav</ShortName>
+							<Path>SFX\tens_oshs_22b_4-4_80bpm_1_696A9007.wem</Path>
+						</File>
 						<File Id="997529329" Language="SFX">
 							<ShortName>amb_melody2_22b_4-4_80bpm.wav</ShortName>
 							<Path>SFX\amb_melody2_22b_4-4_80bpm_696A9007.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="477908357" Name="Play_DeathMusic" ObjectPath="\Events\Default Work Unit\Play_DeathMusic" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="105749822" Language="SFX">
+							<ShortName>death_piano_22b_4-4_80bpm.wav</ShortName>
+							<Path>SFX\death_piano_22b_4-4_80bpm_696A9007.wem</Path>
+						</File>
+						<File Id="1011446651" Language="SFX">
+							<ShortName>death_impact_22b_4-4_80bpm.wav</ShortName>
+							<Path>SFX\death_impact_22b_4-4_80bpm_696A9007.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2295672933" Name="Play_DeathTransition" ObjectPath="\Events\Default Work Unit\Play_DeathTransition" DurationType="OneShot" DurationMin="6.463083" DurationMax="6.463083">
+					<IncludedMemoryFiles>
+						<File Id="911940217" Language="SFX">
+							<ShortName>trans_1b_4-4_80bpm.wav</ShortName>
+							<Path>SFX\trans_1b_4-4_80bpm_3CADDE39.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -197,6 +225,7 @@
 			</IncludedEvents>
 			<GameParameters>
 				<GameParameter Id="602825232" Name="Current_Sine" ObjectPath="\Game Parameters\Default Work Unit\Current_Sine"/>
+				<GameParameter Id="1571361561" Name="Tension" ObjectPath="\Game Parameters\Default Work Unit\Tension"/>
 				<GameParameter Id="1694191731" Name="Correct_Sine" ObjectPath="\Game Parameters\Default Work Unit\Correct_Sine"/>
 			</GameParameters>
 			<StateGroups>

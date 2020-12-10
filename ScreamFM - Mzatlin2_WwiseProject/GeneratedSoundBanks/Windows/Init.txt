@@ -1,7 +1,11 @@
 State Group	ID	Name			Wwise Object Path	Notes
+	417490929	Chase			\Default Work Unit\Chase	
 	556887514	Locomotion			\Default Work Unit\Locomotion	
 
 State	ID	Name	State Group			Notes
+	748895195	None	Chase			
+	930712164	Off	Chase			
+	1651971902	On	Chase			
 	340271938	Walking	Locomotion			
 	748895195	None	Locomotion			
 	3863236874	Running	Locomotion			
