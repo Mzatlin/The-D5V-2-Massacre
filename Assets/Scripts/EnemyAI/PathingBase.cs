@@ -68,7 +68,6 @@ public class PathingBase : MonoBehaviour
             render.flipX = true;
             //  transform.localScale = new Vector3(1f, 1f, 1f);
         }
-
     }
 
     protected void CheckPathing()
