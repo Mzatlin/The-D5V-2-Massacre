@@ -12,6 +12,7 @@ public class ClimbLadder : MonoBehaviour
     bool isClimbing = false;
     float MoveY;
     Rigidbody2D rigidBody;
+    Animator animate => GetComponentInChildren<Animator>();
     IPlayerState state;
     // Start is called before the first frame update
     void Start()
@@ -27,7 +28,9 @@ public class ClimbLadder : MonoBehaviour
         {
             RayCastUpwards();
             Climb();
+            AnimateMovement();
         }
+
     }
 
     void RayCastUpwards()
@@ -46,6 +49,7 @@ public class ClimbLadder : MonoBehaviour
         else
         {
             isClimbing = false;
+            MoveY = 0;
         }
     }
 
@@ -64,5 +68,17 @@ public class ClimbLadder : MonoBehaviour
         }
     }
 
+    void AnimateMovement()
+    {
+        if (animate != null)
+        {
+            animate.SetBool("IsClimbing", isClimbing);
+            animate.SetFloat("MoveY", Mathf.Abs(MoveY));
+        }
+        else
+        {
+            Debug.Log("No animator found!");
+        }
+    }
 
 }

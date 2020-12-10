@@ -21,9 +21,12 @@ public class PlayerSprint : MonoBehaviour
     bool isSpriting = false;
     public float SprintAmount { get; private set; } = 100f;
 
+    Animator animate;
+
     // Start is called before the first frame update
     void Start()
     {
+        animate = GetComponentInChildren<Animator>();
         if(movement != null)
         {
             baseMovementSpeed = movement.MoveSpeed;
@@ -48,6 +51,8 @@ public class PlayerSprint : MonoBehaviour
         }
 
         SprintAmount = Mathf.Clamp(SprintAmount, 0, 100);
+
+        AnimateMovement();
     }
 
     void TryRecharge()
@@ -96,5 +101,16 @@ public class PlayerSprint : MonoBehaviour
     {
         yield return new WaitForSeconds(rechargeDelay);
         hasDelayed = true;
+    }
+    void AnimateMovement()
+    {
+        if (animate != null)
+        {
+            animate.SetBool("IsRunning", isSpriting);
+        }
+        else
+        {
+            Debug.Log("No animator found!");
+        }
     }
 }
