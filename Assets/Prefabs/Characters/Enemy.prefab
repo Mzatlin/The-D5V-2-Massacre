@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 259286942573559308}
   - component: {fileID: 6163107260890018048}
   - component: {fileID: 7485210385592668494}
+  - component: {fileID: 3894223159787028337}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Untagged
@@ -284,6 +285,22 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0240611, y: -0.38801014}
-  m_Size: {x: 0.7764853, y: 1.116682}
+  m_Offset: {x: -0.0240611, y: -0.2004826}
+  m_Size: {x: 0.7764853, y: 0.741627}
   m_Direction: 0
+--- !u!58 &3894223159787028337
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259286942573559318}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: e9f6c3f90ebf1084cb8f2569814617fa, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.015288239, y: -0.71721065}
+  serializedVersion: 2
+  m_Radius: 0.2400949
