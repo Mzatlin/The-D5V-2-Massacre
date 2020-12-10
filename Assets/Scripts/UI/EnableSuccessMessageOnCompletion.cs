@@ -8,6 +8,8 @@ public class EnableSuccessMessageOnCompletion : MonoBehaviour
     public Canvas successCanvas;
     public string successMessage;
     public TextMeshProUGUI successText;
+
+    [SerializeField] GameObject mainCamera;
     IRadioMinigame minigame => GetComponent<IRadioMinigame>();
     // Start is called before the first frame update
     void Start()
@@ -32,6 +34,7 @@ public class EnableSuccessMessageOnCompletion : MonoBehaviour
 
     void HandleSuccess()
     {
+        AkSoundEngine.PostEvent("Stop_Sines", mainCamera);
         successCanvas.enabled = true;
         successText.text = successMessage;
         StartCoroutine(DisableDelay());

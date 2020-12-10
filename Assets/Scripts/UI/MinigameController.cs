@@ -19,6 +19,8 @@ public class MinigameController : MonoBehaviour
     float winSpaceMax = 0.53f;
     float middleSpaceMin = 0.3f;
     float middleSpaceMax = 0.7f;
+
+    [SerializeField] GameObject mainCamera;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,7 @@ public class MinigameController : MonoBehaviour
 
     private void HandleMiniGameExit()
     {
+        AkSoundEngine.PostEvent("Stop_Sines", mainCamera);
         isPlayingGame = false;
     }
 
@@ -41,6 +44,7 @@ public class MinigameController : MonoBehaviour
         isPlayingGame = true;
         dialImage.rectTransform.rotation = Quaternion.Euler(0, 0, 0);
         radioSlider.value = 0.5f;
+        AkSoundEngine.SetRTPCValue("Current_Sine", 5); //Set the Current Sine to the Initial Slider position
         SetRadioValue();
     }
 
@@ -50,11 +54,16 @@ public class MinigameController : MonoBehaviour
         middleSpaceMax = middleSpaceMin + 0.4f;
         winSpaceMin = UnityEngine.Random.Range(middleSpaceMin + 0.1f, middleSpaceMax - 0.1f);
         winSpaceMax = winSpaceMin + 0.03f;
+        AkSoundEngine.SetRTPCValue("Correct_Sine", winSpaceMin + 0.015f); //Set the Correct Sine to the middle of Win Space
 
         if (Mathf.Abs(winSpaceMax - 0.5f) <= 0.1f || Mathf.Abs(winSpaceMin - 0.5f) <= 0.1f)
         {
             SetRadioValue();
         }
+        else
+        {
+            AkSoundEngine.PostEvent("Play_Sines", mainCamera);
+        }    
     }
 
     // Update is called once per frame
@@ -75,6 +84,7 @@ public class MinigameController : MonoBehaviour
 
         radioSlider.value += dialRotation / 360;
         radioSlider.value = Mathf.Clamp(radioSlider.value, 0f, 1f);
+        AkSoundEngine.SetRTPCValue("Current_Sine", radioSlider.value * 10f);
 
         if ((dialImage.rectTransform.rotation.z < -0.9999f && dialRotation > 0))
         {
