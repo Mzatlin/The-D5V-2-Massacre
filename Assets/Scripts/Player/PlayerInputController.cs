@@ -10,6 +10,7 @@ public class PlayerInputController : MonoBehaviour, IPlayerInputAxis
     IMovement movement;
     IPlayerState state;
     Vector2 playerScale;
+    Animator animate;
 
     public float XMovement => Inputx;
     public float YMovement => Inputy;
@@ -20,6 +21,7 @@ public class PlayerInputController : MonoBehaviour, IPlayerInputAxis
         movement = GetComponent<IMovement>();
         playerScale = transform.localScale;
         state = GetComponent<IPlayerState>();
+        animate = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -28,6 +30,7 @@ public class PlayerInputController : MonoBehaviour, IPlayerInputAxis
         if (state.PlayerState.IsPlayerReady())
         {
             MovePlayer();
+            AnimateMovement();
         }
         else
         {
@@ -42,12 +45,6 @@ public class PlayerInputController : MonoBehaviour, IPlayerInputAxis
         {
             movement.ApplyMovement(Inputx);
         }
-
-        if ((Inputx < 0.0f) != isFacingRight)
-        {
-
-        }
-
         FlipPlayer();
     }
 
@@ -58,6 +55,18 @@ public class PlayerInputController : MonoBehaviour, IPlayerInputAxis
             isFacingRight = !isFacingRight;
             playerScale.x *= -1;
             transform.localScale = playerScale;
+        }
+    }
+
+    void AnimateMovement()
+    {
+        if(animate != null)
+        {
+            animate.SetFloat("MoveX", Mathf.Abs(Inputx));
+        }
+        else
+        {
+            Debug.Log("No animator found!");
         }
     }
 }

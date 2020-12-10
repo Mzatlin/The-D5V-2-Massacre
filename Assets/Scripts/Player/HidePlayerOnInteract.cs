@@ -42,17 +42,14 @@ public class HidePlayerOnInteract : HandleInteractionBase
     // Update is called once per frame
     void Update()
     {
-        if (isHiding)
+        if (isHiding && Input.GetKeyDown(KeyCode.E))
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                StartCoroutine(DelayToggle());
-            }
+            StartCoroutine(DelayToggle());
         }
     }
     IEnumerator DelayToggle()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.2f);
         TogglePlayerHide();
         base.HandleInteract();
     }
