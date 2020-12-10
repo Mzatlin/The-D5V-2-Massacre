@@ -335,6 +335,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4af72bf44b4db8447b3afe70ca82ab38, type: 3}
+--- !u!1 &15505972 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2943845964805126345, guid: 4bb0e0d1ea95966468dfab98c5e92fb7, type: 3}
+  m_PrefabInstance: {fileID: 1614071576}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &15505973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15505972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c343c68548416144bbbb0891e88a9f2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 1134361716}
 --- !u!223 &23298682 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 8902379129200223089, guid: b2b4252051747f74fa8e954fdaad9e3e, type: 3}
@@ -566,6 +584,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 999829567}
     - target: {fileID: 4465815958884898466, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1134361716}
+    - target: {fileID: 4465815958884898466, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: successText
       value: 
       objectReference: {fileID: 296981936}
@@ -577,6 +599,10 @@ PrefabInstance:
       propertyPath: dialImage
       value: 
       objectReference: {fileID: 1114900089}
+    - target: {fileID: 7107655971926858589, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1134361716}
     - target: {fileID: 7107655971926858589, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: radioScreen
       value: 
@@ -1823,6 +1849,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 999829567}
     - target: {fileID: 4465815958884898466, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1134361716}
+    - target: {fileID: 4465815958884898466, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: successText
       value: 
       objectReference: {fileID: 296981936}
@@ -1838,6 +1868,10 @@ PrefabInstance:
       propertyPath: dialImage
       value: 
       objectReference: {fileID: 1114900089}
+    - target: {fileID: 7107655971926858589, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1134361716}
     - target: {fileID: 7107655971926858589, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: radioScreen
       value: 
@@ -5789,6 +5823,7 @@ GameObject:
   - component: {fileID: 1134361720}
   - component: {fileID: 1134361721}
   - component: {fileID: 1134361717}
+  - component: {fileID: 1134361722}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5904,6 +5939,35 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &1134361722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134361716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0180b8e74f110ae4988824ee00b9342a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ca2fea5dddc2a2749afcb292b24c773e, type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
 --- !u!1001 &1161872066
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7401,6 +7465,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 999829567}
     - target: {fileID: 4465815958884898466, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1134361716}
+    - target: {fileID: 4465815958884898466, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: successText
       value: 
       objectReference: {fileID: 296981936}
@@ -7416,6 +7484,10 @@ PrefabInstance:
       propertyPath: dialImage
       value: 
       objectReference: {fileID: 1114900089}
+    - target: {fileID: 7107655971926858589, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1134361716}
     - target: {fileID: 7107655971926858589, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: radioScreen
       value: 
@@ -9243,6 +9315,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1789182128}
   - component: {fileID: 1789182127}
+  - component: {fileID: 1789182129}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -9290,6 +9363,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1789182129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789182126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d82a7a6f38587af4bb389d4e854137d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b5760738c730bc843a01a8db313979ce, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!4 &1794604110 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8069309692025773383, guid: 730f1e323524d8e4b8bda96be8e07d9e, type: 3}
@@ -9625,6 +9722,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 999829567}
     - target: {fileID: 4465815958884898466, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1134361716}
+    - target: {fileID: 4465815958884898466, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: successText
       value: 
       objectReference: {fileID: 296981936}
@@ -9636,6 +9737,10 @@ PrefabInstance:
       propertyPath: dialImage
       value: 
       objectReference: {fileID: 1114900089}
+    - target: {fileID: 7107655971926858589, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1134361716}
     - target: {fileID: 7107655971926858589, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: radioScreen
       value: 
