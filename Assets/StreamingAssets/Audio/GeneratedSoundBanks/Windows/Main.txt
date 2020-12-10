@@ -1,0 +1,63 @@
+Event	ID	Name			Wwise Object Path	Notes
+	278617630	Play_Ambience			\Default Work Unit\Play_Ambience	
+	647636032	Play_Sines			\Default Work Unit\Play_Sines	
+	2071442557	Play_LadderClimb			\Default Work Unit\Play_LadderClimb	
+	3854155799	Play_Footsteps			\Default Work Unit\Play_Footsteps	
+	4065681590	Stop_Sines			\Default Work Unit\Stop_Sines	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	556887514	Locomotion			\Default Work Unit\Locomotion	
+
+State	ID	Name	State Group			Notes
+	340271938	Walking	Locomotion			
+	748895195	None	Locomotion			
+	3863236874	Running	Locomotion			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	602825232	Current_Sine			\Default Work Unit\Current_Sine	
+	1694191731	Correct_Sine			\Default Work Unit\Correct_Sine	
+
+Modulator Envelope	ID	Name			Wwise Object Path	Notes
+	80431712	Modulator Envelope (Custom)				
+	221762509	Modulator Envelope (Custom)				
+
+Effect plug-ins	ID	Name	Type				Notes
+	2652646462	Dialog_Leveler_Soft	Wwise Compressor			
+	2952825346	Dual_Filters_Radio_Comm	Wwise Parametric EQ			
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	200889188	Wwise Synth One	Wwise Synth One		\Actor-Mixer Hierarchy\Default Work Unit\CurrentSine\Wwise Synth One	
+	365725625	Wwise Synth One	Wwise Synth One		\Actor-Mixer Hierarchy\Default Work Unit\CorrectSine\Wwise Synth One	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	89402265	ladder_climb_07	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\ClimbingLadder_AFCF65AC.wem		\Actor-Mixer Hierarchy\Default Work Unit\LadderClimb\ladder_climb_07		8271
+	101983256	ladder_climb_03	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\ClimbingLadder_FFBAFADF.wem		\Actor-Mixer Hierarchy\Default Work Unit\LadderClimb\ladder_climb_03		7421
+	117347736	walking_09	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\WHGA1 - Rock_72E8497F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Walking\walking_09		4622
+	131747932	amb_melody1_22b_4-4_80bpm	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\amb_melody1_22b_4-4_80bpm_696A9007.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\Melody1\amb_melody1_22b_4-4_80bpm		349028
+	162220479	ladder_climb_02	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\ClimbingLadder_BD58D18B.wem		\Actor-Mixer Hierarchy\Default Work Unit\LadderClimb\ladder_climb_02		6903
+	195104483	running_06	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\WHGA1 - Rock_75912A51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Running\running_06		4127
+	217938441	ladder_climb_05	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\ClimbingLadder_AFCEE3A0.wem		\Actor-Mixer Hierarchy\Default Work Unit\LadderClimb\ladder_climb_05		6683
+	227446820	running_05	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\WHGA1 - Rock_10BF4265.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Running\running_05		3406
+	228877556	walking_01	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\WHGA1 - Rock_471A2D0C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Walking\walking_01		5271
+	334631596	walking_08	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\WHGA1 - Rock_ADF7E32F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Walking\walking_08		5439
+	370068166	walking_03	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\WHGA1 - Rock_B4C5725A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Walking\walking_03		4867
+	394858174	walking_02	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\WHGA1 - Rock_F10BFE84.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Walking\walking_02		5144
+	404373423	walking_07	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\WHGA1 - Rock_9930C665.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Walking\walking_07		5683
+	495072260	walking_06	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\WHGA1 - Rock_4FEA3CFB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Walking\walking_06		6762
+	551339478	running_08	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\WHGA1 - Rock_A2E4D11F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Running\running_08		3778
+	581915762	ladder_climb	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\ClimbingLadder_EF0D9CB8.wem		\Actor-Mixer Hierarchy\Default Work Unit\LadderClimb\ladder_climb		7922
+	593177721	running_01	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\WHGA1 - Rock_F148C3B3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Running\running_01		3877
+	609552309	running_02	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\WHGA1 - Rock_E5CB161B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Running\running_02		4194
+	684935305	walking_04	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\WHGA1 - Rock_6A15B114.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Walking\walking_04		4879
+	693898603	walking_05	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\WHGA1 - Rock_D8D0562F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Walking\walking_05		4827
+	719380269	amb_drone_22b_4-4_80bpm	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\amb_drone_22b_4-4_80bpm_696A9007.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\Melody2\amb_drone_22b_4-4_80bpm		897245
+	733799120	ladder_climb_04	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\ClimbingLadder_517D6B61.wem		\Actor-Mixer Hierarchy\Default Work Unit\LadderClimb\ladder_climb_04		5830
+	804904074	running_04	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\WHGA1 - Rock_CD8CA230.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Running\running_04		3928
+	813349880	running_09	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\WHGA1 - Rock_070FE718.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Running\running_09		3976
+	899899946	running_03	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\WHGA1 - Rock_04E3B55B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Running\running_03		3972
+	922779358	running_07	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\WHGA1 - Rock_76633805.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Running\running_07		3854
+	960626912	ladder_climb_08	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\ClimbingLadder_1F01970F.wem		\Actor-Mixer Hierarchy\Default Work Unit\LadderClimb\ladder_climb_08		8673
+	997529329	amb_melody2_22b_4-4_80bpm	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\amb_melody2_22b_4-4_80bpm_696A9007.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\Melody2\amb_melody2_22b_4-4_80bpm		411334
+	1064843630	ladder_climb_01	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\ClimbingLadder_84715274.wem		\Actor-Mixer Hierarchy\Default Work Unit\LadderClimb\ladder_climb_01		6933
+	1066285631	ladder_climb_06	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\ClimbingLadder_B31C6802.wem		\Actor-Mixer Hierarchy\Default Work Unit\LadderClimb\ladder_climb_06		7364
+
