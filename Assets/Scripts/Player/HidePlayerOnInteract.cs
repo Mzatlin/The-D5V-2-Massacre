@@ -30,12 +30,14 @@ public class HidePlayerOnInteract : HandleInteractionBase
     {
         if (playerCollider != null && playerSprite != null && playerRigidbody2D != null)
         {
+            Debug.Log("Toggled! " + isHiding);
             playerCollider.enabled = !playerCollider.enabled;
             playerSprite.enabled = !playerSprite.enabled;
             playerRigidbody2D.gravityScale = 0;
-            isHiding = !isHiding;
+            playerRigidbody2D.velocity = Vector2.zero;
             state.isInteracting = !state.isInteracting;
-            interactionStats.CanInteract = !interactionStats.CanInteract;
+
+            StartCoroutine(DelayToggle());
         }
     }
 
@@ -44,13 +46,14 @@ public class HidePlayerOnInteract : HandleInteractionBase
     {
         if (isHiding && Input.GetKeyDown(KeyCode.E))
         {
-            StartCoroutine(DelayToggle());
+            TogglePlayerHide();
         }
     }
     IEnumerator DelayToggle()
     {
-        yield return new WaitForSeconds(0.2f);
-        TogglePlayerHide();
+        yield return new WaitForSeconds(0.1f*Time.deltaTime);
+        isHiding = !isHiding;
+        interactionStats.CanInteract = !interactionStats.CanInteract;
         base.HandleInteract();
     }
 }
