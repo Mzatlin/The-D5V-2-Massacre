@@ -5,6 +5,7 @@ using Pathfinding;
 public class PathToTarget : PathingBase, IEnemyDirection, IEnemyPath
 {
     public Vector2 Direction => direction;//pathDirectionOfCurrentPoint;
+    public bool isPathing => CanPath;
     public bool CanPath { get; set; } = true;
     float stoppingDistance = 1f;
 

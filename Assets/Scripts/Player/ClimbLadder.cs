@@ -30,6 +30,10 @@ public class ClimbLadder : MonoBehaviour
             Climb();
             AnimateMovement();
         }
+        else
+        {
+            AnimateMovement();
+        }
 
     }
 
@@ -72,8 +76,16 @@ public class ClimbLadder : MonoBehaviour
     {
         if (animate != null)
         {
-            animate.SetBool("IsClimbing", isClimbing);
-            animate.SetFloat("MoveY", Mathf.Abs(MoveY));
+            if (state.PlayerState.IsPlayerReady())
+            {
+                animate.SetBool("IsClimbing", isClimbing);
+                animate.SetFloat("MoveY", Mathf.Abs(MoveY));
+            }
+            else
+            {
+                animate.SetBool("IsClimbing", false);
+                animate.SetFloat("MoveY", 0);
+            }
         }
         else
         {

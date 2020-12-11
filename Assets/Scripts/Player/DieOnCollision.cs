@@ -35,7 +35,14 @@ public class DieOnCollision : MonoBehaviour, IDie
         {
             OnDie();
             player.PlayerState.isDead = true;
+            StartCoroutine(DeathDelay());
         }
+    }
+
+    IEnumerator DeathDelay()
+    {
+        yield return new WaitForSeconds(0.1f);
+        gameObject.GetComponent<Collider2D>().enabled = false;
     }
 
 }

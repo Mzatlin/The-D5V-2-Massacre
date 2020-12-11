@@ -34,6 +34,7 @@ public class PlayerInputController : MonoBehaviour, IPlayerInputAxis
         }
         else
         {
+            AnimateMovement();
             movement.ApplyMovement(0f);
         }
     }
@@ -62,7 +63,14 @@ public class PlayerInputController : MonoBehaviour, IPlayerInputAxis
     {
         if(animate != null)
         {
-            animate.SetFloat("MoveX", Mathf.Abs(Inputx));
+            if (state.PlayerState.IsPlayerReady())
+            {
+                animate.SetFloat("MoveX", Mathf.Abs(Inputx));
+            }
+            else
+            {
+                animate.SetFloat("MoveX", 0);
+            }
         }
         else
         {
