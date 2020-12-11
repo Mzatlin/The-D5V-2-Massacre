@@ -4,6 +4,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	647636032	Play_Sines			\Default Work Unit\Play_Sines	
 	2071442557	Play_LadderClimb			\Default Work Unit\Play_LadderClimb	
 	2295672933	Play_DeathTransition			\Default Work Unit\Play_DeathTransition	
+	3086540886	StopAll			\Default Work Unit\StopAll	
 	3854155799	Play_Footsteps			\Default Work Unit\Play_Footsteps	
 	4065681590	Stop_Sines			\Default Work Unit\Stop_Sines	
 
@@ -48,6 +49,9 @@ Modulator Envelope	ID	Name			Wwise Object Path	Notes
 	221762509	Modulator Envelope (Custom)				
 
 Effect plug-ins	ID	Name	Type				Notes
+	136714882	_500ms_Per_Hour	Wwise Stereo Delay			
+	535667444	Bathroom1	Wwise Matrix Reverb			
+	2171939413	Dialog_Leveler_Hard	Wwise Compressor			
 	2652646462	Dialog_Leveler_Soft	Wwise Compressor			
 	2952825346	Dual_Filters_Radio_Comm	Wwise Parametric EQ			
 
@@ -82,11 +86,13 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	733799120	ladder_climb_04	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\ClimbingLadder_517D6B61.wem		\Actor-Mixer Hierarchy\Default Work Unit\LadderClimb\ladder_climb_04		5830
 	804904074	running_04	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\WHGA1 - Rock_CD8CA230.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Running\running_04		3928
 	813349880	running_09	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\WHGA1 - Rock_070FE718.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Running\running_09		3976
+	825325312	AxeUnsheath	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\471147__worldmaxter__sword-slide_81A1F509.wem		\Actor-Mixer Hierarchy\Default Work Unit\AxeUnsheath		9847
 	835370741	tens_oshs_22b_4-4_80bpm	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\tens_oshs_22b_4-4_80bpm_1_696A9007.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\Melody2\tens_oshs_22b_4-4_80bpm		791867
 	899899946	running_03	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\WHGA1 - Rock_04E3B55B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Running\running_03		3972
 	911940217	DeathTransition	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\trans_1b_4-4_80bpm_3CADDE39.wem		\Actor-Mixer Hierarchy\Default Work Unit\DeathTransition		73651
 	922779358	running_07	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\WHGA1 - Rock_76633805.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Running\running_07		3854
 	960626912	ladder_climb_08	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\ClimbingLadder_1F01970F.wem		\Actor-Mixer Hierarchy\Default Work Unit\LadderClimb\ladder_climb_08		8673
+	972305700	AxeKill	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\405646__apinasaundi__found-can-crush-3_3CADDE39.wem		\Actor-Mixer Hierarchy\Default Work Unit\AxeKill		9556
 	997529329	amb_melody2_22b_4-4_80bpm	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\amb_melody2_22b_4-4_80bpm_696A9007.wem		\Interactive Music Hierarchy\Default Work Unit\Ambience\Melody2\amb_melody2_22b_4-4_80bpm		411334
 	1011446651	death_impact_22b_4-4_80bpm	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\death_impact_22b_4-4_80bpm_696A9007.wem		\Interactive Music Hierarchy\Default Work Unit\Death\Death\death_impact_22b_4-4_80bpm		698061
 	1064843630	ladder_climb_01	C:\Users\Jake\Documents\Unity\ScreamFM - Mzatlin2\ScreamFM - Mzatlin2_WwiseProject\.cache\Windows\SFX\ClimbingLadder_84715274.wem		\Actor-Mixer Hierarchy\Default Work Unit\LadderClimb\ladder_climb_01		6933

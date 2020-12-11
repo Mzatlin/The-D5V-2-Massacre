@@ -7,6 +7,8 @@ public class ReloadLevelOnClick : MonoBehaviour
 {
     public void ReloadLevel()
     {
+        GameObject mainCamera = FindObjectOfType<Camera>().gameObject;
+        AkSoundEngine.PostEvent("StopAll", mainCamera);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
     }
 }

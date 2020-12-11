@@ -18,6 +18,8 @@ public class AnimateSpritesOnEnable : MonoBehaviour
 
     void OnEnable()
     {
+        GameObject mainCamera = FindObjectOfType<Camera>().gameObject;
+        AkSoundEngine.PostEvent("Play_DeathTransition", mainCamera);
         StartCoroutine(ManualAnimation());
     }
 
@@ -28,6 +30,11 @@ public class AnimateSpritesOnEnable : MonoBehaviour
         {
             image.sprite = sprites[i];
             yield return new WaitForSeconds(animationSpeed);
+            if(i == sprites.Length - 1)
+            {
+                GameObject mainCamera = FindObjectOfType<Camera>().gameObject;
+                AkSoundEngine.PostEvent("Play_DeathMusic", mainCamera);
+            }
         }
     }
 }

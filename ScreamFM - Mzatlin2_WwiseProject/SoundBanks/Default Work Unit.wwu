@@ -12,6 +12,7 @@
 						<ObjectRef Name="Play_DeathMusic" ID="{34F8EC1E-D996-4907-BEF8-345431729AFD}" WorkUnitID="{036D1B68-3738-44E7-BD1C-22BB66C897FC}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_LadderClimb" ID="{2D637C46-4977-4D66-8A61-DE55AC7C6B41}" WorkUnitID="{036D1B68-3738-44E7-BD1C-22BB66C897FC}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Ambience" ID="{6740D370-218B-4E7B-8912-C1C178B89E04}" WorkUnitID="{036D1B68-3738-44E7-BD1C-22BB66C897FC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="StopAll" ID="{6E8918FA-F499-4FC9-A163-F2BB04758176}" WorkUnitID="{036D1B68-3738-44E7-BD1C-22BB66C897FC}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

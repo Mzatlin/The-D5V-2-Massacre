@@ -22,7 +22,6 @@ public class DieOnCollision : MonoBehaviour, IDie
     {
         if((1 << collision.gameObject.layer & enemyLayer) != 0)
         {
-            AkSoundEngine.PostEvent("Play_DeathTransition", mainCamera);
             OnDie();
             player.PlayerState.isDead = true;
         }

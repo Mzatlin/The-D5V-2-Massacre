@@ -1101,6 +1101,81 @@
 						<ActiveSource Name="trans_1b_4-4_80bpm" ID="{DC08F727-47E3-4D62-A902-9A72AD6B6B4A}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Sound Name="AxeUnsheath" ID="{A48E7196-B5B8-444B-B99E-0BCA49C34B71}" ShortID="13543490">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>11</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+						</Reference>
+						<Reference Name="Effect0" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+							<ObjectRef Name="Dialog_Leveler_Hard" ID="{865FB36F-8717-4D30-AD05-14E56375CD40}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="471147__worldmaxter__sword-slide" ID="{5B9E7089-0BC3-40F3-BA59-6397A86B81BD}">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.442704780542354"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="1.07594073245737"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>471147__worldmaxter__sword-slide.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="825325312"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="471147__worldmaxter__sword-slide" ID="{5B9E7089-0BC3-40F3-BA59-6397A86B81BD}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="AxeKill" ID="{3D6F9BC1-9C54-4DF2-8A1A-C0D014846A2C}" ShortID="8789457">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+						</Reference>
+						<Reference Name="Effect0" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+							<ObjectRef Name="Dialog_Leveler_Hard" ID="{865FB36F-8717-4D30-AD05-14E56375CD40}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+						</Reference>
+						<Reference Name="Effect1" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+							<ObjectRef Name="Bathroom1" ID="{1969D30F-C165-45C0-B290-DE3ED07A7AA3}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+						</Reference>
+						<Reference Name="Effect2" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
+							<ObjectRef Name="_500ms_Per_Hour" ID="{9CE2F0FB-CE0B-4CC7-A699-E30528959D0E}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="405646__apinasaundi__found-can-crush-3" ID="{000BFFCF-BCA5-4ACB-A70B-A67866F42ED6}">
+							<Language>SFX</Language>
+							<AudioFile>405646__apinasaundi__found-can-crush-3.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="972305700"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="405646__apinasaundi__found-can-crush-3" ID="{000BFFCF-BCA5-4ACB-A70B-A67866F42ED6}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

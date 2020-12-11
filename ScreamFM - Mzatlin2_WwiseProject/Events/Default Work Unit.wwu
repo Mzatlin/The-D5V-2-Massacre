@@ -93,6 +93,13 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{1544E01A-4B47-4178-BEF8-9380338E97A2}" ShortID="864973123">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AxeUnsheath" ID="{A48E7196-B5B8-444B-B99E-0BCA49C34B71}" WorkUnitID="{ABEF7731-B9EE-49A0-888E-7D7B3DCDFD0D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Play_DeathMusic" ID="{34F8EC1E-D996-4907-BEF8-345431729AFD}">
@@ -118,6 +125,23 @@
 									</ReferenceList>
 								</EventActionException>
 							</ChildrenList>
+						</Action>
+						<Action Name="" ID="{652F6567-06A2-4218-B4E1-CDAD3EDB7ADA}" ShortID="318472363">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AxeKill" ID="{3D6F9BC1-9C54-4DF2-8A1A-C0D014846A2C}" WorkUnitID="{ABEF7731-B9EE-49A0-888E-7D7B3DCDFD0D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="StopAll" ID="{6E8918FA-F499-4FC9-A163-F2BB04758176}">
+					<ChildrenList>
+						<Action Name="" ID="{312984FF-5556-46B7-B793-2CB8FF2963EF}" ShortID="132496933">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+							</PropertyList>
+							<ReferenceList/>
 						</Action>
 					</ChildrenList>
 				</Event>
