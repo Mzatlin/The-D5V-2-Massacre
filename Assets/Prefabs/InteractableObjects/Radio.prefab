@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7107655971926858589}
   - component: {fileID: 4465815958884898466}
   - component: {fileID: 7917558914912458075}
+  - component: {fileID: 4821926794711558550}
   m_Layer: 8
   m_Name: Radio
   m_TagString: Untagged
@@ -156,6 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
   minigameCanvas: {fileID: 0}
+  mainCamera: {fileID: 0}
 --- !u!114 &7107655971926858589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,7 +171,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialImage: {fileID: 0}
+  radioScreen: {fileID: 0}
   radioSlider: {fileID: 0}
+  turnSpeed: 36
+  mainCamera: {fileID: 0}
 --- !u!114 &4465815958884898466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,6 +190,7 @@ MonoBehaviour:
   successCanvas: {fileID: 0}
   successMessage: Radio Activated
   successText: {fileID: 0}
+  mainCamera: {fileID: 0}
 --- !u!114 &7917558914912458075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,3 +205,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   completion: {fileID: 0}
   radio: {fileID: 0}
+--- !u!114 &4821926794711558550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349570348710239401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9599ebae7ad5f314d9b40eb2fcac9da8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radio: {fileID: 11400000, guid: 1e39c22aaa65ba34ca0f18494f7541cd, type: 2}
+  keys: {fileID: 11400000, guid: acf933fa8109c4f459bceb73081d352e, type: 2}
+  keyName: Storage
+  amountForKey: 2
