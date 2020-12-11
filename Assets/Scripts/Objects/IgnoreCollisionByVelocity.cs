@@ -34,12 +34,30 @@ public class IgnoreCollisionByVelocity : MonoBehaviour
 
     void CheckCollision(Collision2D collision)
     {
-        if (direction != null && Mathf.Abs(direction.Direction.x) < 0.8f)
+        var directionX = Mathf.Abs(direction.Direction.x);
+        var directionY = Mathf.Abs(direction.Direction.y);
+        float difference = Mathf.Abs(directionX - directionY);
+        if (direction != null && difference > 0.9/*((directionX < 0.5f /*&& directionX > 0.8f) && (/*directionY < 0.9f &&  directionY > 0.5f)*/ /*&& (Mathf.Abs(collision.gameObject.GetComponent<Rigidbody2D>().velocity.x) < 0.9f))*/)
         {
             foreach (Collider2D collider in colliders)
             {
                 Physics2D.IgnoreCollision(GetComponent<Collider2D>(), collider);
             }
+        }
+        else
+        {
+            foreach (Collider2D collider in colliders)
+            {
+                Physics2D.IgnoreCollision(GetComponent<Collider2D>(), collider, false);
+            }
+        }
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        foreach (Collider2D collider in colliders)
+        {
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), collider, false);
         }
     }
 

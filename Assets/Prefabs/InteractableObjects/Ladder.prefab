@@ -13,9 +13,8 @@ GameObject:
   - component: {fileID: 1685960555888598708}
   - component: {fileID: 2709717504066070579}
   - component: {fileID: 3295098661194533691}
-  - component: {fileID: 4898143910792715795}
   - component: {fileID: 909593939139870757}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ladder Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3618878230640744120}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.033101007, y: 1.0431321, z: -0.7543659}
-  m_LocalScale: {x: 0.9306162, y: 0.06495164, z: 1}
+  m_LocalPosition: {x: -0.0268, y: 1.05014, z: -0.7543659}
+  m_LocalScale: {x: 0.9385779, y: 0.2182897, z: 1}
   m_Children: []
   m_Father: {fileID: 4927061398114094003}
   m_RootOrder: 1
@@ -76,8 +75,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: dd8a24887d439f845a1a11578c3a7381, type: 3}
-  m_Color: {r: 0.011764707, g: 0, b: 0.427451, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 7ae63246bd9ad6a439f130fb71557f22, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -100,18 +99,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.039192975, y: 0.0000003054738}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5625, y: 1.5625}
+    oldSize: {x: 1.5609756, y: 0.3902439}
     newSize: {x: 8, y: 8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5625, y: 1.5625}
+  m_Size: {x: 1.484114, y: 0.3892771}
   m_EdgeRadius: 0
 --- !u!251 &2709717504066070579
 PlatformEffector2D:
@@ -144,20 +143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cf6eb9e4f7c25c4f8ef5e2eaaf84243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4898143910792715795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3618878230640744120}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf006da663539a9408e8df89309a739c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
-  colliders: []
 --- !u!114 &909593939139870757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,7 +167,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4927061398114094003}
   - component: {fileID: 4927061398114094000}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Ladder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4927061399496259453}
   - component: {fileID: 4927061399496259452}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
