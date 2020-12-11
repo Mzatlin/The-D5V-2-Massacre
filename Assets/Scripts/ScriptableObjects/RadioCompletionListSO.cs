@@ -7,11 +7,10 @@ using System;
 public class RadioCompletionListSO : ScriptableObject
 {
     public event Action<Transform> OnRadioComplete = delegate { };
-
+    public int completeCount = 0;
     public List<RadioSO> radios = new List<RadioSO>();
     public Dictionary<RadioSO, bool> radioStatuses = new Dictionary<RadioSO, bool>();
 
-    // Start is called before the first frame update
     public void ResetRadios()
     {
         radioStatuses.Clear();
@@ -19,6 +18,7 @@ public class RadioCompletionListSO : ScriptableObject
         {
             radioStatuses.Add(radio, false);
         }
+        completeCount = 0;
     }
 
     public void LogRadio(RadioSO radio, Transform radioTransform)
@@ -27,6 +27,7 @@ public class RadioCompletionListSO : ScriptableObject
         {
             radioStatuses[radio] = true;
             OnRadioComplete?.Invoke(radioTransform);
+            completeCount++;
         }
         else
         {

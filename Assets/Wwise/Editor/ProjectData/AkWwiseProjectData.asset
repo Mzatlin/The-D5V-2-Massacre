@@ -71,7 +71,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: c5c1c9c6241f25489d42937e88389abb
     GuidInternal: 
-    m_lastTime: -8585939789632986186
+    m_lastTime: -8585939467693669600
     List:
     - name: Main
       guid: 3b70d55d269857419d15d3d738a71d00
@@ -90,7 +90,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 681b6d033837e744bd1c22bb66c897fc
     GuidInternal: 
-    m_lastTime: -8585939789633187321
+    m_lastTime: -8585939467698560745
     List:
     - name: Play_Ambience
       guid: 70d340678b217b4e8912c1c178b89e04
@@ -102,8 +102,32 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_Ambience
       maxAttenuation: 0
-      maxDuration: 154.82738
-      minDuration: 154.82738
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_DeathMusic
+      guid: 1eecf83496d90749bef8345431729afd
+      id: 477908357
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_DeathMusic
+        ObjectType: 3
+      Path: Default Work Unit\Play_DeathMusic
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_DeathTransition
+      guid: cc31a1d3d3fdd9458b47490fcee185d3
+      id: 2295672933
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_DeathTransition
+        ObjectType: 3
+      Path: Default Work Unit\Play_DeathTransition
+      maxAttenuation: 0
+      maxDuration: 6.463083
+      minDuration: 6.463083
     - name: Play_Footsteps
       guid: a6391b3390c2cf43ba0aeed6491eda90
       id: 3854155799
@@ -160,7 +184,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 27bddc2350c2e641a46965c8cc67b0cd
     GuidInternal: 
-    m_lastTime: -8585939789633187321
+    m_lastTime: -8585939467698550732
     List:
     - name: Correct_Sine
       guid: 7836978c86460448a0c9af21e9ebe714
@@ -180,6 +204,15 @@ MonoBehaviour:
       - ElementName: Current_Sine
         ObjectType: 13
       Path: Default Work Unit\Current_Sine
+    - name: Tension
+      guid: f258a3564d29d345b89eb3ee523f744e
+      id: 1571361561
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tension
+        ObjectType: 13
+      Path: Default Work Unit\Tension
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -188,8 +221,45 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 2ce6a218eff4b544980eeb50d113cbf2
     GuidInternal: 
-    m_lastTime: -8585939789632976179
+    m_lastTime: -8585939467693649582
     List:
+    - name: EnemyState
+      guid: b0655a88e5149c44844a4aae6e0623d2
+      id: 1865569098
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: EnemyState
+        ObjectType: 9
+      Path: Default Work Unit\EnemyState
+      values:
+      - name: Chase
+        guid: ff8b32af0bf5394fa4695ea342a50e49
+        id: 417490929
+        PathAndIcons:
+        - ElementName: Chase
+          ObjectType: 8
+      - name: Investigate
+        guid: 84753b9a7f33b44dbeb35e8fad458224
+        id: 2041902182
+        PathAndIcons:
+        - ElementName: Investigate
+          ObjectType: 8
+      - name: None
+        guid: 393f1d78fd47334fa26abbbb58ac77bd
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      - name: Patrol
+        guid: bff36cf69d79fa4a922b79321e287472
+        id: 3497767639
+        PathAndIcons:
+        - ElementName: Patrol
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
     - name: Locomotion
       guid: 9134ec22e3d7d74696705602a0bab5e5
       id: 556887514

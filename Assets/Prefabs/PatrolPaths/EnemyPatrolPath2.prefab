@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7287295133943285428}
   m_Layer: 0
-  m_Name: Patrol Location 3
+  m_Name: 2Patrol Location 3
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7287295134003418115}
   m_Layer: 0
-  m_Name: Patrol Location 5
+  m_Name: 2Patrol Location 5
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -70,7 +70,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7287295134033627603}
   m_Layer: 0
-  m_Name: Patrol Location 4
+  m_Name: 2Patrol Location 4
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7287295134090066620}
   m_Layer: 0
-  m_Name: Patrol Location 2
+  m_Name: 2Patrol Location 2
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -130,7 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7287295134208822510}
   m_Layer: 0
-  m_Name: Patrol Location 6
+  m_Name: 2Patrol Location 6
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -196,7 +196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7287295135684344322}
   m_Layer: 0
-  m_Name: Patrol Location 1
+  m_Name: 2Patrol Location 1
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0

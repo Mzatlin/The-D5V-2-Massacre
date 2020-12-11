@@ -8,12 +8,13 @@ public class EnemyAI : MonoBehaviour
 
     IEnemyPath enemyPath => GetComponent<IEnemyPath>();
     IEnemyDirection enemyDirection => GetComponent<IEnemyDirection>();
-
+    [SerializeField]
+    GameObject test;
     [SerializeField]
     private Transform playerTarget;
     [SerializeField]
     private List<Transform> patrolTargets = new List<Transform>();
-  //  public bool CanPath { get => enemyPath.CanPath; set => CanPath = value; }
+    //  public bool CanPath { get => enemyPath.CanPath; set => CanPath = value; }
     public Transform PlayerTarget => playerTarget;
     public Transform RadioTarget { get; set; }
     public Transform CurrentTarget { get; private set; }
@@ -24,6 +25,7 @@ public class EnemyAI : MonoBehaviour
     void Awake()
     {
         InitializeStateMachine();
+        SetPatrolPath(test);
     }
 
     void InitializeStateMachine()
@@ -62,6 +64,17 @@ public class EnemyAI : MonoBehaviour
     public void SetCanPath()
     {
         enemyPath.CanPath = !enemyPath.CanPath;
+    }
+
+    public void SetPatrolPath(GameObject pathChildren)
+    {
+        Transform[] paths = pathChildren.GetComponentsInChildren<Transform>();
+        patrolTargets.Clear();
+        foreach (Transform path in paths)
+        {
+            patrolTargets.Add(path);
+        }
+        patrolTargets.RemoveAt(0);
     }
 
 

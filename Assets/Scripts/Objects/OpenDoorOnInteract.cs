@@ -23,7 +23,7 @@ public class OpenDoorOnInteract : HandleInteractionBase
             if(plate != null)
             {
                 plate.DisableNamePlate();
-                Pathfinding.AstarPathEditor.MenuScan();
+              //  Pathfinding.AstarPathEditor.MenuScan();
             }
         }
         base.HandleInteract();

@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 6163107260890018048}
   - component: {fileID: 7485210385592668494}
   - component: {fileID: 3894223159787028337}
+  - component: {fileID: 1600037390719804374}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Untagged
@@ -226,6 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b4f7ba7faa275942a9e7e44137e4dd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  test: {fileID: 0}
   playerTarget: {fileID: 0}
   patrolTargets:
   - {fileID: 0}
@@ -304,3 +306,17 @@ CircleCollider2D:
   m_Offset: {x: -0.015288239, y: -0.71721065}
   serializedVersion: 2
   m_Radius: 0.2400949
+--- !u!114 &1600037390719804374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259286942573559318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82dd01d56bdbc374cbf1f94719429db6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radioCompletion: {fileID: 11400000, guid: 1e39c22aaa65ba34ca0f18494f7541cd, type: 2}
+  patrol: {fileID: 11400000, guid: 8eadfe171fe5d0b43b13bd928f0c38df, type: 2}
