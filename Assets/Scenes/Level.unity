@@ -786,6 +786,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 90686536}
     m_Modifications:
     - target: {fileID: 349570348710239395, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1134361716}
+    - target: {fileID: 349570348710239395, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: minigameCanvas
       value: 
       objectReference: {fileID: 358102011}
@@ -2387,6 +2391,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6764990402291897123, guid: 504d79687784f954b91bda845491b2dd, type: 3}
   m_PrefabInstance: {fileID: 1538129150}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &254158640 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 259286942573559318, guid: 95a0cc24b055009468a9a722ae8a4e6c, type: 3}
+  m_PrefabInstance: {fileID: 820907255}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &257600304 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6764990402291897123, guid: 504d79687784f954b91bda845491b2dd, type: 3}
@@ -3007,6 +3016,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 90686536}
     m_Modifications:
+    - target: {fileID: 349570348710239395, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1134361716}
     - target: {fileID: 349570348710239395, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: minigameCanvas
       value: 
@@ -13731,6 +13744,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 90686536}
     m_Modifications:
     - target: {fileID: 349570348710239395, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1134361716}
+    - target: {fileID: 349570348710239395, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: minigameCanvas
       value: 
       objectReference: {fileID: 358102011}
@@ -13795,6 +13812,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 999829567}
     - target: {fileID: 4465815958884898466, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1134361716}
+    - target: {fileID: 4465815958884898466, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: successText
       value: 
       objectReference: {fileID: 296981936}
@@ -13806,6 +13827,10 @@ PrefabInstance:
       propertyPath: dialImage
       value: 
       objectReference: {fileID: 1114900089}
+    - target: {fileID: 7107655971926858589, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1134361716}
     - target: {fileID: 7107655971926858589, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: radioScreen
       value: 
@@ -13989,6 +14014,10 @@ PrefabInstance:
       propertyPath: sprintSlider
       value: 
       objectReference: {fileID: 1898960970}
+    - target: {fileID: 8935256607402054054, guid: 4bb0e0d1ea95966468dfab98c5e92fb7, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1134361716}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4bb0e0d1ea95966468dfab98c5e92fb7, type: 3}
 --- !u!1001 &1620056415
@@ -15934,6 +15963,7 @@ GameObject:
   - component: {fileID: 1789182128}
   - component: {fileID: 1789182127}
   - component: {fileID: 1789182129}
+  - component: {fileID: 1789182130}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -16005,6 +16035,30 @@ MonoBehaviour:
   unloadTriggerList: 958ca0ea
   bankNameInternal: 
   valueGuidInternal: 
+--- !u!114 &1789182130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789182126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 775238fc1c75f2e4ea941c4651744235, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: ae8d9d44
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6d76e6f5b8addc144967e49d61f0f6b7, type: 2}
+  valueIdInternal: 0
+  groupIdInternal: 0
+  valueGuidInternal: 
+  groupGuidInternal: 
 --- !u!4 &1794604110 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8069309692025773383, guid: 730f1e323524d8e4b8bda96be8e07d9e, type: 3}
@@ -16882,6 +16936,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1646925312}
   colliders: []
+--- !u!1 &1870868937 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2943845963661684782, guid: 4bb0e0d1ea95966468dfab98c5e92fb7, type: 3}
+  m_PrefabInstance: {fileID: 1614071576}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1870868938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870868937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fd3acf5682e9e14c961a764bd86ff7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 254158640}
 --- !u!4 &1871574198 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8037473895892199560, guid: 6e2d63aeb645760418e024a5683c79fd, type: 3}
@@ -16894,6 +16966,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 90686536}
     m_Modifications:
+    - target: {fileID: 349570348710239395, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1134361716}
     - target: {fileID: 349570348710239395, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: minigameCanvas
       value: 

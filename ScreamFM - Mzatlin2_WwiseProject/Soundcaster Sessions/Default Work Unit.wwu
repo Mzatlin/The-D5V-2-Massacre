@@ -33,7 +33,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Off" ID="{F66CF3BF-799D-4AFA-922B-79321E287472}"/>
+						<CurrentStateRef Name="Patrol" ID="{F66CF3BF-799D-4AFA-922B-79321E287472}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>

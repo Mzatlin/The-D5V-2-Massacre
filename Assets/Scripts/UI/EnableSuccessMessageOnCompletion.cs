@@ -28,6 +28,7 @@ public class EnableSuccessMessageOnCompletion : MonoBehaviour
     {
         if (minigame != null)
         {
+            AkSoundEngine.PostEvent("Stop_Sines", mainCamera);
             minigame.OnComplete -= HandleSuccess;
         }
     }

@@ -8,6 +8,7 @@ public class DieOnCollision : MonoBehaviour, IDie
     IPlayerState player => GetComponent<IPlayerState>();
     Transform enemy;
     LayerMask enemyLayer;
+    [SerializeField] GameObject mainCamera;
 
     public event Action OnDie = delegate { };
 
@@ -21,6 +22,7 @@ public class DieOnCollision : MonoBehaviour, IDie
     {
         if((1 << collision.gameObject.layer & enemyLayer) != 0)
         {
+            AkSoundEngine.PostEvent("Play_DeathTransition", mainCamera);
             OnDie();
             player.PlayerState.isDead = true;
         }

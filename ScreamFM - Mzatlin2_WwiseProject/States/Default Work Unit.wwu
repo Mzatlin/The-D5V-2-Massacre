@@ -10,11 +10,12 @@
 						<State Name="Running" ID="{93740663-6767-457B-B51B-1D1523D9E88D}"/>
 					</ChildrenList>
 				</StateGroup>
-				<StateGroup Name="Chase" ID="{885A65B0-14E5-449C-844A-4AAE6E0623D2}">
+				<StateGroup Name="EnemyState" ID="{885A65B0-14E5-449C-844A-4AAE6E0623D2}">
 					<ChildrenList>
 						<State Name="None" ID="{781D3F39-47FD-4F33-A26A-BBBB58AC77BD}"/>
-						<State Name="On" ID="{AF328BFF-F50B-4F39-A469-5EA342A50E49}"/>
-						<State Name="Off" ID="{F66CF3BF-799D-4AFA-922B-79321E287472}"/>
+						<State Name="Chase" ID="{AF328BFF-F50B-4F39-A469-5EA342A50E49}"/>
+						<State Name="Patrol" ID="{F66CF3BF-799D-4AFA-922B-79321E287472}"/>
+						<State Name="Investigate" ID="{9A3B7584-337F-4DB4-BEB3-5E8FAD458224}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>

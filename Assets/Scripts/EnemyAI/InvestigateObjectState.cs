@@ -17,6 +17,7 @@ public class InvestigateObjectState : EnemyStateBase
 
     public override void BeginState()
     {
+        AkSoundEngine.SetState("EnemyState", "Investigate");
         currentTarget = enemy.CurrentTarget;
         playerCollider = enemy.PlayerTarget.gameObject.GetComponent<Collider2D>();
     }

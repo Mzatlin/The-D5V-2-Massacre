@@ -24,17 +24,18 @@ namespace AK
 
     namespace STATES
     {
-        namespace CHASE
+        namespace ENEMYSTATE
         {
-            static const AkUniqueID GROUP = 417490929U;
+            static const AkUniqueID GROUP = 1865569098U;
 
             namespace STATE
             {
+                static const AkUniqueID CHASE = 417490929U;
+                static const AkUniqueID INVESTIGATE = 2041902182U;
                 static const AkUniqueID NONE = 748895195U;
-                static const AkUniqueID OFF = 930712164U;
-                static const AkUniqueID ON = 1651971902U;
+                static const AkUniqueID PATROL = 3497767639U;
             } // namespace STATE
-        } // namespace CHASE
+        } // namespace ENEMYSTATE
 
         namespace LOCOMOTION
         {

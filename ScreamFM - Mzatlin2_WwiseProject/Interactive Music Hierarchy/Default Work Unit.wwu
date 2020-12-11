@@ -170,12 +170,12 @@
 									<StateInfo>
 										<StateGroupList>
 											<StateGroupInfo MusicSyncType="3">
-												<StateGroupRef Name="Chase" ID="{885A65B0-14E5-449C-844A-4AAE6E0623D2}"/>
+												<StateGroupRef Name="EnemyState" ID="{885A65B0-14E5-449C-844A-4AAE6E0623D2}"/>
 											</StateGroupInfo>
 										</StateGroupList>
 										<CustomStateList>
 											<CustomState>
-												<StateRef Name="Off" ID="{F66CF3BF-799D-4AFA-922B-79321E287472}"/>
+												<StateRef Name="Patrol" ID="{F66CF3BF-799D-4AFA-922B-79321E287472}"/>
 												<CustomState Name="" ID="{CE545072-A3E1-425D-8A96-15435C888B06}" ShortID="534153973">
 													<PropertyList>
 														<Property Name="Volume" Type="Real64" Value="-108"/>
@@ -183,7 +183,15 @@
 												</CustomState>
 											</CustomState>
 											<CustomState>
-												<StateRef Name="On" ID="{AF328BFF-F50B-4F39-A469-5EA342A50E49}"/>
+												<StateRef Name="Investigate" ID="{9A3B7584-337F-4DB4-BEB3-5E8FAD458224}"/>
+												<CustomState Name="" ID="{958707F2-1FBF-49F5-AD41-B12E8E352A24}" ShortID="716458373">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Chase" ID="{AF328BFF-F50B-4F39-A469-5EA342A50E49}"/>
 												<CustomState Name="" ID="{C09A8F50-7EED-410F-B53A-47905F8DCC3F}" ShortID="187078382"/>
 											</CustomState>
 										</CustomStateList>
@@ -232,12 +240,12 @@
 									<StateInfo>
 										<StateGroupList>
 											<StateGroupInfo MusicSyncType="3">
-												<StateGroupRef Name="Chase" ID="{885A65B0-14E5-449C-844A-4AAE6E0623D2}"/>
+												<StateGroupRef Name="EnemyState" ID="{885A65B0-14E5-449C-844A-4AAE6E0623D2}"/>
 											</StateGroupInfo>
 										</StateGroupList>
 										<CustomStateList>
 											<CustomState>
-												<StateRef Name="Off" ID="{F66CF3BF-799D-4AFA-922B-79321E287472}"/>
+												<StateRef Name="Patrol" ID="{F66CF3BF-799D-4AFA-922B-79321E287472}"/>
 												<CustomState Name="" ID="{35A117A6-7973-4080-BB2B-79555B4A50C4}" ShortID="664414894">
 													<PropertyList>
 														<Property Name="Volume" Type="Real64" Value="-108"/>
@@ -245,7 +253,15 @@
 												</CustomState>
 											</CustomState>
 											<CustomState>
-												<StateRef Name="On" ID="{AF328BFF-F50B-4F39-A469-5EA342A50E49}"/>
+												<StateRef Name="Investigate" ID="{9A3B7584-337F-4DB4-BEB3-5E8FAD458224}"/>
+												<CustomState Name="" ID="{ECBA01D7-B6ED-445D-B86C-BA9D4B5CB50B}" ShortID="749887397">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Chase" ID="{AF328BFF-F50B-4F39-A469-5EA342A50E49}"/>
 												<CustomState Name="" ID="{646C370B-7247-41A6-8A7C-4086AA4C2F6F}" ShortID="465067981"/>
 											</CustomState>
 										</CustomStateList>
@@ -268,6 +284,187 @@
 														<Property Name="FadeOutMode" Type="int16" Value="0"/>
 													</PropertyList>
 													<AudioSourceRef Name="tens_ostls_22b_4-4_80bpm" ID="{E47DD515-9A08-4878-8C9A-1DCC1F4F542A}"/>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+								<MusicTrack Name="inv_oshs_22b_4-4_80bpm" ID="{604CEC7B-560F-4D99-A4A1-8D054D8FFBD2}" ShortID="317381431">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<RTPCList>
+												<RTPC Name="" ID="{642E3FCD-4363-420A-9BD3-762F4E0C1798}" ShortID="107480517">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="Tension" ID="{56A358F2-294D-45D3-B89E-B3EE523F744E}" WorkUnitID="{23DCBD27-C250-41E6-A469-65C8CC67B0CD}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{B7840E12-DA44-4180-840D-CABBA1901804}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>0</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>2.5</XPos>
+																<YPos>0</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>Log2</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>7.42236</XPos>
+																<YPos>-200</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>10</XPos>
+																<YPos>-200</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="tens_oshs_22b_4-4_80bpm_1" ID="{CCED6027-B212-44D8-B0B8-E2C1448C4FC0}">
+											<Language>SFX</Language>
+											<AudioFile>tens_oshs_22b_4-4_80bpm_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="835370741"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo MusicSyncType="3">
+												<StateGroupRef Name="EnemyState" ID="{885A65B0-14E5-449C-844A-4AAE6E0623D2}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="Patrol" ID="{F66CF3BF-799D-4AFA-922B-79321E287472}"/>
+												<CustomState Name="" ID="{E5312867-5056-4A4D-A8D0-0BCB47C06CC5}" ShortID="749315170">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Investigate" ID="{9A3B7584-337F-4DB4-BEB3-5E8FAD458224}"/>
+												<CustomState Name="" ID="{C093515C-48F2-44D3-9D37-B92C39C6BB0B}" ShortID="181015367"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Chase" ID="{AF328BFF-F50B-4F39-A469-5EA342A50E49}"/>
+												<CustomState Name="" ID="{2063D6DF-8960-4DE7-A90E-EBF926F4E889}" ShortID="964257779">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{4F82CEF4-36C3-407F-AFBA-5F2C37AD5A6D}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{8FE25547-93B8-4CFD-BE9B-773DBFF9EE88}">
+											<ClipList>
+												<MusicClip Name="tens_oshs_22b_4-4_80bpm_1" ID="{DD9EC63E-3B96-4A46-B338-E6D0A8727539}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="66697.6458333333"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="tens_oshs_22b_4-4_80bpm_1" ID="{CCED6027-B212-44D8-B0B8-E2C1448C4FC0}"/>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+								<MusicTrack Name="inv_ostls_22b_4-4_80bpm" ID="{7DF8CF23-5715-460B-8D6F-6ADBAE70E875}" ShortID="415080489">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="tens_ostls_22b_4-4_80bpm" ID="{35517513-80D9-476B-AB80-8AFC57E6B27B}">
+											<Language>SFX</Language>
+											<AudioFile>tens_ostls_22b_4-4_80bpm.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="23158334"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo MusicSyncType="3">
+												<StateGroupRef Name="EnemyState" ID="{885A65B0-14E5-449C-844A-4AAE6E0623D2}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="Patrol" ID="{F66CF3BF-799D-4AFA-922B-79321E287472}"/>
+												<CustomState Name="" ID="{CB77C257-2089-4705-966F-B4202F28806B}" ShortID="380733687">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Investigate" ID="{9A3B7584-337F-4DB4-BEB3-5E8FAD458224}"/>
+												<CustomState Name="" ID="{F040FCB6-34EA-4BCF-9F86-3A8AB813DA46}" ShortID="1034919843"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Chase" ID="{AF328BFF-F50B-4F39-A469-5EA342A50E49}"/>
+												<CustomState Name="" ID="{21E03EEC-5E56-42BA-A4ED-7EF0C0902495}" ShortID="190236075">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{DE55386F-A406-423F-BE7E-BD0345F715DB}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{00CC8EBE-5144-4EAB-8B2F-250733281757}">
+											<ClipList>
+												<MusicClip Name="tens_ostls_22b_4-4_80bpm" ID="{790A7416-FACE-4E44-8DE1-1B25E90A7576}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="67425.8125"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="tens_ostls_22b_4-4_80bpm" ID="{35517513-80D9-476B-AB80-8AFC57E6B27B}"/>
 												</MusicClip>
 											</ClipList>
 										</MusicTrackSequence>
@@ -435,12 +632,12 @@
 									<StateInfo>
 										<StateGroupList>
 											<StateGroupInfo MusicSyncType="3">
-												<StateGroupRef Name="Chase" ID="{885A65B0-14E5-449C-844A-4AAE6E0623D2}"/>
+												<StateGroupRef Name="EnemyState" ID="{885A65B0-14E5-449C-844A-4AAE6E0623D2}"/>
 											</StateGroupInfo>
 										</StateGroupList>
 										<CustomStateList>
 											<CustomState>
-												<StateRef Name="Off" ID="{F66CF3BF-799D-4AFA-922B-79321E287472}"/>
+												<StateRef Name="Patrol" ID="{F66CF3BF-799D-4AFA-922B-79321E287472}"/>
 												<CustomState Name="" ID="{E8671F2B-5EB8-4C66-B93B-3A151028919B}" ShortID="297482713">
 													<PropertyList>
 														<Property Name="Volume" Type="Real64" Value="-108"/>
@@ -448,7 +645,15 @@
 												</CustomState>
 											</CustomState>
 											<CustomState>
-												<StateRef Name="On" ID="{AF328BFF-F50B-4F39-A469-5EA342A50E49}"/>
+												<StateRef Name="Investigate" ID="{9A3B7584-337F-4DB4-BEB3-5E8FAD458224}"/>
+												<CustomState Name="" ID="{8425FDA3-8206-4EC6-B242-2371F68DBB14}" ShortID="974684250">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Chase" ID="{AF328BFF-F50B-4F39-A469-5EA342A50E49}"/>
 												<CustomState Name="" ID="{98C6915E-F849-44A9-B997-B7C3BCAA51A7}" ShortID="381484228"/>
 											</CustomState>
 										</CustomStateList>
@@ -494,12 +699,12 @@
 									<StateInfo>
 										<StateGroupList>
 											<StateGroupInfo MusicSyncType="3">
-												<StateGroupRef Name="Chase" ID="{885A65B0-14E5-449C-844A-4AAE6E0623D2}"/>
+												<StateGroupRef Name="EnemyState" ID="{885A65B0-14E5-449C-844A-4AAE6E0623D2}"/>
 											</StateGroupInfo>
 										</StateGroupList>
 										<CustomStateList>
 											<CustomState>
-												<StateRef Name="Off" ID="{F66CF3BF-799D-4AFA-922B-79321E287472}"/>
+												<StateRef Name="Patrol" ID="{F66CF3BF-799D-4AFA-922B-79321E287472}"/>
 												<CustomState Name="" ID="{F82CCC67-8A7B-4E69-AF31-F4CE954336B0}" ShortID="242987081">
 													<PropertyList>
 														<Property Name="Volume" Type="Real64" Value="-108"/>
@@ -507,7 +712,15 @@
 												</CustomState>
 											</CustomState>
 											<CustomState>
-												<StateRef Name="On" ID="{AF328BFF-F50B-4F39-A469-5EA342A50E49}"/>
+												<StateRef Name="Investigate" ID="{9A3B7584-337F-4DB4-BEB3-5E8FAD458224}"/>
+												<CustomState Name="" ID="{5B8BCD7B-AA69-47FD-9EEF-CD4093F370C5}" ShortID="878809360">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Chase" ID="{AF328BFF-F50B-4F39-A469-5EA342A50E49}"/>
 												<CustomState Name="" ID="{AE8247B5-AABE-4BEC-89F7-A58FDEAF1D3A}" ShortID="1017181281"/>
 											</CustomState>
 										</CustomStateList>
@@ -530,6 +743,187 @@
 														<Property Name="FadeOutMode" Type="int16" Value="0"/>
 													</PropertyList>
 													<AudioSourceRef Name="tens_ostls_22b_4-4_80bpm" ID="{FC4B033E-0D48-41A6-B4C2-FC2FE7885EDC}"/>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+								<MusicTrack Name="inv_oshs_22b_4-4_80bpm" ID="{EEACF88F-B20B-42B1-A601-3961E8F372CD}" ShortID="131676344">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<RTPCList>
+												<RTPC Name="" ID="{04CAA208-7D54-474C-8B13-91B7B8900B4B}" ShortID="971021055">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="Tension" ID="{56A358F2-294D-45D3-B89E-B3EE523F744E}" WorkUnitID="{23DCBD27-C250-41E6-A469-65C8CC67B0CD}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{32604DA7-8E55-4FED-BBC4-1C3B46A69E19}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>0.36655</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>2.5</XPos>
+																<YPos>0</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>Log1</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>7.51553</XPos>
+																<YPos>-200</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>10</XPos>
+																<YPos>-200</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="tens_oshs_22b_4-4_80bpm_1" ID="{7A332D6D-B203-4E88-9CEC-F8C13327E935}">
+											<Language>SFX</Language>
+											<AudioFile>tens_oshs_22b_4-4_80bpm_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="835370741"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo MusicSyncType="3">
+												<StateGroupRef Name="EnemyState" ID="{885A65B0-14E5-449C-844A-4AAE6E0623D2}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="Patrol" ID="{F66CF3BF-799D-4AFA-922B-79321E287472}"/>
+												<CustomState Name="" ID="{CE81F468-AC02-4425-A667-35929A2B7CCF}" ShortID="352958083">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Investigate" ID="{9A3B7584-337F-4DB4-BEB3-5E8FAD458224}"/>
+												<CustomState Name="" ID="{33181206-C101-4B73-A2B4-BCD9C519C839}" ShortID="725866721"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Chase" ID="{AF328BFF-F50B-4F39-A469-5EA342A50E49}"/>
+												<CustomState Name="" ID="{7B819266-0D87-4796-9C6F-38E3B534B9CF}" ShortID="723214434">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{0C580B37-0EAC-43AD-9187-58D50D95FE46}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{D65970E9-6B40-4FF1-825A-90C31728B7BD}">
+											<ClipList>
+												<MusicClip Name="tens_oshs_22b_4-4_80bpm_1" ID="{B4342189-CE9E-4244-A47A-9FF6A69CDC9C}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="66697.6458333333"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="tens_oshs_22b_4-4_80bpm_1" ID="{7A332D6D-B203-4E88-9CEC-F8C13327E935}"/>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+								<MusicTrack Name="inv_ostls_22b_4-4_80bpm" ID="{9C0782C0-9733-4012-BDC0-855E873C15AC}" ShortID="388918871">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3E946DF0-DB81-4A95-90A0-FC41EA04BDA5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="tens_ostls_22b_4-4_80bpm" ID="{B8BE4E36-2DFE-45EB-B633-22BEAE494D36}">
+											<Language>SFX</Language>
+											<AudioFile>tens_ostls_22b_4-4_80bpm.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="23158334"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo MusicSyncType="3">
+												<StateGroupRef Name="EnemyState" ID="{885A65B0-14E5-449C-844A-4AAE6E0623D2}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="Patrol" ID="{F66CF3BF-799D-4AFA-922B-79321E287472}"/>
+												<CustomState Name="" ID="{AB26239F-DCEA-4360-B718-A3CC7AAC625F}" ShortID="345715885">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Investigate" ID="{9A3B7584-337F-4DB4-BEB3-5E8FAD458224}"/>
+												<CustomState Name="" ID="{FF6FC6C7-FD53-4C1E-B81F-C21804DCCCAA}" ShortID="834770329"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Chase" ID="{AF328BFF-F50B-4F39-A469-5EA342A50E49}"/>
+												<CustomState Name="" ID="{6D0EB824-A037-4C62-89C2-1B367F57FF49}" ShortID="76764719">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{3B801364-137A-4D91-9462-5BCD7F0252FB}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{78659528-AF16-49CA-8BD6-56B1B23F96B2}">
+											<ClipList>
+												<MusicClip Name="tens_ostls_22b_4-4_80bpm" ID="{05AA435C-3851-458D-AE5E-935709CA68BD}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="67425.8125"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="tens_ostls_22b_4-4_80bpm" ID="{B8BE4E36-2DFE-45EB-B633-22BEAE494D36}"/>
 												</MusicClip>
 											</ClipList>
 										</MusicTrackSequence>

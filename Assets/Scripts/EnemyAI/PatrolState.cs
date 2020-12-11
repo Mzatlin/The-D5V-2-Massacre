@@ -17,6 +17,7 @@ public class PatrolState : EnemyStateBase
 
     public override void BeginState()
     {
+        AkSoundEngine.SetState("EnemyState", "Patrol");
         currentPatrolPoint = enemy.PatrolTargets[0];
         enemy.SetTarget(currentPatrolPoint);
         size = enemy.PatrolTargets.Count - 1;

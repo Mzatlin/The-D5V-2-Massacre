@@ -8,22 +8,35 @@ Event	ID	Name			Wwise Object Path	Notes
 	4065681590	Stop_Sines			\Default Work Unit\Stop_Sines	
 
 State Group	ID	Name			Wwise Object Path	Notes
-	417490929	Chase			\Default Work Unit\Chase	
 	556887514	Locomotion			\Default Work Unit\Locomotion	
+	1865569098	EnemyState			\Default Work Unit\EnemyState	
 
 State	ID	Name	State Group			Notes
-	748895195	None	Chase			
-	930712164	Off	Chase			
-	1651971902	On	Chase			
 	340271938	Walking	Locomotion			
 	748895195	None	Locomotion			
 	3863236874	Running	Locomotion			
+	417490929	Chase	EnemyState			
+	748895195	None	EnemyState			
+	2041902182	Investigate	EnemyState			
+	3497767639	Patrol	EnemyState			
 
 Custom State	ID	Name	State Group	Owner		Notes
-	242987081	Off	Chase	\Interactive Music Hierarchy\Default Work Unit\Ambience\Melody1\tens_ostls_22b_4-4_80bpm		
-	297482713	Off	Chase	\Interactive Music Hierarchy\Default Work Unit\Ambience\Melody1\tens_oshs_22b_4-4_80bpm		
-	534153973	Off	Chase	\Interactive Music Hierarchy\Default Work Unit\Ambience\Melody2\tens_oshs_22b_4-4_80bpm		
-	664414894	Off	Chase	\Interactive Music Hierarchy\Default Work Unit\Ambience\Melody2\tens_ostls_22b_4-4_80bpm		
+	76764719	Chase	EnemyState	\Interactive Music Hierarchy\Default Work Unit\Ambience\Melody1\inv_ostls_22b_4-4_80bpm		
+	190236075	Chase	EnemyState	\Interactive Music Hierarchy\Default Work Unit\Ambience\Melody2\inv_ostls_22b_4-4_80bpm		
+	242987081	Patrol	EnemyState	\Interactive Music Hierarchy\Default Work Unit\Ambience\Melody1\tens_ostls_22b_4-4_80bpm		
+	297482713	Patrol	EnemyState	\Interactive Music Hierarchy\Default Work Unit\Ambience\Melody1\tens_oshs_22b_4-4_80bpm		
+	345715885	Patrol	EnemyState	\Interactive Music Hierarchy\Default Work Unit\Ambience\Melody1\inv_ostls_22b_4-4_80bpm		
+	352958083	Patrol	EnemyState	\Interactive Music Hierarchy\Default Work Unit\Ambience\Melody1\inv_oshs_22b_4-4_80bpm		
+	380733687	Patrol	EnemyState	\Interactive Music Hierarchy\Default Work Unit\Ambience\Melody2\inv_ostls_22b_4-4_80bpm		
+	534153973	Patrol	EnemyState	\Interactive Music Hierarchy\Default Work Unit\Ambience\Melody2\tens_oshs_22b_4-4_80bpm		
+	664414894	Patrol	EnemyState	\Interactive Music Hierarchy\Default Work Unit\Ambience\Melody2\tens_ostls_22b_4-4_80bpm		
+	716458373	Investigate	EnemyState	\Interactive Music Hierarchy\Default Work Unit\Ambience\Melody2\tens_oshs_22b_4-4_80bpm		
+	723214434	Chase	EnemyState	\Interactive Music Hierarchy\Default Work Unit\Ambience\Melody1\inv_oshs_22b_4-4_80bpm		
+	749315170	Patrol	EnemyState	\Interactive Music Hierarchy\Default Work Unit\Ambience\Melody2\inv_oshs_22b_4-4_80bpm		
+	749887397	Investigate	EnemyState	\Interactive Music Hierarchy\Default Work Unit\Ambience\Melody2\tens_ostls_22b_4-4_80bpm		
+	878809360	Investigate	EnemyState	\Interactive Music Hierarchy\Default Work Unit\Ambience\Melody1\tens_ostls_22b_4-4_80bpm		
+	964257779	Chase	EnemyState	\Interactive Music Hierarchy\Default Work Unit\Ambience\Melody2\inv_oshs_22b_4-4_80bpm		
+	974684250	Investigate	EnemyState	\Interactive Music Hierarchy\Default Work Unit\Ambience\Melody1\tens_oshs_22b_4-4_80bpm		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	602825232	Current_Sine			\Default Work Unit\Current_Sine	
