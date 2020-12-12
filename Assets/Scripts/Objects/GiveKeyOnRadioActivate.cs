@@ -29,18 +29,17 @@ public class GiveKeyOnRadioActivate : MonoBehaviour
         }
     }
 
+    //After completing a radio, check if that's enough completed radios to earn a specific key
     void HandleComplete()
     {
         if (radio != null)
         {
             if(radioKey.radioKeyExchange.ContainsKey(radio.completeCount))
             {
-                if (!keys.IsKeyCollected(radioKey.radioKeyExchange[radio.completeCount])) //this shit needs to happen in the key SO
+                if (!keys.IsKeyCollected(radioKey.radioKeyExchange[radio.completeCount])) 
                 {
                     keys.keyStatuses[radioKey.radioKeyExchange[radio.completeCount]] = true;
-                    Debug.Log("Found a key! "+ radioKey.radioKeyExchange[radio.completeCount]);
                     OnKeyRecieve?.Invoke(radioKey.radioKeyExchange[radio.completeCount]);
-                   // keyNameIndex++;
                 }
             }
         }

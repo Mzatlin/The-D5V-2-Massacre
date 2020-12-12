@@ -189,8 +189,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4279344640
+  m_fontColor: {r: 0, g: 0.61960787, b: 0.06666667, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -292,10 +292,10 @@ RectTransform:
   m_Father: {fileID: 1380086770}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.39600003, y: 0.27632043}
-  m_AnchorMax: {x: 0.60800004, y: 0.34935918}
-  m_AnchoredPosition: {x: -1.6085892, y: -0.3538971}
-  m_SizeDelta: {x: -10.447998, y: 2.8935623}
+  m_AnchorMin: {x: 0.39725003, y: 0.26830602}
+  m_AnchorMax: {x: 0.59424996, y: 0.34935918}
+  m_AnchoredPosition: {x: 0.51000214, y: 0.40390015}
+  m_SizeDelta: {x: -12.099609, y: -3.4270248}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &462467374
 MonoBehaviour:
@@ -327,7 +327,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -337,7 +337,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: -1027442031084566653, guid: 26f600b8b3dade44caaa2f58932ac997, type: 3}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -384,8 +384,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 8356099539146933851, guid: 26f600b8b3dade44caaa2f58932ac997, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -470,8 +470,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4279344640
+  m_fontColor: {r: 0, g: 0.61960787, b: 0.06666667, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -773,8 +773,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4279344640
+  m_fontColor: {r: 0, g: 0.61960787, b: 0.06666667, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1119,10 +1119,10 @@ RectTransform:
   m_Father: {fileID: 1380086770}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.39600003, y: 0.42442676}
-  m_AnchorMax: {x: 0.60800004, y: 0.5}
-  m_AnchoredPosition: {x: -1.6085892, y: -0.6176758}
-  m_SizeDelta: {x: -10.447998, y: 1.8935623}
+  m_AnchorMin: {x: 0.39725003, y: 0.41400003}
+  m_AnchorMax: {x: 0.59424996, y: 0.508}
+  m_AnchoredPosition: {x: 1.3600006, y: -0.66999817}
+  m_SizeDelta: {x: -11.180588, y: -6.0887604}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1597413459
 MonoBehaviour:
@@ -1155,7 +1155,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1165,7 +1165,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: -1027442031084566653, guid: 26f600b8b3dade44caaa2f58932ac997, type: 3}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -1212,8 +1212,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 8356099539146933851, guid: 26f600b8b3dade44caaa2f58932ac997, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
