@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 7485210385592668494}
   - component: {fileID: 3894223159787028337}
   - component: {fileID: 1600037390719804374}
+  - component: {fileID: 5123162507168608260}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Untagged
@@ -234,6 +235,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  paths: {fileID: 0}
 --- !u!114 &259286942573559310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,3 +322,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radioCompletion: {fileID: 11400000, guid: 1e39c22aaa65ba34ca0f18494f7541cd, type: 2}
   patrol: {fileID: 11400000, guid: 8eadfe171fe5d0b43b13bd928f0c38df, type: 2}
+--- !u!114 &5123162507168608260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259286942573559318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05c4a36a188bf0648ab1c9e376defdb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ladderMask:
+    serializedVersion: 2
+    m_Bits: 4096

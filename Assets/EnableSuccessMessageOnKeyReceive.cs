@@ -2,50 +2,49 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
-public class EnableSuccessMessageOnCompletion : MonoBehaviour
+public class EnableSuccessMessageOnKeyReceive : MonoBehaviour
 {
     public Canvas successCanvas;
-    public string successMessage;
+    string successMessage;
     public TextMeshProUGUI successText;
-
-    [SerializeField] GameObject mainCamera;
-    IRadioMinigame minigame => GetComponent<IRadioMinigame>();
+    GiveKeyOnRadioActivate key => GetComponent<GiveKeyOnRadioActivate>();
     // Start is called before the first frame update
-    void Start()
+     void Start()
     {
         if (successCanvas != null)
         {
             successCanvas.enabled = false;
             successText.text = "";
         }
-        if(minigame != null)
+        if(key != null)
         {
-            minigame.OnComplete += HandleSuccess;
+            key.OnKeyRecieve += HandleKeyReceive;
+        }
+
+    }
+
+    private void OnDestroy()
+    {
+        if(key != null)
+        {
+            key.OnKeyRecieve -= HandleKeyReceive;
         }
     }
 
-    void OnDestroy()
+    void HandleKeyReceive(string message)
     {
-        if (minigame != null)
-        {
-            AkSoundEngine.PostEvent("Stop_Sines", mainCamera);
-            minigame.OnComplete -= HandleSuccess;
-        }
-    }
-
-    void HandleSuccess()
-    {
-        AkSoundEngine.PostEvent("Stop_Sines", mainCamera);
+        successMessage = message;
         successCanvas.enabled = true;
-        successText.text = successMessage;
+        successText.text = successMessage + " Key Found";
         StartCoroutine(DisableDelay());
     }
 
     IEnumerator DisableDelay()
     {
         yield return new WaitForSeconds(3f);
-        successCanvas.enabled = false;
         successText.text = "";
+        successCanvas.enabled = false;
     }
 }

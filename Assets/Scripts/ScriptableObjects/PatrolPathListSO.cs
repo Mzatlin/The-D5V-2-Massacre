@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class PatrolPathListSO : ScriptableObject
 {
+    public int currentIndex;
     public List<GameObject> patrolPaths = new List<GameObject>();
 }
 

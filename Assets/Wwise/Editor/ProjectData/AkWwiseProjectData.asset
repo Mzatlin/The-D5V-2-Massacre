@@ -71,7 +71,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: c5c1c9c6241f25489d42937e88389abb
     GuidInternal: 
-    m_lastTime: -8585939467693669600
+    m_lastTime: -8585938793067668648
     List:
     - name: Main
       guid: 3b70d55d269857419d15d3d738a71d00
@@ -90,7 +90,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 681b6d033837e744bd1c22bb66c897fc
     GuidInternal: 
-    m_lastTime: -8585939467698560745
+    m_lastTime: -8585938793068147855
     List:
     - name: Play_Ambience
       guid: 70d340678b217b4e8912c1c178b89e04
@@ -173,6 +173,18 @@ MonoBehaviour:
       - ElementName: Stop_Sines
         ObjectType: 3
       Path: Default Work Unit\Stop_Sines
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: StopAll
+      guid: fa18896e99f4c94fa163f2bb04758176
+      id: 3086540886
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: StopAll
+        ObjectType: 3
+      Path: Default Work Unit\StopAll
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0

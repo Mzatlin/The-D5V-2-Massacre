@@ -33,11 +33,10 @@ public class ChangePatrolPathOnRadioComplete : MonoBehaviour
 
     void HandleRadioComplete(Transform obj)
     {
-      //  if(enemy != null && radioCompletion != null)
-     //   {
-            Debug.Log("Setting Path for "+radioCompletion.completeCount);
+        if(enemy != null && radioCompletion != null)
+        {
             enemy.SetPatrolPath(patrol.patrolPaths[radioCompletion.completeCount]);
-      //  }
+        }
     }
 
 }

@@ -20,12 +20,13 @@ public class EnemyAI : MonoBehaviour
     public Transform CurrentTarget { get; private set; }
     public List<Transform> PatrolTargets => patrolTargets;
     public EnemyStateMachine StateMachine => GetComponent<EnemyStateMachine>();
+    public PatrolPathListSO paths;
 
     // Start is called before the first frame update
     void Awake()
     {
+        SetPatrolPath(paths?.patrolPaths[0]);
         InitializeStateMachine();
-        SetPatrolPath(test);
     }
 
     void InitializeStateMachine()

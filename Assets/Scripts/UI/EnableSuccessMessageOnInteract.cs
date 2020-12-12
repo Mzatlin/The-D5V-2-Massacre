@@ -15,6 +15,7 @@ public class EnableSuccessMessageOnInteract : HandleInteractionBase
         if(successCanvas != null)
         {
             successCanvas.enabled = false;
+            successText.text = "";
         }
     }
 
@@ -28,6 +29,7 @@ public class EnableSuccessMessageOnInteract : HandleInteractionBase
     IEnumerator DisableDelay()
     {
         yield return new WaitForSeconds(3f);
+        successText.text = "";
         successCanvas.enabled = false;
     }
 }

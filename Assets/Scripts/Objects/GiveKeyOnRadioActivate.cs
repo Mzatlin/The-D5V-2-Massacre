@@ -5,13 +5,12 @@ using UnityEngine;
 
 public class GiveKeyOnRadioActivate : MonoBehaviour
 {
+    public event Action<string> OnKeyRecieve = delegate { };
+
     public RadioCompletionListSO radio;
     public KeyListSO keys;
-    public string keyName;
+    public RadioKeyExchange radioKey;
     IRadioMinigame minigame => GetComponent<IRadioMinigame>();
-    [SerializeField]
-    int amountForKey = 4;
-    int counter = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -22,23 +21,26 @@ public class GiveKeyOnRadioActivate : MonoBehaviour
         }
     }
 
-    private void HandleComplete()
+    void OnDestroy()
+    {
+        if (minigame != null)
+        {
+            minigame.OnComplete -= HandleComplete;
+        }
+    }
+
+    void HandleComplete()
     {
         if (radio != null)
         {
-            foreach (KeyValuePair<RadioSO, bool> complete in radio.radioStatuses)
+            if(radioKey.radioKeyExchange.ContainsKey(radio.completeCount))
             {
-                if (complete.Value == true)
+                if (!keys.IsKeyCollected(radioKey.radioKeyExchange[radio.completeCount])) //this shit needs to happen in the key SO
                 {
-                    counter++;
-                }
-            }
-
-            if(counter == amountForKey)
-            {
-                if (!keys.IsKeyCollected(keyName))
-                {
-                    keys.keyStatuses[keyName] = true;
+                    keys.keyStatuses[radioKey.radioKeyExchange[radio.completeCount]] = true;
+                    Debug.Log("Found a key! "+ radioKey.radioKeyExchange[radio.completeCount]);
+                    OnKeyRecieve?.Invoke(radioKey.radioKeyExchange[radio.completeCount]);
+                   // keyNameIndex++;
                 }
             }
         }

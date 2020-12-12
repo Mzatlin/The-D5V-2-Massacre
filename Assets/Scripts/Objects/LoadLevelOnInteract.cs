@@ -11,9 +11,12 @@ public class LoadLevelOnInteract : HandleInteractionBase
     public string sceneName;
     bool isRadiosCleared = false;
     int numbersLeft = 0;
+    GameObject mainCamera;
+
     // Start is called before the first frame update
     protected override void Start()
     {
+        mainCamera = FindObjectOfType<Camera>().gameObject;
         base.Start();
     }
 
@@ -22,6 +25,7 @@ public class LoadLevelOnInteract : HandleInteractionBase
         if (radio.HasWon())
         {
             isRadiosCleared = true;
+            AkSoundEngine.PostEvent("StopAll", mainCamera);
             SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
             base.HandleInteract();
         }
