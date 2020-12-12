@@ -10,6 +10,8 @@ public class PatrolState : EnemyStateBase
     int size;
     List<Transform> locations = new List<Transform>();
     Transform currentPatrolPoint;
+    PlayerSprint sprintPlayer;
+
     public PatrolState(EnemyAI _enemy) : base(_enemy.gameObject)
     {
         enemy = _enemy;
@@ -25,6 +27,11 @@ public class PatrolState : EnemyStateBase
 
     public override Type Tick()
     {
+        if (!enemy.GetCanPath())
+        {
+            enemy.SetCanPath();
+        }
+
         if (enemy.CurrentTarget == enemy.RadioTarget)
         {
             return typeof(InvestigateObjectState);
@@ -48,26 +55,61 @@ public class PatrolState : EnemyStateBase
                 enemy.SetTarget(currentPatrolPoint);
             }
 
-            CheckLineOfSight();
-
-            if (Vector2.Distance(transformEnemy.position, enemy.PlayerTarget.position) < 5 && enemy.PlayerTarget.gameObject.GetComponent<Collider2D>().enabled)
+            if (enemy.PlayerGameObject.GetComponent<PlayerSprint>() == null)
             {
-                return typeof(ChasePlayerState);
+                Debug.Log("Not found");
             }
 
-            
+            if (enemy.PlayerTarget.gameObject.GetComponent<Collider2D>().enabled)
+            {
+                if (CheckLineOfSight())
+                {
+                    return typeof(ChasePlayerState);
+                }
+
+               if (Vector2.Distance(transformEnemy.position, enemy.PlayerTarget.position) < 5f && enemy.PlayerGameObject.GetComponent<PlayerSprint>().IsSprinting)
+                {
+                    return typeof(ChasePlayerState);
+                }
+
+                if (Vector2.Distance(transformEnemy.position, enemy.PlayerTarget.position) < 1f)
+                {
+                    return typeof(ChasePlayerState);
+                }
+            }
+
+
 
         }
 
         return null;
     }
 
-    void CheckLineOfSight()
+    bool CheckLineOfSight()
     {
         Ray2D ray = new Ray2D(transformEnemy.position, gameObjectEnemy.GetComponent<Rigidbody2D>().velocity);
-        Debug.DrawRay(ray.origin, ray.direction, Color.red);
+        Debug.DrawRay(ray.origin, ray.direction*8f, Color.red);
+        bool hasSeenPlayer = false;
         RaycastHit2D[] results;
-        results = Physics2D.RaycastAll(ray.origin, ray.direction); //check if raycast is hitting door or wall.
+        results = Physics2D.RaycastAll(ray.origin, ray.direction, 8f); //check if raycast is hitting door or wall.
+        foreach (RaycastHit2D hit in results)
+        {
+            LayerMask target = 1 << hit.collider.gameObject.layer;
+            if ((target & enemy.obstacles) != 0)
+            {
+                return false;
+            }
+            if (hit.collider.transform == enemy.PlayerTarget)
+            {
+                hasSeenPlayer = true;
+            }
+        }
 
+        if (hasSeenPlayer)
+        {
+            return true;
+        }
+
+        return false;
     }
 }

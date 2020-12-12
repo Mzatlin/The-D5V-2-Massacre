@@ -18,7 +18,8 @@ public class PlayerSprint : MonoBehaviour
     bool hasDelayed = false;
  
     float baseMovementSpeed;
-    bool isSpriting = false;
+    bool isSprinting = false;
+    public bool IsSprinting => isSprinting;
     public float SprintAmount { get; private set; } = 100f;
 
     Animator animate;
@@ -41,7 +42,7 @@ public class PlayerSprint : MonoBehaviour
             TrySprint();
         }
 
-        if (isSpriting)
+        if (isSprinting)
         {
             SprintAmount -= depletionSpeed * Time.deltaTime;
         }
@@ -78,9 +79,9 @@ public class PlayerSprint : MonoBehaviour
 
         if (SprintAmount > 1 && Input.GetKey(KeyCode.LeftShift))
         {
-            if(movement != null && !isSpriting)
+            if(movement != null && !isSprinting)
             {
-                isSpriting = true;
+                isSprinting = true;
                 movement.MoveSpeed *= moveSpeedMultiplier;   
             }
         }
@@ -93,7 +94,7 @@ public class PlayerSprint : MonoBehaviour
     }
     void ResetSpeed()
     {
-        isSpriting = false;
+        isSprinting = false;
         movement.MoveSpeed = baseMovementSpeed;
     }
 
@@ -106,7 +107,7 @@ public class PlayerSprint : MonoBehaviour
     {
         if (animate != null)
         {
-            animate.SetBool("IsRunning", isSpriting);
+            animate.SetBool("IsRunning", isSprinting);
         }
         else
         {

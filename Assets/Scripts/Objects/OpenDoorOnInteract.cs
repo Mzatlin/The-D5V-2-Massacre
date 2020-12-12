@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
+
 public class OpenDoorOnInteract : HandleInteractionBase
 {
     INamePlate plate;
@@ -23,7 +24,7 @@ public class OpenDoorOnInteract : HandleInteractionBase
             if(plate != null)
             {
                 plate.DisableNamePlate();
-              //  Pathfinding.AstarPathEditor.MenuScan();
+                //AstarPathEditor.MenuScan();
             }
         }
         base.HandleInteract();

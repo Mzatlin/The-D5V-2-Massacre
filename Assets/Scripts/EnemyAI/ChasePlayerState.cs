@@ -21,10 +21,16 @@ public class ChasePlayerState : EnemyStateBase
 
     public override Type Tick()
     {
-        if(playerCollider != null && !playerCollider.enabled)
+        if (!enemy.GetCanPath())
+        {
+            enemy.SetCanPath();
+        }
+
+        if (playerCollider != null && !playerCollider.enabled)
         {
             return typeof(InvestigateObjectState);
         }
+
 
         return null;
     }

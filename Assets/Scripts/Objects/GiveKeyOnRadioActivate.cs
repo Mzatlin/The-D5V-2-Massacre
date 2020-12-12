@@ -10,27 +10,26 @@ public class GiveKeyOnRadioActivate : MonoBehaviour
     public RadioCompletionListSO radio;
     public KeyListSO keys;
     public RadioKeyExchange radioKey;
-    IRadioMinigame minigame => GetComponent<IRadioMinigame>();
 
     // Start is called before the first frame update
     void Start()
     {
-        if (minigame != null)
+        if(radio != null)
         {
-            minigame.OnComplete += HandleComplete;
+            radio.OnRadioComplete += HandleComplete;
         }
     }
 
     void OnDestroy()
     {
-        if (minigame != null)
+        if (radio != null)
         {
-            minigame.OnComplete -= HandleComplete;
+            radio.OnRadioComplete -= HandleComplete;
         }
     }
 
     //After completing a radio, check if that's enough completed radios to earn a specific key
-    void HandleComplete()
+    void HandleComplete(Transform obj)
     {
         if (radio != null)
         {

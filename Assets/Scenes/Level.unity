@@ -2771,7 +2771,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 775285883996037694, guid: 91a7e8fc63bbda44d821fa087b8db2a3, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 775285883996037694, guid: 91a7e8fc63bbda44d821fa087b8db2a3, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3841,7 +3841,7 @@ RectTransform:
   m_Children:
   - {fileID: 2031666298}
   m_Father: {fileID: 775670550}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7609,12 +7609,12 @@ Transform:
   m_LocalPosition: {x: 22.450138, y: 0.27500004, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 405695242}
   - {fileID: 999829564}
   - {fileID: 1692847782}
   - {fileID: 358102008}
   - {fileID: 371439278}
   - {fileID: 1888420171}
-  - {fileID: 405695242}
   - {fileID: 180797798}
   - {fileID: 962802448}
   - {fileID: 138234836}
@@ -7980,7 +7980,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1410471810436874816, guid: a5d31e4e54f59ad4f8eb28de284edc1e, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1410471810436874816, guid: a5d31e4e54f59ad4f8eb28de284edc1e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -8091,6 +8091,14 @@ PrefabInstance:
       propertyPath: playerTarget
       value: 
       objectReference: {fileID: 1558568568}
+    - target: {fileID: 259286942573559311, guid: 95a0cc24b055009468a9a722ae8a4e6c, type: 3}
+      propertyPath: obstacles.m_Bits
+      value: 3072
+      objectReference: {fileID: 0}
+    - target: {fileID: 259286942573559311, guid: 95a0cc24b055009468a9a722ae8a4e6c, type: 3}
+      propertyPath: playerGameObject
+      value: 
+      objectReference: {fileID: 1302560272}
     - target: {fileID: 259286942573559311, guid: 95a0cc24b055009468a9a722ae8a4e6c, type: 3}
       propertyPath: patrolTargets.Array.size
       value: 6
@@ -13141,6 +13149,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1302560272 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2943845963661684782, guid: 4bb0e0d1ea95966468dfab98c5e92fb7, type: 3}
+  m_PrefabInstance: {fileID: 1614071576}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1316310260
 GameObject:
   m_ObjectHideFlags: 0
@@ -15567,7 +15580,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6250550467373906540, guid: 17e902e053eeb6048943eac4b131c6c5, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6250550467373906540, guid: 17e902e053eeb6048943eac4b131c6c5, type: 3}
       propertyPath: m_AnchorMax.x
@@ -17146,7 +17159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5629453978835491388, guid: d92faef0586945049a0c1e820bd9bef4, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5629453978835491388, guid: d92faef0586945049a0c1e820bd9bef4, type: 3}
       propertyPath: m_AnchorMax.x
@@ -19053,7 +19066,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8069309692025773380, guid: 730f1e323524d8e4b8bda96be8e07d9e, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8069309692025773383, guid: 730f1e323524d8e4b8bda96be8e07d9e, type: 3}
       propertyPath: m_RootOrder
@@ -22408,7 +22421,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1181715231574399738, guid: f35f5e01e90cab548beb8fe92d4cff46, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1181715231574399738, guid: f35f5e01e90cab548beb8fe92d4cff46, type: 3}
       propertyPath: m_AnchorMax.x
@@ -22963,6 +22976,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueBox
       objectReference: {fileID: 0}
+    - target: {fileID: 2861938807103172383, guid: 31843e0663fa476428b0ae8e190c55fb, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6527125884537158030, guid: 31843e0663fa476428b0ae8e190c55fb, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -23046,6 +23063,10 @@ PrefabInstance:
     - target: {fileID: 6527125884537158030, guid: 31843e0663fa476428b0ae8e190c55fb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7701533485646292398, guid: 31843e0663fa476428b0ae8e190c55fb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -5.100006
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31843e0663fa476428b0ae8e190c55fb, type: 3}
