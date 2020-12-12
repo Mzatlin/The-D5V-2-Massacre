@@ -44,3 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radioSO: {fileID: 11400000, guid: 1e39c22aaa65ba34ca0f18494f7541cd, type: 2}
+  radioKey: {fileID: 11400000, guid: 6b17cb18ea517754eaff843344c81688, type: 2}
