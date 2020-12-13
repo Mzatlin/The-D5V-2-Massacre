@@ -34,6 +34,7 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="Patrol" ID="{F66CF3BF-799D-4AFA-922B-79321E287472}"/>
+						<CurrentStateRef Name="Walking" ID="{8A96731B-7288-4606-A523-CA607611D03F}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>

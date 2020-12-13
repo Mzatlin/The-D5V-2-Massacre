@@ -10,7 +10,7 @@ public class AnimateSpritesOnEnable : MonoBehaviour
     public float animationSpeed;
     [SerializeField]
     private Image image;
-    GameObject mainCamera;
+    [SerializeField] GameObject mainCamera;
     bool isPlaying = false;
 
    void Awake()

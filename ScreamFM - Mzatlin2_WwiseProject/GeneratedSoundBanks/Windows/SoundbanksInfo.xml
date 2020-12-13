@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="1741109554">
+		<SoundBank Id="1355168291" Language="SFX" Hash="1497043871">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -20,7 +20,7 @@
 				<AuxBus Id="2385628198" Name="Footsteps" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Footsteps"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="3925650855">
+		<SoundBank Id="3161908922" Language="SFX" Hash="2749407717">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -69,7 +69,7 @@
 					<IncludedMemoryFiles>
 						<File Id="825325312" Language="SFX">
 							<ShortName>471147__worldmaxter__sword-slide.wav</ShortName>
-							<Path>SFX\471147__worldmaxter__sword-slide_81A1F509.wem</Path>
+							<Path>SFX\471147__worldmaxter__sword-slide_85BCA3D9.wem</Path>
 						</File>
 						<File Id="911940217" Language="SFX">
 							<ShortName>trans_1b_4-4_80bpm.wav</ShortName>
@@ -78,6 +78,114 @@
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps" DurationType="OneShot" DurationMin="0.324252" DurationMax="0.669023">
+					<IncludedMemoryFiles>
+						<File Id="117347736" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_72E8497F.wem</Path>
+						</File>
+						<File Id="195104483" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_75912A51.wem</Path>
+						</File>
+						<File Id="227446820" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_10BF4265.wem</Path>
+						</File>
+						<File Id="228877556" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_471A2D0C.wem</Path>
+						</File>
+						<File Id="334631596" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_ADF7E32F.wem</Path>
+						</File>
+						<File Id="370068166" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_B4C5725A.wem</Path>
+						</File>
+						<File Id="394858174" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_F10BFE84.wem</Path>
+						</File>
+						<File Id="404373423" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_9930C665.wem</Path>
+						</File>
+						<File Id="495072260" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_4FEA3CFB.wem</Path>
+						</File>
+						<File Id="551339478" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_A2E4D11F.wem</Path>
+						</File>
+						<File Id="593177721" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_F148C3B3.wem</Path>
+						</File>
+						<File Id="609552309" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_E5CB161B.wem</Path>
+						</File>
+						<File Id="684935305" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_6A15B114.wem</Path>
+						</File>
+						<File Id="693898603" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_D8D0562F.wem</Path>
+						</File>
+						<File Id="804904074" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_CD8CA230.wem</Path>
+						</File>
+						<File Id="813349880" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_070FE718.wem</Path>
+						</File>
+						<File Id="899899946" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_04E3B55B.wem</Path>
+						</File>
+						<File Id="922779358" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_76633805.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{8A96731B-7288-4606-A523-CA607611D03F}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{93740663-6767-457B-B51B-1D1523D9E88D}">
+							<Media>
+								<File Id="593177721"/>
+								<File Id="609552309"/>
+								<File Id="899899946"/>
+								<File Id="804904074"/>
+								<File Id="227446820"/>
+								<File Id="195104483"/>
+								<File Id="922779358"/>
+								<File Id="551339478"/>
+								<File Id="813349880"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{8A96731B-7288-4606-A523-CA607611D03F}">
+							<Media>
+								<File Id="228877556"/>
+								<File Id="394858174"/>
+								<File Id="370068166"/>
+								<File Id="684935305"/>
+								<File Id="693898603"/>
+								<File Id="495072260"/>
+								<File Id="404373423"/>
+								<File Id="334631596"/>
+								<File Id="117347736"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+					<AuxBusSends>
+						<AuxBus Id="2385628198" Name="Footsteps" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Footsteps"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="971382617" Name="Play_FootstepsEnemy" ObjectPath="\Events\Default Work Unit\Play_FootstepsEnemy" DurationType="OneShot" DurationMin="0.644768" DurationMax="1.330339">
 					<IncludedMemoryFiles>
 						<File Id="117347736" Language="SFX">
 							<ShortName>WHGA1 - Rock.wav</ShortName>
