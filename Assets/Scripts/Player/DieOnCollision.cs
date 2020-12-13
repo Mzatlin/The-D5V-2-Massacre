@@ -8,7 +8,6 @@ public class DieOnCollision : MonoBehaviour, IDie
     IPlayerState player => GetComponent<IPlayerState>();
     Transform enemy;
     LayerMask enemyLayer;
-    [SerializeField] GameObject mainCamera;
 
     public event Action OnDie = delegate { };
 

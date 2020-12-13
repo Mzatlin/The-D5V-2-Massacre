@@ -10,6 +10,7 @@ public class AnimateSpritesOnEnable : MonoBehaviour
     public float animationSpeed;
     [SerializeField]
     private Image image;
+    [SerializeField] GameObject mainCamera;
 
    void Awake()
     {
@@ -18,7 +19,6 @@ public class AnimateSpritesOnEnable : MonoBehaviour
 
     void OnEnable()
     {
-        GameObject mainCamera = FindObjectOfType<Camera>().gameObject;
         AkSoundEngine.PostEvent("Play_DeathTransition", mainCamera);
         StartCoroutine(ManualAnimation());
     }
@@ -32,7 +32,6 @@ public class AnimateSpritesOnEnable : MonoBehaviour
             yield return new WaitForSeconds(animationSpeed);
             if(i == sprites.Length - 1)
             {
-                GameObject mainCamera = FindObjectOfType<Camera>().gameObject;
                 AkSoundEngine.PostEvent("Play_DeathMusic", mainCamera);
             }
         }
