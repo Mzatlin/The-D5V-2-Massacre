@@ -3,30 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SetInactiveOnDialogueEnd : MonoBehaviour
+public class SetInactiveOnDialogueEnd : DisableOnDialogueEndBase
 {
 
-    IEndDialogue End => GetComponent<IEndDialogue>();
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
-        if(End != null)
-        {
-            End.OnEndDialogue += HandleEnd;
-        }
+        base.Start();
     }
 
-    void OnDestroy()
+    protected override void HandleEnd()
     {
-        if (End != null)
-        {
-            End.OnEndDialogue -= HandleEnd;
-        }
-    }
-
-    private void HandleEnd()
-    {
-        gameObject.SetActive(false);
+        base.HandleEnd();
     }
 
 }

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Lists/PatrolPaths")]
-
 public class PatrolPathListSO : ScriptableObject
 {
     public int currentIndex;
