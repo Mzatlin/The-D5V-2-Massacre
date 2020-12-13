@@ -8,6 +8,9 @@ public class MinigameController : MonoBehaviour
 {
     public Image dialImage;
     public Image radioScreen;
+    public Image radioAnswer;
+    Animator radioScreenAnimation;
+    Animator radioAnswerAnimation;
     public Slider radioSlider;
     IRadioMinigame radio => GetComponent<IRadioMinigame>();
     [SerializeField]
@@ -24,12 +27,16 @@ public class MinigameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(radioScreen != null && radioAnswer != null)
+        {
+            radioScreenAnimation = radioScreen.GetComponent<Animator>();
+            radioAnswerAnimation = radioAnswer.GetComponent<Animator>();
+        }
 
         if (radio != null)
         {
             radio.OnMinigameStart += HandleMiniGameStart;
             radio.OnExit += HandleMiniGameExit;
-           
         }
     }
 
@@ -84,6 +91,8 @@ public class MinigameController : MonoBehaviour
 
         radioSlider.value += dialRotation / 360;
         radioSlider.value = Mathf.Clamp(radioSlider.value, 0f, 1f);
+        radioScreenAnimation.speed = (radioSlider.value * 1.5f)+.3f;
+        radioAnswerAnimation.speed = (radioSlider.value * 1.5f) + .3f;
         AkSoundEngine.SetRTPCValue("Current_Sine", radioSlider.value * 10f);
 
         if ((dialImage.rectTransform.rotation.z < -0.9999f && dialRotation > 0))
@@ -107,17 +116,23 @@ public class MinigameController : MonoBehaviour
         if (radioSlider.value >= winSpaceMin && radioSlider.value <= winSpaceMax)
         {
             isOnTheSpot = true;
-            SetRadioScreen(Color.green);
+            radioScreenAnimation.SetBool("IsOnSpot", true);
+            radioScreenAnimation.SetBool("IsOnMid", false);
+          //  SetRadioScreen(Color.green);
         }
         else if (radioSlider.value >= middleSpaceMin && radioSlider.value <= middleSpaceMax)
         {
             isOnTheSpot = false;
-            SetRadioScreen(Color.yellow);
+            radioScreenAnimation.SetBool("IsOnSpot", false);
+            radioScreenAnimation.SetBool("IsOnMid", true);
+         //   SetRadioScreen(Color.yellow);
         }
         else
         {
             isOnTheSpot = false;
-            SetRadioScreen(Color.white);
+            radioScreenAnimation.SetBool("IsOnSpot", false);
+            radioScreenAnimation.SetBool("IsOnMid", false);
+         //   SetRadioScreen(Color.white);
         }
     }
 

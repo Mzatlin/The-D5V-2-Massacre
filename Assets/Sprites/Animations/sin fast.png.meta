@@ -1,7 +1,28 @@
 fileFormatVersion: 2
-guid: 4d11678578a456d48bb20b37eb77c647
+guid: 6df56fc2d42f55a469183924e1dddb2a
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 3573503978916813743
+    second: sin fast (2)_0
+  - first:
+      213: 6130016443952757636
+    second: sin fast (2)_1
+  - first:
+      213: -8313402755238671002
+    second: sin fast (2)_2
+  - first:
+      213: 8905675096611862253
+    second: sin fast_0
+  - first:
+      213: 4688569475394886115
+    second: sin fast_1
+  - first:
+      213: 589519527515665079
+    second: sin fast_2
+  - first:
+      213: 7592895809119253138
+    second: sin fast_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -123,11 +144,95 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: sin fast_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 83
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de6b79ae050579b70800000000000000
+      internalID: 8905675096611862253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sin fast_1
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 0
+        width: 83
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e9d6a5c815211140800000000000000
+      internalID: 4688569475394886115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sin fast_2
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 0
+        width: 83
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b23ab903e46e2800800000000000000
+      internalID: 589519527515665079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sin fast_3
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 0
+        width: 83
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 292fa1f62826f5960800000000000000
+      internalID: 7592895809119253138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 03cdce1ff7521944c83c2bae170da722
     internalID: 0
     vertices: []
     indices: 

@@ -1,7 +1,19 @@
 fileFormatVersion: 2
-guid: c3ece9d15ff250d4aa3221bf02d741a9
+guid: 2762558e62d7cac4cb4341b7dd0aba97
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1428643046149155474
+    second: sin super slow (2)_0
+  - first:
+      213: 6781064647392715236
+    second: sin super slow (2)_1
+  - first:
+      213: 7682963364130715635
+    second: sin super slow (2)_2
+  - first:
+      213: 8647840940965531326
+    second: sin super slow (2)_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -123,11 +135,95 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: sin super slow (2)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 82
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e65927308b07c2ce0800000000000000
+      internalID: -1428643046149155474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sin super slow (2)_1
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 0
+        width: 82
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e16dc28e5e2b1e50800000000000000
+      internalID: 6781064647392715236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sin super slow (2)_2
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 0
+        width: 82
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f7f95d397e5f9a60800000000000000
+      internalID: 7682963364130715635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sin super slow (2)_3
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 0
+        width: 82
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebe8450848d430870800000000000000
+      internalID: 8647840940965531326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 94659898b21aca44ea47756f47804ae7
     internalID: 0
     vertices: []
     indices: 
