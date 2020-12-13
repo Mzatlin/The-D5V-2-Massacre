@@ -140,7 +140,7 @@
 																<Flags>0</Flags>
 															</Point>
 															<Point>
-																<XPos>10</XPos>
+																<XPos>100</XPos>
 																<YPos>-200</YPos>
 																<Flags>37</Flags>
 															</Point>
@@ -321,7 +321,7 @@
 																<Flags>0</Flags>
 															</Point>
 															<Point>
-																<XPos>10</XPos>
+																<XPos>100</XPos>
 																<YPos>-200</YPos>
 																<Flags>37</Flags>
 															</Point>
@@ -605,7 +605,7 @@
 																<Flags>0</Flags>
 															</Point>
 															<Point>
-																<XPos>10</XPos>
+																<XPos>100</XPos>
 																<YPos>-200</YPos>
 																<Flags>37</Flags>
 															</Point>
@@ -780,7 +780,7 @@
 																<Flags>0</Flags>
 															</Point>
 															<Point>
-																<XPos>10</XPos>
+																<XPos>100</XPos>
 																<YPos>-200</YPos>
 																<Flags>37</Flags>
 															</Point>

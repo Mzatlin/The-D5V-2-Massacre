@@ -17,6 +17,7 @@ namespace AK
         static const AkUniqueID PLAY_DEATHMUSIC = 477908357U;
         static const AkUniqueID PLAY_DEATHTRANSITION = 2295672933U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
+        static const AkUniqueID PLAY_FOOTSTEPSENEMY = 971382617U;
         static const AkUniqueID PLAY_LADDERCLIMB = 2071442557U;
         static const AkUniqueID PLAY_SINES = 647636032U;
         static const AkUniqueID STOP_SINES = 4065681590U;

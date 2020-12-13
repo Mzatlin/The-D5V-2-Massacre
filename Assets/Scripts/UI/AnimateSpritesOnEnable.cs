@@ -10,12 +10,8 @@ public class AnimateSpritesOnEnable : MonoBehaviour
     public float animationSpeed;
     [SerializeField]
     private Image image;
-<<<<<<< HEAD
     [SerializeField] GameObject mainCamera;
-=======
-    GameObject mainCamera;
     bool isPlaying = false;
->>>>>>> b78a0844fdd106d76438c3c84293035931270b63
 
    void Awake()
     {
@@ -39,11 +35,8 @@ public class AnimateSpritesOnEnable : MonoBehaviour
             yield return new WaitForSeconds(animationSpeed);
             if(i == sprites.Length - 1 && !isPlaying)
             {
-<<<<<<< HEAD
-=======
                 isPlaying = true;
                 //GameObject mainCamera = FindObjectOfType<Camera>().gameObject;
->>>>>>> b78a0844fdd106d76438c3c84293035931270b63
                 AkSoundEngine.PostEvent("Play_DeathMusic", mainCamera);
             }
         }

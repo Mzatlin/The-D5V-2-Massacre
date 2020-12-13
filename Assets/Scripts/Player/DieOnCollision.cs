@@ -8,12 +8,8 @@ public class DieOnCollision : MonoBehaviour, IDie
     IPlayerState player => GetComponent<IPlayerState>();
     Transform enemy;
     LayerMask enemyLayer;
-<<<<<<< HEAD
-
-=======
     [SerializeField] GameObject mainCamera;
     bool isDead;
->>>>>>> b78a0844fdd106d76438c3c84293035931270b63
     public event Action OnDie = delegate { };
 
     // Start is called before the first frame update

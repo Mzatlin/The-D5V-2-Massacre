@@ -7369,6 +7369,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &730295411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730295407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6daf949d9eac694e857b56ae54ea500, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 1134361716}
 --- !u!1 &730343199
 GameObject:
   m_ObjectHideFlags: 0
@@ -11347,8 +11360,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6621becaab9e3dc46aa9a3984a991c0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deactivatePathDelay: 0.5
-  enemyGameObject: {fileID: 254158640}
 --- !u!4 &1056850835 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3612091565967651753, guid: 2b1e3deaefab62743b748e07a73fde4a, type: 3}
@@ -11855,8 +11866,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6621becaab9e3dc46aa9a3984a991c0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deactivatePathDelay: 0.5
-  enemyGameObject: {fileID: 0}
 --- !u!114 &1089707289 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 207004764411614808, guid: 91a7e8fc63bbda44d821fa087b8db2a3, type: 3}
@@ -24584,6 +24593,10 @@ PrefabInstance:
     - target: {fileID: 810678111960403204, guid: 31843e0663fa476428b0ae8e190c55fb, type: 3}
       propertyPath: m_Name
       value: DialogueBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657416479305482417, guid: 31843e0663fa476428b0ae8e190c55fb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -5.4999695
       objectReference: {fileID: 0}
     - target: {fileID: 2861938807103172383, guid: 31843e0663fa476428b0ae8e190c55fb, type: 3}
       propertyPath: m_UiScaleMode

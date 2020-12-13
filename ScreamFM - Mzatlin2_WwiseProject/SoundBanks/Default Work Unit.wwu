@@ -9,6 +9,7 @@
 						<ObjectRef Name="Play_Footsteps" ID="{331B39A6-C290-43CF-BA0A-EED6491EDA90}" WorkUnitID="{036D1B68-3738-44E7-BD1C-22BB66C897FC}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_DeathTransition" ID="{D3A131CC-FDD3-45D9-8B47-490FCEE185D3}" WorkUnitID="{036D1B68-3738-44E7-BD1C-22BB66C897FC}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Sines" ID="{9D6FD7C1-2068-4654-A7A1-A4CE722874F5}" WorkUnitID="{036D1B68-3738-44E7-BD1C-22BB66C897FC}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_FootstepsEnemy" ID="{8791C75C-F155-48D3-B80C-B4877ED2E354}" WorkUnitID="{036D1B68-3738-44E7-BD1C-22BB66C897FC}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_DeathMusic" ID="{34F8EC1E-D996-4907-BEF8-345431729AFD}" WorkUnitID="{036D1B68-3738-44E7-BD1C-22BB66C897FC}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_LadderClimb" ID="{2D637C46-4977-4D66-8A61-DE55AC7C6B41}" WorkUnitID="{036D1B68-3738-44E7-BD1C-22BB66C897FC}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Ambience" ID="{6740D370-218B-4E7B-8912-C1C178B89E04}" WorkUnitID="{036D1B68-3738-44E7-BD1C-22BB66C897FC}" Origin="Manual" Filter="7"/>
