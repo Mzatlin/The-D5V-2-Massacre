@@ -13,7 +13,7 @@ public class PlayerInputController : MonoBehaviour, IPlayerInputAxis
     Animator animate;
 
     public float XMovement => Inputx;
-    public float YMovement => Inputy;
+    public float YMovement => Input.GetAxis("Vertical");
 
     // Start is called before the first frame update
     void Start()
