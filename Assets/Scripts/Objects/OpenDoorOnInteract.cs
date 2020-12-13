@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
-
 public class OpenDoorOnInteract : HandleInteractionBase
 {
     INamePlate plate;
@@ -21,10 +20,11 @@ public class OpenDoorOnInteract : HandleInteractionBase
         if (keyChecker.Keys.IsKeyCollected(keyChecker.KeyName))
         {
             gameObject.SetActive(false);
-            if(plate != null)
+            if (plate != null)
             {
                 plate.DisableNamePlate();
-                //AstarPathEditor.MenuScan();
+                var graphToScan = AstarPath.active.data.gridGraph;
+                AstarPath.active.Scan(graphToScan);
             }
         }
         base.HandleInteract();

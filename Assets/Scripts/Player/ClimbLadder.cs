@@ -65,7 +65,7 @@ public class ClimbLadder : MonoBehaviour, IClimb
         if (hit && isClimbing)
         {
             MoveY = Input.GetAxis("Vertical");
-            rigidBody.velocity = new Vector2(rigidBody.velocity.x, MoveY * climbSpeed*Time.deltaTime);
+            rigidBody.velocity = new Vector2(rigidBody.velocity.x, MoveY * climbSpeed);
             rigidBody.gravityScale = 0f;
         }
         else
@@ -89,7 +89,7 @@ public class ClimbLadder : MonoBehaviour, IClimb
                 animate.SetFloat("MoveY", 0);
             }
 
-            if(climbSpeed > 100f)
+            if(climbSpeed > 2f)
             {
                 animate.speed = 1.5f;
             }

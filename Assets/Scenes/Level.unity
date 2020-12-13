@@ -2931,7 +2931,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2093200962141791163, guid: 91a7e8fc63bbda44d821fa087b8db2a3, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3727202311578636928, guid: 91a7e8fc63bbda44d821fa087b8db2a3, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2943,7 +2943,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7837325940846242248, guid: 91a7e8fc63bbda44d821fa087b8db2a3, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7837325940846242248, guid: 91a7e8fc63bbda44d821fa087b8db2a3, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -7937,7 +7937,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &775670550
 Transform:
   m_ObjectHideFlags: 0
@@ -8072,6 +8072,10 @@ PrefabInstance:
     - target: {fileID: 6494304629925283854, guid: ac40c60c4919512409f72708a08bfb2b, type: 3}
       propertyPath: keyName
       value: Control Room
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494304629925283860, guid: ac40c60c4919512409f72708a08bfb2b, type: 3}
+      propertyPath: text
+      value: Control Key Required
       objectReference: {fileID: 0}
     - target: {fileID: 6494304629925283860, guid: ac40c60c4919512409f72708a08bfb2b, type: 3}
       propertyPath: flavorText
@@ -8304,11 +8308,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 40640101218457337, guid: a5d31e4e54f59ad4f8eb28de284edc1e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -20.999908
+      value: -20.999878
       objectReference: {fileID: 0}
     - target: {fileID: 1410471809608809511, guid: a5d31e4e54f59ad4f8eb28de284edc1e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -20.999908
+      value: -20.999878
       objectReference: {fileID: 0}
     - target: {fileID: 1410471810436874816, guid: a5d31e4e54f59ad4f8eb28de284edc1e, type: 3}
       propertyPath: m_Pivot.x
@@ -13216,6 +13220,10 @@ PrefabInstance:
       value: Storage
       objectReference: {fileID: 0}
     - target: {fileID: 6494304629925283860, guid: ac40c60c4919512409f72708a08bfb2b, type: 3}
+      propertyPath: text
+      value: Storage Key Required
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494304629925283860, guid: ac40c60c4919512409f72708a08bfb2b, type: 3}
       propertyPath: flavorText
       value: 
       objectReference: {fileID: 1964423452}
@@ -17390,6 +17398,10 @@ PrefabInstance:
     - target: {fileID: 2943845963661684774, guid: 4bb0e0d1ea95966468dfab98c5e92fb7, type: 3}
       propertyPath: climbSpeed
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943845963661684774, guid: 4bb0e0d1ea95966468dfab98c5e92fb7, type: 3}
+      propertyPath: baseClimbSpeed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2943845963661684774, guid: 4bb0e0d1ea95966468dfab98c5e92fb7, type: 3}
       propertyPath: ladderLayer.m_Bits
@@ -22352,6 +22364,10 @@ PrefabInstance:
       value: Diving
       objectReference: {fileID: 0}
     - target: {fileID: 6494304629925283860, guid: ac40c60c4919512409f72708a08bfb2b, type: 3}
+      propertyPath: text
+      value: Diving Key Required
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494304629925283860, guid: ac40c60c4919512409f72708a08bfb2b, type: 3}
       propertyPath: flavorText
       value: 
       objectReference: {fileID: 1964423452}
@@ -23930,7 +23946,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1181715230145062793, guid: f35f5e01e90cab548beb8fe92d4cff46, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1181715231152480110, guid: f35f5e01e90cab548beb8fe92d4cff46, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -24305,6 +24321,10 @@ PrefabInstance:
     - target: {fileID: 6494304629925283854, guid: ac40c60c4919512409f72708a08bfb2b, type: 3}
       propertyPath: keyName
       value: Diving
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494304629925283860, guid: ac40c60c4919512409f72708a08bfb2b, type: 3}
+      propertyPath: text
+      value: Diving Key Required
       objectReference: {fileID: 0}
     - target: {fileID: 6494304629925283860, guid: ac40c60c4919512409f72708a08bfb2b, type: 3}
       propertyPath: flavorText
