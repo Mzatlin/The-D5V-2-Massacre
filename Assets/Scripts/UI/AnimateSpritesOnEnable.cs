@@ -38,7 +38,6 @@ public class AnimateSpritesOnEnable : MonoBehaviour
                 isPlaying = true;
                 //GameObject mainCamera = FindObjectOfType<Camera>().gameObject;
                 AkSoundEngine.PostEvent("Play_DeathMusic", mainCamera);
-                Debug.Log("Triggered Death Music" + i);
             }
         }
     }
