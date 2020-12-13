@@ -5,10 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class ReloadLevelOnClick : MonoBehaviour
 {
-    public void ReloadLevel()
+    public string levelName = "";
+    GameObject mainCamera;
+    void Awake()
     {
-        GameObject mainCamera = FindObjectOfType<Camera>().gameObject;
+        mainCamera = FindObjectOfType<Camera>().gameObject;
+    }
+
+    public void ReloadLevel()
+    { 
         AkSoundEngine.PostEvent("StopAll", mainCamera);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
+        SceneManager.LoadScene(levelName, LoadSceneMode.Single);
     }
 }

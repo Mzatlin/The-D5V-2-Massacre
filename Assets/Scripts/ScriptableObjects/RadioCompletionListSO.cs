@@ -25,9 +25,9 @@ public class RadioCompletionListSO : ScriptableObject
     {
         if (radio != null && radioStatuses.ContainsKey(radio))
         {
+            completeCount++;
             radioStatuses[radio] = true;
             OnRadioComplete?.Invoke(radioTransform);
-            completeCount++;
         }
         else
         {

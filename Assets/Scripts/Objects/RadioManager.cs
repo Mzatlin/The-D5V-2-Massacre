@@ -5,6 +5,7 @@ using UnityEngine;
 public class RadioManager : MonoBehaviour
 {
     public RadioCompletionListSO radioSO;
+    public RadioKeyExchange radioKey;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +15,7 @@ public class RadioManager : MonoBehaviour
     void SetupRadios()
     {
         radioSO.ResetRadios();
+        radioKey.SetRadioKeyExchange();
     }
 
 }

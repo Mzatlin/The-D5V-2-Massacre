@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7397f99570d09744beb9a90b6cdcab4, type: 3}
   m_Name: PatrolPathList
   m_EditorClassIdentifier: 
+  currentIndex: 0
   patrolPaths:
   - {fileID: 2079740288129460862, guid: a23037b6bc702c244bb4045b31c24183, type: 3}
   - {fileID: 7287295135150867968, guid: 554657eec96cb3c4eb427d760be9d776, type: 3}
   - {fileID: 4495354862576336876, guid: 6a36ac6acba0ebf4f87c3c26527591bb, type: 3}
   - {fileID: 7417803354974528274, guid: 4f6b30ff0af15ee47a44418c79923400, type: 3}
   - {fileID: 1463627932545588181, guid: eb5ba74482635d74d855801e7ecbebf2, type: 3}
-  - {fileID: 7385730440018066401, guid: 77173b7d212f7794caa80b2c4c42cd40, type: 3}
   - {fileID: 7266442153913876753, guid: 38fe978d783aae14ab470323239fe724, type: 3}

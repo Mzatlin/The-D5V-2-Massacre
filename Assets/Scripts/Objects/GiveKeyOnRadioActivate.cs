@@ -5,40 +5,40 @@ using UnityEngine;
 
 public class GiveKeyOnRadioActivate : MonoBehaviour
 {
+    public event Action<string> OnKeyRecieve = delegate { };
+
     public RadioCompletionListSO radio;
     public KeyListSO keys;
-    public string keyName;
-    IRadioMinigame minigame => GetComponent<IRadioMinigame>();
-    [SerializeField]
-    int amountForKey = 4;
-    int counter = 0;
+    public RadioKeyExchange radioKey;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (minigame != null)
+        if(radio != null)
         {
-            minigame.OnComplete += HandleComplete;
+            radio.OnRadioComplete += HandleComplete;
         }
     }
 
-    private void HandleComplete()
+    void OnDestroy()
     {
         if (radio != null)
         {
-            foreach (KeyValuePair<RadioSO, bool> complete in radio.radioStatuses)
-            {
-                if (complete.Value == true)
-                {
-                    counter++;
-                }
-            }
+            radio.OnRadioComplete -= HandleComplete;
+        }
+    }
 
-            if(counter == amountForKey)
+    //After completing a radio, check if that's enough completed radios to earn a specific key
+    void HandleComplete(Transform obj)
+    {
+        if (radio != null)
+        {
+            if(radioKey.radioKeyExchange.ContainsKey(radio.completeCount))
             {
-                if (!keys.IsKeyCollected(keyName))
+                if (!keys.IsKeyCollected(radioKey.radioKeyExchange[radio.completeCount])) 
                 {
-                    keys.keyStatuses[keyName] = true;
+                    keys.keyStatuses[radioKey.radioKeyExchange[radio.completeCount]] = true;
+                    OnKeyRecieve?.Invoke(radioKey.radioKeyExchange[radio.completeCount]);
                 }
             }
         }

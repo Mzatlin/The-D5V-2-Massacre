@@ -8,21 +8,33 @@ public class DieOnCollision : MonoBehaviour, IDie
     IPlayerState player => GetComponent<IPlayerState>();
     Transform enemy;
     LayerMask enemyLayer;
+<<<<<<< HEAD
 
+=======
+    [SerializeField] GameObject mainCamera;
+    bool isDead;
+>>>>>>> b78a0844fdd106d76438c3c84293035931270b63
     public event Action OnDie = delegate { };
 
     // Start is called before the first frame update
     void Awake()
     {
         enemyLayer = LayerMask.GetMask("Enemy");
+        isDead = false;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if((1 << collision.gameObject.layer & enemyLayer) != 0)
+        if ((1 << collision.gameObject.layer & enemyLayer) != 0)
         {
-            OnDie();
-            player.PlayerState.isDead = true;
+
+            if (!isDead)
+            {
+                isDead = true;
+                player.PlayerState.isDead = true;
+                StartCoroutine(DeathDelay());
+            }
+
         }
 
     }
@@ -31,15 +43,19 @@ public class DieOnCollision : MonoBehaviour, IDie
     {
         if ((1 << collision.gameObject.layer & enemyLayer) != 0)
         {
-            OnDie();
-            player.PlayerState.isDead = true;
-            StartCoroutine(DeathDelay());
+            if (!isDead)
+            {
+                isDead = true;
+                player.PlayerState.isDead = true;
+                StartCoroutine(DeathDelay());
+            }
         }
     }
 
     IEnumerator DeathDelay()
     {
         yield return new WaitForSeconds(0.1f);
+        OnDie();
         gameObject.GetComponent<Collider2D>().enabled = false;
     }
 

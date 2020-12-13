@@ -2,23 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerSprint : MonoBehaviour
+public class PlayerSprint : MonoBehaviour, ISprint
 {
     IPlayerState state => GetComponent<IPlayerState>();
     IMovement movement => GetComponent<IMovement>();
+    IPlayerInputAxis playerInput => GetComponent<IPlayerInputAxis>();
+    IClimb climb => GetComponent<IClimb>();
 
     [SerializeField]
     float moveSpeedMultiplier = 2f;
+    [SerializeField]
+    float climbSpeedMultipler = 2f;
     [SerializeField]
     float rechargeSpeed = 10f;
     [SerializeField]
     float depletionSpeed = 30f;
     [SerializeField]
     float rechargeDelay = 3f;
-    bool hasDelayed = false;
- 
+    bool isDelaying = false;
+    bool canSprint = true;
+
     float baseMovementSpeed;
-    bool isSpriting = false;
+    bool isSprinting = false;
+    public bool IsSprinting => isSprinting;
     public float SprintAmount { get; private set; } = 100f;
 
     Animator animate;
@@ -27,7 +33,7 @@ public class PlayerSprint : MonoBehaviour
     void Start()
     {
         animate = GetComponentInChildren<Animator>();
-        if(movement != null)
+        if (movement != null)
         {
             baseMovementSpeed = movement.MoveSpeed;
         }
@@ -39,15 +45,12 @@ public class PlayerSprint : MonoBehaviour
         if (state != null && state.PlayerState.IsPlayerReady())
         {
             TrySprint();
-        }
-
-        if (isSpriting)
-        {
-            SprintAmount -= depletionSpeed * Time.deltaTime;
+            ChangeSprintBar();
         }
         else
         {
-            TryRecharge();
+            ChangeSprintBar();
+            isSprinting = false;
         }
 
         SprintAmount = Mathf.Clamp(SprintAmount, 0, 100);
@@ -55,58 +58,100 @@ public class PlayerSprint : MonoBehaviour
         AnimateMovement();
     }
 
-    void TryRecharge()
+
+
+    void ChangeSprintBar()
     {
-        if (SprintAmount < 3f && !hasDelayed)
+        if (isSprinting && ((Mathf.Abs(playerInput.XMovement) > 0.1) || (Mathf.Abs(playerInput.YMovement) > 0.1 && climb.IsClimbing)))
         {
-            StartCoroutine(Delay());
+            SprintAmount -= depletionSpeed * Time.deltaTime;
         }
         else
         {
-            hasDelayed = false;
+            TryRecharge();
+        }
+    }
+
+
+    void TryRecharge()
+    {
+        if (SprintAmount < 1f && !isDelaying)
+        {
+            canSprint = false;
+            if (!isDelaying)
+            {
+                StartCoroutine(Delay());
+            }
+            else
+            {
+                isDelaying = false;
+                SprintAmount += rechargeSpeed * Time.deltaTime;
+            }
+
+        }
+        else
+        {
+            isDelaying = false;
             SprintAmount += rechargeSpeed * Time.deltaTime;
         }
+      
     }
 
     void TrySprint()
     {
-        if (Input.GetKeyUp(KeyCode.LeftShift))
+        if (Input.GetKeyUp(KeyCode.LeftShift) && !canSprint)
         {
             ResetSpeed();
             return;
         }
 
-        if (SprintAmount > 1 && Input.GetKey(KeyCode.LeftShift))
+        if (SprintAmount > 0 && Input.GetKey(KeyCode.LeftShift))
         {
-            if(movement != null && !isSpriting)
+            if (Mathf.Abs(playerInput.XMovement) > 0.1)
             {
-                isSpriting = true;
-                movement.MoveSpeed *= moveSpeedMultiplier;   
+                if (movement != null && !isSprinting)
+                {
+                    isSprinting = true;
+                    movement.MoveSpeed *= moveSpeedMultiplier;
+                }
+            }
+
+            if(Mathf.Abs(playerInput.YMovement) > 0.1 && climb.IsClimbing)
+            {
+                if (climb != null && !isSprinting)
+                {
+                    isSprinting = true;
+                    climb.SetClimbSpeed(climbSpeedMultipler);
+                }
             }
         }
         else
         {
             ResetSpeed();
-            movement.MoveSpeed = baseMovementSpeed;
         }
-        
+
     }
+
+
     void ResetSpeed()
     {
-        isSpriting = false;
+        isSprinting = false;
         movement.MoveSpeed = baseMovementSpeed;
+        climb.ResetClimbSpeed();
     }
 
     IEnumerator Delay()
     {
+
         yield return new WaitForSeconds(rechargeDelay);
-        hasDelayed = true;
+        isDelaying = true;
     }
+
     void AnimateMovement()
     {
         if (animate != null)
         {
-            animate.SetBool("IsRunning", isSpriting);
+            animate.SetBool("IsRunning", isSprinting);
         }
         else
         {

@@ -17,6 +17,7 @@ public class EnableSuccessMessageOnCompletion : MonoBehaviour
         if (successCanvas != null)
         {
             successCanvas.enabled = false;
+            successText.text = "";
         }
         if(minigame != null)
         {
@@ -45,5 +46,6 @@ public class EnableSuccessMessageOnCompletion : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         successCanvas.enabled = false;
+        successText.text = "";
     }
 }

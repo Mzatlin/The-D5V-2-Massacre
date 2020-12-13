@@ -2,21 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClimbLadder : MonoBehaviour
+public class ClimbLadder : MonoBehaviour, IClimb
 {
     RaycastHit2D hit;
     [SerializeField]
     LayerMask ladderLayer;
     [SerializeField]
+    float baseClimbSpeed = 100f;
     float climbSpeed = 2f;
     bool isClimbing = false;
     float MoveY;
     Rigidbody2D rigidBody;
     Animator animate => GetComponentInChildren<Animator>();
+
+    public bool IsClimbing => isClimbing;
+
     IPlayerState state;
     // Start is called before the first frame update
     void Start()
     {
+        climbSpeed = baseClimbSpeed;
         rigidBody = GetComponent<Rigidbody2D>();
         state = GetComponent<IPlayerState>();
     }
@@ -44,11 +49,8 @@ public class ClimbLadder : MonoBehaviour
         hit = Physics2D.Raycast(ray.origin, ray.direction, 8f, ladderLayer);
         if (hit)
         {
-          //  if (Input.GetKeyDown(KeyCode.E))
-          //  {
-                isClimbing = true;
-                Climb();
-           // }
+            isClimbing = true;
+            Climb();
         }
         else
         {
@@ -60,7 +62,7 @@ public class ClimbLadder : MonoBehaviour
 
     void Climb()
     {
-        if(hit && isClimbing)
+        if (hit && isClimbing)
         {
             MoveY = Input.GetAxis("Vertical");
             rigidBody.velocity = new Vector2(rigidBody.velocity.x, MoveY * climbSpeed);
@@ -86,6 +88,16 @@ public class ClimbLadder : MonoBehaviour
                 animate.SetBool("IsClimbing", false);
                 animate.SetFloat("MoveY", 0);
             }
+
+            if(climbSpeed > 2f)
+            {
+                animate.speed = 1.5f;
+            }
+            else
+            {
+                animate.speed = 1f;
+            }
+
         }
         else
         {
@@ -93,4 +105,13 @@ public class ClimbLadder : MonoBehaviour
         }
     }
 
+    public void SetClimbSpeed(float newSpeedMultiplier)
+    {
+        climbSpeed *= newSpeedMultiplier;
+    }
+
+    public void ResetClimbSpeed()
+    {
+        climbSpeed = baseClimbSpeed;
+    }
 }
