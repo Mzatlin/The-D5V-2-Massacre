@@ -28,6 +28,7 @@ public class EnableNewCanvasOnEnable : MonoBehaviour
         {
             newCanvas.enabled = true;
             newCanvas.gameObject.SetActive(true);
+            Cursor.visible = true;
         }
     }
 }
