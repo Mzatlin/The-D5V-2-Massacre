@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
-public class OpenDoorOnInteract : HandleInteractionBase
+public class OpenDoorOnInteract : HandleInteractionBase, IDoor
 {
     INamePlate plate;
     ICheckKey keyChecker;
+    bool isOpen = false;
+    public bool IsOpen => isOpen;
 
     protected override void Start()
     {
@@ -19,14 +21,19 @@ public class OpenDoorOnInteract : HandleInteractionBase
     {
         if (keyChecker.Keys.IsKeyCollected(keyChecker.KeyName))
         {
-            gameObject.SetActive(false);
-            if (plate != null)
-            {
-                plate.DisableNamePlate();
-                var graphToScan = AstarPath.active.data.gridGraph;
-                AstarPath.active.Scan(graphToScan);
-            }
+            OpenDoor();
         }
         base.HandleInteract();
+    }
+
+    public void OpenDoor()
+    {
+        gameObject.SetActive(false);
+        if (plate != null)
+        {
+            plate.DisableNamePlate();
+            var graphToScan = AstarPath.active.data.gridGraph;
+            AstarPath.active.Scan(graphToScan);
+        }
     }
 }

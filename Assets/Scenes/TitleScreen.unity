@@ -739,10 +739,10 @@ RectTransform:
   m_Father: {fileID: 1380086770}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.37475002, y: 0.6124367}
-  m_AnchorMax: {x: 0.6255001, y: 0.7541551}
-  m_AnchoredPosition: {x: 0, y: 0.036193848}
-  m_SizeDelta: {x: 0, y: -3}
+  m_AnchorMin: {x: 0.3185, y: 0.590778}
+  m_AnchorMax: {x: 0.6667501, y: 0.82620984}
+  m_AnchoredPosition: {x: -105, y: -28}
+  m_SizeDelta: {x: -78, y: -55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &901713968
 MonoBehaviour:
@@ -764,7 +764,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Title Screen
+  m_text: The D5V-2 Massacre
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 93c73d355bd8736469406f26d4f693c5, type: 2}
   m_sharedMaterial: {fileID: -8425648301945734594, guid: 93c73d355bd8736469406f26d4f693c5, type: 2}
@@ -827,7 +827,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 65.75575, y: -59.650833, z: -143.19998, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
