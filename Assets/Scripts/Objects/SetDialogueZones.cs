@@ -24,9 +24,4 @@ public class SetDialogueZones : MonoBehaviour
             dialogue.SetActive(false);
         }
     }
-
-    private void DisableInteractions()
-    {
-        
-    }
 }

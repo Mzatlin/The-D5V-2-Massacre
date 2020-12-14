@@ -23,6 +23,7 @@ public class EnemyAI : MonoBehaviour
     public EnemyStateMachine StateMachine => GetComponent<EnemyStateMachine>();
     public PatrolPathListSO paths;
     public LayerMask obstacles;
+    public Transform scriptedStopPoint;
 
     // Start is called before the first frame update
     void Awake()
@@ -38,6 +39,7 @@ public class EnemyAI : MonoBehaviour
             {typeof(PatrolState),new PatrolState(this) },
             {typeof(ChasePlayerState),new ChasePlayerState(this) },
             {typeof(InvestigateObjectState),new InvestigateObjectState(this) },
+             {typeof(ScriptedStopState),new ScriptedStopState(this) },
         };
 
         StateMachine.SetStates(states);

@@ -15,7 +15,10 @@ public class RadioKeyExchange : ScriptableObject
         {
             for (int i = 0; i < radioAmount.Count; i++)
             {
-                radioKeyExchange.Add(radioAmount[i], keys[i]);
+                if (!radioKeyExchange.ContainsKey(radioAmount[i]))
+                {
+                    radioKeyExchange.Add(radioAmount[i], keys[i]);
+                }
             }
         }
         else
