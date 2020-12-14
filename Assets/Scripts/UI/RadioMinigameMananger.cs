@@ -29,7 +29,7 @@ public class RadioMinigameMananger : HandleInteractionBase, IRadioMinigame
     {
         if (isMiniGameStarted)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.S))
             {
                 StartCoroutine(DelayToggle());
             }

@@ -6,6 +6,7 @@ public class SetInteractables : MonoBehaviour
 {
     [SerializeField]
     List<GameObject> interatables = new List<GameObject>();
+    public GameObject setInactiveObject;
     public SaveStateSO save;
 
     // Start is called before the first frame update
@@ -17,6 +18,14 @@ public class SetInteractables : MonoBehaviour
             {
                 DisableInteractables();
             }
+            else
+            {
+                var stat = setInactiveObject.GetComponent<IInteractionStats>();
+                if (stat != null)
+                {
+                    SetObjectActive(stat, false);
+                }
+            }
         }
     }
 
@@ -27,8 +36,19 @@ public class SetInteractables : MonoBehaviour
            var stats = interact.GetComponent<IInteractionStats>();
             if(stats != null)
             {
-                stats.CanInteract = false;
+                SetObjectActive(stats, false);
             }
         }
+        var stat = setInactiveObject.GetComponent<IInteractionStats>();
+        if (stat != null)
+        {
+            SetObjectActive(stat, true);
+        }
+
+    }
+
+    void SetObjectActive(IInteractionStats stats, bool isActive)
+    {
+        stats.CanInteract = isActive;
     }
 }

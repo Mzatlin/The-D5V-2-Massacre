@@ -7,6 +7,7 @@ public class OpenDoorOnInteract : HandleInteractionBase, IDoor
 {
     INamePlate plate;
     ICheckKey keyChecker;
+    public Sprite spriteSwap;
     bool isOpen = false;
     public bool IsOpen => isOpen;
 

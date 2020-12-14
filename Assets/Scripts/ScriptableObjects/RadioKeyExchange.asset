@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: RadioKeyExchange
   m_EditorClassIdentifier: 
   keys:
-  - Diving
   - Storage
-  radioAmount: 0200000004000000
+  radioAmount: 04000000
