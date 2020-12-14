@@ -37,6 +37,11 @@ public class PatrolState : EnemyStateBase
             return typeof(InvestigateObjectState);
         }
 
+        if(enemy.CurrentTarget == enemy.scriptedStopPoint)
+        {
+            return typeof(ScriptedStopState);
+        }
+
 
         if (currentPatrolPoint != null)
         {
