@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 655024a92692ad34d8874aa7ff524d4a, type: 3}
-  m_Name: SaveStateSO
+  m_Script: {fileID: 11500000, guid: c1ac27e2485538c47bf19e0efc3a5060, type: 3}
+  m_Name: 34F8EC1E-D996-4907-BEF8-345431729AFD
   m_EditorClassIdentifier: 
-  IsOpeningComplete: 1
+  objectName: Play_DeathMusic
+  id: 477908357
+  guid: 34F8EC1E-D996-4907-BEF8-345431729AFD

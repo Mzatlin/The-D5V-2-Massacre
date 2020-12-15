@@ -38,7 +38,7 @@ public class ToggleMap : MonoBehaviour
 
     void SetMap()
     {
-        player.PlayerState.isPaused = !player.PlayerState.isPaused;
+       // player.PlayerState.isPaused = !player.PlayerState.isPaused;
         map.enabled = !map.enabled;
     }
 }

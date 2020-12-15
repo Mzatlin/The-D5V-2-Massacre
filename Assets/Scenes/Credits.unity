@@ -1086,7 +1086,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 100
+  m_lineSpacing: 50
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -1110,7 +1110,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -232.05989, y: -13.844242, z: -153.57993, w: -245.46646}
+  m_margin: {x: -232.05989, y: -13.844242, z: -153.57993, w: -208.20819}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1124,6 +1124,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1917274356}
   m_CullTransparentMesh: 0
+--- !u!1 &2065629192
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2065629194}
+  - component: {fileID: 2065629193}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2065629193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065629192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e47e1476c9953514aa2bc1235eb03f50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2065629194
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065629192}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.1825974, y: 0.22176129, z: -339.7198}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2066869945
 GameObject:
   m_ObjectHideFlags: 0
@@ -1159,10 +1202,10 @@ RectTransform:
   m_Father: {fileID: 1846783082}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.40100002, y: 0.04853572}
-  m_AnchorMax: {x: 0.59637845, y: 0.123}
-  m_AnchoredPosition: {x: -1.300003, y: 0.3000183}
-  m_SizeDelta: {x: 29.096375, y: 9.476875}
+  m_AnchorMin: {x: 0.39878735, y: 0.11928816}
+  m_AnchorMax: {x: 0.6007874, y: 0.19700001}
+  m_AnchoredPosition: {x: -1.800003, y: -0.5}
+  m_SizeDelta: {x: 26.096375, y: 8.476875}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2066869947
 MonoBehaviour:
