@@ -15223,19 +15223,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2943845963661684782, guid: 4bb0e0d1ea95966468dfab98c5e92fb7, type: 3}
   m_PrefabInstance: {fileID: 1614071576}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1302560286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1302560272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b533def872d6e2b4bb7a791dc5fa3872, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseCanavs: {fileID: 3115407961782110663}
 --- !u!1 &1316310260
 GameObject:
   m_ObjectHideFlags: 0
@@ -18671,6 +18658,10 @@ PrefabInstance:
       propertyPath: climbSpeedMultipler
       value: 2.1
       objectReference: {fileID: 0}
+    - target: {fileID: 8184491639677976191, guid: 4bb0e0d1ea95966468dfab98c5e92fb7, type: 3}
+      propertyPath: pauseCanavs
+      value: 
+      objectReference: {fileID: 3115407961782110663}
     - target: {fileID: 8785264991094897110, guid: 4bb0e0d1ea95966468dfab98c5e92fb7, type: 3}
       propertyPath: enemy
       value: 
