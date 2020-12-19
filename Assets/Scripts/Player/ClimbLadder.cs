@@ -38,6 +38,8 @@ public class ClimbLadder : MonoBehaviour, IClimb
         else
         {
             AnimateMovement();
+            rigidBody.velocity = Vector2.zero;
+            rigidBody.gravityScale = 0f;
         }
 
     }
