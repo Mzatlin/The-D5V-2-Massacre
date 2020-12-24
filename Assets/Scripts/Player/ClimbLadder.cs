@@ -17,13 +17,12 @@ public class ClimbLadder : MonoBehaviour, IClimb
 
     public bool IsClimbing => isClimbing;
 
-    IPlayerState state;
+    IPlayerState state => GetComponent<IPlayerState>();
     // Start is called before the first frame update
     void Start()
     {
         climbSpeed = baseClimbSpeed;
         rigidBody = GetComponent<Rigidbody2D>();
-        state = GetComponent<IPlayerState>();
     }
 
     // Update is called once per frame
