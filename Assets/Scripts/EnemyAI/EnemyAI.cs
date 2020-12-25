@@ -24,12 +24,14 @@ public class EnemyAI : MonoBehaviour
     public PatrolPathListSO paths;
     public LayerMask obstacles;
     public Transform scriptedStopPoint;
+    public EnemyTarget target;
 
     // Start is called before the first frame update
     void Awake()
     {
         SetPatrolPath(paths?.patrolPaths[0]);
         InitializeStateMachine();
+        target = new EnemyTarget(PlayerGameObject, PlayerTarget, TargetType.Player);
     }
 
     void InitializeStateMachine()

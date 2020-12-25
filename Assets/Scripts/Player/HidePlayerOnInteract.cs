@@ -30,13 +30,11 @@ public class HidePlayerOnInteract : HandleInteractionBase
     {
         if (playerCollider != null && playerSprite != null && playerRigidbody2D != null)
         {
-            Debug.Log("Toggled! " + isHiding);
             playerCollider.enabled = !playerCollider.enabled;
             playerSprite.enabled = !playerSprite.enabled;
             playerRigidbody2D.gravityScale = 0;
             playerRigidbody2D.velocity = Vector2.zero;
             state.isInteracting = !state.isInteracting;
-
             StartCoroutine(DelayToggle());
         }
     }
