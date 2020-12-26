@@ -9,10 +9,10 @@ public struct EnemyTarget
     public Transform targetTransform;
     public TargetType typeOfTarget;
 
-    public EnemyTarget(GameObject _target, Transform _targetTransform, TargetType _typeOfTarget)
+    public EnemyTarget(GameObject _target, TargetType _typeOfTarget)
     {
         target = _target;
-        targetTransform = _targetTransform;
+        targetTransform = _target.transform;
         typeOfTarget = _typeOfTarget;
     }
 }

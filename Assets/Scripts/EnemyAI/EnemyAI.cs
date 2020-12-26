@@ -31,7 +31,7 @@ public class EnemyAI : MonoBehaviour
     {
         SetPatrolPath(paths?.patrolPaths[0]);
         InitializeStateMachine();
-        target = new EnemyTarget(PlayerGameObject, PlayerTarget, TargetType.Player);
+        target = new EnemyTarget(PlayerGameObject, TargetType.Player);
     }
 
     void InitializeStateMachine()
@@ -51,6 +51,11 @@ public class EnemyAI : MonoBehaviour
     {
         CurrentTarget = target;
         enemyPath?.SetPathTarget(target);
+    }
+
+    public void SetTarget(EnemyTarget _target)
+    {
+        target = _target;
     }
 
     public Vector2 GetDirection()

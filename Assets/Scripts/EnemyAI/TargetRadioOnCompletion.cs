@@ -31,6 +31,7 @@ public class TargetRadioOnCompletion : MonoBehaviour
         {
             enemy.RadioTarget = radioTransform;
             enemy.SetTarget(enemy.RadioTarget);
+            enemy.SetTarget(new EnemyTarget(radioTransform.gameObject, TargetType.Radio));
         }
     }
 
