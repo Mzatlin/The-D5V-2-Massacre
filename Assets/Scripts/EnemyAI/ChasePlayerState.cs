@@ -16,6 +16,7 @@ public class ChasePlayerState : EnemyStateBase
     {
         AkSoundEngine.SetState("EnemyState", "Chase");
         enemy.SetTarget(enemy.PlayerTarget);
+        enemy.SetTarget(new EnemyTarget(enemy.PlayerTarget.gameObject, TargetType.Player));
         playerCollider = enemy.PlayerTarget.gameObject.GetComponent<Collider2D>();
     }
 

@@ -23,6 +23,7 @@ public class OnDialogueEndSetEnemyActive : DisableOnDialogueEndBase
             if(enemyAI != null)
             {
                 enemyAI.SetTarget(scriptedTarget);
+                enemyAI.SetTarget(new EnemyTarget(scriptedTarget.gameObject, TargetType.ScriptedStopPoint));
             }
         }
     }

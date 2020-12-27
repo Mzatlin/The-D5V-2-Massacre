@@ -18,7 +18,7 @@ public class ScriptedStopState : EnemyStateBase
 
     public override Type Tick()
     {
-        if(enemy.CurrentTarget != enemy.scriptedStopPoint)
+        if(enemy.target.typeOfTarget != TargetType.ScriptedStopPoint)
         {
             return typeof(ChasePlayerState);
         }

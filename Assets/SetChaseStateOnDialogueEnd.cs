@@ -23,6 +23,7 @@ public class SetChaseStateOnDialogueEnd : DisableOnDialogueEndBase
         if (enemyAI != null)
         {
             enemyAI.SetTarget(playerTarget);
+            enemyAI.SetTarget(new EnemyTarget(playerTarget.gameObject, TargetType.Player));
         }
     }
 }

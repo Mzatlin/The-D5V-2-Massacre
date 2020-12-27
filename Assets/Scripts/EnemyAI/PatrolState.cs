@@ -32,12 +32,12 @@ public class PatrolState : EnemyStateBase
             enemy.SetCanPath();
         }
 
-        if (enemy.CurrentTarget == enemy.RadioTarget)
+        if (enemy.target.typeOfTarget == TargetType.Radio)
         {
             return typeof(InvestigateObjectState);
         }
 
-        if(enemy.CurrentTarget == enemy.scriptedStopPoint)
+        if(enemy.target.typeOfTarget == TargetType.ScriptedStopPoint)
         {
             return typeof(ScriptedStopState);
         }
