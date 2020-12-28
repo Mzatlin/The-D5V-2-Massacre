@@ -29,8 +29,6 @@ public class TargetRadioOnCompletion : MonoBehaviour
         if (StateMachine != null
             && (StateMachine.CurrentState.GetType() == typeof(PatrolState) || StateMachine.CurrentState.GetType() == typeof(InvestigateObjectState)))
         {
-            enemy.RadioTarget = radioTransform;
-            enemy.SetTarget(enemy.RadioTarget);
             enemy.SetTarget(new EnemyTarget(radioTransform.gameObject, TargetType.Radio));
         }
     }

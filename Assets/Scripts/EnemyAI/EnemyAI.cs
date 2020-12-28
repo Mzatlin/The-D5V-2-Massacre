@@ -17,13 +17,11 @@ public class EnemyAI : MonoBehaviour
     //  public bool CanPath { get => enemyPath.CanPath; set => CanPath = value; }
     public Transform PlayerTarget => playerTarget;
     public GameObject PlayerGameObject => playerGameObject;
-    public Transform RadioTarget { get; set; }
     public Transform CurrentTarget { get; private set; }
     public List<Transform> PatrolTargets => patrolTargets;
     public EnemyStateMachine StateMachine => GetComponent<EnemyStateMachine>();
     public PatrolPathListSO paths;
     public LayerMask obstacles;
-    public Transform scriptedStopPoint;
     public EnemyTarget target;
 
     // Start is called before the first frame update
@@ -56,6 +54,8 @@ public class EnemyAI : MonoBehaviour
     public void SetTarget(EnemyTarget _target)
     {
         target = _target;
+        CurrentTarget = _target.targetTransform;
+        enemyPath?.SetPathTarget(_target.targetTransform);
     }
 
     public Vector2 GetDirection()

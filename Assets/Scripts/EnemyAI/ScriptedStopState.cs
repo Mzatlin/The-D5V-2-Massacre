@@ -13,7 +13,6 @@ public class ScriptedStopState : EnemyStateBase
     public override void BeginState()
     {
         AkSoundEngine.SetState("EnemyState", "Chase");
-        enemy.SetTarget(enemy.scriptedStopPoint);
     }
 
     public override Type Tick()
