@@ -16643,6 +16643,7 @@ GameObject:
   - component: {fileID: 1167584727}
   - component: {fileID: 1167584729}
   - component: {fileID: 1167584730}
+  - component: {fileID: 1167584731}
   m_Layer: 0
   m_Name: 6DialogueTriggerZone
   m_TagString: Untagged
@@ -16861,6 +16862,21 @@ MonoBehaviour:
   - {fileID: 1385044105}
   - {fileID: 1078577581}
   setInactiveObject: {fileID: 280980780}
+--- !u!114 &1167584731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167584719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e41cea28e1f13ec4085db736fb34cdd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 254158640}
+  player: {fileID: 1302560272}
+  scriptedSpot: {fileID: 1783890874}
 --- !u!1 &1173403651
 GameObject:
   m_ObjectHideFlags: 0
@@ -25121,6 +25137,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1783890874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1783890875}
+  m_Layer: 0
+  m_Name: ScriptedStopSpot (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1783890875
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783890874}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.71, z: -1}
+  m_LocalScale: {x: 1.5491767, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1646925312}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1783986015
 GameObject:
   m_ObjectHideFlags: 0
