@@ -76,8 +76,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279344640
-  m_fontColor: {r: 0, g: 0.61960787, b: 0.06666667, a: 1}
+    rgba: 4278255372
+  m_fontColor: {r: 0.04705883, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -296,6 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseCanvas: {fileID: 664188649417083411}
+  player: {fileID: 0}
 --- !u!1 &664188648914127972
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,8 +373,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279344640
-  m_fontColor: {r: 0, g: 0.61960787, b: 0.06666667, a: 1}
+    rgba: 4278255372
+  m_fontColor: {r: 0.04705883, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -609,8 +610,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279344640
-  m_fontColor: {r: 0, g: 0.61960787, b: 0.06666667, a: 1}
+    rgba: 4278255372
+  m_fontColor: {r: 0.04705883, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
