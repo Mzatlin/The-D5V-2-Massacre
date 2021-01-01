@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class SetGraphOnEnable : MonoBehaviour
 {
-
-    void Start()
-    {
-        gameObject.SetActive(false);    
-    }
-
     void OnEnable()
     {
         var graphToScan = AstarPath.active.data.gridGraph;

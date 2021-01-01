@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 6494304629925283848}
   - component: {fileID: 6494304629925283849}
   - component: {fileID: 6494304629925283854}
+  - component: {fileID: 5469596287476507862}
   m_Layer: 9
   m_Name: Door
   m_TagString: Untagged
@@ -276,9 +277,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab05785f3a8a48946897ee833f534fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteSwap: {fileID: 0}
-  pathBlockers: []
-  isOpen: 0
 --- !u!114 &6494304629925283854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,3 +291,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyName: Yellow
   keys: {fileID: 11400000, guid: acf933fa8109c4f459bceb73081d352e, type: 2}
+--- !u!114 &5469596287476507862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6494304629925283862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3542c3e59ea5f49bf5f378a714a104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteSwap: {fileID: 21300000, guid: a2b20fc5b6de04e48aa7bb82fa1aee0a, type: 3}
+  pathBlockers: []
+  isOpen: 0
