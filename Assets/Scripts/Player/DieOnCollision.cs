@@ -28,6 +28,7 @@ public class DieOnCollision : MonoBehaviour, IDie
             {
                 isDead = true;
                 player.PlayerState.isDead = true;
+                collision.gameObject.SetActive(false);
                 StartCoroutine(DeathDelay());
             }
 
@@ -43,6 +44,7 @@ public class DieOnCollision : MonoBehaviour, IDie
             {
                 isDead = true;
                 player.PlayerState.isDead = true;
+                collision.gameObject.SetActive(false);
                 StartCoroutine(DeathDelay());
             }
         }

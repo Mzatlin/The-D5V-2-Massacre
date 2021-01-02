@@ -9651,6 +9651,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6494304629925283862, guid: ac40c60c4919512409f72708a08bfb2b, type: 3}
   m_PrefabInstance: {fileID: 276688016}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &709452768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709452763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c439b1d5122fac2449cdffe2080478ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &709452771 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6494304629925283863, guid: ac40c60c4919512409f72708a08bfb2b, type: 3}
@@ -31000,7 +31012,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1657416479305482417, guid: 31843e0663fa476428b0ae8e190c55fb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -5.4999084
+      value: -5.4998474
       objectReference: {fileID: 0}
     - target: {fileID: 2861938807103172383, guid: 31843e0663fa476428b0ae8e190c55fb, type: 3}
       propertyPath: m_UiScaleMode
