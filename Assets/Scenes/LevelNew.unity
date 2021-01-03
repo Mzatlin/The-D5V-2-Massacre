@@ -23307,6 +23307,22 @@ PrefabInstance:
       propertyPath: nameCanvas
       value: 
       objectReference: {fileID: 999829567}
+    - target: {fileID: 3612091565967651756, guid: 2b1e3deaefab62743b748e07a73fde4a, type: 3}
+      propertyPath: m_Size.x
+      value: 0.3514269
+      objectReference: {fileID: 0}
+    - target: {fileID: 3612091565967651756, guid: 2b1e3deaefab62743b748e07a73fde4a, type: 3}
+      propertyPath: m_Size.y
+      value: 1.5314941
+      objectReference: {fileID: 0}
+    - target: {fileID: 3612091565967651756, guid: 2b1e3deaefab62743b748e07a73fde4a, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0027593896
+      objectReference: {fileID: 0}
+    - target: {fileID: 3612091565967651756, guid: 2b1e3deaefab62743b748e07a73fde4a, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.003870964
+      objectReference: {fileID: 0}
     - target: {fileID: 3612091565967651758, guid: 2b1e3deaefab62743b748e07a73fde4a, type: 3}
       propertyPath: player
       value: 
@@ -29319,6 +29335,10 @@ PrefabInstance:
     - target: {fileID: 7582519197211531527, guid: b2b4252051747f74fa8e954fdaad9e3e, type: 3}
       propertyPath: m_Name
       value: RetryMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013754563159315539, guid: b2b4252051747f74fa8e954fdaad9e3e, type: 3}
+      propertyPath: levelName
+      value: LevelNew
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2b4252051747f74fa8e954fdaad9e3e, type: 3}

@@ -1,10 +1,11 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class HidePlayerOnInteract : HandleInteractionBase
 {
     public Transform player;
+    Vector3 originalPlayerPosition;
+    Vector2 lockerPosition;
     public PlayerStateSO state;
     Collider2D playerCollider;
     SpriteRenderer playerSprite;
@@ -19,6 +20,8 @@ public class HidePlayerOnInteract : HandleInteractionBase
         playerCollider = player.GetComponent<Collider2D>();
         playerSprite = player.GetComponentInChildren<SpriteRenderer>();
         playerRigidbody2D = player.GetComponent<Rigidbody2D>();
+        lockerPosition = transform.position;
+        originalPlayerPosition = player.transform.position;
     }
 
     protected override void HandleInteract()
@@ -39,6 +42,15 @@ public class HidePlayerOnInteract : HandleInteractionBase
         }
     }
 
+    void ChangePlayerPosition()
+    {
+        if (isHiding)
+        {
+            originalPlayerPosition = player.transform.position;
+            player.transform.position = new Vector3(lockerPosition.x,player.transform.position.y, player.transform.position.z);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -51,6 +63,7 @@ public class HidePlayerOnInteract : HandleInteractionBase
     {
         yield return new WaitForSeconds(0.1f*Time.deltaTime);
         isHiding = !isHiding;
+        ChangePlayerPosition();
         interactionStats.CanInteract = !interactionStats.CanInteract;
         base.HandleInteract();
     }
