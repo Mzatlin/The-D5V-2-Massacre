@@ -43,6 +43,7 @@ public class IgnoreCollisionByVelocity : MonoBehaviour
             {
                 Physics2D.IgnoreCollision(GetComponent<Collider2D>(), collider);
             }
+            StartCoroutine(IgnoreDelay(collision));
         }
         else
         {
@@ -53,12 +54,17 @@ public class IgnoreCollisionByVelocity : MonoBehaviour
         }
     }
 
-    void OnCollisionExit(Collision collision)
+
+    //Recursively check if the object is still eligible for ignorecollision after given delay 
+    IEnumerator IgnoreDelay(Collision2D collision)
     {
+        yield return new WaitForSeconds(.5f);
         foreach (Collider2D collider in colliders)
         {
             Physics2D.IgnoreCollision(GetComponent<Collider2D>(), collider, false);
         }
+        CheckCollision(collision);
+
     }
 
 
