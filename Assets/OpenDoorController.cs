@@ -14,7 +14,7 @@ public class OpenDoorController : MonoBehaviour, IDoor
     bool isOpen = false;
     public bool IsOpen => isOpen;
 
-    void Start()
+    void Awake()
     {
         pathBlockers = GetComponentsInChildren<Collider2D>();
         render = GetComponent<SpriteRenderer>();
@@ -38,7 +38,7 @@ public class OpenDoorController : MonoBehaviour, IDoor
             }
         }
 
-        if (spriteSwap != null)
+        if (spriteSwap != null && render != null)
         {
             render.sprite = spriteSwap;
         }

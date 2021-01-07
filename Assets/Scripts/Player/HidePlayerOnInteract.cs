@@ -9,6 +9,10 @@ public class HidePlayerOnInteract : HandleInteractionBase
     public PlayerStateSO state;
     Collider2D playerCollider;
     SpriteRenderer playerSprite;
+    SpriteRenderer LockerSprite => GetComponent<SpriteRenderer>();
+    [SerializeField]
+    Sprite openSprite;
+    Sprite originalSprite;
     Rigidbody2D playerRigidbody2D;
     IInteractionStats interactionStats => GetComponent<IInteractionStats>();
     bool isHiding = false;
@@ -22,6 +26,8 @@ public class HidePlayerOnInteract : HandleInteractionBase
         playerRigidbody2D = player.GetComponent<Rigidbody2D>();
         lockerPosition = transform.position;
         originalPlayerPosition = player.transform.position;
+        originalSprite = LockerSprite.sprite;
+        LockerSprite.sprite = openSprite;
     }
 
     protected override void HandleInteract()
@@ -51,6 +57,19 @@ public class HidePlayerOnInteract : HandleInteractionBase
         }
     }
 
+    void SwapSprite()
+    {
+        if (isHiding)
+        {
+
+            LockerSprite.sprite = originalSprite;
+        }
+        else
+        {
+            LockerSprite.sprite = openSprite;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -65,6 +84,7 @@ public class HidePlayerOnInteract : HandleInteractionBase
         isHiding = !isHiding;
         ChangePlayerPosition();
         interactionStats.CanInteract = !interactionStats.CanInteract;
+        SwapSprite();
         base.HandleInteract();
     }
 }
