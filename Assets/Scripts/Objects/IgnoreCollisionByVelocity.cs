@@ -37,7 +37,7 @@ public class IgnoreCollisionByVelocity : MonoBehaviour
         var directionX = Mathf.Abs(direction.Direction.x);
         var directionY = Mathf.Abs(direction.Direction.y);
         float difference = Mathf.Abs(directionX - directionY);
-        if (direction != null && difference > 0.9/*((directionX < 0.5f /*&& directionX > 0.8f) && (/*directionY < 0.9f &&  directionY > 0.5f)*/ /*&& (Mathf.Abs(collision.gameObject.GetComponent<Rigidbody2D>().velocity.x) < 0.9f))*/)
+        if (direction != null && difference > 0.9)
         {
             foreach (Collider2D collider in colliders)
             {
