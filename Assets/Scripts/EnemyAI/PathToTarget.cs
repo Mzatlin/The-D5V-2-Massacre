@@ -7,6 +7,8 @@ public class PathToTarget : PathingBase, IEnemyDirection, IEnemyPath
     public Vector2 Direction => direction;//pathDirectionOfCurrentPoint;
 
     public bool CanPath { get; set; } = true;
+    public float ObjectSpeed { get => objectSpeed; set => objectSpeed = value; }
+
     public bool IsPathing = false;
     float stoppingDistance = 1f;
 
