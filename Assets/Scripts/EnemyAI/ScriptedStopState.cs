@@ -6,20 +6,26 @@ using UnityEngine;
 public class ScriptedStopState : EnemyStateBase
 {
     EnemyAI enemy;
+    EnemyTarget currentTarget;
     public ScriptedStopState(EnemyAI _enemy) : base(_enemy.gameObject)
     {
         enemy = _enemy;
     }
     public override void BeginState()
     {
-        AkSoundEngine.SetState("EnemyState", "Chase");
+       currentTarget = enemy.GetEnemyTarget();
+
+        if (currentTarget.typeOfTarget == TargetType.Player)
+        {
+            AkSoundEngine.SetState("EnemyState", "Chase");
+        }
     }
 
     public override Type Tick()
     {
         if(enemy.target.typeOfTarget != TargetType.ScriptedStopPoint)
         {
-            return typeof(ChasePlayerState);
+            return SetType();
         }
 
         if(Vector2.Distance(transformEnemy.position, enemy.PlayerTarget.position) < 3f)
@@ -30,6 +36,23 @@ public class ScriptedStopState : EnemyStateBase
 
 
         return null;
+    }
+
+    Type SetType()
+    {
+        if (currentTarget.typeOfTarget == TargetType.Player)
+        {
+            return typeof(ChasePlayerState);
+        }
+        if(currentTarget.typeOfTarget == TargetType.Radio)
+        {
+            return typeof(InvestigateObjectState);
+        }
+        else
+        {
+            return typeof(PatrolState);
+        }
+
     }
 
 }

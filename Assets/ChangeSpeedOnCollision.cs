@@ -16,7 +16,7 @@ public class ChangeSpeedOnCollision : MonoBehaviour
             var pathSpeed = collision.gameObject.GetComponent<IEnemyPath>();
             if (pathSpeed != null)
             {
-                pathSpeed.ObjectSpeed += speed;
+                //pathSpeed.ObjectSpeed += speed;
             }
         }
     }
@@ -28,7 +28,7 @@ public class ChangeSpeedOnCollision : MonoBehaviour
             var pathSpeed = collision.gameObject.GetComponent<IEnemyPath>();
             if (pathSpeed != null)
             {
-                pathSpeed.ObjectSpeed = originalSpeed;
+            //    pathSpeed.ObjectSpeed = originalSpeed;
             }
         }
     }

@@ -99,5 +99,10 @@ public class EnemyAI : MonoBehaviour
         return playerGameObject.GetComponent<PlayerSprint>();
     }
 
+    public EnemyTarget GetEnemyTarget()
+    {
+        return target;
+    }
+
 
 }
