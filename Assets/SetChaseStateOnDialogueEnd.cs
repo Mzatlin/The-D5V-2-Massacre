@@ -5,7 +5,7 @@ using UnityEngine;
 public class SetChaseStateOnDialogueEnd : DisableOnDialogueEndBase
 {
     public GameObject enemy;
-    public Transform playerTarget;
+    public EnemyTarget chaseTarget;
     EnemyAI enemyAI;
    
     // Start is called before the first frame update
@@ -22,8 +22,8 @@ public class SetChaseStateOnDialogueEnd : DisableOnDialogueEndBase
     {
         if (enemyAI != null)
         {
-            enemyAI.SetTarget(playerTarget);
-            enemyAI.SetTarget(new EnemyTarget(playerTarget.gameObject, TargetType.Player));
+            enemyAI.SetTarget(chaseTarget.targetTransform);
+            enemyAI.SetTarget(chaseTarget);
         }
     }
 }

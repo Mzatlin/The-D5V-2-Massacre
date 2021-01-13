@@ -13,7 +13,7 @@ public class ScriptedStopState : EnemyStateBase
     }
     public override void BeginState()
     {
-       currentTarget = enemy.GetEnemyTarget();
+       currentTarget = enemy.GetPreviousEnemyTarget();
 
         if (currentTarget.typeOfTarget == TargetType.Player)
         {
@@ -28,7 +28,7 @@ public class ScriptedStopState : EnemyStateBase
             return SetType();
         }
 
-        if(Vector2.Distance(transformEnemy.position, enemy.PlayerTarget.position) < 3f)
+        if(Vector2.Distance(transformEnemy.position, enemy.PlayerTarget.position) < 2f)
         {
             enemy.SetCanPath();
         }
@@ -48,9 +48,14 @@ public class ScriptedStopState : EnemyStateBase
         {
             return typeof(InvestigateObjectState);
         }
+        if(currentTarget.typeOfTarget == TargetType.None)
+        {
+            enemy.SetTarget(new EnemyTarget(enemy.PatrolTargets[0].gameObject, TargetType.None));
+            return typeof(PatrolState);
+        }
         else
         {
-            return typeof(PatrolState);
+            return null;
         }
 
     }

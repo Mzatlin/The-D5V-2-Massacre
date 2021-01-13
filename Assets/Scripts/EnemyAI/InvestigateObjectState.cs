@@ -37,6 +37,7 @@ public class InvestigateObjectState : EnemyStateBase
             {
                 enemy.SetCanPath();
                 hasDelayed = false;
+                enemy.SetTarget(new EnemyTarget(enemy.PatrolTargets[0].gameObject, TargetType.None));
                 return typeof(PatrolState);
             }
 

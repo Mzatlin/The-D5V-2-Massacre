@@ -24,6 +24,7 @@ public class OnDialogueEndSetEnemyActive : DisableOnDialogueEndBase
             {
                 enemyAI.SetTarget(scriptedTarget);
                 enemyAI.SetTarget(new EnemyTarget(scriptedTarget.gameObject, TargetType.ScriptedStopPoint));
+                AkSoundEngine.SetState("EnemyState", "Investigate");
             }
         }
     }

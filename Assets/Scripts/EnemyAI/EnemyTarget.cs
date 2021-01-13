@@ -21,5 +21,6 @@ public enum TargetType
 {
     Player,
     Radio,
-    ScriptedStopPoint
+    ScriptedStopPoint,
+    None
 }

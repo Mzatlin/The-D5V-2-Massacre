@@ -23,13 +23,16 @@ public class EnemyAI : MonoBehaviour
     public PatrolPathListSO paths;
     public LayerMask obstacles;
     public EnemyTarget target;
+    public EnemyTarget previousTarget;
 
     // Start is called before the first frame update
     void Awake()
     {
+        target = new EnemyTarget(PlayerGameObject, TargetType.Player);
+        previousTarget = new EnemyTarget(PlayerGameObject, TargetType.Player);
         SetPatrolPath(paths?.patrolPaths[0]);
         InitializeStateMachine();
-        target = new EnemyTarget(PlayerGameObject, TargetType.Player);
+
     }
 
     void InitializeStateMachine()
@@ -47,12 +50,14 @@ public class EnemyAI : MonoBehaviour
 
     public void SetTarget(Transform target)
     {
+
         CurrentTarget = target;
         enemyPath?.SetPathTarget(target);
     }
 
     public void SetTarget(EnemyTarget _target)
     {
+        previousTarget = target;
         target = _target;
         CurrentTarget = _target.targetTransform;
         enemyPath?.SetPathTarget(_target.targetTransform);
@@ -102,6 +107,11 @@ public class EnemyAI : MonoBehaviour
     public EnemyTarget GetEnemyTarget()
     {
         return target;
+    }
+
+    public EnemyTarget GetPreviousEnemyTarget()
+    {
+        return previousTarget;
     }
 
 

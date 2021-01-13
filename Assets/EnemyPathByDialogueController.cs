@@ -6,14 +6,16 @@ using UnityEngine;
 public class EnemyPathByDialogueController : DisableOnDialogueEndBase
 {
     public GameObject enemy;
-    public GameObject player;
-    public GameObject scriptedSpot;
-    EnemyAI AiEnemy => enemy?.GetComponent<EnemyAI>();
+
+    public EnemyTarget targetToChange;
+    EnemyTarget previousTarget;
+
+    EnemyAI enemyAI => enemy?.GetComponent<EnemyAI>();
     IActivateDialogue ActivateDialogue => GetComponent<IActivateDialogue>();
     // Start is called before the first frame update
     protected override void Start()
     {
-        if(enemy == null || AiEnemy == null)
+        if(enemy == null || enemyAI == null)
         {
             Debug.Log("No gameobject or EnemyAI assigned to Path Dialogue Controller");
         }
@@ -31,10 +33,11 @@ public class EnemyPathByDialogueController : DisableOnDialogueEndBase
 
     private void HandleActivation()
     {
-        if(AiEnemy != null)
+        if(enemyAI != null)
         {
-            AiEnemy.SetCanPath();
-            AiEnemy.SetTarget(new EnemyTarget(scriptedSpot.gameObject, TargetType.ScriptedStopPoint));
+            enemyAI.SetCanPath();
+            previousTarget = enemyAI.target;
+            enemyAI.SetTarget(targetToChange);
         }
         else
         {
@@ -44,10 +47,10 @@ public class EnemyPathByDialogueController : DisableOnDialogueEndBase
 
     protected override void HandleEnd()
     {
-        if (AiEnemy != null)
+        if (enemyAI != null)
         {
-            AiEnemy.SetCanPath();
-            AiEnemy.SetTarget(new EnemyTarget(player.gameObject, TargetType.Player));
+            enemyAI.SetCanPath();
+            enemyAI.SetTarget(previousTarget);
         }
         else
         {
