@@ -24,7 +24,7 @@ public class EnemyAI : MonoBehaviour
     public LayerMask obstacles;
     public EnemyTarget target;
     public EnemyTarget previousTarget;
-
+    public int patrolIndex = 0;
     // Start is called before the first frame update
     void Awake()
     {
@@ -90,6 +90,7 @@ public class EnemyAI : MonoBehaviour
 
     public void SetPatrolPath(GameObject pathChildren)
     {
+        patrolIndex = 0;
         Transform[] paths = pathChildren.GetComponentsInChildren<Transform>();
         patrolTargets.Clear();
         foreach (Transform path in paths)

@@ -6,7 +6,6 @@ using System;
 public class PatrolState : EnemyStateBase
 {
     EnemyAI enemy;
-    int index = 0;
     int size;
     List<Transform> locations = new List<Transform>();
     Transform currentPatrolPoint;
@@ -20,7 +19,7 @@ public class PatrolState : EnemyStateBase
     public override void BeginState()
     {
         AkSoundEngine.SetState("EnemyState", "Patrol");
-        currentPatrolPoint = enemy.PatrolTargets[index];
+        currentPatrolPoint = enemy.PatrolTargets[enemy.patrolIndex];
         enemy.SetTarget(currentPatrolPoint);
         size = enemy.PatrolTargets.Count - 1;
     }
@@ -48,15 +47,15 @@ public class PatrolState : EnemyStateBase
 
             if (Vector2.Distance(transformEnemy.position, currentPatrolPoint.position) < 1)
             {
-                if (index >= size)
+                if (enemy.patrolIndex >= size)
                 {
-                    index = 0;
+                    enemy.patrolIndex = 0;
                 }
                 else
                 {
-                    index++;
+                    enemy.patrolIndex++;
                 }
-                currentPatrolPoint = enemy.PatrolTargets[index];
+                currentPatrolPoint = enemy.PatrolTargets[enemy.patrolIndex];
                 enemy.SetTarget(currentPatrolPoint);
             }
 
