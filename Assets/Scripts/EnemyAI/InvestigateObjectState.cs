@@ -41,7 +41,7 @@ public class InvestigateObjectState : EnemyStateBase
                 return typeof(PatrolState);
             }
 
-            if (playerCollider != null && playerCollider.enabled && Vector2.Distance(transformEnemy.position, enemy.PlayerTarget.position) < 5)
+            if (playerCollider != null && playerCollider.enabled && Vector2.Distance(transformEnemy.position, enemy.PlayerTarget.position) < 3)
             {
                 if (!enemy.GetCanPath())
                 {

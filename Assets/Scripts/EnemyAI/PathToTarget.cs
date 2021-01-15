@@ -5,7 +5,7 @@ using Pathfinding;
 public class PathToTarget : PathingBase, IEnemyDirection, IEnemyPath
 {
     public Vector2 Direction => direction;//pathDirectionOfCurrentPoint;
-
+    public float distance = 0;
     public bool CanPath { get; set; } = true;
     public float ObjectSpeed { get => objectSpeed; set => objectSpeed = value; }
 
@@ -15,6 +15,12 @@ public class PathToTarget : PathingBase, IEnemyDirection, IEnemyPath
     public void SetPathTarget(Transform nextTarget)
     {
         target = nextTarget;
+    }
+
+    void LogDistance()
+    {
+        distance = (Vector2.Distance(target.position, transform.position));
+        //Debug.Log(distance);
     }
 
     // Start is called before the first frame update
@@ -33,6 +39,7 @@ public class PathToTarget : PathingBase, IEnemyDirection, IEnemyPath
             MoveSeeker();
             UpdateWayPoint();
         }
+        LogDistance();
     }
 
 
