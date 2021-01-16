@@ -12236,6 +12236,7 @@ GameObject:
   - component: {fileID: 414357128}
   - component: {fileID: 414357129}
   - component: {fileID: 414357130}
+  - component: {fileID: 414357131}
   m_Layer: 0
   m_Name: OpeningManager
   m_TagString: Untagged
@@ -12331,6 +12332,20 @@ MonoBehaviour:
   - {fileID: 626622783}
   - {fileID: 709452763}
   - {fileID: 787819623}
+--- !u!114 &414357131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414357125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 345158a7ea7fe924f9c4df30fcb3baa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  save: {fileID: 11400000, guid: d03d12d99c0ec4440926da9465702e67, type: 2}
+  RadioUI: {fileID: 608507224}
 --- !u!1 &418688861
 GameObject:
   m_ObjectHideFlags: 0
@@ -17633,6 +17648,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1721200792607471275, guid: 2727d84479394fa439447d82bf3be51c, type: 3}
   m_PrefabInstance: {fileID: 841107200}
+  m_PrefabAsset: {fileID: 0}
+--- !u!223 &608507224 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 362166526280577101, guid: 238f22774618e364cbfdaf7c880fc4c8, type: 3}
+  m_PrefabInstance: {fileID: 362166526258880549}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &609890618 stripped
 Transform:
@@ -34011,6 +34031,7 @@ GameObject:
   - component: {fileID: 1167584731}
   - component: {fileID: 1167584727}
   - component: {fileID: 1167584728}
+  - component: {fileID: 1167584732}
   m_Layer: 0
   m_Name: 6DialogueTriggerZone
   m_TagString: Untagged
@@ -34245,6 +34266,19 @@ MonoBehaviour:
     target: {fileID: 1783890874}
     targetTransform: {fileID: 1783890875}
     typeOfTarget: 2
+--- !u!114 &1167584732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167584719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23f27850f01164d48b8f901c2d8dbdfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radioUI: {fileID: 608507224}
 --- !u!1 &1171569689
 GameObject:
   m_ObjectHideFlags: 0
