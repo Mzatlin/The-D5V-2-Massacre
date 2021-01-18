@@ -48,6 +48,12 @@ public class DialogueController : MonoBehaviour, IEndDialogue
     }
 
 
+    public void SetContentText(string _content)
+    {
+        content = _content;
+    }
+
+
     void HandleActivateDialogue()
     {
         if (dialogueCanvas != null)

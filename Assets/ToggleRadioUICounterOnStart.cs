@@ -5,6 +5,7 @@ using UnityEngine;
 public class ToggleRadioUICounterOnStart : MonoBehaviour
 {
     public SaveStateSO save;
+    public RadioDialogueCompleteSO dialogue;
     public Canvas RadioUI;
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,10 @@ public class ToggleRadioUICounterOnStart : MonoBehaviour
         if(save != null)
         {
             ToggleRadioUI();
+        }
+        if(dialogue != null)
+        {
+            dialogue.ResetDialogueIndex();
         }
     }
 

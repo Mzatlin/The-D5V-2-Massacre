@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417a248c9ad72574f9dc07a4078db535, type: 3}
+  m_Name: RadioDialogueCompleteSO
+  m_EditorClassIdentifier: 
+  dialogueRadioList:
+  - "Wait a second! There\u2019s something taped on the back\u2026 the key to storage?"
+  - "Yes! I did it! Now I have to head back to the Radio room and hole up. Can\u2019t
+    let him see me get in. I\u2019m so close\u2026"

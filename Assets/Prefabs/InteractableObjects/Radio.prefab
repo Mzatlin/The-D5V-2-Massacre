@@ -19,6 +19,10 @@ GameObject:
   - component: {fileID: 7917558914912458075}
   - component: {fileID: 4821926794711558550}
   - component: {fileID: 1477786889030858834}
+  - component: {fileID: 2234411081804396221}
+  - component: {fileID: 915866258850377359}
+  - component: {fileID: 2178700552600317044}
+  - component: {fileID: 7243888567883202411}
   m_Layer: 8
   m_Name: Radio
   m_TagString: Untagged
@@ -173,6 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialImage: {fileID: 0}
   radioScreen: {fileID: 0}
+  radioAnswer: {fileID: 0}
   radioSlider: {fileID: 0}
   turnSpeed: 36
   mainCamera: {fileID: 0}
@@ -221,11 +226,6 @@ MonoBehaviour:
   radio: {fileID: 11400000, guid: 1e39c22aaa65ba34ca0f18494f7541cd, type: 2}
   keys: {fileID: 11400000, guid: acf933fa8109c4f459bceb73081d352e, type: 2}
   radioKey: {fileID: 11400000, guid: 6b17cb18ea517754eaff843344c81688, type: 2}
-  keyNames:
-  - Diving
-  - Storage
-  keyNameIndex: 0
-  keyAmounts: 0200000004000000
 --- !u!114 &1477786889030858834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,3 +240,64 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   successCanvas: {fileID: 0}
   successText: {fileID: 0}
+--- !u!114 &2234411081804396221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349570348710239401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c89e2368b5f58f04b8f209307a552216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueCanvas: {fileID: 0}
+  textDialogue: {fileID: 0}
+  content: 
+  typingSpeed: 0.1
+--- !u!114 &915866258850377359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349570348710239401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a990ec806c6e029498bfbf8d8dcf3ed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radio: {fileID: 11400000, guid: 1e39c22aaa65ba34ca0f18494f7541cd, type: 2}
+  dialogues: {fileID: 11400000, guid: 20ce003428f33f944b2b018d9393f710, type: 2}
+  radioCounts: 0100000005000000
+--- !u!114 &2178700552600317044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349570348710239401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71f2a1ca158bb154dbb838e2844717b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerState: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
+--- !u!114 &7243888567883202411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349570348710239401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e41cea28e1f13ec4085db736fb34cdd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
+  targetToChange:
+    target: {fileID: 0}
+    targetTransform: {fileID: 0}
+    typeOfTarget: 2
