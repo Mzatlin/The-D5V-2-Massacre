@@ -28,6 +28,10 @@ public class DialogueController : MonoBehaviour, IEndDialogue
             dialogueCanvas.enabled = false;
             textDialogue.text = "";
         }
+        else
+        {
+            Debug.Log("Dialogue Canvas/Text Dialogue not attached to: " + gameObject);
+        }
 
         if(Activate != null)
         {
