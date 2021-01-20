@@ -51,6 +51,7 @@ public class PlayerSprint : MonoBehaviour, ISprint
         {
             ChangeSprintBar();
             isSprinting = false;
+            ResetSpeed();
         }
 
         SprintAmount = Mathf.Clamp(SprintAmount, 0, 100);
@@ -107,20 +108,12 @@ public class PlayerSprint : MonoBehaviour, ISprint
 
         if (SprintAmount > 0 && Input.GetKey(KeyCode.LeftShift))
         {
-            if (Mathf.Abs(playerInput.XMovement) > 0.1)
+            if (Mathf.Abs(playerInput.XMovement) > 0.1 || (Mathf.Abs(playerInput.YMovement) > 0.1 && climb.IsClimbing))
             {
-                if (movement != null && !isSprinting)
+                if (movement != null && climb != null && !isSprinting)
                 {
                     isSprinting = true;
                     movement.MoveSpeed *= moveSpeedMultiplier;
-                }
-            }
-
-            if(Mathf.Abs(playerInput.YMovement) > 0.1 && climb.IsClimbing)
-            {
-                if (climb != null && !isSprinting)
-                {
-                    isSprinting = true;
                     climb.SetClimbSpeed(climbSpeedMultipler);
                 }
             }
