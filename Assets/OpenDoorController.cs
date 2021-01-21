@@ -7,9 +7,11 @@ public class OpenDoorController : MonoBehaviour, IDoor
     // Start is called before the first frame update
     INamePlate Plate =>  GetComponent<INamePlate>();
     public Sprite spriteSwap;
+    public GameObject lightSwap;
+    public GameObject originalLight;
     Sprite originalSprite;
     SpriteRenderer render;
-    public Collider2D[] pathBlockers;
+    Collider2D[] pathBlockers;
     [SerializeField]
     bool isOpen = false;
     public bool IsOpen => isOpen;
@@ -47,6 +49,12 @@ public class OpenDoorController : MonoBehaviour, IDoor
         {
             Plate.DisableNamePlate();
         }
+
+        if (originalLight != null && lightSwap != null)
+        {
+            originalLight.SetActive(false);
+            lightSwap.SetActive(true);
+        }
         ScanGraph();
 
         isOpen = true;
@@ -66,6 +74,14 @@ public class OpenDoorController : MonoBehaviour, IDoor
         {
             render.sprite = originalSprite;
         }
+
+        if(originalLight != null && lightSwap != null)
+        {
+            originalLight.SetActive(true);
+            lightSwap.SetActive(false);
+        }
+
+
         ScanGraph();
 
         isOpen = false;
