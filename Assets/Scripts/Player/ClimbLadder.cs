@@ -36,9 +36,9 @@ public class ClimbLadder : MonoBehaviour, IClimb
         }
         else
         {
-            AnimateMovement();
             rigidBody.velocity = Vector2.zero;
             rigidBody.gravityScale = 0f;
+            AnimateMovement();
         }
 
     }
@@ -47,9 +47,10 @@ public class ClimbLadder : MonoBehaviour, IClimb
     {
         Ray2D ray = new Ray2D(transform.position, Vector2.up);
         Debug.DrawRay(ray.origin, ray.direction, Color.red);
-        hit = Physics2D.Raycast(ray.origin, ray.direction, 8f, ladderLayer);
+        hit = Physics2D.Raycast(ray.origin, ray.direction, 1f, ladderLayer);
         if (hit)
         {
+            Debug.Log("Hit!");
             isClimbing = true;
             Climb();
         }
@@ -79,15 +80,24 @@ public class ClimbLadder : MonoBehaviour, IClimb
     {
         if (animate != null)
         {
-            if (state.PlayerState.IsPlayerReady())
+            if (isClimbing)
             {
                 animate.SetBool("IsClimbing", isClimbing);
-                animate.SetFloat("MoveY", Mathf.Abs(MoveY));
+                if (state.PlayerState.IsPlayerReady())
+                {
+
+                    animate.SetFloat("MoveY", Mathf.Abs(MoveY));
+                }
+                else
+                {
+                    animate.SetFloat("MoveY", 0);
+                }
+
             }
             else
             {
-                animate.SetBool("IsClimbing", false);
                 animate.SetFloat("MoveY", 0);
+                animate.SetBool("IsClimbing", false);
             }
 
             if(climbSpeed > 2f)
