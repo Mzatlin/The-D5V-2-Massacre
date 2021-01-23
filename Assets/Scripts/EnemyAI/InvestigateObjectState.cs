@@ -26,7 +26,7 @@ public class InvestigateObjectState : EnemyStateBase
     {
         if (currentTarget != null)
         {
-            if (!hasDelayed && Vector3.Distance(transformEnemy.position, currentTarget.position) < 3.3f)
+            if (!hasDelayed && Vector3.Distance(transformEnemy.position, currentTarget.position) < 2.5f)
             {
                 enemy.DelayAction(UnityEngine.Random.Range(3f,5f));
                 enemy.SetCanPath();
