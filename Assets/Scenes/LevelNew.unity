@@ -7675,6 +7675,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 259286942573559318, guid: 95a0cc24b055009468a9a722ae8a4e6c, type: 3}
   m_PrefabInstance: {fileID: 820907255}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &254158641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254158640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c8b5d28d1adb9945ba34c0580630d99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedAmount: 50
 --- !u!4 &257600304 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6764990402291897123, guid: 504d79687784f954b91bda845491b2dd, type: 3}
@@ -34104,7 +34117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerList: f7e1664c
   useOtherObject: 0
-  actionOnEventType: 0
+  actionOnEventType: 2
   curveInterpolation: 4
   enableActionOnEvent: 0
   data:

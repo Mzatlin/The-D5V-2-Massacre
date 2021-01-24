@@ -2,7 +2,7 @@
 using Pathfinding;
 
 
-public class PathToTarget : PathingBase, IEnemyDirection, IEnemyPath
+public class PathToTarget : PathingBase, IEnemyDirection, IEnemyPath, IEnemySpeed
 {
     public Vector2 Direction => direction;//pathDirectionOfCurrentPoint;
     public float distance = 0;
@@ -11,6 +11,7 @@ public class PathToTarget : PathingBase, IEnemyDirection, IEnemyPath
 
     public bool IsPathing = false;
     float stoppingDistance = 1f;
+    float baseSpeed;
 
     public void SetPathTarget(Transform nextTarget)
     {
@@ -28,6 +29,7 @@ public class PathToTarget : PathingBase, IEnemyDirection, IEnemyPath
     {
         base.Start();
         InvokeRepeating("UpdatePath", 0f, .5f);
+        baseSpeed = objectSpeed;
     }
 
     void FixedUpdate()
@@ -42,9 +44,13 @@ public class PathToTarget : PathingBase, IEnemyDirection, IEnemyPath
         LogDistance();
     }
 
+    public void ResetSpeedToBase()
+    {
+        objectSpeed = baseSpeed;
+    }
 
-
-
-
-
+    public void SetSpeed(float _speed)
+    {
+        objectSpeed += _speed;
+    }
 }
