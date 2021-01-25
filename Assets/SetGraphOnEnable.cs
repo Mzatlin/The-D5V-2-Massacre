@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SetGraphOnEnable : MonoBehaviour
 {
-    void OnEnable()
+   /* void OnEnable()
     {
         var graphToScan = AstarPath.active.data.gridGraph;
         AstarPath.active.Scan(graphToScan);
@@ -14,5 +14,5 @@ public class SetGraphOnEnable : MonoBehaviour
     {
         var graphToScan = AstarPath.active.data.gridGraph;
         AstarPath.active.Scan(graphToScan);
-    }
+    }*/
 }

@@ -17,13 +17,17 @@ public class AnimateSpritesOnEnable : MonoBehaviour
     {
         image = GetComponentInChildren<Image>();
         mainCamera = FindObjectOfType<Camera>().gameObject;
-        
     }
 
     void OnEnable()
     {
         AkSoundEngine.PostEvent("Play_DeathTransition", mainCamera);
         StartCoroutine(ManualAnimation());
+    }
+
+    private void OnDestroy()
+    {
+        AkSoundEngine.PostEvent("StopAll", mainCamera);
     }
 
 

@@ -33988,6 +33988,7 @@ GameObject:
   - component: {fileID: 1134361717}
   - component: {fileID: 1134361722}
   - component: {fileID: 1134361724}
+  - component: {fileID: 1134361723}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -34132,6 +34133,30 @@ MonoBehaviour:
   eventIdInternal: 0
   valueGuidInternal: 
   m_callbackDataInternal: {fileID: 0}
+--- !u!114 &1134361723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134361716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d82a7a6f38587af4bb389d4e854137d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b5760738c730bc843a01a8db313979ce, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!114 &1134361724
 MonoBehaviour:
   m_ObjectHideFlags: 0
