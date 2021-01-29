@@ -28,12 +28,10 @@ public class ScriptedStopState : EnemyStateBase
             return SetType();
         }
 
-        if(Vector2.Distance(transformEnemy.position, enemy.PlayerTarget.position) < 2f)
+        if(Vector2.Distance(transformEnemy.position, enemy.PlayerTarget.position) < 3f)
         {
             enemy.SetCanPath();
         }
-
-
 
         return null;
     }
