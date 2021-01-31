@@ -1469,6 +1469,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1888420174}
     - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: playerState
+      value: 
+      objectReference: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
+    - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: textDialogue
       value: 
       objectReference: {fileID: 1590920235}
@@ -6712,7 +6716,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4495354862576336867, guid: 6a36ac6acba0ebf4f87c3c26527591bb, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 4495354862576336867, guid: 6a36ac6acba0ebf4f87c3c26527591bb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8223,6 +8227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueCanvas: {fileID: 138234835}
+  playerState: {fileID: 0}
   textDialogue: {fileID: 1590920235}
   content: 'Thank god there''s a key on him. I gotta get the hell out of here! '
   typingSpeed: 0.1
@@ -8325,7 +8330,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &285194549 stripped
 Transform:
@@ -10434,7 +10439,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7266442153913876766, guid: 38fe978d783aae14ab470323239fe724, type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 7266442153913876766, guid: 38fe978d783aae14ab470323239fe724, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10715,7 +10720,7 @@ RectTransform:
   m_Children:
   - {fileID: 1707103484}
   m_Father: {fileID: 775670550}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -11716,6 +11721,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1888420174}
     - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: playerState
+      value: 
+      objectReference: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
+    - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: textDialogue
       value: 
       objectReference: {fileID: 1590920235}
@@ -12680,7 +12689,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &414357128
 MonoBehaviour:
@@ -17260,6 +17269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueCanvas: {fileID: 138234835}
+  playerState: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
   textDialogue: {fileID: 1590920235}
   content: Oh dear god! Who did this?! I gotta get to the control room and get to
     the nearest port.
@@ -17971,7 +17981,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2079740288129460849, guid: a23037b6bc702c244bb4045b31c24183, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 2079740288129460849, guid: a23037b6bc702c244bb4045b31c24183, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19506,7 +19516,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7287295135150867983, guid: 554657eec96cb3c4eb427d760be9d776, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 7287295135150867983, guid: 554657eec96cb3c4eb427d760be9d776, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20180,6 +20190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueCanvas: {fileID: 138234835}
+  playerState: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
   textDialogue: {fileID: 1590920235}
   content: "Shit! Control\u2019s completely sealed off! Maybe there\u2019s a key
     in radio. Luckily it\u2019s right here. Not risking my ass going all the way
@@ -22296,11 +22307,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1646925312}
   colliders: []
---- !u!224 &767572972 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3452468000592675346, guid: 87e31a0ec2578b84a94cb223da2f9ed0, type: 3}
-  m_PrefabInstance: {fileID: 1020946475}
-  m_PrefabAsset: {fileID: 0}
 --- !u!223 &767572973 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 3452468000592675347, guid: 87e31a0ec2578b84a94cb223da2f9ed0, type: 3}
@@ -22592,7 +22598,6 @@ Transform:
   - {fileID: 138234836}
   - {fileID: 3115407961782110662}
   - {fileID: 122622053}
-  - {fileID: 767572972}
   - {fileID: 370315233}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -27376,6 +27381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueCanvas: {fileID: 138234835}
+  playerState: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
   textDialogue: {fileID: 1590920235}
   content: 'Can''t get to Diving. Armament''s the other way, anyhow. I''m wasting
     Time!
@@ -29937,7 +29943,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 775670550}
+    m_TransformParent: {fileID: 3115407961782110662}
     m_Modifications:
     - target: {fileID: 3452467999779423197, guid: 87e31a0ec2578b84a94cb223da2f9ed0, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -29945,15 +29951,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3452468000592675346, guid: 87e31a0ec2578b84a94cb223da2f9ed0, type: 3}
       propertyPath: m_Pivot.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3452468000592675346, guid: 87e31a0ec2578b84a94cb223da2f9ed0, type: 3}
       propertyPath: m_Pivot.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3452468000592675346, guid: 87e31a0ec2578b84a94cb223da2f9ed0, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3452468000592675346, guid: 87e31a0ec2578b84a94cb223da2f9ed0, type: 3}
       propertyPath: m_AnchorMax.x
@@ -29973,11 +29979,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3452468000592675346, guid: 87e31a0ec2578b84a94cb223da2f9ed0, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 3452468000592675346, guid: 87e31a0ec2578b84a94cb223da2f9ed0, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 507.85828
+      objectReference: {fileID: 0}
+    - target: {fileID: 3452468000592675346, guid: 87e31a0ec2578b84a94cb223da2f9ed0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3452468000592675346, guid: 87e31a0ec2578b84a94cb223da2f9ed0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3452468000592675346, guid: 87e31a0ec2578b84a94cb223da2f9ed0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3452468000592675346, guid: 87e31a0ec2578b84a94cb223da2f9ed0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -29997,23 +30015,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3452468000592675346, guid: 87e31a0ec2578b84a94cb223da2f9ed0, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3452468000592675346, guid: 87e31a0ec2578b84a94cb223da2f9ed0, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3452468000592675346, guid: 87e31a0ec2578b84a94cb223da2f9ed0, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3452468000592675346, guid: 87e31a0ec2578b84a94cb223da2f9ed0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 3452468000592675346, guid: 87e31a0ec2578b84a94cb223da2f9ed0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 253.92914
       objectReference: {fileID: 0}
     - target: {fileID: 3452468000592675346, guid: 87e31a0ec2578b84a94cb223da2f9ed0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -30155,6 +30173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueCanvas: {fileID: 138234835}
+  playerState: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
   textDialogue: {fileID: 1590920235}
   content: Oh dear god! Who did this?! I gotta get to the control room and get to
     the nearest port.
@@ -31046,7 +31065,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1038759911
 PrefabInstance:
@@ -31413,6 +31432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueCanvas: {fileID: 138234835}
+  playerState: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
   textDialogue: {fileID: 1590920235}
   content: Oh dear god... What was that?!
   typingSpeed: 0.1
@@ -32584,6 +32604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueCanvas: {fileID: 138234835}
+  playerState: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
   textDialogue: {fileID: 1590920235}
   content: "Jesus Christ! I gotta hide. I think there\u2019s a locker big enough
     to hide me in the Control Room. Can\u2019t let him see me get in!"
@@ -34624,7 +34645,7 @@ Transform:
   - {fileID: 1002631388}
   - {fileID: 1763755206}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1147311762
 GameObject:
@@ -35047,6 +35068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueCanvas: {fileID: 138234835}
+  playerState: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
   textDialogue: {fileID: 1590920235}
   content: "No! The Control Room Panel is hacked to pieces! I hear a radio though\u2026
     I have to fix them all and call for help!"
@@ -43015,7 +43037,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7417803354974528285, guid: 4f6b30ff0af15ee47a44418c79923400, type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7417803354974528285, guid: 4f6b30ff0af15ee47a44418c79923400, type: 3}
       propertyPath: m_LocalPosition.x
@@ -43195,7 +43217,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3157396770457671496, guid: 822e3503550f1984681cb9723fff999e, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3157396770457671496, guid: 822e3503550f1984681cb9723fff999e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -43499,6 +43521,10 @@ PrefabInstance:
       propertyPath: successCanvas
       value: 
       objectReference: {fileID: 1888420174}
+    - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: playerState
+      value: 
+      objectReference: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
     - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: textDialogue
       value: 
@@ -43855,7 +43881,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1523977699
 PrefabInstance:
@@ -46563,7 +46589,7 @@ Transform:
   - {fileID: 1088209070}
   - {fileID: 1167584720}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1579889341
 GameObject:
@@ -47418,6 +47444,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1888420174}
     - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: playerState
+      value: 
+      objectReference: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
+    - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: textDialogue
       value: 
       objectReference: {fileID: 1590920235}
@@ -47784,6 +47814,14 @@ PrefabInstance:
       propertyPath: pauseCanavs
       value: 
       objectReference: {fileID: 3115407961782110663}
+    - target: {fileID: 8184491639677976191, guid: 4bb0e0d1ea95966468dfab98c5e92fb7, type: 3}
+      propertyPath: subCanvases.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8184491639677976191, guid: 4bb0e0d1ea95966468dfab98c5e92fb7, type: 3}
+      propertyPath: subCanvases.Array.data[0]
+      value: 
+      objectReference: {fileID: 767572973}
     - target: {fileID: 8785264991094897110, guid: 4bb0e0d1ea95966468dfab98c5e92fb7, type: 3}
       propertyPath: enemy
       value: 
@@ -48088,7 +48126,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4144232864135166397, guid: ff3f5f45942ad584499db3787e672bc2, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4144232864135166397, guid: ff3f5f45942ad584499db3787e672bc2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -52697,6 +52735,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: playerState
+      value: 
+      objectReference: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
+    - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: textDialogue
       value: 
       objectReference: {fileID: 1590920235}
@@ -54007,7 +54049,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1789182129
 MonoBehaviour:
@@ -56095,6 +56137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueCanvas: {fileID: 138234835}
+  playerState: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
   textDialogue: {fileID: 1590920235}
   content: "Huh\u2026?  Where is everyone? I must've overslept! Better head to the
     Control Room. should be straight east from here.\n"
@@ -56289,53 +56332,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1866035470
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1866035472}
-  - component: {fileID: 1866035471}
-  m_Layer: 0
-  m_Name: DialogueMananger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1866035471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1866035470}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c89e2368b5f58f04b8f209307a552216, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueCanvas: {fileID: 138234835}
-  textDialogue: {fileID: 1590920235}
-  content: 
-  typingSpeed: 0.1
---- !u!4 &1866035472
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1866035470}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 307.70154, y: 161.25641, z: -96.03089}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1866543715
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56700,6 +56696,10 @@ PrefabInstance:
       propertyPath: successCanvas
       value: 
       objectReference: {fileID: 1888420174}
+    - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: playerState
+      value: 
+      objectReference: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
     - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: textDialogue
       value: 
@@ -59491,7 +59491,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1463627932545588186, guid: eb5ba74482635d74d855801e7ecbebf2, type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 1463627932545588186, guid: eb5ba74482635d74d855801e7ecbebf2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -64492,6 +64492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueCanvas: {fileID: 138234835}
+  playerState: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
   textDialogue: {fileID: 1590920235}
   content: Damn it, no! I have to take the long way around through Battery and Armament.
   typingSpeed: 0.1
@@ -66160,7 +66161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 497653223832271113, guid: 9c3c21c587535004fa6b4cd61cd331a3, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 497653223832271113, guid: 9c3c21c587535004fa6b4cd61cd331a3, type: 3}
       propertyPath: m_AnchorMax.x
@@ -66582,6 +66583,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseUI
       objectReference: {fileID: 0}
+    - target: {fileID: 664188649417083414, guid: bf3cc92f32f296841a1fdb9e82d24c36, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1521705384563478446, guid: bf3cc92f32f296841a1fdb9e82d24c36, type: 3}
       propertyPath: canvasToToggle
       value: 
@@ -66594,6 +66599,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1302560272}
+    - target: {fileID: 3099572251953388630, guid: bf3cc92f32f296841a1fdb9e82d24c36, type: 3}
+      propertyPath: playerState
+      value: 
+      objectReference: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
+    - target: {fileID: 5368619821815715265, guid: bf3cc92f32f296841a1fdb9e82d24c36, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.6684265
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf3cc92f32f296841a1fdb9e82d24c36, type: 3}
 --- !u!1001 &2795965491579327050

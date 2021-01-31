@@ -7,6 +7,7 @@ using System;
 public class DialogueController : MonoBehaviour, IEndDialogue
 {
     public Canvas dialogueCanvas;
+    public PlayerStateSO playerState;
     public TextMeshProUGUI textDialogue;
     [TextArea(2,3)]
     public string content;
@@ -91,7 +92,7 @@ public class DialogueController : MonoBehaviour, IEndDialogue
 
     void EndDialogueOnInput()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && playerState != null && !playerState.isPaused)
         {
             if (IsTextFinished())
             {

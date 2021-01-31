@@ -6,11 +6,17 @@ public class ResumeOnClick : MonoBehaviour
 {
     public Canvas pauseCanvas;
     public GameObject player;
+    public PlayerStateSO playerState;
     public void Resume()
     {
         Time.timeScale = 1;
         pauseCanvas.enabled = false;
         Cursor.visible = false;
-        player.GetComponent<IPause>().SetPause();
+
+        if(player != null && playerState != null)
+        {
+            player.GetComponent<IPause>().SetPause();
+            playerState.isPaused = false;
+        }
     }
 }

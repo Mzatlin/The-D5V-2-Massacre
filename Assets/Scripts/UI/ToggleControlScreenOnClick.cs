@@ -6,7 +6,6 @@ public class ToggleControlScreenOnClick : MonoBehaviour
 {
     public Canvas canvasToToggle;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -30,13 +29,13 @@ public class ToggleControlScreenOnClick : MonoBehaviour
 
     void ToggleCanvas()
     {
-        if (canvasToToggle.enabled)
+        if (!canvasToToggle.enabled)
         {
-            canvasToToggle.enabled = false;
+            canvasToToggle.enabled = true;
         }
         else
         {
-            canvasToToggle.enabled = true;
+            canvasToToggle.enabled = false;
         }
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PauseGame : MonoBehaviour,IPause
 {
     public Canvas pauseCanavs;
+    public List<Canvas> subCanvases = new List<Canvas>();
     IPlayerState player => GetComponent<IPlayerState>();
     bool isPaused;
     // Start is called before the first frame update
@@ -36,6 +37,8 @@ public class PauseGame : MonoBehaviour,IPause
             isPaused = false;
             pauseCanavs.enabled = false;
             Cursor.visible = false;
+            player.PlayerState.isPaused = false;
+            DisableSubMenus();
         }
         else
         {
@@ -43,6 +46,7 @@ public class PauseGame : MonoBehaviour,IPause
             isPaused = true;
             pauseCanavs.enabled = true;
             Cursor.visible = true;
+            player.PlayerState.isPaused = true;
         }
     }
     IEnumerator Delay()
@@ -50,6 +54,18 @@ public class PauseGame : MonoBehaviour,IPause
         yield return new WaitForSeconds(0.1f);
         HandlePause();
     }
+
+    void DisableSubMenus()
+    {
+        if (subCanvases.Count > 0)
+        {
+            foreach (Canvas can in subCanvases)
+            {
+                can.enabled = false;
+            }
+        }
+    }
+
 
     public void SetPause()
     {
