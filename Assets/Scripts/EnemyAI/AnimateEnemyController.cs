@@ -5,7 +5,7 @@ using UnityEngine;
 public class AnimateEnemyController : MonoBehaviour
 {
     Animator Animate => GetComponentInChildren<Animator>();
-    EnemyStateMachine StateMachine => GetComponent<EnemyStateMachine>();
+    IEnemyState StateMachine => GetComponent<IEnemyState>();
     Rigidbody2D Rb => GetComponent<Rigidbody2D>();
     public LayerMask ladderMask;
 

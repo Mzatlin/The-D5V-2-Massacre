@@ -26,4 +26,5 @@ public class SetChaseStateOnDialogueEnd : DisableOnDialogueEndBase
             enemyAI.SetTarget(chaseTarget);
         }
     }
+
 }

@@ -5,7 +5,7 @@ using TMPro;
 
 public class EnemyStateDebugText : MonoBehaviour
 {
-    EnemyStateMachine stateMachine => GetComponent<EnemyStateMachine>();
+    IEnemyState stateMachine => GetComponent<IEnemyState>();
     [SerializeField]
     TextMeshProUGUI stateText;
     Vector2 canvasPosition;

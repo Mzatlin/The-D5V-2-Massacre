@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 using System.Linq;
 
-public class EnemyStateMachine : MonoBehaviour
+public class EnemyStateMachine : MonoBehaviour, IEnemyState
 {
     public EnemyStateBase CurrentState { get; private set; }
     public bool IsDelayed { get; private set; }

@@ -30,10 +30,6 @@ public class ToggleMap : MonoBehaviour
         {
             SetMap();
         }
-        else if (map.enabled)
-        {
-            SetMap();
-        }
     }
 
     void SetMap()

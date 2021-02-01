@@ -3,30 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChangeEnemySpeedOnChase : MonoBehaviour
+public class ChangeEnemySpeedOnChase : HandleEnemyStateChangeBase
 {
     public float speedAmount = 25f;
-    EnemyStateMachine stateMachine => GetComponent<EnemyStateMachine>();
     IEnemySpeed speed => GetComponent<IEnemySpeed>();
+    IEnemyState state => GetComponent<IEnemyState>();
     bool isSpeedIncreased;
-    // Start is called before the first frame update
-    void Start()
-    {
-        stateMachine.OnStateChanged += HandleStateChange;
-    }
 
-    private void OnDestroy()
+    protected override void HandleStateChange(EnemyStateBase obj)
     {
-        if(stateMachine != null)
-        {
-            stateMachine.OnStateChanged -= HandleStateChange;
-        }
-    }
-
-    private void HandleStateChange(EnemyStateBase obj)
-    {
-        if(stateMachine != null && 
-            (stateMachine.CurrentState.GetType() == typeof(ChasePlayerState) || stateMachine.CurrentState.GetType() == typeof(InvestigateObjectState)))
+        if(state != null && 
+            (state.CurrentState.GetType() == typeof(ChasePlayerState) || state.CurrentState.GetType() == typeof(InvestigateObjectState)))
         {
             if (!isSpeedIncreased)
             {

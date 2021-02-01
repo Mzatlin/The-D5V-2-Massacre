@@ -7692,6 +7692,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedAmount: 75
+--- !u!114 &254158654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254158640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f31faa4d747c15948adcd52d070a472b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &257600304 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6764990402291897123, guid: 504d79687784f954b91bda845491b2dd, type: 3}
@@ -47804,11 +47816,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7270576253345465612, guid: 4bb0e0d1ea95966468dfab98c5e92fb7, type: 3}
       propertyPath: climbSpeedMultipler
-      value: 2.1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7270576253345465612, guid: 4bb0e0d1ea95966468dfab98c5e92fb7, type: 3}
       propertyPath: moveSpeedMultiplier
-      value: 1.65
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8184491639677976191, guid: 4bb0e0d1ea95966468dfab98c5e92fb7, type: 3}
       propertyPath: pauseCanavs
