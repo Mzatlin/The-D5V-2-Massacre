@@ -21,7 +21,6 @@ public class AnimateSpritesOnEnable : MonoBehaviour
 
     void OnEnable()
     {
-        AkSoundEngine.PostEvent("Play_DeathTransition", mainCamera);
         StartCoroutine(ManualAnimation());
     }
 

@@ -5,6 +5,7 @@ using UnityEngine;
 public class AudioTension : MonoBehaviour
 {
     [SerializeField] GameObject enemy;
+
     void Update()
     {
         if (enemy.activeInHierarchy)

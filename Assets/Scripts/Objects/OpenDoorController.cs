@@ -16,7 +16,7 @@ public class OpenDoorController : MonoBehaviour, IDoor
     bool isOpen = false;
     public bool IsOpen => isOpen;
 
-    void Awake()
+    void Start()
     {
         pathBlockers = GetComponentsInChildren<Collider2D>();
         render = GetComponent<SpriteRenderer>();
