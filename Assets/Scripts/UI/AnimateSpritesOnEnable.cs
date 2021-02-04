@@ -8,9 +8,8 @@ public class AnimateSpritesOnEnable : MonoBehaviour
 {
     public Sprite[] sprites;
     public float animationSpeed;
-    [SerializeField]
     private Image image;
-    [SerializeField] GameObject mainCamera;
+    GameObject mainCamera;
     bool isPlaying = false;
 
    void Awake()
@@ -23,12 +22,6 @@ public class AnimateSpritesOnEnable : MonoBehaviour
     {
         StartCoroutine(ManualAnimation());
     }
-
-    private void OnDestroy()
-    {
-        AkSoundEngine.PostEvent("StopAll", mainCamera);
-    }
-
 
     public IEnumerator ManualAnimation()
     {

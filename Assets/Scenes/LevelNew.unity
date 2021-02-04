@@ -47798,6 +47798,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2943845963661684778, guid: 4bb0e0d1ea95966468dfab98c5e92fb7, type: 3}
+      propertyPath: movementSpeedX
+      value: 110
+      objectReference: {fileID: 0}
     - target: {fileID: 2943845963661684782, guid: 4bb0e0d1ea95966468dfab98c5e92fb7, type: 3}
       propertyPath: m_Name
       value: Player
@@ -47828,11 +47832,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7270576253345465612, guid: 4bb0e0d1ea95966468dfab98c5e92fb7, type: 3}
       propertyPath: climbSpeedMultipler
-      value: 2
+      value: 1.9
       objectReference: {fileID: 0}
     - target: {fileID: 7270576253345465612, guid: 4bb0e0d1ea95966468dfab98c5e92fb7, type: 3}
       propertyPath: moveSpeedMultiplier
-      value: 1.5
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 8184491639677976191, guid: 4bb0e0d1ea95966468dfab98c5e92fb7, type: 3}
       propertyPath: pauseCanavs
