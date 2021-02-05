@@ -8239,7 +8239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueCanvas: {fileID: 138234835}
-  playerState: {fileID: 0}
+  playerState: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
   textDialogue: {fileID: 1590920235}
   content: 'Thank god there''s a key on him. I gotta get the hell out of here! '
   typingSpeed: 0.1
@@ -50019,6 +50019,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 1.6343994
       objectReference: {fileID: 0}
+    - target: {fileID: 5629453979438417773, guid: d92faef0586945049a0c1e820bd9bef4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a7f4b874d538ce645a59e93bf8f28ce5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d92faef0586945049a0c1e820bd9bef4, type: 3}
 --- !u!1 &1673219583
