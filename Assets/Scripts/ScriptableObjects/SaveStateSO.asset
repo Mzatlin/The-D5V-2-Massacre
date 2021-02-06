@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 655024a92692ad34d8874aa7ff524d4a, type: 3}
   m_Name: SaveStateSO
   m_EditorClassIdentifier: 
-  IsOpeningComplete: 0
+  IsOpeningComplete: 1
