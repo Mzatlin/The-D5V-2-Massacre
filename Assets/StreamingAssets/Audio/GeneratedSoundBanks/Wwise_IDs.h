@@ -57,6 +57,7 @@ namespace AK
     {
         static const AkUniqueID CORRECT_SINE = 1694191731U;
         static const AkUniqueID CURRENT_SINE = 602825232U;
+        static const AkUniqueID INLOCKER = 2723267000U;
         static const AkUniqueID TENSION = 1571361561U;
     } // namespace GAME_PARAMETERS
 

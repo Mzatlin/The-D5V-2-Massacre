@@ -45,6 +45,7 @@ public class HidePlayerOnInteract : HandleInteractionBase
             playerRigidbody2D.velocity = Vector2.zero;
             state.isInteracting = !state.isInteracting;
             StartCoroutine(DelayToggle());
+            AkSoundEngine.SetRTPCValue("InLocker", 1f);
         }
     }
 
@@ -76,6 +77,7 @@ public class HidePlayerOnInteract : HandleInteractionBase
         if (isHiding && Input.GetKeyDown(KeyCode.E))
         {
             TogglePlayerHide();
+            AkSoundEngine.SetRTPCValue("InLocker", 0f);
         }
     }
     IEnumerator DelayToggle()

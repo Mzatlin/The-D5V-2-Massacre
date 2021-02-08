@@ -621,8 +621,8 @@
 								<Effect Name="Low_Pass_20KHz" ID="{830124FB-B9D5-4AE8-846E-E94A74652666}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
 									<PropertyList>
 										<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
-										<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
-										<Property Name="FrequencyBand3" Type="Real32" Value="20000"/>
+										<Property Name="FilterTypeBand3" Type="int32" Value="4"/>
+										<Property Name="FrequencyBand3" Type="Real32" Value="304"/>
 										<Property Name="OnOffBand1" Type="bool" Value="False"/>
 										<Property Name="OnOffBand2" Type="bool" Value="False"/>
 									</PropertyList>

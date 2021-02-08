@@ -4,6 +4,64 @@
 		<WorkUnit Name="Default Work Unit" ID="{21F8877D-CAEA-41E1-A568-149F9766C3AB}" PersistMode="Standalone">
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<PropertyList>
+						<Property Name="Lowpass" Type="int16">
+							<RTPCList>
+								<RTPC Name="" ID="{045AFA0B-EA3E-4AD2-AB6E-FA52155DDF93}" ShortID="426653161">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="InLocker" ID="{543B0D69-0B43-4412-9827-12348C90D703}" WorkUnitID="{23DCBD27-C250-41E6-A469-65C8CC67B0CD}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{BED83C10-4DDB-4473-B5AE-22512AF9837E}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="65537"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>0</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>1</XPos>
+												<YPos>72</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{93D4849C-6922-43CE-BF13-794C7919A50D}" ShortID="657613241">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="InLocker" ID="{543B0D69-0B43-4412-9827-12348C90D703}" WorkUnitID="{23DCBD27-C250-41E6-A469-65C8CC67B0CD}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{51F090D1-D89A-4B56-9C62-363EAE91AA54}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-0</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>1</XPos>
+												<YPos>-0.21716</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="AudioDevice">
 							<ObjectRef Name="System" ID="{13FC9883-37E0-44F6-8DE0-9CE04AC9A94F}" WorkUnitID="{EF4275F0-BF88-4596-B50A-8D858C44DE68}"/>
