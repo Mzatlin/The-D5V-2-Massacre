@@ -71,7 +71,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: c5c1c9c6241f25489d42937e88389abb
     GuidInternal: 
-    m_lastTime: -8585937096562536221
+    m_lastTime: -8585937031697250077
     List:
     - name: Main
       guid: 3b70d55d269857419d15d3d738a71d00
@@ -90,7 +90,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 681b6d033837e744bd1c22bb66c897fc
     GuidInternal: 
-    m_lastTime: -8585937096563000416
+    m_lastTime: -8585888029464849538
     List:
     - name: Play_Ambience
       guid: 70d340678b217b4e8912c1c178b89e04
@@ -149,7 +149,7 @@ MonoBehaviour:
       - ElementName: Play_FootstepsEnemy
         ObjectType: 3
       Path: Default Work Unit\Play_FootstepsEnemy
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 1.330339
       minDuration: 0.644768
     - name: Play_LadderClimb
@@ -208,7 +208,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 27bddc2350c2e641a46965c8cc67b0cd
     GuidInternal: 
-    m_lastTime: -8585937096563000416
+    m_lastTime: -8585888029999979344
     List:
     - name: Correct_Sine
       guid: 7836978c86460448a0c9af21e9ebe714

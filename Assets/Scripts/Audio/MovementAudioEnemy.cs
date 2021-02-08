@@ -8,12 +8,12 @@ public class MovementAudioEnemy : MonoBehaviour
     void EnemyWalkingAudio()
     {
         AkSoundEngine.SetState("Locomotion", "Walking");
-        AkSoundEngine.PostEvent("Play_FootstepsEnemy", mainCamera);
+        AkSoundEngine.PostEvent("Play_FootstepsEnemy", gameObject);
     }
 
     void EnemyRunningAudio()
     {
         AkSoundEngine.SetState("Locomotion", "Running");
-        AkSoundEngine.PostEvent("Play_FootstepsEnemy", mainCamera);
+        AkSoundEngine.PostEvent("Play_FootstepsEnemy", gameObject);
     }
 }

@@ -28,6 +28,10 @@
 				<Event Name="Play_Ambience" ID="{6740D370-218B-4E7B-8912-C1C178B89E04}">
 					<ChildrenList>
 						<Action Name="" ID="{77466B81-1640-4577-8FCC-ABA58CD963BB}" ShortID="142113564">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="7"/>
+								<Property Name="FadeTime" Type="Real64" Value="5"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Ambience" ID="{38A28C59-EFF8-4CC5-AC2F-F1F63140CBDB}" WorkUnitID="{3B76972A-B63E-4218-9166-980A2C8C1120}"/>
@@ -140,6 +144,8 @@
 						<Action Name="" ID="{312984FF-5556-46B7-B793-2CB8FF2963EF}" ShortID="132496933">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
 							</PropertyList>
 							<ReferenceList/>
 						</Action>

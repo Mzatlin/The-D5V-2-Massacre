@@ -61,14 +61,14 @@ public class MinigameController : MonoBehaviour
         middleSpaceMax = middleSpaceMin + 0.4f;
         winSpaceMin = UnityEngine.Random.Range(middleSpaceMin + 0.1f, middleSpaceMax - 0.1f);
         winSpaceMax = winSpaceMin + 0.03f;
-        AkSoundEngine.SetRTPCValue("Correct_Sine", winSpaceMin + 0.015f); //Set the Correct Sine to the middle of Win Space
-
+        
         if (Mathf.Abs(winSpaceMax - 0.5f) <= 0.1f || Mathf.Abs(winSpaceMin - 0.5f) <= 0.1f)
         {
             SetRadioValue();
         }
         else
         {
+            AkSoundEngine.SetRTPCValue("Correct_Sine", winSpaceMax * 10f); //Set the Correct Sine to the middle of Win Space
             AkSoundEngine.PostEvent("Play_Sines", mainCamera);
         }    
     }

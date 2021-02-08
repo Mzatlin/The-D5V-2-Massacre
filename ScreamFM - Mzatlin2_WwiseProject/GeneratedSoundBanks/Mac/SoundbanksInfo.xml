@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="876658801">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3162230615">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -20,13 +20,17 @@
 				<AuxBus Id="2385628198" Name="Footsteps" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Footsteps"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="252667790">
+		<SoundBank Id="3161908922" Language="SFX" Hash="1881850844">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
-				<Event Id="278617630" Name="Play_Ambience" ObjectPath="\Events\Default Work Unit\Play_Ambience" DurationType="OneShot" DurationMin="154.827377" DurationMax="154.827377">
+				<Event Id="278617630" Name="Play_Ambience" ObjectPath="\Events\Default Work Unit\Play_Ambience" DurationType="Infinite">
 					<IncludedMemoryFiles>
+						<File Id="23158334" Language="SFX">
+							<ShortName>tens_ostls_22b_4-4_80bpm.wav</ShortName>
+							<Path>SFX\tens_ostls_22b_4-4_80bpm_696A9007.wem</Path>
+						</File>
 						<File Id="131747932" Language="SFX">
 							<ShortName>amb_melody1_22b_4-4_80bpm.wav</ShortName>
 							<Path>SFX\amb_melody1_22b_4-4_80bpm_696A9007.wem</Path>
@@ -35,13 +39,153 @@
 							<ShortName>amb_drone_22b_4-4_80bpm.wav</ShortName>
 							<Path>SFX\amb_drone_22b_4-4_80bpm_696A9007.wem</Path>
 						</File>
+						<File Id="835370741" Language="SFX">
+							<ShortName>tens_oshs_22b_4-4_80bpm_1.wav</ShortName>
+							<Path>SFX\tens_oshs_22b_4-4_80bpm_1_696A9007.wem</Path>
+						</File>
 						<File Id="997529329" Language="SFX">
 							<ShortName>amb_melody2_22b_4-4_80bpm.wav</ShortName>
 							<Path>SFX\amb_melody2_22b_4-4_80bpm_696A9007.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="477908357" Name="Play_DeathMusic" ObjectPath="\Events\Default Work Unit\Play_DeathMusic" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="105749822" Language="SFX">
+							<ShortName>death_piano_22b_4-4_80bpm.wav</ShortName>
+							<Path>SFX\death_piano_22b_4-4_80bpm_696A9007.wem</Path>
+						</File>
+						<File Id="972305700" Language="SFX">
+							<ShortName>405646__apinasaundi__found-can-crush-3.wav</ShortName>
+							<Path>SFX\405646__apinasaundi__found-can-crush-3_3CADDE39.wem</Path>
+						</File>
+						<File Id="1011446651" Language="SFX">
+							<ShortName>death_impact_22b_4-4_80bpm.wav</ShortName>
+							<Path>SFX\death_impact_22b_4-4_80bpm_696A9007.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2295672933" Name="Play_DeathTransition" ObjectPath="\Events\Default Work Unit\Play_DeathTransition" DurationType="OneShot" DurationMin="6.463083" DurationMax="6.463083">
+					<IncludedMemoryFiles>
+						<File Id="825325312" Language="SFX">
+							<ShortName>471147__worldmaxter__sword-slide.wav</ShortName>
+							<Path>SFX\471147__worldmaxter__sword-slide_85BCA3D9.wem</Path>
+						</File>
+						<File Id="911940217" Language="SFX">
+							<ShortName>trans_1b_4-4_80bpm.wav</ShortName>
+							<Path>SFX\trans_1b_4-4_80bpm_3CADDE39.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps" DurationType="OneShot" DurationMin="0.324252" DurationMax="0.669023">
+					<IncludedMemoryFiles>
+						<File Id="117347736" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_72E8497F.wem</Path>
+						</File>
+						<File Id="195104483" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_75912A51.wem</Path>
+						</File>
+						<File Id="227446820" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_10BF4265.wem</Path>
+						</File>
+						<File Id="228877556" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_471A2D0C.wem</Path>
+						</File>
+						<File Id="334631596" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_ADF7E32F.wem</Path>
+						</File>
+						<File Id="370068166" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_B4C5725A.wem</Path>
+						</File>
+						<File Id="394858174" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_F10BFE84.wem</Path>
+						</File>
+						<File Id="404373423" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_9930C665.wem</Path>
+						</File>
+						<File Id="495072260" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_4FEA3CFB.wem</Path>
+						</File>
+						<File Id="551339478" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_A2E4D11F.wem</Path>
+						</File>
+						<File Id="593177721" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_F148C3B3.wem</Path>
+						</File>
+						<File Id="609552309" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_E5CB161B.wem</Path>
+						</File>
+						<File Id="684935305" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_6A15B114.wem</Path>
+						</File>
+						<File Id="693898603" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_D8D0562F.wem</Path>
+						</File>
+						<File Id="804904074" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_CD8CA230.wem</Path>
+						</File>
+						<File Id="813349880" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_070FE718.wem</Path>
+						</File>
+						<File Id="899899946" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_04E3B55B.wem</Path>
+						</File>
+						<File Id="922779358" Language="SFX">
+							<ShortName>WHGA1 - Rock.wav</ShortName>
+							<Path>SFX\WHGA1 - Rock_76633805.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{8A96731B-7288-4606-A523-CA607611D03F}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{93740663-6767-457B-B51B-1D1523D9E88D}">
+							<Media>
+								<File Id="593177721"/>
+								<File Id="609552309"/>
+								<File Id="899899946"/>
+								<File Id="804904074"/>
+								<File Id="227446820"/>
+								<File Id="195104483"/>
+								<File Id="922779358"/>
+								<File Id="551339478"/>
+								<File Id="813349880"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{8A96731B-7288-4606-A523-CA607611D03F}">
+							<Media>
+								<File Id="228877556"/>
+								<File Id="394858174"/>
+								<File Id="370068166"/>
+								<File Id="684935305"/>
+								<File Id="693898603"/>
+								<File Id="495072260"/>
+								<File Id="404373423"/>
+								<File Id="334631596"/>
+								<File Id="117347736"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+					<AuxBusSends>
+						<AuxBus Id="2385628198" Name="Footsteps" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Footsteps"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="971382617" Name="Play_FootstepsEnemy" ObjectPath="\Events\Default Work Unit\Play_FootstepsEnemy" MaxAttenuation="100.000000" DurationType="OneShot" DurationMin="0.644768" DurationMax="1.330339">
 					<IncludedMemoryFiles>
 						<File Id="117347736" Language="SFX">
 							<ShortName>WHGA1 - Rock.wav</ShortName>
@@ -194,9 +338,11 @@
 				</Event>
 				<Event Id="647636032" Name="Play_Sines" ObjectPath="\Events\Default Work Unit\Play_Sines" DurationType="Unknown"/>
 				<Event Id="4065681590" Name="Stop_Sines" ObjectPath="\Events\Default Work Unit\Stop_Sines" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3086540886" Name="StopAll" ObjectPath="\Events\Default Work Unit\StopAll" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 			<GameParameters>
 				<GameParameter Id="602825232" Name="Current_Sine" ObjectPath="\Game Parameters\Default Work Unit\Current_Sine"/>
+				<GameParameter Id="1571361561" Name="Tension" ObjectPath="\Game Parameters\Default Work Unit\Tension"/>
 				<GameParameter Id="1694191731" Name="Correct_Sine" ObjectPath="\Game Parameters\Default Work Unit\Correct_Sine"/>
 			</GameParameters>
 			<StateGroups>

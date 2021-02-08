@@ -10,8 +10,16 @@
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="CorrectSine" ID="{6DD942D1-FCEE-4D89-9422-87809DA143B3}" WorkUnitID="{ABEF7731-B9EE-49A0-888E-7D7B3DCDFD0D}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Play_DeathMusic" ID="{34F8EC1E-D996-4907-BEF8-345431729AFD}" WorkUnitID="{036D1B68-3738-44E7-BD1C-22BB66C897FC}"/>
 							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="CurrentSine" ID="{CAD20A23-BAB3-4791-94E2-A56249F41F31}" WorkUnitID="{ABEF7731-B9EE-49A0-888E-7D7B3DCDFD0D}"/>
+							<Position X="1" Y="1"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Play_DeathTransition" ID="{D3A131CC-FDD3-45D9-8B47-490FCEE185D3}" WorkUnitID="{036D1B68-3738-44E7-BD1C-22BB66C897FC}"/>
@@ -25,11 +33,11 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Correct_Sine" ID="{8C973678-4686-4804-A0C9-AF21E9EBE714}"/>
-							<Value>10</Value>
+							<Value>5.8</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Current_Sine" ID="{51E30495-38B5-4CF8-8926-2677CC6BF7A6}"/>
-							<Value>10</Value>
+							<Value>5.8</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
