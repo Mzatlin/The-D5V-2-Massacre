@@ -6,6 +6,7 @@ using UnityEngine;
 public class ScriptedStopState : EnemyStateBase
 {
     EnemyAI enemy;
+    bool isStopped = false;
     EnemyTarget currentTarget;
     public ScriptedStopState(EnemyAI _enemy) : base(_enemy.gameObject)
     {
@@ -25,12 +26,14 @@ public class ScriptedStopState : EnemyStateBase
     {
         if(enemy.target.typeOfTarget != TargetType.ScriptedStopPoint)
         {
+            isStopped = false;
             return SetType();
         }
 
-        if(Vector2.Distance(transformEnemy.position, enemy.PlayerTarget.position) < 3f)
+        if(Vector2.Distance(transformEnemy.position, enemy.PlayerTarget.position) < 2f && !isStopped)
         {
             enemy.SetCanPath();
+            isStopped = true;
         }
 
         return null;
