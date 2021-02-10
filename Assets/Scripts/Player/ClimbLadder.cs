@@ -50,7 +50,6 @@ public class ClimbLadder : MonoBehaviour, IClimb
         hit = Physics2D.Raycast(ray.origin, ray.direction, 1f, ladderLayer);
         if (hit)
         {
-            Debug.Log("Hit!");
             isClimbing = true;
             Climb();
         }

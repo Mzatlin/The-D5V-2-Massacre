@@ -30,7 +30,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 7d87f821eacae141a568149f9766c3ab
     GuidInternal: 
-    m_lastTime: -8585939857053727890
+    m_lastTime: -8585887771499279416
     List:
     - name: Footsteps
       guid: 9a7efce5b6081f4a97dc430676cf8f4b
@@ -90,7 +90,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 681b6d033837e744bd1c22bb66c897fc
     GuidInternal: 
-    m_lastTime: -8585888029464849538
+    m_lastTime: -8585887771500130261
     List:
     - name: Play_Ambience
       guid: 70d340678b217b4e8912c1c178b89e04
@@ -150,8 +150,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_FootstepsEnemy
       maxAttenuation: 100
-      maxDuration: 1.330339
-      minDuration: 0.644768
+      maxDuration: 2.276463
+      minDuration: 1.103321
     - name: Play_LadderClimb
       guid: 467c632d7749664d8a61de55ac7c6b41
       id: 2071442557
@@ -208,7 +208,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 27bddc2350c2e641a46965c8cc67b0cd
     GuidInternal: 
-    m_lastTime: -8585888029999979344
+    m_lastTime: -8585887771500120252
     List:
     - name: Correct_Sine
       guid: 7836978c86460448a0c9af21e9ebe714
@@ -228,6 +228,15 @@ MonoBehaviour:
       - ElementName: Current_Sine
         ObjectType: 13
       Path: Default Work Unit\Current_Sine
+    - name: InLocker
+      guid: 690d3b54430b1244982712348c90d703
+      id: 2723267000
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: InLocker
+        ObjectType: 13
+      Path: Default Work Unit\InLocker
     - name: Tension
       guid: f258a3564d29d345b89eb3ee523f744e
       id: 1571361561
