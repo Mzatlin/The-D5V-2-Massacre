@@ -107,7 +107,7 @@ public class MinigameController : MonoBehaviour
 
     void GetInputValidation()
     {
-        if (Input.GetKeyDown(KeyCode.W) && isOnTheSpot)
+        if (Input.GetKeyDown(KeyCode.W) && isOnTheSpot && isPlayingGame)
         {
             isPlayingGame = false;
             radio.ProcessSuccess();

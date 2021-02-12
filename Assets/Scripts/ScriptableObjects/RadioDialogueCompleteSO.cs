@@ -21,6 +21,6 @@ public class RadioDialogueCompleteSO : ScriptableObject
 
     public int IncrementIndex()
     {
-        return currentIndex++;
+        return currentIndex < dialogueRadioList.Count-1 ? currentIndex++ : currentIndex;
     }
 }
