@@ -991,6 +991,10 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 138234835}
+    - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: dialoguewriter
+      value: 
+      objectReference: {fileID: 11400000, guid: abd15fea626fc8c4ea38b07d9ba82317, type: 2}
     - target: {fileID: 4465815958884898466, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: mainCamera
       value: 
@@ -6562,6 +6566,7 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 138234835}
   playerState: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
   textDialogue: {fileID: 1590920235}
+  dialoguewriter: {fileID: 11400000, guid: abd15fea626fc8c4ea38b07d9ba82317, type: 2}
   content: 'Thank god there''s a key on him. I gotta get the hell out of here! '
   typingSpeed: 0.1
 --- !u!114 &280980790
@@ -9237,6 +9242,10 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 138234835}
+    - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: dialoguewriter
+      value: 
+      objectReference: {fileID: 11400000, guid: abd15fea626fc8c4ea38b07d9ba82317, type: 2}
     - target: {fileID: 4465815958884898466, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: mainCamera
       value: 
@@ -13170,6 +13179,7 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 138234835}
   playerState: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
   textDialogue: {fileID: 1590920235}
+  dialoguewriter: {fileID: 11400000, guid: abd15fea626fc8c4ea38b07d9ba82317, type: 2}
   content: Oh dear god! Who did this?! I gotta get to the control room and get to
     the nearest port.
   typingSpeed: 0.1
@@ -15119,6 +15129,7 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 138234835}
   playerState: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
   textDialogue: {fileID: 1590920235}
+  dialoguewriter: {fileID: 11400000, guid: abd15fea626fc8c4ea38b07d9ba82317, type: 2}
   content: "Shit! Control\u2019s completely sealed off! Maybe there\u2019s a key
     in radio. Luckily it\u2019s right here. Not risking my ass going all the way
     back through.\n"
@@ -20585,6 +20596,7 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 138234835}
   playerState: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
   textDialogue: {fileID: 1590920235}
+  dialoguewriter: {fileID: 11400000, guid: abd15fea626fc8c4ea38b07d9ba82317, type: 2}
   content: 'Can''t get to Diving. Armament''s the other way, anyhow. I''m wasting
     Time!
 
@@ -22623,6 +22635,7 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 138234835}
   playerState: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
   textDialogue: {fileID: 1590920235}
+  dialoguewriter: {fileID: 11400000, guid: abd15fea626fc8c4ea38b07d9ba82317, type: 2}
   content: Oh dear god! Who did this?! I gotta get to the control room and get to
     the nearest port.
   typingSpeed: 0.1
@@ -23570,6 +23583,7 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 138234835}
   playerState: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
   textDialogue: {fileID: 1590920235}
+  dialoguewriter: {fileID: 11400000, guid: abd15fea626fc8c4ea38b07d9ba82317, type: 2}
   content: Oh dear god... What was that?!
   typingSpeed: 0.1
 --- !u!114 &1052899237
@@ -24493,6 +24507,7 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 138234835}
   playerState: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
   textDialogue: {fileID: 1590920235}
+  dialoguewriter: {fileID: 11400000, guid: abd15fea626fc8c4ea38b07d9ba82317, type: 2}
   content: "Jesus Christ! I gotta hide. I think there\u2019s a locker big enough
     to hide me in the Control Room. Can\u2019t let him see me get in!"
   typingSpeed: 0.1
@@ -26667,6 +26682,7 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 138234835}
   playerState: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
   textDialogue: {fileID: 1590920235}
+  dialoguewriter: {fileID: 11400000, guid: abd15fea626fc8c4ea38b07d9ba82317, type: 2}
   content: "No! The Control Room Panel is hacked to pieces! I hear a radio though\u2026
     I have to fix them all and call for help!"
   typingSpeed: 0.1
@@ -32205,6 +32221,10 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 138234835}
+    - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: dialoguewriter
+      value: 
+      objectReference: {fileID: 11400000, guid: abd15fea626fc8c4ea38b07d9ba82317, type: 2}
     - target: {fileID: 4465815958884898466, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: mainCamera
       value: 
@@ -34359,6 +34379,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1578392207}
+  - component: {fileID: 1578392208}
   m_Layer: 0
   m_Name: DialogueTriggerZones
   m_TagString: Untagged
@@ -34389,6 +34410,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1578392208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578392206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65b37e237de99a04480177cec001e31c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueWriter: {fileID: 11400000, guid: abd15fea626fc8c4ea38b07d9ba82317, type: 2}
 --- !u!1 &1579889341
 GameObject:
   m_ObjectHideFlags: 0
@@ -35129,6 +35163,10 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 138234835}
+    - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: dialoguewriter
+      value: 
+      objectReference: {fileID: 11400000, guid: abd15fea626fc8c4ea38b07d9ba82317, type: 2}
     - target: {fileID: 4465815958884898466, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: mainCamera
       value: 
@@ -38850,6 +38888,10 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 138234835}
+    - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: dialoguewriter
+      value: 
+      objectReference: {fileID: 11400000, guid: abd15fea626fc8c4ea38b07d9ba82317, type: 2}
     - target: {fileID: 4465815958884898466, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: successText
       value: 
@@ -41229,6 +41271,7 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 138234835}
   playerState: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
   textDialogue: {fileID: 1590920235}
+  dialoguewriter: {fileID: 11400000, guid: abd15fea626fc8c4ea38b07d9ba82317, type: 2}
   content: "Huh\u2026?  Where is everyone? I must've overslept! Better head to the
     Control Room. should be straight east from here.\n"
   typingSpeed: 0.1
@@ -41609,6 +41652,10 @@ PrefabInstance:
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 138234835}
+    - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: dialoguewriter
+      value: 
+      objectReference: {fileID: 11400000, guid: abd15fea626fc8c4ea38b07d9ba82317, type: 2}
     - target: {fileID: 4465815958884898466, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: mainCamera
       value: 
@@ -47047,6 +47094,7 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 138234835}
   playerState: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
   textDialogue: {fileID: 1590920235}
+  dialoguewriter: {fileID: 11400000, guid: abd15fea626fc8c4ea38b07d9ba82317, type: 2}
   content: Damn it, no! I have to take the long way around through Battery and Armament.
   typingSpeed: 0.1
 --- !u!114 &2111515521
@@ -48384,7 +48432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1657416479305482417, guid: 31843e0663fa476428b0ae8e190c55fb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -5.499756
+      value: -5.4997864
       objectReference: {fileID: 0}
     - target: {fileID: 2861938807103172383, guid: 31843e0663fa476428b0ae8e190c55fb, type: 3}
       propertyPath: m_UiScaleMode
@@ -48480,7 +48528,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7701533485646292398, guid: 31843e0663fa476428b0ae8e190c55fb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -5.1000366
+      value: -5.100052
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31843e0663fa476428b0ae8e190c55fb, type: 3}

@@ -107,32 +107,41 @@ public class MinigameController : MonoBehaviour
 
     void GetInputValidation()
     {
-        if (Input.GetKeyDown(KeyCode.W) && isOnTheSpot && isPlayingGame)
+        CheckSpot();
+        if (Input.GetKeyDown(KeyCode.W))
         {
-            isPlayingGame = false;
-            radio.ProcessSuccess();
+            if (isPlayingGame && isOnTheSpot)
+            {
+                isPlayingGame = false;
+                isOnTheSpot = false;
+                radio.ProcessSuccess();
+            }
         }
 
+    }
+
+    void CheckSpot()
+    {
         if (radioSlider.value >= winSpaceMin && radioSlider.value <= winSpaceMax)
         {
             isOnTheSpot = true;
             radioScreenAnimation.SetBool("IsOnSpot", true);
             radioScreenAnimation.SetBool("IsOnMid", false);
-          //  SetRadioScreen(Color.green);
+            //  SetRadioScreen(Color.green);
         }
         else if (radioSlider.value >= middleSpaceMin && radioSlider.value <= middleSpaceMax)
         {
             isOnTheSpot = false;
             radioScreenAnimation.SetBool("IsOnSpot", false);
             radioScreenAnimation.SetBool("IsOnMid", true);
-         //   SetRadioScreen(Color.yellow);
+            //   SetRadioScreen(Color.yellow);
         }
         else
         {
             isOnTheSpot = false;
             radioScreenAnimation.SetBool("IsOnSpot", false);
             radioScreenAnimation.SetBool("IsOnMid", false);
-         //   SetRadioScreen(Color.white);
+            //   SetRadioScreen(Color.white);
         }
     }
 

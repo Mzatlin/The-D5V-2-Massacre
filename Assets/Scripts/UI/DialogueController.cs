@@ -9,11 +9,11 @@ public class DialogueController : MonoBehaviour, IEndDialogue
     public Canvas dialogueCanvas;
     public PlayerStateSO playerState;
     public TextMeshProUGUI textDialogue;
+    public DialogueWriterSO dialoguewriter;
     [TextArea(2,3)]
     public string content;
     [SerializeField]
     float typingSpeed = 0.1f;
-
     bool isActive = false;
     IEnumerator dialogueCoroutine = null;
     public event Action OnEndDialogue = delegate { };
@@ -24,6 +24,11 @@ public class DialogueController : MonoBehaviour, IEndDialogue
     // Start is called before the first frame update
     void Awake()
     {
+        if(dialoguewriter == null)
+        {
+            Debug.Log(gameObject.name + " has a dialoguecontroller without the dialogueSO!");
+        }
+
         if(dialogueCanvas != null && textDialogue != null)
         {
             dialogueCanvas.enabled = false;
@@ -61,13 +66,13 @@ public class DialogueController : MonoBehaviour, IEndDialogue
 
     void HandleActivateDialogue()
     {
-        if (dialogueCanvas != null)
+        if (dialogueCanvas != null && !dialoguewriter.IsWriting)
         {
             dialogueCanvas.enabled = true;
             isActive = true;
+            dialoguewriter.RequestToWrite();
             dialogueCoroutine = TypeDelay(content);
             StartCoroutine(dialogueCoroutine);
-
         }
     }
 
@@ -100,6 +105,7 @@ public class DialogueController : MonoBehaviour, IEndDialogue
                 dialogueCanvas.enabled = false;
                 textDialogue.text = "";
                 isActive = false;
+                dialoguewriter.ResetWriter();
             }
             else
             {
