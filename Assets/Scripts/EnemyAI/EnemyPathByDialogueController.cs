@@ -7,7 +7,7 @@ public class EnemyPathByDialogueController : DisableOnDialogueEndBase
 {
     public GameObject enemy;
 
-    public EnemyTarget targetToChange;
+    public EnemyTarget newTargetToChange;
     EnemyTarget previousTarget;
 
     EnemyAI enemyAI => enemy?.GetComponent<EnemyAI>();
@@ -31,13 +31,22 @@ public class EnemyPathByDialogueController : DisableOnDialogueEndBase
         }
     }
 
+    void SetTarget()
+    {
+
+        if(enemyAI.target.typeOfTarget != newTargetToChange.typeOfTarget)
+        {
+            enemyAI.SetCanPath();
+            previousTarget = enemyAI.target;
+            enemyAI.SetTarget(newTargetToChange);
+        }
+    }
+
     private void HandleActivation()
     {
         if(enemyAI != null)
         {
-            enemyAI.SetCanPath();
-            previousTarget = enemyAI.target;
-            enemyAI.SetTarget(targetToChange);
+            SetTarget();
         }
         else
         {

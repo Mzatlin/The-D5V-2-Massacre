@@ -50,7 +50,6 @@ public class EnemyAI : MonoBehaviour
 
     public void SetTarget(Transform target)
     {
-
         CurrentTarget = target;
         enemyPath?.SetPathTarget(target);
     }
