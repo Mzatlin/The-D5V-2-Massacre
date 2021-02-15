@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnDialogueEndSetEnemyActive : DisableOnDialogueEndBase
+public class OnDialogueEndSetEnemyActive : DisableOnDialogueEndBase//,ISetTarget 
 {
     public GameObject Enemy;
-    public Transform scriptedTarget;
+    public EnemyTarget scriptedTarget;
     EnemyAI enemyAI;
 
     // Start is called before the first frame update
@@ -15,6 +15,12 @@ public class OnDialogueEndSetEnemyActive : DisableOnDialogueEndBase
         enemyAI = Enemy.GetComponent<EnemyAI>();
     }
 
+    void SetTarget()
+    {
+        enemyAI.SetTarget(scriptedTarget);
+        AkSoundEngine.SetState("EnemyState", "Investigate");
+    }
+
     protected override void HandleEnd()
     {
         if(Enemy != null)
@@ -22,9 +28,7 @@ public class OnDialogueEndSetEnemyActive : DisableOnDialogueEndBase
             Enemy.SetActive(true);
             if(enemyAI != null)
             {
-                enemyAI.SetTarget(scriptedTarget);
-                enemyAI.SetTarget(new EnemyTarget(scriptedTarget.gameObject, TargetType.ScriptedStopPoint));
-                AkSoundEngine.SetState("EnemyState", "Investigate");
+                SetTarget();
             }
         }
     }
