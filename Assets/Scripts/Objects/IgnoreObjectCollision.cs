@@ -18,4 +18,15 @@ public class IgnoreObjectCollision : MonoBehaviour
        
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.transform == enemy)
+        {
+            foreach(Collider2D collider in colliders)
+            {
+                Physics2D.IgnoreCollision(GetComponent<Collider2D>(), collider);
+            }
+        }
+    }
+
 }

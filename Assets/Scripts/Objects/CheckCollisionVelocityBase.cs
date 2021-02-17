@@ -10,6 +10,7 @@ public class CheckCollisionVelocityBase : MonoBehaviour
     Transform enemy;
     IEnemyDirection direction;
     Animator Animate => GetComponentInChildren<Animator>();
+    Rigidbody2D rb;
 
 
     void Start()
@@ -17,7 +18,9 @@ public class CheckCollisionVelocityBase : MonoBehaviour
         if (enemy != null)
         {
             direction = enemy.GetComponent<IEnemyDirection>();
+            rb = enemy.GetComponent<Rigidbody2D>();
         }
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -37,12 +40,20 @@ public class CheckCollisionVelocityBase : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (((1 << collision.gameObject.layer) & allowedLayers) != 0)
+        {
+            CheckAnimation();
+        }
+    }
+
     void CheckAnimation()
     {
         var directionX = Mathf.Abs(direction.Direction.x);
         var directionY = Mathf.Abs(direction.Direction.y);
         float difference = Mathf.Abs(directionX - directionY);
-        if (Animate != null && direction != null && difference > 0.9)
+        if (Animate != null && ((direction != null && difference > 0.9)))
         {
             Animate.SetBool("IsEntering", true);
             Animate.SetBool("IsLeaving", false);
@@ -53,7 +64,7 @@ public class CheckCollisionVelocityBase : MonoBehaviour
     {
         if (((1 << collision.gameObject.layer) & allowedLayers) != 0)
         {
-            if (Animate != null)
+            if (Animate != null && (rb != null && Vector3.Distance(enemy.position,transform.position)>1))
             {
                 Animate.SetBool("IsEntering", false);
                 Animate.SetBool("IsLeaving", true);
