@@ -984,6 +984,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
     - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: typingSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: textDialogue
       value: 
       objectReference: {fileID: 1590920235}
@@ -9320,6 +9324,10 @@ PrefabInstance:
       propertyPath: playerState
       value: 
       objectReference: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
+    - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: typingSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: textDialogue
       value: 
@@ -32329,6 +32337,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
     - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: typingSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: textDialogue
       value: 
       objectReference: {fileID: 1590920235}
@@ -33902,7 +33914,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1557179599}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.615004, y: -27.944632, z: 31}
+  m_LocalPosition: {x: -26.604, y: -27.944632, z: 31}
   m_LocalScale: {x: 3.5109794, y: 2.5219781, z: 1}
   m_Children: []
   m_Father: {fileID: 1978231853}
@@ -35283,6 +35295,10 @@ PrefabInstance:
       propertyPath: playerState
       value: 
       objectReference: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
+    - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: typingSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: textDialogue
       value: 
@@ -39021,6 +39037,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
     - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: typingSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: textDialogue
       value: 
       objectReference: {fileID: 1590920235}
@@ -41796,6 +41816,10 @@ PrefabInstance:
       propertyPath: playerState
       value: 
       objectReference: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
+    - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: typingSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: textDialogue
       value: 

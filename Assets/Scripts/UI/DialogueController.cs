@@ -13,7 +13,7 @@ public class DialogueController : MonoBehaviour, IEndDialogue
     [TextArea(2,3)]
     public string content;
     [SerializeField]
-    float typingSpeed = 0.1f;
+    float typingSpeed = 0.3f;
     bool isActive = false;
     IEnumerator dialogueCoroutine = null;
     public event Action OnEndDialogue = delegate { };
@@ -78,10 +78,11 @@ public class DialogueController : MonoBehaviour, IEndDialogue
 
     IEnumerator TypeDelay(string sentence)
     {
+        var newtypingSpeed = typingSpeed / 10;
         foreach(char letter in sentence)
         {
             textDialogue.text += letter;
-            yield return new WaitForSeconds(typingSpeed*Time.deltaTime);
+            yield return new WaitForSeconds(newtypingSpeed);
         }
      
     }
