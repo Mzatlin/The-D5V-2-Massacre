@@ -9843,6 +9843,7 @@ GameObject:
   - component: {fileID: 414357129}
   - component: {fileID: 414357130}
   - component: {fileID: 414357131}
+  - component: {fileID: 414357132}
   m_Layer: 0
   m_Name: OpeningManager
   m_TagString: Untagged
@@ -9954,6 +9955,18 @@ MonoBehaviour:
   save: {fileID: 11400000, guid: d03d12d99c0ec4440926da9465702e67, type: 2}
   dialogue: {fileID: 11400000, guid: 20ce003428f33f944b2b018d9393f710, type: 2}
   RadioUI: {fileID: 608507224}
+--- !u!114 &414357132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414357125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7794725c626ba242aeb89a3f39ad99b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &418688861
 GameObject:
   m_ObjectHideFlags: 0
@@ -47693,7 +47706,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1181715231152480110, guid: f35f5e01e90cab548beb8fe92d4cff46, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1.999939
+      value: -1.9998779
       objectReference: {fileID: 0}
     - target: {fileID: 1181715231574399738, guid: f35f5e01e90cab548beb8fe92d4cff46, type: 3}
       propertyPath: m_Pivot.x
@@ -48976,6 +48989,10 @@ PrefabInstance:
     - target: {fileID: 5368619821815715265, guid: bf3cc92f32f296841a1fdb9e82d24c36, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.6684265
+      objectReference: {fileID: 0}
+    - target: {fileID: 7528225974353359246, guid: bf3cc92f32f296841a1fdb9e82d24c36, type: 3}
+      propertyPath: delayTime
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf3cc92f32f296841a1fdb9e82d24c36, type: 3}
