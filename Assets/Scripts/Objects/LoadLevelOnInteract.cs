@@ -1,9 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LoadLevelOnInteract : HandleInteractionBase
+public class LoadLevelOnInteract : HandleInteractionBase, ICompleteGame
 {
     public RadioCompletionListSO radio;
     INamePlate namePlate => GetComponent<INamePlate>();
@@ -12,6 +13,8 @@ public class LoadLevelOnInteract : HandleInteractionBase
     bool isRadiosCleared = false;
     int numbersLeft = 0;
     GameObject mainCamera;
+
+    public event Action OnComplete = delegate { };
 
     // Start is called before the first frame update
     protected override void Start()
@@ -25,13 +28,11 @@ public class LoadLevelOnInteract : HandleInteractionBase
         if (radio.HasWon())
         {
             isRadiosCleared = true;
-            AkSoundEngine.PostEvent("StopAll", mainCamera);
-            SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+            StartCoroutine(Delay());
             base.HandleInteract();
         }
         else
         {
-            
             namePlate.ChangeNamePlate("Fix "+numbersLeft+" More Radios");
         }
         base.HandleInteract();
@@ -48,6 +49,15 @@ public class LoadLevelOnInteract : HandleInteractionBase
             }
         }
         return count;
+    }
+
+    IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(2f);
+        OnComplete(); 
+        //ToDo: Move the load scene into another script - or move the leadup to another script
+        AkSoundEngine.PostEvent("StopAll", mainCamera);
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
 
     void Update()

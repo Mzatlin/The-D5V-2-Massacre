@@ -39337,6 +39337,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: content
+      value: I need to fix more radios before I can call for help!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: playerState
       value: 
       objectReference: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
