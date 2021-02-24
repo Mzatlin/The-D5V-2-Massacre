@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class FadeOutOnComplete : FadeOutBase
 {
+    public float delay = 0.1f;
     ICompleteGame Complete => GetComponent<ICompleteGame>();
-    // Start is called before the first frame update
 
     void Start()
     {
@@ -18,6 +18,11 @@ public class FadeOutOnComplete : FadeOutBase
 
     private void HandleComplete()
     {
+        StartCoroutine(FadeDelay());
+    }
+    IEnumerator FadeDelay()
+    {
+        yield return new WaitForSeconds(delay);
         FadeOut();
     }
 

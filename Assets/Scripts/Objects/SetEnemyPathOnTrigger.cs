@@ -2,36 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SetEnemyPathOnComplete : MonoBehaviour
+public class SetEnemyPathOnTrigger : MonoBehaviour
 {
     public GameObject enemy;
-
     public EnemyTarget newTargetToChange;
-    EnemyTarget previousTarget;
+    [SerializeField]
+    LayerMask playerMask;
 
+    EnemyTarget previousTarget;
     EnemyAI enemyAI => enemy?.GetComponent<EnemyAI>();
-    // Start is called before the first frame update
     ICompleteGame Complete => GetComponent<ICompleteGame>();
 
-    void Start()
-    {
-        if (Complete != null)
-        {
-            Complete.OnComplete += HandleComplete;
-        }
-    }
 
-    void OnDestroy()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (Complete != null)
+        if ((playerMask & 1 << collision.gameObject.layer) != 0)
         {
-            Complete.OnComplete -= HandleComplete;
+            if (enemyAI != null)
+            {
+                SetTarget();   //ToDo, make possible extension method for this
+            }
         }
-    }
-
-    private void HandleComplete()
-    {
-        SetTarget(); //ToDo, make possible extension method for this
     }
     void SetTarget()
     {
@@ -43,5 +34,4 @@ public class SetEnemyPathOnComplete : MonoBehaviour
             enemyAI.SetTarget(newTargetToChange);
         }
     }
-
 }

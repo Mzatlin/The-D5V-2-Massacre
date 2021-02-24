@@ -1,0 +1,5 @@
+﻿interface ISetTarget
+{
+    void SetTarget();
+
+}
