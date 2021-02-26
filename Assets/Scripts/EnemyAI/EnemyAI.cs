@@ -25,6 +25,7 @@ public class EnemyAI : MonoBehaviour
     public EnemyTarget target;
     public EnemyTarget previousTarget;
     public int patrolIndex = 0;
+    public bool isStuck;
     // Start is called before the first frame update
     void Awake()
     {

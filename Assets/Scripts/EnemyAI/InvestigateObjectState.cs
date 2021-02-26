@@ -49,6 +49,14 @@ public class InvestigateObjectState : EnemyStateBase
                 hasDelayed = false;
                 return typeof(ChasePlayerState);
             }
+
+        }
+
+        if (enemy.isStuck)
+        {
+            enemy.isStuck = false;
+            enemy.SetTarget(new EnemyTarget(enemy.PatrolTargets[0].gameObject, TargetType.None));
+            return typeof(PatrolState);
         }
 
         return null;

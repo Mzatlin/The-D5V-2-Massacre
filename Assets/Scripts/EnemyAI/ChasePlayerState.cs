@@ -31,6 +31,12 @@ public class ChasePlayerState : EnemyStateBase
             return typeof(InvestigateObjectState);
         }
 
+        if (enemy.isStuck)
+        {
+            enemy.isStuck = false;
+            enemy.SetTarget(new EnemyTarget(enemy.PatrolTargets[0].gameObject, TargetType.None));
+            return typeof(PatrolState);
+        }
 
         return null;
     }
