@@ -46,7 +46,6 @@ public class ClimbLadder : MonoBehaviour, IClimb
     void RayCastUpwards()
     {
         Ray2D ray = new Ray2D(transform.position, Vector2.up);
-        Debug.DrawRay(ray.origin, ray.direction, Color.red);
         hit = Physics2D.Raycast(ray.origin, ray.direction, 1f, ladderLayer);
         if (hit)
         {

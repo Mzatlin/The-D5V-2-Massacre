@@ -9,7 +9,7 @@ public class EnemyStuckController : MonoBehaviour
     Vector2 enemyLocation;
     public Transform resetSpawn;
     float Timer = 0f;
-    float Delay = 10f;
+    float Delay = 9f;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +43,11 @@ public class EnemyStuckController : MonoBehaviour
 
     private void FixEnemyStuckState()
     {
+        if(enemy.target.typeOfTarget == TargetType.ScriptedStopPoint)
+        {
+            return;
+        }
+
         if (state != null &&
              (state.CurrentState.GetType() == typeof(ChasePlayerState) || state.CurrentState.GetType() == typeof(InvestigateObjectState)))
         {

@@ -91,7 +91,6 @@ public class PatrolState : EnemyStateBase
     bool CheckLineOfSight()
     {
         Ray2D ray = new Ray2D(transformEnemy.position, gameObjectEnemy.GetComponent<Rigidbody2D>().velocity);
-        Debug.DrawRay(ray.origin, ray.direction*6f, Color.red);
         bool hasSeenPlayer = false;
         RaycastHit2D[] results;
         results = Physics2D.RaycastAll(ray.origin, ray.direction, 6f); //check if raycast is hitting door or wall.

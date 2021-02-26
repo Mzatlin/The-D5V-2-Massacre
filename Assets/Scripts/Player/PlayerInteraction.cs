@@ -41,7 +41,6 @@ public class PlayerInteraction : MonoBehaviour
         }
         Ray2D ray = new Ray2D(transform.position, lastPosition);
   
-        Debug.DrawRay(ray.origin, ray.direction, Color.red);
         hit = Physics2D.Raycast(ray.origin, ray.direction,lookDistance,mask);
         if(hit)
         {
