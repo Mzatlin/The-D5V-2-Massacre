@@ -19,10 +19,12 @@ public class PlayerSprint : MonoBehaviour, ISprint
     float depletionSpeed = 30f;
     [SerializeField]
     float rechargeDelay = 3f;
-    bool isDelaying = false;
+    bool hasDelayed = false;
+    [SerializeField]
     bool canSprint = true;
 
     float baseMovementSpeed;
+    [SerializeField]
     bool isSprinting = false;
     public bool IsSprinting => isSprinting;
     public float SprintAmount { get; private set; } = 100f;
@@ -76,37 +78,36 @@ public class PlayerSprint : MonoBehaviour, ISprint
 
     void TryRecharge()
     {
-        if (SprintAmount < 1f && !isDelaying)
+        if (Input.GetKey(KeyCode.LeftShift) && !canSprint)
+        {
+            return;
+        }
+        if (SprintAmount < 1f && canSprint)
         {
             canSprint = false;
-            if (!isDelaying)
-            {
-                StartCoroutine(Delay());
-            }
-            else
-            {
-                isDelaying = false;
-                SprintAmount += rechargeSpeed * Time.deltaTime;
-            }
-
+            StartCoroutine(Delay());
         }
-        else
+        if (hasDelayed)
         {
-            isDelaying = false;
+            hasDelayed = false;
+            canSprint = true;
+        }
+        if (canSprint)
+        {
             SprintAmount += rechargeSpeed * Time.deltaTime;
         }
-      
     }
 
     void TrySprint()
     {
-        if (Input.GetKeyUp(KeyCode.LeftShift) && !canSprint)
+        if (Input.GetKeyUp(KeyCode.LeftShift) || !canSprint)
         {
             ResetSpeed();
+            isSprinting = false;
             return;
         }
 
-        if (SprintAmount > 0 && Input.GetKey(KeyCode.LeftShift))
+        if (SprintAmount > 1 && Input.GetKey(KeyCode.LeftShift) && canSprint)
         {
             if (Mathf.Abs(playerInput.XMovement) > 0.1 || (Mathf.Abs(playerInput.YMovement) > 0.1 && climb.IsClimbing))
             {
@@ -116,6 +117,10 @@ public class PlayerSprint : MonoBehaviour, ISprint
                     movement.MoveSpeed *= moveSpeedMultiplier;
                     climb.SetClimbSpeed(climbSpeedMultipler);
                 }
+            }
+            else
+            {
+                ResetSpeed();
             }
         }
         else
@@ -135,9 +140,8 @@ public class PlayerSprint : MonoBehaviour, ISprint
 
     IEnumerator Delay()
     {
-
         yield return new WaitForSeconds(rechargeDelay);
-        isDelaying = true;
+        hasDelayed = true;
     }
 
     void AnimateMovement()
