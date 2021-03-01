@@ -18,9 +18,7 @@
 
 ## Screenshots
 
-![alt text](https://github.com/Mzatlin/The-D5V-2-Massacre/blob/main/GameScreenshots/1.png)
-![alt text](https://github.com/Mzatlin/The-D5V-2-Massacre/blob/main/GameScreenshots/2.png)
-![alt text](https://github.com/Mzatlin/The-D5V-2-Massacre/blob/main/GameScreenshots/3.png)
+![alt text](https://github.com/Mzatlin/The-D5V-2-Massacre/blob/main/GameScreenshots/1.png){height:"50%" width="50%"} ![alt text](https://github.com/Mzatlin/The-D5V-2-Massacre/blob/main/GameScreenshots/2.png){height:"50%" width="50%"} ![alt text](https://github.com/Mzatlin/The-D5V-2-Massacre/blob/main/GameScreenshots/3.png){height:"50%" width="50%"}
 
 
 ## Features 
@@ -61,11 +59,6 @@
     -If the Player validates this match, they will finish the minigame with the radio marked as complete <br />
     -When the radio is marked as complete, the enemy AI will stop what it's currently doing and investigate the completed radio unless it's currently chasing the Player <br />
     
-    -Locked Doors <br />
-      -Some doors are locked and requires a key to open <br />
-      -If the player either loots a certain body, or complete 4 radio minigames, they will recieve a key to a certain door <br />
-      -Upon interaction with one of these doors, if a the correct key is found in the player's inventory, the door will open <br />
-    
    -Dialogue <br />
     -If the Player meets certain criteria (entering a specific zone or interacting with a certain object) a dialogue box will appear, locking the player until completion <br />
     -Text will type out one key at a time from the top left-hand side of the box until the full line is typed out. <br />
@@ -76,4 +69,8 @@
     -If the Player reaches a certain radio, and has completed all 5 minigames, a completion event will fire off <br />
     -After 5 seconds, the player will be taken to a completion screen, where they can either replay the game, or exit the application <br />
     
+   -Locked Doors <br />
+   -Some doors are locked and require a key to open <br />
+   -If the player either loots a certain body, or complete 4 radio minigames, they will receive a key to a certain door <br />
+   -Upon interaction with one of the locked doors, if the correct key is found in the player's inventory, the door will open <br />
    
