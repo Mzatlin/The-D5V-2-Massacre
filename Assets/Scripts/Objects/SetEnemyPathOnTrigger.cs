@@ -12,6 +12,7 @@ public class SetEnemyPathOnTrigger : MonoBehaviour
     EnemyTarget previousTarget;
     EnemyAI enemyAI => enemy?.GetComponent<EnemyAI>();
     ICompleteGame Complete => GetComponent<ICompleteGame>();
+    IEnemyState state => GetComponent<IEnemyState>();
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -20,10 +21,20 @@ public class SetEnemyPathOnTrigger : MonoBehaviour
         {
             if (enemyAI != null)
             {
-                SetTarget();   //ToDo, make possible extension method for this
+                SetTarget();
             }
         }
     }
+
+    void CheckTarget()
+    {
+        if (state != null &&
+            (state.CurrentState.GetType() == typeof(ChasePlayerState) || state.CurrentState.GetType() == typeof(InvestigateObjectState)))
+        {
+            SetTarget();   //ToDo, make possible extension method for this
+        }
+    }
+
     void SetTarget()
     {
 
