@@ -20,7 +20,6 @@
 
 <img align="left" width="400" height="300" src="https://github.com/Mzatlin/The-D5V-2-Massacre/blob/main/GameScreenshots/1.png">
 <img align="right" width="400" height="300" src="https://github.com/Mzatlin/The-D5V-2-Massacre/blob/main/GameScreenshots/2.png">
-<img align="center" width="400" height="300" src="https://github.com/Mzatlin/The-D5V-2-Massacre/blob/main/GameScreenshots/3.png">
 
 
 ## Features 
@@ -41,10 +40,10 @@
      * The Player will be hunted by a single AI entity for most of the game <br />
      * If the Player touches this enemy, they will lose the game <br />
      * The Enemy has 4 different states: <br />
-           * **Patrol**: The enemy will A* path to specific waypoints listed to them. When reached, the enemy will continue to the next point on loop <br />
-           * **Chase**: The enemy will path to the player at a faster speed <br />
-           * **Investigate**: The enemy will path to a specified point at a faster speed. When reached, it will wait for 3-5 seconds before reverting to Patrol State <br />
-           * **ScriptedStop**: The enemy will path to a specified point and will wait indefinitely until a certain event is triggered.  <br />
+          * **Patrol**: The enemy will A* path to specific waypoints listed to them. When reached, the enemy will continue to the next point on loop <br />
+          * **Chase**: The enemy will path to the player at a faster speed <br />
+          * **Investigate**: The enemy will path to a specified point at a faster speed. When reached, it will wait for 3-5 seconds before reverting to Patrol State <br />
+          * **ScriptedStop**: The enemy will path to a specified point and will wait indefinitely until a certain event is triggered.  <br />
    
    * **Hide** <br />
       * The Player can hide in certain storage lockers, making them undetectable by the enemy AI <br />
