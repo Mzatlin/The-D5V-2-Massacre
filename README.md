@@ -19,8 +19,8 @@
 ## Screenshots
 
 <img align="left" width="400" height="300" src="https://github.com/Mzatlin/The-D5V-2-Massacre/blob/main/GameScreenshots/1.png">
-<img align="right" width="400" height="300" src="https://github.com/Mzatlin/The-D5V-2-Massacre/blob/main/GameScreenshots/2.png">
-
+<img align="left" width="400" height="300" src="https://github.com/Mzatlin/The-D5V-2-Massacre/blob/main/GameScreenshots/2.png"><br />
+<br />
 
 ## Features 
   * **Vertical and Horizontal Movement** <br />
