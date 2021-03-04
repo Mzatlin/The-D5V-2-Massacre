@@ -8,8 +8,10 @@ public class EnemyStuckController : MonoBehaviour
     IEnemyState state => GetComponent<IEnemyState>();
     Vector2 enemyLocation;
     public Transform resetSpawn;
+    public int stuckThreshold = 3;
     float Timer = 0f;
-    float Delay = 9f;
+    int stuckCounter = 0;
+    float Delay = 3.5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +29,6 @@ public class EnemyStuckController : MonoBehaviour
         {
             ValidateEnemyPosition();
             Timer = 0;
-            enemyLocation = transform.position;
         }
     }
 
@@ -36,9 +37,20 @@ public class EnemyStuckController : MonoBehaviour
         Debug.Log("Start Validation");
         if (Vector2.Distance(enemyLocation,transform.position) < 2.5f)
         {
-            Debug.Log("Enemy Is Stuck!");
-            FixEnemyStuckState();
+            stuckCounter++;
+            if (stuckCounter >= stuckThreshold)
+            {
+                Debug.Log("Enemy Is Stuck!");
+                stuckCounter = 0;
+                FixEnemyStuckState();
+            }
         }
+        else
+        {
+            stuckCounter = 0;
+            enemyLocation = transform.position;
+        }
+
     }
 
     private void FixEnemyStuckState()
