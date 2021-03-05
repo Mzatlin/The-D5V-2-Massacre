@@ -1,32 +1,31 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SetObjectActiveOnTrigger : MonoBehaviour
+public class SetObjectActiveOnTrigger : HandlePlayerTriggerEventBase
 {
     public GameObject objectToVanish;
-    [SerializeField]
-    LayerMask playerMask;
 
-    private void Awake()
+
+    protected override void Start()
     {
-        if(objectToVanish != null)
+        base.Start();
+        if (objectToVanish != null)
         {
             objectToVanish.SetActive(false);
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected override void HandleTrigger()
     {
-        if ((playerMask & 1 << collision.gameObject.layer) != 0)
+        if (objectToVanish != null)
         {
-            if (objectToVanish != null)
-            {
-                objectToVanish.SetActive(true);
-                ScanGraph();
-            }
+            objectToVanish.SetActive(true);
+            ScanGraph();
         }
     }
+
     void ScanGraph() //Todo: Extension Method 
     {
         var graphToScan = AstarPath.active.data.gridGraph;

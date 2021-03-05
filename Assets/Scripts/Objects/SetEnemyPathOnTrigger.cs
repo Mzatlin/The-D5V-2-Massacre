@@ -1,28 +1,23 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SetEnemyPathOnTrigger : MonoBehaviour
+public class SetEnemyPathOnTrigger : HandlePlayerTriggerEventBase
 {
     public GameObject enemy;
     public EnemyTarget newTargetToChange;
-    [SerializeField]
-    LayerMask playerMask;
 
     EnemyTarget previousTarget;
     EnemyAI enemyAI => enemy?.GetComponent<EnemyAI>();
-    ICompleteGame Complete => GetComponent<ICompleteGame>();
     IEnemyState state => GetComponent<IEnemyState>();
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected override void HandleTrigger()
     {
-        if ((playerMask & 1 << collision.gameObject.layer) != 0)
+        if (enemyAI != null)
         {
-            if (enemyAI != null)
-            {
-                SetTarget();
-            }
+            SetTarget();
         }
     }
 
