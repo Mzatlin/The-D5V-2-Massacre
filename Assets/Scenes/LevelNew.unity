@@ -1103,6 +1103,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1114900089}
     - target: {fileID: 7107655971926858589, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: wrongText
+      value: 
+      objectReference: {fileID: 1601343303}
+    - target: {fileID: 7107655971926858589, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1134361716}
@@ -9457,6 +9461,10 @@ PrefabInstance:
       propertyPath: dialImage
       value: 
       objectReference: {fileID: 1114900089}
+    - target: {fileID: 7107655971926858589, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: wrongText
+      value: 
+      objectReference: {fileID: 1601343303}
     - target: {fileID: 7107655971926858589, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: mainCamera
       value: 
@@ -32930,6 +32938,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1114900089}
     - target: {fileID: 7107655971926858589, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: wrongText
+      value: 
+      objectReference: {fileID: 1601343303}
+    - target: {fileID: 7107655971926858589, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1134361716}
@@ -35911,6 +35923,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1114900089}
     - target: {fileID: 7107655971926858589, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: wrongText
+      value: 
+      objectReference: {fileID: 1601343303}
+    - target: {fileID: 7107655971926858589, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1134361716}
@@ -35960,6 +35976,17 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 1e39c22aaa65ba34ca0f18494f7541cd, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+--- !u!114 &1601343303 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1743142771846931194, guid: 91a7e8fc63bbda44d821fa087b8db2a3, type: 3}
+  m_PrefabInstance: {fileID: 291925240}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1603893354
 GameObject:
   m_ObjectHideFlags: 0
@@ -42416,6 +42443,10 @@ PrefabInstance:
       propertyPath: dialImage
       value: 
       objectReference: {fileID: 1114900089}
+    - target: {fileID: 7107655971926858589, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: wrongText
+      value: 
+      objectReference: {fileID: 1601343303}
     - target: {fileID: 7107655971926858589, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: mainCamera
       value: 
@@ -49338,7 +49369,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1657416479305482417, guid: 31843e0663fa476428b0ae8e190c55fb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -5.4997864
+      value: -5.499817
       objectReference: {fileID: 0}
     - target: {fileID: 2861938807103172383, guid: 31843e0663fa476428b0ae8e190c55fb, type: 3}
       propertyPath: m_UiScaleMode

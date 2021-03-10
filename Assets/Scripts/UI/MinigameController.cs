@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class MinigameController : MonoBehaviour
 {
     public Image dialImage;
     public Image radioScreen;
     public Image radioAnswer;
+    public TextMeshProUGUI wrongText;
     Animator radioScreenAnimation;
     Animator radioAnswerAnimation;
     public Slider radioSlider;
@@ -41,13 +43,28 @@ public class MinigameController : MonoBehaviour
             radio.OnMinigameStart += HandleMiniGameStart;
             radio.OnExit += HandleMiniGameExit;
         }
+        if(wrongText != null)
+        {
+            wrongText.enabled = false;
+        }
 
         stopInput = StopInput();
     }
 
+    void ToggleText()
+    {
+        if (wrongText != null)
+        {
+            wrongText.enabled = !wrongText.enabled;
+        }
+    }
+
+
     IEnumerator StopInput()
     {
-        yield return new WaitForSeconds(0.3f);
+        ToggleText();
+        yield return new WaitForSeconds(0.5f);
+        ToggleText();
         canInput = true;
         isDelayed = false;
     }
@@ -56,6 +73,7 @@ public class MinigameController : MonoBehaviour
     {
         canInput = true;
         StopCoroutine(stopInput);
+        wrongText.enabled = false;
     }
 
     private void HandleMiniGameExit()
@@ -122,6 +140,7 @@ public class MinigameController : MonoBehaviour
         }
     }
 
+//Register Input key - Check the spot - if correct - Send complete event - Else - prevent dial input
     void GetInputValidation()
     {
         CheckSpot();
@@ -146,6 +165,8 @@ public class MinigameController : MonoBehaviour
 
     }
 
+
+//Animate Bottom Frequency Sprite based on how close the slider is to the point
     void CheckSpot()
     {
         if (radioSlider.value >= winSpaceMin && radioSlider.value <= winSpaceMax)
