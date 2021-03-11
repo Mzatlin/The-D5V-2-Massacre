@@ -39,7 +39,7 @@ public class RadioMinigameMananger : HandleInteractionBase, IRadioMinigame
 
     protected override void HandleInteract()
     {
-        if (state != null && minigameCanvas != null)
+        if (state != null && minigameCanvas != null && interact.IsInteracting)
         {
             StartCoroutine(DelayToggle());
         }
@@ -62,6 +62,7 @@ public class RadioMinigameMananger : HandleInteractionBase, IRadioMinigame
         minigameCanvas.enabled = false;
         state.isInteracting = false;
         interact.CanInteract = true;
+        OnExit();
         base.HandleInteract();
     }
 
@@ -74,7 +75,6 @@ public class RadioMinigameMananger : HandleInteractionBase, IRadioMinigame
         }
         else
         {
-
             EndMinigame();
         }
     }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraFollowPlayer : MonoBehaviour
 {
     public Transform target;
+    ICameraShake shake => GetComponent<ICameraShake>();
     public float offset = 0.125f;
     [SerializeField]
     Vector3 offsetPosition = Vector3.zero;
@@ -13,7 +14,10 @@ public class CameraFollowPlayer : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        cameraOffset = Vector3.Lerp(target.position+offsetPosition, cameraOffset, offset);
-        transform.position = cameraOffset;
+        if(shake == null || !shake.IsShaking)
+        {
+            cameraOffset = Vector3.Lerp(target.position + offsetPosition, cameraOffset, offset);
+            transform.position = cameraOffset;
+        }
     }
 }

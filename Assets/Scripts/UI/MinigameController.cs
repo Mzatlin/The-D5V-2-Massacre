@@ -15,6 +15,7 @@ public class MinigameController : MonoBehaviour
     Animator radioAnswerAnimation;
     public Slider radioSlider;
     IRadioMinigame radio => GetComponent<IRadioMinigame>();
+    ICameraShake cameraShake;
     [SerializeField]
     float turnSpeed = 36f;
     float dialRotation = 0f;
@@ -28,10 +29,16 @@ public class MinigameController : MonoBehaviour
     IEnumerator stopInput = null;
     bool isDelayed = false;
 
-    [SerializeField] GameObject mainCamera;
+    Camera mainCamera;
     // Start is called before the first frame update
     void Start()
     {
+        mainCamera = Camera.main;
+        if(mainCamera != null)
+        {
+            cameraShake = mainCamera.GetComponent<ICameraShake>();
+        }
+
         if(radioScreen != null && radioAnswer != null)
         {
             radioScreenAnimation = radioScreen.GetComponent<Animator>();
@@ -63,28 +70,34 @@ public class MinigameController : MonoBehaviour
     IEnumerator StopInput()
     {
         ToggleText();
+        if(cameraShake != null)
+        {
+            cameraShake.TryShake(0.5f, 0.1f);
+        }
         yield return new WaitForSeconds(0.5f);
         ToggleText();
         canInput = true;
         isDelayed = false;
     }
 
-    void OnDisable()
+    private void HandleMiniGameExit()
     {
+        AkSoundEngine.PostEvent("Stop_Sines", mainCamera.gameObject);
+        isPlayingGame = false;
+        Debug.Log(isPlayingGame);
         canInput = true;
         StopCoroutine(stopInput);
         wrongText.enabled = false;
-    }
-
-    private void HandleMiniGameExit()
-    {
-        AkSoundEngine.PostEvent("Stop_Sines", mainCamera);
-        isPlayingGame = false;
+        if (cameraShake != null)
+        {
+            cameraShake.ResetShake();
+        }
     }
 
     private void HandleMiniGameStart()
     {
         isPlayingGame = true;
+        wrongText.enabled = false;
         dialImage.rectTransform.rotation = Quaternion.Euler(0, 0, 0);
         radioSlider.value = 0.5f;
         AkSoundEngine.SetRTPCValue("Current_Sine", 5); //Set the Current Sine to the Initial Slider position
@@ -105,7 +118,7 @@ public class MinigameController : MonoBehaviour
         else
         {
             AkSoundEngine.SetRTPCValue("Correct_Sine", winSpaceMax * 10f); //Set the Correct Sine to the middle of Win Space
-            AkSoundEngine.PostEvent("Play_Sines", mainCamera);
+            AkSoundEngine.PostEvent("Play_Sines", mainCamera.gameObject);
         }    
     }
 
@@ -144,9 +157,9 @@ public class MinigameController : MonoBehaviour
     void GetInputValidation()
     {
         CheckSpot();
-        if (Input.GetKeyDown(KeyCode.W))
+        if (isPlayingGame && Input.GetKeyDown(KeyCode.W))
         {
-            if (isPlayingGame && isOnTheSpot)
+            if (isOnTheSpot)
             {
                 isPlayingGame = false;
                 isOnTheSpot = false;
