@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 915866258850377359}
   - component: {fileID: 2178700552600317044}
   - component: {fileID: 7243888567883202411}
+  - component: {fileID: 4386839299705093899}
   m_Layer: 8
   m_Name: Radio
   m_TagString: Untagged
@@ -175,12 +176,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ec31be9a74457e4cb0ba2d7ed14d85a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialImage: {fileID: 0}
   radioScreen: {fileID: 0}
   radioAnswer: {fileID: 0}
-  radioSlider: {fileID: 0}
-  turnSpeed: 36
-  mainCamera: {fileID: 0}
+  wrongText: {fileID: 0}
+  isPlayingGame: 0
 --- !u!114 &4465815958884898466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,7 +252,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueCanvas: {fileID: 0}
+  playerState: {fileID: 0}
   textDialogue: {fileID: 0}
+  dialoguewriter: {fileID: 0}
   content: 
   typingSpeed: 0.1
 --- !u!114 &915866258850377359
@@ -297,7 +298,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 0}
-  targetToChange:
+  newTargetToChange:
     target: {fileID: 0}
     targetTransform: {fileID: 0}
-    typeOfTarget: 2
+    typeOfTarget: 0
+--- !u!114 &4386839299705093899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349570348710239401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67aefdec4ddb6674bb536cfefa72517a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radioSlider: {fileID: 0}
+  dialImage: {fileID: 0}

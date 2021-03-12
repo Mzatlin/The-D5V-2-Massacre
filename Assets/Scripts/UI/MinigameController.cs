@@ -7,18 +7,15 @@ using TMPro;
 
 public class MinigameController : MonoBehaviour
 {
-    public Image dialImage;
     public Image radioScreen;
     public Image radioAnswer;
     public TextMeshProUGUI wrongText;
     Animator radioScreenAnimation;
     Animator radioAnswerAnimation;
-    public Slider radioSlider;
     IRadioMinigame radio => GetComponent<IRadioMinigame>();
+    IRadioSlider slider => GetComponent<IRadioSlider>();
     ICameraShake cameraShake;
     [SerializeField]
-    float turnSpeed = 36f;
-    float dialRotation = 0f;
     bool isPlayingGame = false;
     bool isOnTheSpot = false;
     bool canInput = true;
@@ -98,8 +95,11 @@ public class MinigameController : MonoBehaviour
     {
         isPlayingGame = true;
         wrongText.enabled = false;
-        dialImage.rectTransform.rotation = Quaternion.Euler(0, 0, 0);
-        radioSlider.value = 0.5f;
+        if(slider != null)
+        {
+            slider.ResetDialRotation();
+            slider.SetRadioSliderValue(0.5f);
+        }
         AkSoundEngine.SetRTPCValue("Current_Sine", 5); //Set the Current Sine to the Initial Slider position
         SetRadioValue();
     }
@@ -125,31 +125,10 @@ public class MinigameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (dialImage != null && isPlayingGame && canInput)
+        if (slider != null && isPlayingGame && canInput)
         {
-            RotateDial();
+            slider.RotateDial();
             GetInputValidation();
-        }
-    }
-
-    void RotateDial()
-    {
-        dialRotation = Input.GetAxis("Horizontal") * turnSpeed * Time.deltaTime;
-        dialImage.rectTransform.Rotate(new Vector3(0, 0, -dialRotation));
-
-        radioSlider.value += dialRotation / 360;
-        radioSlider.value = Mathf.Clamp(radioSlider.value, 0f, 1f);
-        radioScreenAnimation.speed = (radioSlider.value * 1.5f)+.3f;
-        radioAnswerAnimation.speed = (radioSlider.value * 1.5f) + .3f;
-        AkSoundEngine.SetRTPCValue("Current_Sine", radioSlider.value * 10f);
-
-        if ((dialImage.rectTransform.rotation.z < -0.9999f && dialRotation > 0))
-        {
-            dialImage.rectTransform.rotation = Quaternion.Euler(0, 0, -180);
-        }
-        else if ((dialImage.rectTransform.rotation.z > 0.9999f) && dialRotation < 0)
-        {
-            dialImage.rectTransform.rotation = Quaternion.Euler(0, 0, 180);
         }
     }
 
@@ -182,13 +161,17 @@ public class MinigameController : MonoBehaviour
 //Animate Bottom Frequency Sprite based on how close the slider is to the point
     void CheckSpot()
     {
-        if (radioSlider.value >= winSpaceMin && radioSlider.value <= winSpaceMax)
+        radioScreenAnimation.speed = (slider.RadioSliderValue * 1.5f) + .3f; //Can be put in the dial animation class
+        radioAnswerAnimation.speed = (slider.RadioSliderValue * 1.5f) + .3f;
+        AkSoundEngine.SetRTPCValue("Current_Sine", slider.RadioSliderValue * 10f); //can be put in a sound class 
+
+        if (slider.RadioSliderValue >= winSpaceMin && slider.RadioSliderValue <= winSpaceMax)
         {
             isOnTheSpot = true;
             radioScreenAnimation.SetBool("IsOnSpot", true);
             radioScreenAnimation.SetBool("IsOnMid", false);
         }
-        else if (radioSlider.value >= middleSpaceMin && radioSlider.value <= middleSpaceMax)
+        else if (slider.RadioSliderValue >= middleSpaceMin && slider.RadioSliderValue <= middleSpaceMax)
         {
             isOnTheSpot = false;
             radioScreenAnimation.SetBool("IsOnSpot", false);

@@ -1082,6 +1082,14 @@ PrefabInstance:
       propertyPath: dialoguewriter
       value: 
       objectReference: {fileID: 11400000, guid: abd15fea626fc8c4ea38b07d9ba82317, type: 2}
+    - target: {fileID: 4386839299705093899, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: dialImage
+      value: 
+      objectReference: {fileID: 1114900089}
+    - target: {fileID: 4386839299705093899, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: radioSlider
+      value: 
+      objectReference: {fileID: 840777032}
     - target: {fileID: 4465815958884898466, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: mainCamera
       value: 
@@ -9441,6 +9449,14 @@ PrefabInstance:
       propertyPath: dialoguewriter
       value: 
       objectReference: {fileID: 11400000, guid: abd15fea626fc8c4ea38b07d9ba82317, type: 2}
+    - target: {fileID: 4386839299705093899, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: dialImage
+      value: 
+      objectReference: {fileID: 1114900089}
+    - target: {fileID: 4386839299705093899, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: radioSlider
+      value: 
+      objectReference: {fileID: 840777032}
     - target: {fileID: 4465815958884898466, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: mainCamera
       value: 
@@ -32926,6 +32942,14 @@ PrefabInstance:
       propertyPath: dialoguewriter
       value: 
       objectReference: {fileID: 11400000, guid: abd15fea626fc8c4ea38b07d9ba82317, type: 2}
+    - target: {fileID: 4386839299705093899, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: dialImage
+      value: 
+      objectReference: {fileID: 1114900089}
+    - target: {fileID: 4386839299705093899, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: radioSlider
+      value: 
+      objectReference: {fileID: 840777032}
     - target: {fileID: 4465815958884898466, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: mainCamera
       value: 
@@ -35919,6 +35943,14 @@ PrefabInstance:
       propertyPath: dialoguewriter
       value: 
       objectReference: {fileID: 11400000, guid: abd15fea626fc8c4ea38b07d9ba82317, type: 2}
+    - target: {fileID: 4386839299705093899, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: dialImage
+      value: 
+      objectReference: {fileID: 1114900089}
+    - target: {fileID: 4386839299705093899, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: radioSlider
+      value: 
+      objectReference: {fileID: 840777032}
     - target: {fileID: 4465815958884898466, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: mainCamera
       value: 
@@ -42440,6 +42472,14 @@ PrefabInstance:
       propertyPath: dialoguewriter
       value: 
       objectReference: {fileID: 11400000, guid: abd15fea626fc8c4ea38b07d9ba82317, type: 2}
+    - target: {fileID: 4386839299705093899, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: dialImage
+      value: 
+      objectReference: {fileID: 1114900089}
+    - target: {fileID: 4386839299705093899, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: radioSlider
+      value: 
+      objectReference: {fileID: 840777032}
     - target: {fileID: 4465815958884898466, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: mainCamera
       value: 
@@ -50181,5 +50221,6 @@ PrefabInstance:
       propertyPath: nameCanvas
       value: 
       objectReference: {fileID: 999829567}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4775077073291771409, guid: 8cec7c2f0de91ad4b980622f80efe1e8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8cec7c2f0de91ad4b980622f80efe1e8, type: 3}
