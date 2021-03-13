@@ -29,6 +29,12 @@ public class MinigameSliderController : MonoBehaviour, IRadioSlider
         dialRotation = Input.GetAxis("Horizontal") * turnSpeed * Time.deltaTime;
         dialImage.rectTransform.Rotate(new Vector3(0, 0, -dialRotation));
 
+        ClampDialRotation(dialRotation);
+        UpdateRadioSlider(dialRotation);
+    }
+
+    void ClampDialRotation(float dialRotation)
+    {
         if ((dialImage.rectTransform.rotation.z < -0.9999f && dialRotation > 0))
         {
             dialImage.rectTransform.rotation = Quaternion.Euler(0, 0, -180);
@@ -37,10 +43,7 @@ public class MinigameSliderController : MonoBehaviour, IRadioSlider
         {
             dialImage.rectTransform.rotation = Quaternion.Euler(0, 0, 180);
         }
-
-        UpdateRadioSlider(dialRotation);
     }
-
 
     void UpdateRadioSlider(float dialRotation)
     {

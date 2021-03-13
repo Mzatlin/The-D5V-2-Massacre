@@ -1062,6 +1062,14 @@ PrefabInstance:
       propertyPath: successCanvas
       value: 
       objectReference: {fileID: 1888420174}
+    - target: {fileID: 2216549637108049830, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: frequencyOutput
+      value: 
+      objectReference: {fileID: 1746617676}
+    - target: {fileID: 2216549637108049830, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: correctFrequency
+      value: 
+      objectReference: {fileID: 1089707289}
     - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: playerState
       value: 
@@ -1130,6 +1138,14 @@ PrefabInstance:
       propertyPath: radioSlider
       value: 
       objectReference: {fileID: 840777032}
+    - target: {fileID: 7107655971926858589, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: frequencyOutput
+      value: 
+      objectReference: {fileID: 1746617676}
+    - target: {fileID: 7107655971926858589, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: correctFrequency
+      value: 
+      objectReference: {fileID: 1089707289}
     - target: {fileID: 7243888567883202411, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: enemy
       value: 
@@ -9429,6 +9445,14 @@ PrefabInstance:
       propertyPath: successCanvas
       value: 
       objectReference: {fileID: 1888420174}
+    - target: {fileID: 2216549637108049830, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: frequencyOutput
+      value: 
+      objectReference: {fileID: 1746617676}
+    - target: {fileID: 2216549637108049830, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: correctFrequency
+      value: 
+      objectReference: {fileID: 1089707289}
     - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: playerState
       value: 
@@ -9497,6 +9521,14 @@ PrefabInstance:
       propertyPath: radioSlider
       value: 
       objectReference: {fileID: 840777032}
+    - target: {fileID: 7107655971926858589, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: frequencyOutput
+      value: 
+      objectReference: {fileID: 1746617676}
+    - target: {fileID: 7107655971926858589, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: correctFrequency
+      value: 
+      objectReference: {fileID: 1089707289}
     - target: {fileID: 7243888567883202411, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: enemy
       value: 
@@ -32922,6 +32954,14 @@ PrefabInstance:
       propertyPath: successCanvas
       value: 
       objectReference: {fileID: 1888420174}
+    - target: {fileID: 2216549637108049830, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: frequencyOutput
+      value: 
+      objectReference: {fileID: 1746617676}
+    - target: {fileID: 2216549637108049830, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: correctFrequency
+      value: 
+      objectReference: {fileID: 1089707289}
     - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: playerState
       value: 
@@ -32994,6 +33034,14 @@ PrefabInstance:
       propertyPath: radioSlider
       value: 
       objectReference: {fileID: 840777032}
+    - target: {fileID: 7107655971926858589, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: frequencyOutput
+      value: 
+      objectReference: {fileID: 1746617676}
+    - target: {fileID: 7107655971926858589, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: correctFrequency
+      value: 
+      objectReference: {fileID: 1089707289}
     - target: {fileID: 7243888567883202411, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: enemy
       value: 
@@ -35923,6 +35971,14 @@ PrefabInstance:
       propertyPath: successCanvas
       value: 
       objectReference: {fileID: 1888420174}
+    - target: {fileID: 2216549637108049830, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: frequencyOutput
+      value: 
+      objectReference: {fileID: 1746617676}
+    - target: {fileID: 2216549637108049830, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: correctFrequency
+      value: 
+      objectReference: {fileID: 1089707289}
     - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: playerState
       value: 
@@ -35987,6 +36043,14 @@ PrefabInstance:
       propertyPath: radioSlider
       value: 
       objectReference: {fileID: 840777032}
+    - target: {fileID: 7107655971926858589, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: frequencyOutput
+      value: 
+      objectReference: {fileID: 1746617676}
+    - target: {fileID: 7107655971926858589, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: correctFrequency
+      value: 
+      objectReference: {fileID: 1089707289}
     - target: {fileID: 7243888567883202411, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: enemy
       value: 
@@ -42452,6 +42516,14 @@ PrefabInstance:
       propertyPath: successCanvas
       value: 
       objectReference: {fileID: 1888420174}
+    - target: {fileID: 2216549637108049830, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: frequencyOutput
+      value: 
+      objectReference: {fileID: 1746617676}
+    - target: {fileID: 2216549637108049830, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: correctFrequency
+      value: 
+      objectReference: {fileID: 1089707289}
     - target: {fileID: 2234411081804396221, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: playerState
       value: 
@@ -42516,6 +42588,14 @@ PrefabInstance:
       propertyPath: radioSlider
       value: 
       objectReference: {fileID: 840777032}
+    - target: {fileID: 7107655971926858589, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: frequencyOutput
+      value: 
+      objectReference: {fileID: 1746617676}
+    - target: {fileID: 7107655971926858589, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
+      propertyPath: correctFrequency
+      value: 
+      objectReference: {fileID: 1089707289}
     - target: {fileID: 7243888567883202411, guid: 4ff49d53ead64944f9c3800e20d6bfce, type: 3}
       propertyPath: enemy
       value: 
@@ -48495,7 +48575,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1181715231152480110, guid: f35f5e01e90cab548beb8fe92d4cff46, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1.9998779
+      value: -1.9999084
       objectReference: {fileID: 0}
     - target: {fileID: 1181715231574399738, guid: f35f5e01e90cab548beb8fe92d4cff46, type: 3}
       propertyPath: m_Pivot.x
@@ -49422,7 +49502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1657416479305482417, guid: 31843e0663fa476428b0ae8e190c55fb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -5.499817
+      value: -5.4998474
       objectReference: {fileID: 0}
     - target: {fileID: 2861938807103172383, guid: 31843e0663fa476428b0ae8e190c55fb, type: 3}
       propertyPath: m_UiScaleMode
@@ -50223,4 +50303,5 @@ PrefabInstance:
       objectReference: {fileID: 999829567}
     m_RemovedComponents:
     - {fileID: 4775077073291771409, guid: 8cec7c2f0de91ad4b980622f80efe1e8, type: 3}
+    - {fileID: 6946679774036584124, guid: 8cec7c2f0de91ad4b980622f80efe1e8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8cec7c2f0de91ad4b980622f80efe1e8, type: 3}

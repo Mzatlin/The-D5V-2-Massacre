@@ -7,15 +7,11 @@ using TMPro;
 
 public class MinigameController : MonoBehaviour
 {
-    public Image radioScreen;
-    public Image radioAnswer;
     public TextMeshProUGUI wrongText;
-    Animator radioScreenAnimation;
-    Animator radioAnswerAnimation;
     IRadioMinigame radio => GetComponent<IRadioMinigame>();
-    IRadioSlider slider => GetComponent<IRadioSlider>();
+    IRadioSlider RadioSlider => GetComponent<IRadioSlider>();
+    ISineWaveAnimate Animation => GetComponent<ISineWaveAnimate>();
     ICameraShake cameraShake;
-    [SerializeField]
     bool isPlayingGame = false;
     bool isOnTheSpot = false;
     bool canInput = true;
@@ -23,6 +19,8 @@ public class MinigameController : MonoBehaviour
     float winSpaceMax = 0.53f;
     float middleSpaceMin = 0.3f;
     float middleSpaceMax = 0.7f;
+    float correctSpeed = 0f;
+    float outputSpeed = 0f;
     IEnumerator stopInput = null;
     bool isDelayed = false;
 
@@ -34,12 +32,6 @@ public class MinigameController : MonoBehaviour
         if(mainCamera != null)
         {
             cameraShake = mainCamera.GetComponent<ICameraShake>();
-        }
-
-        if(radioScreen != null && radioAnswer != null)
-        {
-            radioScreenAnimation = radioScreen.GetComponent<Animator>();
-            radioAnswerAnimation = radioAnswer.GetComponent<Animator>();
         }
 
         if (radio != null)
@@ -63,7 +55,6 @@ public class MinigameController : MonoBehaviour
         }
     }
 
-
     IEnumerator StopInput()
     {
         ToggleText();
@@ -81,7 +72,6 @@ public class MinigameController : MonoBehaviour
     {
         AkSoundEngine.PostEvent("Stop_Sines", mainCamera.gameObject);
         isPlayingGame = false;
-        Debug.Log(isPlayingGame);
         canInput = true;
         StopCoroutine(stopInput);
         wrongText.enabled = false;
@@ -95,10 +85,10 @@ public class MinigameController : MonoBehaviour
     {
         isPlayingGame = true;
         wrongText.enabled = false;
-        if(slider != null)
+        if(RadioSlider != null)
         {
-            slider.ResetDialRotation();
-            slider.SetRadioSliderValue(0.5f);
+            RadioSlider.ResetDialRotation();
+            RadioSlider.SetRadioSliderValue(0.5f);
         }
         AkSoundEngine.SetRTPCValue("Current_Sine", 5); //Set the Current Sine to the Initial Slider position
         SetRadioValue();
@@ -119,15 +109,17 @@ public class MinigameController : MonoBehaviour
         {
             AkSoundEngine.SetRTPCValue("Correct_Sine", winSpaceMax * 10f); //Set the Correct Sine to the middle of Win Space
             AkSoundEngine.PostEvent("Play_Sines", mainCamera.gameObject);
+            correctSpeed = ((winSpaceMax - 0.015f) * 1.5f) + .3f;
+            Animation.SetCorrectSineWaveSpeed(correctSpeed);
         }    
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (slider != null && isPlayingGame && canInput)
+        if (RadioSlider != null && isPlayingGame && canInput)
         {
-            slider.RotateDial();
+            RadioSlider.RotateDial();
             GetInputValidation();
         }
     }
@@ -157,31 +149,38 @@ public class MinigameController : MonoBehaviour
 
     }
 
-
 //Animate Bottom Frequency Sprite based on how close the slider is to the point
     void CheckSpot()
     {
-        radioScreenAnimation.speed = (slider.RadioSliderValue * 1.5f) + .3f; //Can be put in the dial animation class
-        radioAnswerAnimation.speed = (slider.RadioSliderValue * 1.5f) + .3f;
-        AkSoundEngine.SetRTPCValue("Current_Sine", slider.RadioSliderValue * 10f); //can be put in a sound class 
+        outputSpeed = (RadioSlider.RadioSliderValue * 1.5f) + .3f;
+        Animation.SetOutputSineWaveSpeed(outputSpeed);
+        AkSoundEngine.SetRTPCValue("Current_Sine", RadioSlider.RadioSliderValue * 10f); //can be put in a sound class 
 
-        if (slider.RadioSliderValue >= winSpaceMin && slider.RadioSliderValue <= winSpaceMax)
+        if (RadioSlider.RadioSliderValue >= winSpaceMin && RadioSlider.RadioSliderValue <= winSpaceMax)
         {
             isOnTheSpot = true;
-            radioScreenAnimation.SetBool("IsOnSpot", true);
-            radioScreenAnimation.SetBool("IsOnMid", false);
+            SetAnimation(isOnTheSpot);
         }
-        else if (slider.RadioSliderValue >= middleSpaceMin && slider.RadioSliderValue <= middleSpaceMax)
+        else if (RadioSlider.RadioSliderValue >= middleSpaceMin && RadioSlider.RadioSliderValue <= middleSpaceMax)
         {
             isOnTheSpot = false;
-            radioScreenAnimation.SetBool("IsOnSpot", false);
-            radioScreenAnimation.SetBool("IsOnMid", true);
+            SetAnimation(isOnTheSpot);
         }
         else
         {
             isOnTheSpot = false;
-            radioScreenAnimation.SetBool("IsOnSpot", false);
-            radioScreenAnimation.SetBool("IsOnMid", false);
+            if(Animation != null)
+            {
+                Animation.ResetSignWave();
+            }
+        }
+    }
+
+    void SetAnimation(bool state)
+    {
+        if(Animation != null)
+        {
+            Animation.AnimateSignWave(state);
         }
     }
 }
