@@ -8,9 +8,10 @@ using TMPro;
 public class MinigameController : MonoBehaviour
 {
     public TextMeshProUGUI wrongText;
-    IRadioMinigame radio => GetComponent<IRadioMinigame>();
+    IRadioMinigame Radio => GetComponent<IRadioMinigame>();
     IRadioSlider RadioSlider => GetComponent<IRadioSlider>();
     ISineWaveAnimate Animation => GetComponent<ISineWaveAnimate>();
+    ISineWaveSound Sound => GetComponent<ISineWaveSound>();
     ICameraShake cameraShake;
     bool isPlayingGame = false;
     bool isOnTheSpot = false;
@@ -29,17 +30,17 @@ public class MinigameController : MonoBehaviour
     void Start()
     {
         mainCamera = Camera.main;
-        if(mainCamera != null)
+        if (mainCamera != null)
         {
             cameraShake = mainCamera.GetComponent<ICameraShake>();
         }
 
-        if (radio != null)
+        if (Radio != null)
         {
-            radio.OnMinigameStart += HandleMiniGameStart;
-            radio.OnExit += HandleMiniGameExit;
+            Radio.OnMinigameStart += HandleMiniGameStart;
+            Radio.OnExit += HandleMiniGameExit;
         }
-        if(wrongText != null)
+        if (wrongText != null)
         {
             wrongText.enabled = false;
         }
@@ -58,7 +59,7 @@ public class MinigameController : MonoBehaviour
     IEnumerator StopInput()
     {
         ToggleText();
-        if(cameraShake != null)
+        if (cameraShake != null)
         {
             cameraShake.TryShake(0.5f, 0.1f);
         }
@@ -70,7 +71,10 @@ public class MinigameController : MonoBehaviour
 
     private void HandleMiniGameExit()
     {
-        AkSoundEngine.PostEvent("Stop_Sines", mainCamera.gameObject);
+        if (Sound != null)
+        {
+            Sound.StopSineWave();
+        }
         isPlayingGame = false;
         canInput = true;
         StopCoroutine(stopInput);
@@ -85,12 +89,16 @@ public class MinigameController : MonoBehaviour
     {
         isPlayingGame = true;
         wrongText.enabled = false;
-        if(RadioSlider != null)
+        if (RadioSlider != null)
         {
             RadioSlider.ResetDialRotation();
             RadioSlider.SetRadioSliderValue(0.5f);
         }
-        AkSoundEngine.SetRTPCValue("Current_Sine", 5); //Set the Current Sine to the Initial Slider position
+        if(Sound != null)
+        {
+            //Set the Current Sine to the Initial Slider position
+            Sound.SetOutputSineWave(5f);
+        }
         SetRadioValue();
     }
 
@@ -100,18 +108,20 @@ public class MinigameController : MonoBehaviour
         middleSpaceMax = middleSpaceMin + 0.4f;
         winSpaceMin = UnityEngine.Random.Range(middleSpaceMin + 0.1f, middleSpaceMax - 0.1f);
         winSpaceMax = winSpaceMin + 0.03f;
-        
+
         if (Mathf.Abs(winSpaceMax - 0.5f) <= 0.1f || Mathf.Abs(winSpaceMin - 0.5f) <= 0.1f)
         {
             SetRadioValue();
         }
         else
         {
-            AkSoundEngine.SetRTPCValue("Correct_Sine", winSpaceMax * 10f); //Set the Correct Sine to the middle of Win Space
-            AkSoundEngine.PostEvent("Play_Sines", mainCamera.gameObject);
+            if(Sound != null)
+            {
+                Sound.StartSineWave(winSpaceMax * 10f);
+            }
             correctSpeed = ((winSpaceMax - 0.015f) * 1.5f) + .3f;
             Animation.SetCorrectSineWaveSpeed(correctSpeed);
-        }    
+        }
     }
 
     // Update is called once per frame
@@ -124,7 +134,7 @@ public class MinigameController : MonoBehaviour
         }
     }
 
-//Register Input key - Check the spot - if correct - Send complete event - Else - prevent dial input
+    //Register Input key - Check the spot - if correct - Send complete event - Else - prevent dial input
     void GetInputValidation()
     {
         CheckSpot();
@@ -134,7 +144,7 @@ public class MinigameController : MonoBehaviour
             {
                 isPlayingGame = false;
                 isOnTheSpot = false;
-                radio.ProcessSuccess();
+                Radio.ProcessSuccess();
             }
             else
             {
@@ -149,13 +159,15 @@ public class MinigameController : MonoBehaviour
 
     }
 
-//Animate Bottom Frequency Sprite based on how close the slider is to the point
+    //Animate Bottom Frequency Sprite based on how close the slider is to the point
     void CheckSpot()
     {
         outputSpeed = (RadioSlider.RadioSliderValue * 1.5f) + .3f;
         Animation.SetOutputSineWaveSpeed(outputSpeed);
-        AkSoundEngine.SetRTPCValue("Current_Sine", RadioSlider.RadioSliderValue * 10f); //can be put in a sound class 
-
+        if(Sound != null)
+        {
+            Sound.SetOutputSineWave(RadioSlider.RadioSliderValue * 10f);
+        }
         if (RadioSlider.RadioSliderValue >= winSpaceMin && RadioSlider.RadioSliderValue <= winSpaceMax)
         {
             isOnTheSpot = true;
@@ -169,7 +181,7 @@ public class MinigameController : MonoBehaviour
         else
         {
             isOnTheSpot = false;
-            if(Animation != null)
+            if (Animation != null)
             {
                 Animation.ResetSignWave();
             }
@@ -178,7 +190,7 @@ public class MinigameController : MonoBehaviour
 
     void SetAnimation(bool state)
     {
-        if(Animation != null)
+        if (Animation != null)
         {
             Animation.AnimateSignWave(state);
         }
