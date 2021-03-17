@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerInteraction : MonoBehaviour
+public class PlayerInteraction : MonoBehaviour, IPlayerLookDirection
 {
     RaycastHit2D hit;
     IInteractable interact;
@@ -14,6 +14,7 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField]
     float lookDistance = 13f;
     Vector2 lastPosition;
+    public Vector2 LastLookDirection => lastPosition;
     // Start is called before the first frame update
     void Start()
     {

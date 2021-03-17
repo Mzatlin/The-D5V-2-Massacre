@@ -1,0 +1,4 @@
+﻿interface IFlipPlayer
+{
+    void FlipPlayer();
+}

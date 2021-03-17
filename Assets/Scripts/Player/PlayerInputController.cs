@@ -6,10 +6,9 @@ public class PlayerInputController : MonoBehaviour, IPlayerInputAxis
 {
     float Inputx;
     float Inputy;
-    bool isFacingRight = true;
     IMovement movement;
     IPlayerState state;
-    Vector2 playerScale;
+    IFlipPlayer flip;
     Animator animate;
 
     public float XMovement => Inputx;
@@ -19,9 +18,9 @@ public class PlayerInputController : MonoBehaviour, IPlayerInputAxis
     void Start()
     {
         movement = GetComponent<IMovement>();
-        playerScale = transform.localScale;
         state = GetComponent<IPlayerState>();
         animate = GetComponentInChildren<Animator>();
+        flip = GetComponent<IFlipPlayer>();
     }
 
     // Update is called once per frame
@@ -35,7 +34,10 @@ public class PlayerInputController : MonoBehaviour, IPlayerInputAxis
         else
         {
             AnimateMovement();
-            movement.ApplyMovement(0f);
+            if(movement != null)
+            {
+                movement.ApplyMovement(0f);
+            }
         }
     }
 
@@ -46,16 +48,9 @@ public class PlayerInputController : MonoBehaviour, IPlayerInputAxis
         {
             movement.ApplyMovement(Inputx);
         }
-        FlipPlayer();
-    }
-
-    void FlipPlayer()
-    {
-        if ((Inputx >= 0.0f) != isFacingRight)
+        if(flip != null)
         {
-            isFacingRight = !isFacingRight;
-            playerScale.x *= -1;
-            transform.localScale = playerScale;
+            flip.FlipPlayer();
         }
     }
 
