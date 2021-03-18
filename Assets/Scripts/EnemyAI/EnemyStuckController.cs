@@ -4,24 +4,28 @@ using UnityEngine;
 
 public class EnemyStuckController : MonoBehaviour
 {
-    EnemyAI enemy => GetComponent<EnemyAI>();
-    IEnemyState state => GetComponent<IEnemyState>();
-    Vector2 enemyLocation;
     public Transform resetSpawn;
     public int stuckThreshold = 3;
+
+    EnemyAI Enemy => GetComponent<EnemyAI>();
+    IEnemyState State => GetComponent<IEnemyState>();
+
+    Vector2 enemyLocation;
     float Timer = 0f;
     int stuckCounter = 0;
-    float Delay = 3.5f;
-    // Start is called before the first frame update
+
+    readonly float delay = 3.5f;
+    readonly float moveDistance = 2.5f;
+
     void Start()
     {
         enemyLocation = transform.position;
     }
 
-    // Update is called once per frame
+    //After a certain time in seconds, validate if the enemy is stuck somewhere 
     void Update()
     {
-       if(Timer < Delay)
+       if(Timer < delay)
         {
             Timer += Time.deltaTime;
         }
@@ -32,15 +36,16 @@ public class EnemyStuckController : MonoBehaviour
         }
     }
 
+   //This will check and see if the enemy's location has changed much at all after a certain number of seconds
     void ValidateEnemyPosition()
     {
-        Debug.Log("Start Validation");
-        if (Vector2.Distance(enemyLocation,transform.position) < 2.5f)
+        //If the enemy hasn't moved a certain distance from the last spot, increment a stuck count
+        if (Vector2.Distance(enemyLocation,transform.position) < moveDistance)
         {
             stuckCounter++;
+            //When the stuck count has amet a certain threshold, then the enemy is definitely stuck and needs to be unstuck
             if (stuckCounter >= stuckThreshold)
             {
-                Debug.Log("Enemy Is Stuck!");
                 stuckCounter = 0;
                 FixEnemyStuckState();
             }
@@ -50,27 +55,31 @@ public class EnemyStuckController : MonoBehaviour
             stuckCounter = 0;
             enemyLocation = transform.position;
         }
-
     }
 
+    //Depending on the state of the enemy, different methods of fixing this will apply
     private void FixEnemyStuckState()
     {
-        if(enemy.target.typeOfTarget == TargetType.ScriptedStopPoint)
+        //Enemy is supposed to not be moving during a scripted stop point. Ignore
+        if(Enemy.target.typeOfTarget == TargetType.ScriptedStopPoint)
         {
             return;
         }
 
-        if (state != null &&
-             (state.CurrentState.GetType() == typeof(ChasePlayerState) || state.CurrentState.GetType() == typeof(InvestigateObjectState)))
+        //Enemy state machine should revert to patrol, since the enemy is fixated on a target it can't reach
+        if (State != null &&
+             (State.CurrentState.GetType() == typeof(ChasePlayerState) || State.CurrentState.GetType() == typeof(InvestigateObjectState)))
         {
-            enemy.isStuck = true;
+            Enemy.isStuck = true;
         }
-        else if (state != null && (state.CurrentState.GetType() == typeof(PatrolState)))
+        //This is a worst case, where the enemy is not fixated on a particular target, meaning it is REALLY stuck
+        else if (State != null && (State.CurrentState.GetType() == typeof(PatrolState)))
         {
             ResetEnemyPosition();
         }
     }
 
+    //Respawn the enemy 
     void ResetEnemyPosition()
     {
         if(resetSpawn != null)
