@@ -7,7 +7,6 @@ public class SetObjectActiveOnTrigger : HandlePlayerTriggerEventBase
 {
     public GameObject objectToVanish;
 
-
     protected override void Start()
     {
         base.Start();
@@ -26,9 +25,8 @@ public class SetObjectActiveOnTrigger : HandlePlayerTriggerEventBase
         }
     }
 
-    void ScanGraph() //Todo: Extension Method 
+    void ScanGraph()
     {
-        var graphToScan = AstarPath.active.data.gridGraph;
-        AstarPath.active.Scan(graphToScan);
+        GraphScanExtensionMethods.ReScanPathFindingGraph();
     }
 }

@@ -89,7 +89,6 @@ public class OpenDoorController : MonoBehaviour, IDoor
 
     void ScanGraph()
     {
-        var graphToScan = AstarPath.active.data.gridGraph;
-        AstarPath.active.Scan(graphToScan);
+        GraphScanExtensionMethods.ReScanPathFindingGraph();
     }
 }
