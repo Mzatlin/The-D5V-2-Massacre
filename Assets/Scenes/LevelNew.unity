@@ -26141,6 +26141,7 @@ GameObject:
   - component: {fileID: 1133031821}
   - component: {fileID: 1133031822}
   - component: {fileID: 1133031816}
+  - component: {fileID: 1133031823}
   m_Layer: 0
   m_Name: CloseDoorTrigger (Ending)
   m_TagString: Untagged
@@ -26314,6 +26315,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToChange: {fileID: 11713274}
   newLocation: {fileID: 1595033550}
+--- !u!114 &1133031823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133031814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ed67be0a2c38a742a4dd03fa74ba428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectCollider: {fileID: 5325190582590055906}
 --- !u!1 &1134361716
 GameObject:
   m_ObjectHideFlags: 0
@@ -50030,6 +50044,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f387e4737eb6a164ca75f37258bc0f6a, type: 3}
+--- !u!1 &5325190582590055906 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5325190581772944763, guid: f387e4737eb6a164ca75f37258bc0f6a, type: 3}
+  m_PrefabInstance: {fileID: 5325190582590055905}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5750573517018630672
 PrefabInstance:
   m_ObjectHideFlags: 0
