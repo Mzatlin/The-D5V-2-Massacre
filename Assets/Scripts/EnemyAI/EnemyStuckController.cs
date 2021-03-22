@@ -5,17 +5,17 @@ using UnityEngine;
 public class EnemyStuckController : MonoBehaviour
 {
     public Transform resetSpawn;
-    public int stuckThreshold = 3;
+    public int stuckThreshold = 4;
 
     EnemyAI Enemy => GetComponent<EnemyAI>();
     IEnemyState State => GetComponent<IEnemyState>();
 
     Vector2 enemyLocation;
     float Timer = 0f;
-    int stuckCounter = 0;
+    [SerializeField] int stuckCounter = 0;
 
     readonly float delay = 3.5f;
-    readonly float moveDistance = 2.5f;
+    readonly float moveDistance = 2f;
 
     void Start()
     {
