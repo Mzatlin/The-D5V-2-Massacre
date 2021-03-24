@@ -6236,7 +6236,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resetSpawn: {fileID: 1488763991}
-  stuckThreshold: 3
+  backupResetSpawn: {fileID: 1533065680}
+  stuckThreshold: 4
+  stuckCounter: 0
 --- !u!114 &254158654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32728,7 +32730,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1488763991}
   m_Layer: 0
-  m_Name: RespawnSpot
+  m_Name: RespawnSpot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33816,6 +33818,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1533065679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1533065680}
+  m_Layer: 0
+  m_Name: RespawnSpot2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1533065680
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533065679}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -25.41, y: -28.44, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1536602088 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2795965492618649003, guid: 14ebc0f145bd3d8408f37c2ceb955aed, type: 3}

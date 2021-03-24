@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyStuckController : MonoBehaviour
 {
     public Transform resetSpawn;
+    public Transform backupResetSpawn;
     public int stuckThreshold = 4;
 
     EnemyAI Enemy => GetComponent<EnemyAI>();
@@ -82,9 +83,14 @@ public class EnemyStuckController : MonoBehaviour
     //Respawn the enemy 
     void ResetEnemyPosition()
     {
-        if(resetSpawn != null)
+        if(resetSpawn != null && Vector3.Distance(resetSpawn.position,transform.position) > 10f)
         {
             transform.position = resetSpawn.position;
+        }
+        else
+        {
+            //Enemy is too close to the respawn point when stuck, move them somewhere else to prevent stuck/unstuck loop 
+            transform.position = backupResetSpawn.position;
         }
     }
 }
