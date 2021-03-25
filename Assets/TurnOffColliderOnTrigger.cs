@@ -14,7 +14,12 @@ public class TurnOffColliderOnTrigger : HandlePlayerTriggerEventBase
         {
             colliderToVanish = objectCollider.GetComponent<Collider2D>();
             if(colliderToVanish != null)
-                  colliderToVanish.enabled = true;
+            {
+                colliderToVanish.enabled = true;
+                GraphScanExtensionMethods.ReScanPathFindingGraph();
+            }
+
+                   
         }
     }
 
