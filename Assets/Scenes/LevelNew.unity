@@ -20887,7 +20887,7 @@ MonoBehaviour:
   textDialogue: {fileID: 1590920235}
   dialoguewriter: {fileID: 11400000, guid: abd15fea626fc8c4ea38b07d9ba82317, type: 2}
   content: 'Can''t get to Diving. Armament''s the other way, anyhow. I''m wasting
-    Time!
+    time!
 
 '
   typingSpeed: 0.1
@@ -48100,7 +48100,7 @@ MonoBehaviour:
   playerState: {fileID: 11400000, guid: 3291cce688203924eb3c30b2fc271b33, type: 2}
   textDialogue: {fileID: 1590920235}
   dialoguewriter: {fileID: 11400000, guid: abd15fea626fc8c4ea38b07d9ba82317, type: 2}
-  content: Damn it, no! I have to take the long way around through Battery and Armament.
+  content: Dammit, no! I have to take the long way around through Battery and Armament.
   typingSpeed: 0.1
 --- !u!114 &2111515521
 MonoBehaviour:
