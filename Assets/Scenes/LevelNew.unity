@@ -10030,6 +10030,7 @@ MonoBehaviour:
   - {fileID: 1052899232}
   - {fileID: 1167584719}
   - {fileID: 684884651}
+  - {fileID: 414986981}
 --- !u!4 &414357127
 Transform:
   m_ObjectHideFlags: 0
@@ -26445,8 +26446,8 @@ Camera:
   m_GameObject: {fileID: 1134361716}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.17354932, g: 0.3261837, b: 0.5660378, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0.03137255, b: 0.21960786, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -43601,7 +43602,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7799671328294326678, guid: cb1305de8ce18874faedf995783f2144, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.415614
+      value: 13.56
       objectReference: {fileID: 0}
     - target: {fileID: 7799671328294326678, guid: cb1305de8ce18874faedf995783f2144, type: 3}
       propertyPath: m_LocalPosition.y
@@ -50017,6 +50018,10 @@ PrefabInstance:
       propertyPath: canvasToToggle
       value: 
       objectReference: {fileID: 767572973}
+    - target: {fileID: 2527000537675485544, guid: bf3cc92f32f296841a1fdb9e82d24c36, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2556388519012601170, guid: bf3cc92f32f296841a1fdb9e82d24c36, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 1
