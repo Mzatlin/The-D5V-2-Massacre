@@ -15,7 +15,7 @@ public class AnimateEnemyController : MonoBehaviour
         SetMovement();
         SetClimb();
     }
-
+    //The enemy will only run if a certain set of states are active 
     void AnimateEnemy()
     {
         if (StateMachine != null && 
@@ -29,7 +29,7 @@ public class AnimateEnemyController : MonoBehaviour
         }
        
     }
-
+    //If the enemy movement has slowed down, stop climbing 
     void SetMovement()
     {
         if(Mathf.Abs(Rb.velocity.x) <= .3f && (Mathf.Abs(Rb.velocity.y) <= .3f))
@@ -42,12 +42,12 @@ public class AnimateEnemyController : MonoBehaviour
             Animate.SetBool("IsStopped", false);
         }
     }
-
+    //Climbing is verified based on its Y value. If it's greater than 0, it must be climbing
     void SetClimb()
     {
         Animate.SetFloat("MoveY", Mathf.Abs(Rb.velocity.y));
     }
-
+    //Climbing is based around whether the enemy is touching a ladder 
     void OnTriggerEnter2D(Collider2D collision)
     {
         if((ladderMask & 1<<collision.gameObject.layer) != 0){

@@ -14,7 +14,6 @@ public class CloseDoorOnRadioComplete : HandlePlayerTriggerEventBase
 
     void CloseDoor()
     {
-
         foreach (GameObject door in doors)
         {
             if (door != null)

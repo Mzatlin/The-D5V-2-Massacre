@@ -30,7 +30,7 @@ public class ChasePlayerState : EnemyStateBase
         {
             return typeof(InvestigateObjectState);
         }
-
+        //If the enemy is determined to be stuck, it must be reset
         if (enemy.isStuck)
         {
             enemy.isStuck = false;

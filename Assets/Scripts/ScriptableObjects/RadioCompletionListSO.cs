@@ -10,7 +10,7 @@ public class RadioCompletionListSO : ScriptableObject
     public int completeCount = 0;
     public List<RadioSO> radios = new List<RadioSO>();
     public Dictionary<RadioSO, bool> radioStatuses = new Dictionary<RadioSO, bool>();
-
+    //This ensures no completed radio carries over to a game restart 
     public void ResetRadios()
     {
         radioStatuses.Clear();
@@ -20,7 +20,7 @@ public class RadioCompletionListSO : ScriptableObject
         }
         completeCount = 0;
     }
-
+    //Sends the location of the radio to a reciever that needs to know the current radio's location
     public void LogRadio(RadioSO radio, Transform radioTransform)
     {
         if (radio != null && radioStatuses.ContainsKey(radio))
@@ -34,7 +34,7 @@ public class RadioCompletionListSO : ScriptableObject
             Debug.Log("Radio does not exist!");
         }
     }
-
+    //Returns a boolean that checks if all the radios in the list have been completed
     public bool HasWon()
     {
         foreach(KeyValuePair<RadioSO,bool> radio in radioStatuses)
